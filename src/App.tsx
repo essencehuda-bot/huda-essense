@@ -2401,8 +2401,8 @@ export default function App() {
     return DEFAULT_PRODUCTS;
   });
   const [deliveryCharge, setDeliveryCharge] = useState(() => {
-    try { const s = localStorage.getItem("he_delivery"); return s ? Number(s) : 200; }
-    catch { return 200; }
+    try { const s = localStorage.getItem("he_delivery"); return s ? Number(s) : 300; }
+    catch { return 300; }
   });
   const [whatsappNum, setWhatsappNum] = useState(() => {
     try { return localStorage.getItem("he_whatsapp") || "923376760760"; }
@@ -2865,7 +2865,7 @@ export default function App() {
               ["Premium Oils", "High-quality fragrance oils sourced for long-lasting performance."],
               ["Affordable Luxury", "Designer-inspired scents from just PKR 300 for 10ml."],
               ["Made for Pakistan", "Formulated to perform in our hot and humid climate."],
-              ["Flat Delivery", "Flat PKR 200 delivery charge within Karachi only."],
+              ["Flat Delivery", `Flat PKR ${deliveryCharge} delivery charge within Karachi only.`],
               ["Prepayment Required", "Payment via JazzCash, EasyPaisa, or Bank Transfer."],
               ["7-Day Returns", "Not happy? Return within 7 days. No questions asked."],
             ].map(([t, s]) => (
