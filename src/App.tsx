@@ -5747,12 +5747,11 @@ export default function App() {
 
       {/* ═══════════ TRUST BAR ═══════════ */}
       <div className="border-y border-[#e5d8c3] bg-[#f5eee2]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-5 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-5 grid grid-cols-3 gap-4 text-center">
           {[
             { icon: "✨", title: "Premium Quality", sub: "Long-lasting fragrances" },
             { icon: "🚚", title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
             { icon: "💳", title: "Prepayment Required", sub: "JazzCash / EasyPaisa / Bank" },
-            { icon: "🔄", title: "Easy Returns", sub: "7-day return policy" },
           ].map(t => (
             <div key={t.title} className="flex flex-col items-center gap-1">
               <span className="text-[22px]">{t.icon}</span>
@@ -5934,7 +5933,6 @@ export default function App() {
               ["Made for Pakistan", "Formulated to perform in our hot and humid climate."],
               ["Flat Delivery", `Flat PKR ${deliveryCharge} delivery charge within Karachi only.`],
               ["Prepayment Required", "Payment via JazzCash, EasyPaisa, or Bank Transfer."],
-              ["7-Day Returns", "Not happy? Return within 7 days. No questions asked."],
             ].map(([t, s]) => (
               <div key={t} className="bg-white/70 rounded-2xl p-5 border border-[#e4d0b2]">
                 <div className="text-[20px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{t}</div>
@@ -5998,7 +5996,7 @@ export default function App() {
         <div className="mx-auto max-w-[900px] px-5 lg:px-10 py-16 lg:py-[80px] text-center">
           <div className="text-[11px] tracking-[0.24em] text-[#d8a757] uppercase font-[600]">Ready to smell amazing?</div>
           <h4 className="text-[42px] lg:text-[54px] mt-3 leading-[0.98]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Order your Huda Essence<br />perfume today.</h4>
-          <p className="mt-4 text-[#d6c1a3] text-[16px]">Delivery in Karachi only. Prepayment required. 7-day returns.</p>
+          <p className="mt-4 text-[#d6c1a3] text-[16px]">Delivery in Karachi only. Prepayment required.</p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <button onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-[15px] rounded-full bg-[#e3b96a] text-[#24160c] font-[700] text-[15px] hover:bg-[#f0cc80] transition">Shop All Perfumes →</button>
             <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to place an order from Huda Essence`} target="_blank" rel="noopener" className="px-8 py-[15px] rounded-full border border-[#4b3728] text-[#f2dbc0] text-[15px] flex items-center gap-2 hover:bg-[#241a12] transition">
@@ -6061,7 +6059,6 @@ export default function App() {
             <div className="font-[650] mb-3 text-[#f0dcc0]">Help</div>
             <ul className="space-y-2 text-[#a89070]">
               <li>Shipping Policy</li>
-              <li>Returns & Exchange</li>
               <li>Track Your Order</li>
               <li>FAQs</li>
             </ul>
@@ -6149,7 +6146,6 @@ export default function App() {
                 <div className="mt-6 text-[12.6px] text-[#7c6348] border-t border-[#e5d0b2] pt-4 grid grid-cols-2 gap-3">
                   <div>✓ PKR {deliveryCharge} delivery (Karachi Only)</div>
                   <div>✓ Prepayment Required</div>
-                  <div>✓ 7-day easy returns</div>
                   <div>✓ Premium quality oils</div>
                 </div>
               </div>
