@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import Lenis from 'lenis';
 import Logo from './Logo';
 import AdminPanel, { ProductData } from './AdminPanel';
+import PerfumeImage from './PerfumeImage';
 
 /* ── types ─────────────────────────────────────────── */
 type Product = ProductData;
@@ -3339,7 +3340,7 @@ const DEFAULT_PRODUCTS: Product[] = [
       "Musk"
     ],
     "mood": "garden • rich • white floral",
-    "image": "/images/blue-lady.png",
+    "image": "/images/blue-lady-original.png",
     "story": "A rich white floral garden in a bottle. Lush, creamy tuberose and jasmine experience.",
     "sizes": [
       {
@@ -5818,7 +5819,7 @@ export default function App() {
                 {group.items.map(p => (
                   <div key={p.id} className="group bg-white rounded-[26px] border border-[#ead9bf] overflow-hidden hover:shadow-[0_30px_80px_rgba(120,90,40,0.18)] hover:-translate-y-1.5 transition-all duration-500">
                     <div className="relative overflow-hidden">
-                      <img src={p.image} alt={p.name} className="h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
+                      <PerfumeImage product={p} className="h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
                       <div className="absolute top-4 left-4 flex gap-2">
                         {p.bestseller && <span className="bg-[#19120d] text-[#f4e2c2] px-3.5 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] font-[600] uppercase">Bestseller</span>}
                         {p.nouveau && <span className="bg-[#7b1d2a] text-white px-3.5 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] font-[600] uppercase">New</span>}
@@ -6089,7 +6090,7 @@ export default function App() {
             <button onClick={() => setModal(null)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e1ccab] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
             <div className="grid md:grid-cols-[460px_1fr]">
               <div className="relative bg-[#efe3d1]">
-                <img src={modal.image} alt={modal.name} className="w-full h-[450px] md:h-full object-cover" />
+                <PerfumeImage product={modal} className="w-full h-[450px] md:h-full object-cover" />
                 <div className="absolute left-5 top-5 flex gap-2">
                   {modal.bestseller && <span className="bg-[#17120e] text-[#f7e5c6] px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">Bestseller</span>}
                   {modal.nouveau && <span className="bg-[#7d1927] text-white px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">New</span>}
@@ -6176,7 +6177,7 @@ export default function App() {
               const sz = p.sizes.find(s => s.ml === line.sizeMl) ?? p.sizes[0];
               return (
                 <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex gap-4 bg-white border border-[#edd8b8] rounded-2xl p-3">
-                  <img src={p.image} alt="" className="w-[76px] h-[76px] object-cover rounded-xl shrink-0" />
+                  <PerfumeImage product={p} className="w-[76px] h-[76px] object-cover rounded-xl shrink-0" />
                   <div className="flex-1 min-w-0">
                     <div className="text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</div>
                     <div className="text-[12px] text-[#8d7253]">{line.sizeMl}ml • {p.concentration}</div>
@@ -6247,7 +6248,7 @@ export default function App() {
                   const sz = p.sizes.find(s => s.ml === line.sizeMl) ?? p.sizes[0];
                   return (
                     <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex items-center gap-3 py-2 border-b border-[#f0e0c8] last:border-0">
-                      <img src={p.image} alt="" className="w-10 h-10 object-cover rounded-lg shrink-0" />
+                      <PerfumeImage product={p} className="w-10 h-10 object-cover rounded-lg shrink-0" />
                       <div className="flex-1 min-w-0">
                         <div className="text-[14px] font-[600] truncate">{p.name}</div>
                         <div className="text-[11px] text-[#8d7253]">{line.sizeMl}ml × {line.qty}</div>

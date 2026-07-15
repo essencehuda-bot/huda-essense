@@ -154,6 +154,17 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // Exit api to shut down server
+  if (req.url === '/api/exit') {
+    console.log("Exit API called. Shutting down server.");
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: true }));
+    setTimeout(() => {
+      process.exit(0);
+    }, 1000);
+    return;
+  }
+
   // Serve public folder assets
   if (req.url.startsWith('/images/')) {
     const filePath = path.join(PUBLIC_DIR, req.url);
@@ -582,6 +593,7 @@ function getGeneratorHtml() {
         name.includes('bloom') ||
         name.includes('j\\\'adore') ||
         name.includes('blue lady') ||
+        name.includes('blue-lady') ||
         name.includes('jasmine') ||
         name.includes('flower') ||
         name.includes('grace')
@@ -802,14 +814,34 @@ function getGeneratorHtml() {
       previewTitle.innerText = 'Generation Complete!';
       
       await loadStatus();
+
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('auto') === 'true') {
+        log('Auto-mode complete. Shutting down server...');
+        setTimeout(() => {
+          fetch('/api/exit');
+        }, 1500);
+      }
     }
 
     document.getElementById('btnGenerateMissing').addEventListener('click', () => {
       startGeneration(missingProducts);
     });
 
-    window.onload = () => {
-      loadStatus();
+    window.onload = async () => {
+      await loadStatus();
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('auto') === 'true') {
+        log('Auto-start generation triggered via url parameter.');
+        if (missingProducts.length > 0) {
+          startGeneration(missingProducts);
+        } else {
+          log('No missing products to generate. Exiting...');
+          setTimeout(() => {
+            fetch('/api/exit');
+          }, 1500);
+        }
+      }
     };
   </script>
 </body>
