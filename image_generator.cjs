@@ -64,26 +64,12 @@ function getProducts() {
 
 function getMissingTargetImages(products) {
   const missing = [];
-  const normalizedTargets = TARGET_INSPIRED.map(t => t.toLowerCase().replace(/[^a-z0-9]/g, ''));
-  
   for (const product of products) {
     if (!product.image) continue;
-    
-    // Check if the product matches our list of target inspired-by perfumes
-    const inspiredNormalized = (product.inspiredBy || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-    const nameNormalized = (product.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-    
-    const isTarget = normalizedTargets.some(target => 
-      inspiredNormalized.includes(target) || nameNormalized.includes(target)
-    );
-
-    if (isTarget) {
-      const cleanPath = product.image.startsWith('/') ? product.image.slice(1) : product.image;
-      const fullPath = path.join(PUBLIC_DIR, cleanPath);
-      
-      if (!fs.existsSync(fullPath)) {
-        missing.push(product);
-      }
+    const cleanPath = product.image.startsWith('/') ? product.image.slice(1) : product.image;
+    const fullPath = path.join(PUBLIC_DIR, cleanPath);
+    if (!fs.existsSync(fullPath)) {
+      missing.push(product);
     }
   }
   return missing;
@@ -121,7 +107,7 @@ const server = http.createServer((req, res) => {
     req.on('data', chunk => { body += chunk; });
     req.on('end', () => {
       try {
-        const { filename, dataUrl } = JSON.parse(body);
+        const { filename, dataUrl, overwrite } = JSON.parse(body);
         if (!filename || !dataUrl) {
           throw new Error("Missing filename or dataUrl");
         }
@@ -130,7 +116,7 @@ const server = http.createServer((req, res) => {
         const filePath = path.join(PUBLIC_DIR, cleanPath);
 
         // Never overwrite if file already exists
-        if (fs.existsSync(filePath)) {
+        if (fs.existsSync(filePath) && !overwrite) {
           console.log(`[SKIPPED] ${cleanPath} (File already exists, protecting original)`);
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: true, skipped: true, path: cleanPath }));
@@ -427,7 +413,7 @@ function getGeneratorHtml() {
       </div>
       <div class="stat-card">
         <div class="val" id="statMissing" style="color: #ff6b6b;">0</div>
-        <div class="lbl">Missing Target Images</div>
+        <div class="lbl">Missing Images</div>
       </div>
       <div class="stat-card">
         <div class="val" id="statProgress">0%</div>
@@ -437,6 +423,7 @@ function getGeneratorHtml() {
 
     <div class="controls">
       <button id="btnGenerateMissing" disabled>Generate Missing Images Only</button>
+      <button id="btnGenerateAll" style="background: #731827; color: white;">Regenerate All 130 Images (Force Overwrite)</button>
     </div>
 
     <div class="progress-bar-container" id="progressBarContainer">
@@ -751,15 +738,18 @@ function getGeneratorHtml() {
       ctx.fillText('50ML', centerX, 674);
     }
 
-    async function startGeneration(productList) {
+    async function startGeneration(productList, forceOverwrite = false) {
       if (isGenerating) return;
       isGenerating = true;
       
       document.getElementById('btnGenerateMissing').disabled = true;
+      if (document.getElementById('btnGenerateAll')) {
+        document.getElementById('btnGenerateAll').disabled = true;
+      }
       progressBarContainer.style.display = 'block';
       previewImg.style.display = 'block';
       
-      log(\`Starting generation of \smash{\${productList.length}} target images...\`);
+      log(\`Starting generation of \${productList.length} images...\`);
       
       const total = productList.length;
       let count = 0;
@@ -769,11 +759,11 @@ function getGeneratorHtml() {
 
       for (const product of productList) {
         if (!product.image) {
-          log(\`Skipping \smash{\${product.name}}: no image path specified.\`, 'info');
+          log(\`Skipping \${product.name}: no image path specified.\`, 'info');
           continue;
         }
         
-        previewTitle.innerText = \`Rendering: \smash{\${product.name}}\`;
+        previewTitle.innerText = \`Rendering: \${product.name}\`;
         
         try {
           await renderProduct(product);
@@ -785,22 +775,23 @@ function getGeneratorHtml() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               filename: product.image,
-              dataUrl: dataUrl
+              dataUrl: dataUrl,
+              overwrite: forceOverwrite
             })
           });
           
           const result = await response.json();
           if (result.success) {
             if (result.skipped) {
-              log(\`[SKIPPED] \smash{\${product.image}} (protected original)\`, 'info');
+              log(\`[SKIPPED] \${product.image} (already exists)\`, 'info');
             } else {
-              log(\`[SAVED] \smash{\${product.image}}\`);
+              log(\`[SAVED] \${product.image}\`);
             }
           } else {
             throw new Error(result.error || 'Unknown error');
           }
         } catch (err) {
-          log(\`Error processing \smash{\${product.name}}: \smash{\${err.message}}\`, 'error');
+          log(\`Error processing \${product.name}: \${err.message}\`, 'error');
         }
         
         count++;
@@ -809,11 +800,7 @@ function getGeneratorHtml() {
         document.getElementById('statProgress').innerText = pct + '%';
       }
       
-      isGenerating = false;
-      log(\`Done! Processed \smash{\${count}} files.\`, 'info');
-      previewTitle.innerText = 'Generation Complete!';
-      
-      await loadStatus();
+      await endGeneration(count);
 
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('auto') === 'true') {
@@ -824,8 +811,26 @@ function getGeneratorHtml() {
       }
     }
 
+    async function endGeneration(count) {
+      isGenerating = false;
+      log(\`Done! Processed \${count} files.\`, 'info');
+      previewTitle.innerText = 'Generation Complete!';
+      
+      document.getElementById('btnGenerateMissing').disabled = false;
+      if (document.getElementById('btnGenerateAll')) {
+        document.getElementById('btnGenerateAll').disabled = false;
+      }
+      await loadStatus();
+    }
+
     document.getElementById('btnGenerateMissing').addEventListener('click', () => {
-      startGeneration(missingProducts);
+      startGeneration(missingProducts, false);
+    });
+
+    document.getElementById('btnGenerateAll').addEventListener('click', () => {
+      if (confirm("Are you sure you want to regenerate and overwrite all perfume images? This will fix any naming/image mismatches.")) {
+        startGeneration(allProducts, true);
+      }
     });
 
     window.onload = async () => {
@@ -834,7 +839,7 @@ function getGeneratorHtml() {
       if (urlParams.get('auto') === 'true') {
         log('Auto-start generation triggered via url parameter.');
         if (missingProducts.length > 0) {
-          startGeneration(missingProducts);
+          startGeneration(missingProducts, false);
         } else {
           log('No missing products to generate. Exiting...');
           setTimeout(() => {

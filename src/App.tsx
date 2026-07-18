@@ -4260,7 +4260,7 @@ const DEFAULT_PRODUCTS: Product[] = [
   },
   {
     "id": "ck-one-unisex",
-    "name": "CK One",
+    "name": "CK One (Unisex)",
     "inspiredBy": "CK One by Calvin Klein",
     "gender": "Unisex",
     "concentration": "Eau de Parfum",
@@ -4303,7 +4303,7 @@ const DEFAULT_PRODUCTS: Product[] = [
   },
   {
     "id": "tom-ford-oud-wood-unisex",
-    "name": "Tom Ford Oud Wood",
+    "name": "Tom Ford Oud Wood (Unisex)",
     "inspiredBy": "Oud Wood by Tom Ford",
     "gender": "Unisex",
     "concentration": "Eau de Parfum",
@@ -4468,7 +4468,7 @@ const DEFAULT_PRODUCTS: Product[] = [
   },
   {
     "id": "ameer-al-oud-unisex",
-    "name": "Ameer Al Oud",
+    "name": "Ameer Al Oud (Unisex)",
     "inspiredBy": "Ameer Al Oudh by Lattafa",
     "gender": "Unisex",
     "concentration": "Eau de Parfum",
@@ -4549,7 +4549,7 @@ const DEFAULT_PRODUCTS: Product[] = [
   },
   {
     "id": "oud-mood-unisex",
-    "name": "Oud Mood",
+    "name": "Oud Mood (Unisex)",
     "inspiredBy": "Oud Mood by Lattafa",
     "gender": "Unisex",
     "concentration": "Eau de Parfum",
@@ -4748,7 +4748,7 @@ const DEFAULT_PRODUCTS: Product[] = [
   },
   {
     "id": "lattafa-khamrah-unisex",
-    "name": "Lattafa Khamrah",
+    "name": "Lattafa Khamrah (Unisex)",
     "inspiredBy": "Khamrah by Lattafa",
     "gender": "Unisex",
     "concentration": "Eau de Parfum",
@@ -5396,7 +5396,7 @@ const DEFAULT_PRODUCTS: Product[] = [
   },
   {
     "id": "creed-silver-mountain-water-unisex",
-    "name": "Creed Silver Mountain Water",
+    "name": "Creed Silver Mountain Water (Unisex)",
     "inspiredBy": "Silver Mountain Water by Creed",
     "gender": "Unisex",
     "concentration": "Eau de Parfum",
