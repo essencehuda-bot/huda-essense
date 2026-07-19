@@ -209,12 +209,25 @@ export default function PerfumeImage({ product, className }: Props) {
           ctx.closePath();
         };
 
-        const goldColor = '#7d6132'; // Deep, rich gold/bronze with high contrast
+        // Label sizing (perfectly fitted on the bottle's flat front face)
+        const rectW = 270;
+        const rectH = 340;
+        const rectX = centerX - rectW / 2;
+        const rectY = 475;
+
+        // Create metallic gold gradient for foil-like appearance on borders & logo
+        const goldGrad = ctx.createLinearGradient(rectX, rectY, rectX + rectW, rectY + rectH);
+        goldGrad.addColorStop(0, '#59441a');   // deep gold shadow
+        goldGrad.addColorStop(0.22, '#be9f6a'); // warm gold
+        goldGrad.addColorStop(0.45, '#f5e4c3'); // bright gold shine
+        goldGrad.addColorStop(0.55, '#f5e4c3'); // bright gold shine
+        goldGrad.addColorStop(0.78, '#be9f6a'); // warm gold
+        goldGrad.addColorStop(1, '#59441a');   // deep gold shadow
 
         const drawLeafLogo = (cx: number, cy: number) => {
           ctx.save();
-          ctx.fillStyle = goldColor;
-          ctx.strokeStyle = goldColor;
+          ctx.fillStyle = goldGrad;
+          ctx.strokeStyle = goldGrad;
           ctx.lineWidth = 2.0; // Bolder stem
           
           // Draw stem
@@ -252,27 +265,69 @@ export default function PerfumeImage({ product, className }: Props) {
           ctx.restore();
         };
 
-        // Draw sticker/label background (vertical rectangle 270x340 px, fits perfectly on bottle body)
-        const rectW = 270;
-        const rectH = 340;
-        const rectX = centerX - rectW / 2;
-        const rectY = 475;
+        // Draw soft drop shadow for the label to simulate real paper depth on glass
+        ctx.shadowColor = 'rgba(15, 10, 5, 0.18)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetX = 1;
+        ctx.shadowOffsetY = 3;
 
-        // Fill sticker with premium warm cream/ivory paper color
-        ctx.fillStyle = '#f9f6f0';
+        // Cylindrical 3D gradient for label background (simulates bottle curvature & lighting)
+        const labelGrad = ctx.createLinearGradient(rectX, 0, rectX + rectW, 0);
+        labelGrad.addColorStop(0, '#ebdcc5');    // shadow on left edge
+        labelGrad.addColorStop(0.12, '#fbf8f0'); // transition
+        labelGrad.addColorStop(0.5, '#ffffff');  // bright highlight in the center
+        labelGrad.addColorStop(0.88, '#fbf8f0'); // transition
+        labelGrad.addColorStop(1, '#ebdcc5');    // shadow on right edge
+
+        // Fill sticker with premium warm cream/ivory paper color (3D gradient)
+        ctx.fillStyle = labelGrad;
         drawRoundedRect(rectX, rectY, rectW, rectH, 16);
         ctx.fill();
 
-        // Draw outer gold border (thicker for high visibility)
-        ctx.strokeStyle = goldColor;
-        ctx.lineWidth = 2.2;
+        // RESET shadow for borders and text to keep them sharp
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 0;
+
+        // Draw outer gold border (metallic gold gradient)
+        ctx.strokeStyle = goldGrad;
+        ctx.lineWidth = 1.8;
         drawRoundedRect(rectX, rectY, rectW, rectH, 16);
         ctx.stroke();
 
         // Draw inner gold border (inset by 7px)
-        ctx.lineWidth = 1.0;
+        ctx.lineWidth = 0.8;
         drawRoundedRect(rectX + 7, rectY + 7, rectW - 14, rectH - 14, 11);
         ctx.stroke();
+
+        // Overlay a realistic diagonal glass reflection across the label paper
+        ctx.save();
+        drawRoundedRect(rectX, rectY, rectW, rectH, 16);
+        ctx.clip();
+
+        const reflectGrad = ctx.createLinearGradient(rectX, 0, rectX + rectW, 0);
+        reflectGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+        reflectGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.02)');
+        reflectGrad.addColorStop(0.65, 'rgba(255, 255, 255, 0.12)'); // soft white reflection highlight
+        reflectGrad.addColorStop(0.75, 'rgba(255, 255, 255, 0.02)');
+        reflectGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+        ctx.fillStyle = reflectGrad;
+        ctx.beginPath();
+        ctx.moveTo(rectX - 100, rectY);
+        ctx.lineTo(rectX + rectW, rectY);
+        ctx.lineTo(rectX + rectW + 100, rectY + rectH);
+        ctx.lineTo(rectX, rectY + rectH);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+
+        // Enable a very subtle letterpress shadow for printed elements to feel physical
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.12)';
+        ctx.shadowBlur = 1;
+        ctx.shadowOffsetX = 0.5;
+        ctx.shadowOffsetY = 0.5;
 
         // 1. Draw Leaf Logo
         drawLeafLogo(centerX, 515);
