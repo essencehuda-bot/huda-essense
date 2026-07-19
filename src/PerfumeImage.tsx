@@ -16,135 +16,146 @@ function getScentThemeTemplate(product: Product): string {
   const family = (product.family || '').toLowerCase();
   const name = (product.name || '').toLowerCase();
   const mood = (product.mood || '').toLowerCase();
+  const story = (product.story || '').toLowerCase();
+  const topNotes = (product.top || []).map(n => n.toLowerCase());
+  const heartNotes = (product.heart || []).map(n => n.toLowerCase());
+  const baseNotes = (product.base || []).map(n => n.toLowerCase());
 
+  // Aggregate all perfume text descriptive details
+  const allText = [
+    family,
+    name,
+    mood,
+    story,
+    ...topNotes,
+    ...heartNotes,
+    ...baseNotes
+  ].join(' ');
+
+  const scores = {
+    woody: 0,
+    leather: 0,
+    aquatic: 0,
+    spicy: 0,
+    green: 0,
+    white_floral: 0,
+    fruity: 0,
+    floral: 0
+  };
+
+  // 1. Woody keywords
+  const woodyKeywords = ['wood', 'oud', 'cedar', 'sandalwood', 'patchouli', 'vetiver', 'birch', 'incense', 'tobacco', 'amberwood', 'smoky', 'guaiac', 'cypress', 'commanding'];
+  woodyKeywords.forEach(k => {
+    if (allText.includes(k)) scores.woody += 2.5;
+  });
+
+  // 2. Leather keywords
+  const leatherKeywords = ['leather', 'suede', 'animalic', 'caban'];
+  leatherKeywords.forEach(k => {
+    if (allText.includes(k)) scores.leather += 5;
+  });
+
+  // 3. Aquatic keywords
+  const aquaticKeywords = ['aquatic', 'marine', 'sea', 'calone', 'ocean', 'water', 'salt', 'ozone', 'ozonic'];
+  aquaticKeywords.forEach(k => {
+    if (allText.includes(k)) scores.aquatic += 4;
+  });
+
+  // 4. Spicy / Amber / Vanilla keywords
+  const spicyKeywords = ['vanilla', 'vanille', 'spicy', 'spice', 'amber', 'cinnamon', 'cardamom', 'clove', 'nutmeg', 'ginger', 'tonka', 'meringue', 'chestnut', 'caramel', 'khamrah', 'warm', 'cocoa', 'coffee'];
+  spicyKeywords.forEach(k => {
+    if (allText.includes(k)) scores.spicy += 2.5;
+  });
+
+  // 5. Green / Herbal / Aromatic keywords
+  const greenKeywords = ['green', 'herbal', 'basil', 'sage', 'violet leaf', 'galbanum', 'grass', 'ivy', 'mint', 'oakmoss', 'aromatic', 'tweed'];
+  greenKeywords.forEach(k => {
+    if (allText.includes(k)) scores.green += 2.5;
+  });
+
+  // 6. White Floral keywords
+  const whiteFloralKeywords = ['jasmine', 'neroli', 'orange blossom', 'tuberose', 'gardenia', 'lily', 'freesia', 'magnolia', 'white floral', 'orange flower', 'bloom'];
+  whiteFloralKeywords.forEach(k => {
+    if (allText.includes(k)) scores.white_floral += 3;
+  });
+
+  // 7. Fruity / Sweet keywords
+  const fruityKeywords = ['fruity', 'sweet', 'cherry', 'peach', 'apple', 'pineapple', 'pear', 'strawberry', 'raspberry', 'blackcurrant', 'berry', 'berries', 'melon', 'coconut', 'gourmand', 'plum', 'mandarin', 'citrus', 'orange', 'grapefruit', 'lemon', 'lime', 'bergamot'];
+  fruityKeywords.forEach(k => {
+    if (allText.includes(k)) scores.fruity += 1.5;
+  });
+
+  // 8. Floral keywords
+  const floralKeywords = ['floral', 'rose', 'peony', 'iris', 'orchid', 'violet', 'geranium', 'lavender', 'blossom', 'flower', 'petal', 'petals', 'flora'];
+  floralKeywords.forEach(k => {
+    if (allText.includes(k)) scores.floral += 2.2;
+  });
+
+  // Boost based on family name
+  if (family.includes('wood') || family.includes('oud')) scores.woody += 5;
+  if (family.includes('leather')) scores.leather += 8;
+  if (family.includes('aquatic') || family.includes('marine')) scores.aquatic += 5;
+  if (family.includes('spicy') || family.includes('amber') || family.includes('oriental')) scores.spicy += 5;
+  if (family.includes('green') || family.includes('herbal')) scores.green += 5;
+  if (family.includes('white floral') || family.includes('jasmine')) scores.white_floral += 5;
+  else if (family.includes('floral') || family.includes('rose')) scores.floral += 4;
+  if (family.includes('fruity') || family.includes('sweet') || family.includes('gourmand')) scores.fruity += 5;
+
+  // Exact Name-Based Boosts to guarantee accuracy for specific iconic fragrances
+  if (name.includes('sauvage') || name.includes('bleu') || name.includes('cool water') || name.includes('hawas') || name.includes('chrome') || name.includes('explorer') || name.includes('acqua')) {
+    scores.aquatic += 12;
+  }
+  if (name.includes('rose') || name.includes('flora') || name.includes('chance') || name.includes('bright crystal')) {
+    scores.floral += 12;
+  }
+  if (name.includes('wood') || name.includes('oud') || name.includes('janan') || name.includes('prestige')) {
+    scores.woody += 12;
+  }
+  if (name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger')) {
+    scores.spicy += 12;
+  }
+  if (name.includes('black opium') || name.includes('la nuit') || name.includes('desire') || name.includes('eros') || name.includes('1 million')) {
+    scores.leather += 12;
+  }
+  if (name.includes('bloom') || name.includes('j\'adore') || name.includes('blue lady') || name.includes('jasmine') || name.includes('grace')) {
+    scores.white_floral += 12;
+  }
+  if (name.includes('yara') || name.includes('bombshell') || name.includes('cherry') || name.includes('rouge 540') || name.includes('baccarat') || name.includes('pear')) {
+    scores.fruity += 12;
+  }
+  if (name.includes('tweed') || name.includes('sage') || name.includes('legend') || name.includes('century')) {
+    scores.green += 12;
+  }
+
+  // Find highest scoring theme
+  let maxScore = -1;
+  let selectedTheme = 'floral';
   
+  (Object.keys(scores) as Array<keyof typeof scores>).forEach(theme => {
+    if (scores[theme] > maxScore) {
+      maxScore = scores[theme];
+      selectedTheme = theme;
+    }
+  });
 
-  // Theme 2: Woody, Oud, Smoky (the woody background with smoke and incense burner, matching reference)
-  if (
-    family.includes('wood') ||
-    family.includes('oud') ||
-    name.includes('wood') ||
-    name.includes('oud') ||
-    name.includes('janan') ||
-    name.includes('prestige') ||
-    name.includes('mood') ||
-    mood.includes('smoky') ||
-    mood.includes('oriental') ||
-    mood.includes('woody')
-  ) {
-    return '/images/base_woody.png';
-  }
-
-  // Theme 1: Fresh & Aquatic (navy blue bottle, ripples)
-  if (
-    family.includes('aquatic') ||
-    family.includes('marine') ||
-    name.includes('sauvage') ||
-    name.includes('bleu') ||
-    name.includes('cool water') ||
-    name.includes('acqua') ||
-    name.includes('hawas') ||
-    name.includes('chrome') ||
-    name.includes('explorer') ||
-    mood.includes('fresh') ||
-    mood.includes('aquatic')
-  ) {
-    return '/images/base_aquatic.png';
-  }
-
-  // Theme 3: Warm & Spicy / Amber (amber glass, cinnamon/vanilla)
-  if (
-    family.includes('spicy') ||
-    family.includes('amber') ||
-    name.includes('spicy') ||
-    name.includes('vanille') ||
-    name.includes('khamrah') ||
-    name.includes('asad') ||
-    name.includes('code') ||
-    name.includes('stronger') ||
-    mood.includes('warm') ||
-    mood.includes('sweet')
-  ) {
+  if (maxScore <= 0) {
+    if (product.gender === 'Men') return '/images/base_aquatic.png';
+    if (product.gender === 'Women') return '/images/base_floral.png';
     return '/images/base_spicy.png';
   }
 
-  // Theme 6: Bold Leather / Seductive (matte black/purple leather)
-  if (
-    family.includes('leather') ||
-    name.includes('leather') ||
-    name.includes('black opium') ||
-    name.includes('la nuit') ||
-    name.includes('desire') ||
-    name.includes('eros') ||
-    name.includes('1 million') ||
-    mood.includes('leather') ||
-    mood.includes('nocturnal') ||
-    mood.includes('seductive')
-  ) {
-    return '/images/base_leather.png';
-  }
+  const themeMap: Record<string, string> = {
+    woody: '/images/base_woody.png',
+    leather: '/images/base_leather.png',
+    aquatic: '/images/base_aquatic.png',
+    spicy: '/images/base_spicy.png',
+    green: '/images/base_green.png',
+    white_floral: '/images/base_white_floral.png',
+    fruity: '/images/base_fruity.png',
+    floral: '/images/base_floral.png',
+  };
 
-  // Theme 8: Green & Herbal (emerald green, ferns, daylight)
-  if (
-    family.includes('green') ||
-    family.includes('herbal') ||
-    name.includes('tweed') ||
-    name.includes('sage') ||
-    name.includes('neroli') ||
-    name.includes('legend') ||
-    name.includes('century')
-  ) {
-    return '/images/base_green.png';
-  }
-
-  // Theme 5: White Floral / Sweet Garden (clear glass, jasmine, fresh leaves)
-  if (
-    family.includes('white floral') ||
-    family.includes('jasmine') ||
-    name.includes('bloom') ||
-    name.includes('j\'adore') ||
-    name.includes('blue lady') ||
-    name.includes('jasmine') ||
-    name.includes('flower') ||
-    name.includes('grace')
-  ) {
-    return '/images/base_white_floral.png';
-  }
-
-  // Theme 7: Fruity & Sweet / Gourmand (ruby red, berries, gold flakes)
-  if (
-    family.includes('fruity') ||
-    name.includes('rouge 540') ||
-    name.includes('bombshell') ||
-    name.includes('yara') ||
-    name.includes('good girl') ||
-    name.includes('cherry')
-  ) {
-    return '/images/base_fruity.png';
-  }
-
-  // Theme 4: Rich Floral (default for women if not matching others: soft pink/peony petals)
-  if (
-    product.gender === 'Women' ||
-    family.includes('floral') ||
-    name.includes('flora') ||
-    name.includes('rose') ||
-    name.includes('chance') ||
-    name.includes('gabrielle') ||
-    name.includes('yellow diamond') ||
-    name.includes('bright crystal')
-  ) {
-    return '/images/base_floral.png';
-  }
-
-  // Default fallbacks by gender
-  if (product.gender === 'Men') {
-    return '/images/base_aquatic.png';
-  } else if (product.gender === 'Women') {
-    return '/images/base_floral.png';
-  } else {
-    return '/images/base_spicy.png';
-  }
+  return themeMap[selectedTheme] || '/images/base_spicy.png';
 }
 
 export default function PerfumeImage({ product, className }: Props) {
