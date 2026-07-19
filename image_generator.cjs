@@ -802,6 +802,28 @@ function getGeneratorHtml() {
       ctx.font = "600 12.5px 'Cormorant Garamond', 'Times New Roman', serif";
       ctx.fillText('— ESSENCE —', centerX, 595);
 
+      // 4. Draw separator line with diamond (centered Y = 625)
+      ctx.beginPath();
+      ctx.moveTo(centerX - 40, 625);
+      ctx.lineTo(centerX + 40, 625);
+      ctx.strokeStyle = 'rgba(28, 28, 28, 0.22)';
+      ctx.lineWidth = 0.8;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(centerX, 621);
+      ctx.lineTo(centerX + 4, 625);
+      ctx.lineTo(centerX, 629);
+      ctx.lineTo(centerX - 4, 625);
+      ctx.closePath();
+      ctx.fillStyle = goldGrad;
+      ctx.fill();
+
+      // 5. Draw "INSPIRED BY" (rich gold, bold, centered Y = 658)
+      ctx.font = "700 10.5px 'Instrument Sans', 'Arial', sans-serif";
+      ctx.fillStyle = goldGrad;
+      ctx.fillText('INSPIRED BY', centerX, 658);
+
       // 6. Draw clean perfume name (bold, sharp, and title case)
       const cleanName = product.name
         .replace(/\s+(men|women|unisex|pour\s+homme|pour\s+femme|for\s+him|for\s+her)\b/gi, '')
@@ -834,15 +856,16 @@ function getGeneratorHtml() {
       ctx.font = \`700 \${fontSize}px 'Cormorant Garamond', 'Times New Roman', serif\`;
       ctx.fillStyle = '#0d0d0d';
       const totalHeight = lines.length * lineHeight;
-      const startY = 665 - (totalHeight / 2) + (lineHeight / 2);
+      const startY = 705 - (totalHeight / 2) + (lineHeight / 2);
       lines.forEach((line, index) => {
-        ctx.fillText(line.toUpperCase(), centerX, startY + (index * lineHeight));
+        ctx.fillText(line, centerX, startY + (index * lineHeight));
       });
 
       // 7. Draw Gender
       ctx.font = "600 14px 'Cormorant Garamond', 'Times New Roman', serif";
       ctx.fillStyle = '#444444';
-      ctx.fillText(product.gender.toUpperCase(), centerX, 735);
+      const displayGender = product.gender === 'Women' ? 'Women' : product.gender === 'Men' ? 'Men' : 'Unisex';
+      ctx.fillText(displayGender, centerX, 755);
     }
 
     async function startGeneration(productList, forceOverwrite = false) {
