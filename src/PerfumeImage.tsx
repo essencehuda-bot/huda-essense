@@ -158,8 +158,12 @@ export default function PerfumeImage({ product, className }: Props) {
     }
 
     const drawCanvasTemplate = () => {
-      // Determine the template path
+      // Determine the background image to draw
       const baseImgPath = getScentThemeTemplate(product);
+      // If the image is a custom data URL (uploaded via admin), use it. Otherwise use the base template.
+      const bgSrc = (product.image && product.image.startsWith('data:image/')) 
+        ? product.image 
+        : baseImgPath;
 
       const img = new Image();
 
@@ -173,106 +177,186 @@ export default function PerfumeImage({ product, className }: Props) {
           return;
         }
 
-        // Draw the base bottle image
+        // Draw the background image
         ctx.drawImage(img, 0, 0, 1024, 1024);
 
-        // Label Bounding Box coordinates
-        const centerX = 511;
+        // Center X
+        const centerX = 512;
 
-        // --- Draw "HUDA ESSENCE" Header ---
+        const drawRoundedRect = (
+          x: number,
+          y: number,
+          width: number,
+          height: number,
+          radius: number
+        ) => {
+          ctx.beginPath();
+          ctx.moveTo(x + radius, y);
+          ctx.arcTo(x + width, y, x + width, y + height, radius);
+          ctx.arcTo(x + width, y + height, x, y + height, radius);
+          ctx.arcTo(x, y + height, x, y, radius);
+          ctx.arcTo(x, y, x + width, y, radius);
+          ctx.closePath();
+        };
+
+        const drawLeafLogo = (cx: number, cy: number) => {
+          ctx.save();
+          ctx.fillStyle = '#b5945b'; // Elegant gold color
+          ctx.strokeStyle = '#b5945b';
+          ctx.lineWidth = 1.5;
+          
+          // Draw stem
+          ctx.beginPath();
+          ctx.moveTo(cx, cy + 22);
+          ctx.quadraticCurveTo(cx - 2, cy + 5, cx, cy - 15);
+          ctx.stroke();
+          
+          // Helper to draw a single leaf pointing at an angle
+          const drawLeaf = (x: number, y: number, w: number, h: number, angle: number) => {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(angle);
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.quadraticCurveTo(w / 2, -h / 2, w, 0);
+            ctx.quadraticCurveTo(w / 2, h / 2, 0, 0);
+            ctx.fill();
+            ctx.restore();
+          };
+
+          // Top center leaf
+          drawLeaf(cx, cy - 15, 14, 7, -Math.PI / 2);
+          
+          // Upper left leaf
+          drawLeaf(cx - 2, cy - 3, 13, 6, -Math.PI * 0.7);
+          // Upper right leaf
+          drawLeaf(cx + 2, cy - 3, 13, 6, -Math.PI * 0.3);
+          
+          // Lower left leaf
+          drawLeaf(cx - 3, cy + 10, 14, 6.5, -Math.PI * 0.8);
+          // Lower right leaf
+          drawLeaf(cx + 3, cy + 10, 14, 6.5, -Math.PI * 0.2);
+          
+          ctx.restore();
+        };
+
+        // Draw sticker/label background (vertical rectangle 300x380 px, centered on bottle body)
+        const rectW = 300;
+        const rectH = 380;
+        const rectX = centerX - rectW / 2;
+        const rectY = 420;
+
+        // Fill sticker with warm white
+        ctx.fillStyle = '#ffffff';
+        drawRoundedRect(rectX, rectY, rectW, rectH, 16);
+        ctx.fill();
+
+        // Draw outer gold border
+        ctx.strokeStyle = '#b5945b';
+        ctx.lineWidth = 1.5;
+        drawRoundedRect(rectX, rectY, rectW, rectH, 16);
+        ctx.stroke();
+
+        // Draw inner gold border (inset by 7px)
+        ctx.lineWidth = 0.8;
+        drawRoundedRect(rectX + 7, rectY + 7, rectW - 14, rectH - 14, 11);
+        ctx.stroke();
+
+        // 1. Draw Leaf Logo
+        drawLeafLogo(centerX, 475);
+
+        // 2. Draw "HUDA" brand name
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = '#1c1c1c';
-        
-        // Top Brand Header
-        ctx.font = "600 13px 'Cormorant Garamond', 'Times New Roman', serif";
+        ctx.font = "bold 38px 'Cormorant Garamond', 'Times New Roman', serif";
         if ('letterSpacing' in ctx) {
-          (ctx as any).letterSpacing = '3px';
+          (ctx as any).letterSpacing = '1px';
         }
-        ctx.fillText('HUDA ESSENCE', centerX, 506);
+        ctx.fillText('HUDA', centerX, 530);
 
-        // Draw Horizontal Lines on both sides of HUDA ESSENCE
-        ctx.lineWidth = 0.8;
-        ctx.strokeStyle = 'rgba(28, 28, 28, 0.4)';
+        // 3. Draw "— ESSENCE —"
+        ctx.font = "500 13px 'Cormorant Garamond', 'Times New Roman', serif";
+        if ('letterSpacing' in ctx) {
+          (ctx as any).letterSpacing = '5px';
+        }
+        ctx.fillText('ESSENCE', centerX, 570);
+
+        // Reset letter spacing
+        if ('letterSpacing' in ctx) {
+          (ctx as any).letterSpacing = '0px';
+        }
+
+        // 4. Draw separator line with diamond
         ctx.beginPath();
-        ctx.moveTo(432, 506);
-        ctx.lineTo(448, 506);
-        ctx.moveTo(572, 506);
-        ctx.lineTo(588, 506);
+        ctx.moveTo(centerX - 40, 610);
+        ctx.lineTo(centerX + 40, 610);
+        ctx.strokeStyle = 'rgba(28, 28, 28, 0.15)';
+        ctx.lineWidth = 0.8;
         ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(centerX, 606);
+        ctx.lineTo(centerX + 4, 610);
+        ctx.lineTo(centerX, 614);
+        ctx.lineTo(centerX - 4, 610);
+        ctx.closePath();
+        ctx.fillStyle = '#b5945b';
+        ctx.fill();
+
+        // 5. Draw "INSPIRED BY"
+        ctx.font = "600 10.5px 'Instrument Sans', 'Arial', sans-serif";
+        ctx.fillStyle = '#b5945b';
+        if ('letterSpacing' in ctx) {
+          (ctx as any).letterSpacing = '2px';
+        }
+        ctx.fillText('INSPIRED BY', centerX, 645);
 
         if ('letterSpacing' in ctx) {
           (ctx as any).letterSpacing = '0px';
         }
 
-        // --- Draw Perfume Name ---
-        const name = product.name.trim();
-        const words = name.split(/\s+/);
+        // 6. Draw clean perfume name
+        const cleanName = product.name
+          .replace(/\s+(men|women|unisex|pour\s+homme|pour\s+femme|for\s+him|for\s+her)\b/gi, '')
+          .trim();
+
+        const words = cleanName.split(/\s+/);
         const lines: string[] = [];
         let currentLine = '';
-        
-        const maxChars = name.length > 20 ? 12 : 9;
-
-        words.forEach(word => {
-          if ((currentLine + ' ' + word).trim().length <= maxChars) {
-            currentLine = (currentLine + ' ' + word).trim();
+        const maxChars = cleanName.length > 20 ? 14 : 10;
+        words.forEach(w => {
+          if ((currentLine + ' ' + w).trim().length <= maxChars) {
+            currentLine = (currentLine + ' ' + w).trim();
           } else {
             if (currentLine) lines.push(currentLine);
-            currentLine = word;
+            currentLine = w;
           }
         });
         if (currentLine) lines.push(currentLine);
 
-        let fontSize = 23;
-        let lineHeight = 28;
-        
-        const maxLineLength = Math.max(...lines.map(l => l.length));
-        if (maxLineLength > 12 || lines.length > 3) {
-          fontSize = 15;
-          lineHeight = 19;
-        } else if (maxLineLength > 9 || lines.length > 2) {
-          fontSize = 18;
-          lineHeight = 22;
+        let fontSize = 22;
+        let lineHeight = 26;
+        if (lines.length === 2) {
+          fontSize = 19;
+          lineHeight = 23;
+        } else if (lines.length >= 3) {
+          fontSize = 16;
+          lineHeight = 20;
         }
 
         ctx.font = `700 ${fontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        
-        const totalNameHeight = lines.length * lineHeight;
-        const startY = 590 - (totalNameHeight / 2) + (lineHeight / 2);
-
+        ctx.fillStyle = '#1c1c1c';
+        const totalHeight = lines.length * lineHeight;
+        const startY = 695 - (totalHeight / 2) + (lineHeight / 2);
         lines.forEach((line, index) => {
-          ctx.fillText(line.toUpperCase(), centerX, startY + (index * lineHeight));
+          ctx.fillText(line, centerX, startY + (index * lineHeight));
         });
 
-        // --- Draw Gender & Concentration ---
-        if ('letterSpacing' in ctx) {
-          (ctx as any).letterSpacing = '2px';
-        }
-        ctx.font = "600 10.5px 'Instrument Sans', 'Arial', sans-serif";
-        ctx.fillStyle = 'rgba(28, 28, 28, 0.75)';
-        
-        let genderText = 'FOR HIM';
-        if (product.gender === 'Women') genderText = 'FOR HER';
-        else if (product.gender === 'Unisex') genderText = 'FOR UNISEX';
-        
-        ctx.fillText(genderText, centerX, 666);
-
-        if ('letterSpacing' in ctx) {
-          (ctx as any).letterSpacing = '1.5px';
-        }
-        ctx.font = "500 9.5px 'Instrument Sans', 'Arial', sans-serif";
-        ctx.fillStyle = 'rgba(28, 28, 28, 0.55)';
-        
-        const concentration = product.concentration ? product.concentration.toUpperCase() : 'EAU DE PARFUM';
-        ctx.fillText(concentration, centerX, 683);
-
-        // --- Draw Bottom Logo/Signature ---
-        if ('letterSpacing' in ctx) {
-          (ctx as any).letterSpacing = '4px';
-        }
-        ctx.font = "600 10px 'Cormorant Garamond', 'Times New Roman', serif";
-        ctx.fillStyle = 'rgba(28, 28, 28, 0.6)';
-        ctx.fillText('ATELIER', centerX, 715);
+        // 7. Draw Gender
+        ctx.font = "500 13px 'Cormorant Garamond', 'Times New Roman', serif";
+        ctx.fillStyle = 'rgba(28, 28, 28, 0.7)';
+        ctx.fillText(product.gender, centerX, 750);
 
         try {
           const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
@@ -285,28 +369,15 @@ export default function PerfumeImage({ product, className }: Props) {
       };
 
       img.onerror = () => {
-        console.error('Failed to load base image:', baseImgPath);
+        console.error('Failed to load background image:', bgSrc);
         setSrc(baseImgPath);
       };
 
       // Set src after setting up handlers to prevent race condition
-      img.src = baseImgPath;
+      img.src = bgSrc;
     };
 
-    if (product.image) {
-      const testImg = new Image();
-      testImg.onload = () => {
-        imageCache[product.id] = product.image;
-        setSrc(product.image);
-      };
-      testImg.onerror = () => {
-        drawCanvasTemplate();
-      };
-      // Set src after setting up handlers to prevent race condition
-      testImg.src = product.image;
-    } else {
-      drawCanvasTemplate();
-    }
+    drawCanvasTemplate();
   }, [product]);
 
   return src ? (
