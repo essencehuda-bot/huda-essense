@@ -168,9 +168,13 @@ export default function PerfumeImage({ product, className }: Props) {
       return;
     }
 
+    const baseImgPath = getScentThemeTemplate(product);
+
     const drawCanvasTemplate = () => {
-      // Use product.image directly if it exists (allows custom images/backgrounds), otherwise fall back to note-based template path
-      const bgSrc = product.image ? product.image : baseImgPath;
+      // If it's a custom data image, draw on top of it. Otherwise draw on top of base template.
+      const bgSrc = (product.image && product.image.startsWith('data:image/'))
+        ? product.image
+        : baseImgPath;
 
       const img = new Image();
 
@@ -416,7 +420,24 @@ export default function PerfumeImage({ product, className }: Props) {
       img.src = bgSrc;
     };
 
-    drawCanvasTemplate();
+    // If it is a pre-rendered static image (like /images/dior-sauvage.png), try to load it directly
+    const isPreRendered = product.image && 
+                          product.image.startsWith('/images/') && 
+                          !product.image.startsWith('/images/base_');
+
+    if (isPreRendered) {
+      const img = new Image();
+      img.onload = () => {
+        imageCache[product.id] = product.image;
+        setSrc(product.image);
+      };
+      img.onerror = () => {
+        drawCanvasTemplate();
+      };
+      img.src = product.image;
+    } else {
+      drawCanvasTemplate();
+    }
   }, [product]);
 
   return src ? (
