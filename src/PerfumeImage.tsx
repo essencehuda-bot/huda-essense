@@ -180,6 +180,9 @@ export default function PerfumeImage({ product, className }: Props) {
         // Draw the background image
         ctx.drawImage(img, 0, 0, 1024, 1024);
 
+        // Ensure full opacity for drawing the sticker
+        ctx.globalAlpha = 1.0;
+
         // Center X
         const centerX = 512;
 
@@ -199,11 +202,13 @@ export default function PerfumeImage({ product, className }: Props) {
           ctx.closePath();
         };
 
+        const goldColor = '#7d6132'; // Deep, rich gold/bronze with high contrast
+
         const drawLeafLogo = (cx: number, cy: number) => {
           ctx.save();
-          ctx.fillStyle = '#b5945b'; // Elegant gold color
-          ctx.strokeStyle = '#b5945b';
-          ctx.lineWidth = 1.5;
+          ctx.fillStyle = goldColor;
+          ctx.strokeStyle = goldColor;
+          ctx.lineWidth = 2.0; // Bolder stem
           
           // Draw stem
           ctx.beginPath();
@@ -240,47 +245,47 @@ export default function PerfumeImage({ product, className }: Props) {
           ctx.restore();
         };
 
-        // Draw sticker/label background (vertical rectangle 300x380 px, centered on bottle body)
-        const rectW = 300;
-        const rectH = 380;
+        // Draw sticker/label background (vertical rectangle 270x340 px, fits perfectly on bottle body)
+        const rectW = 270;
+        const rectH = 340;
         const rectX = centerX - rectW / 2;
-        const rectY = 420;
+        const rectY = 475;
 
-        // Fill sticker with warm white
-        ctx.fillStyle = '#ffffff';
+        // Fill sticker with premium warm cream/ivory paper color
+        ctx.fillStyle = '#f9f6f0';
         drawRoundedRect(rectX, rectY, rectW, rectH, 16);
         ctx.fill();
 
-        // Draw outer gold border
-        ctx.strokeStyle = '#b5945b';
-        ctx.lineWidth = 1.5;
+        // Draw outer gold border (thicker for high visibility)
+        ctx.strokeStyle = goldColor;
+        ctx.lineWidth = 2.2;
         drawRoundedRect(rectX, rectY, rectW, rectH, 16);
         ctx.stroke();
 
         // Draw inner gold border (inset by 7px)
-        ctx.lineWidth = 0.8;
+        ctx.lineWidth = 1.0;
         drawRoundedRect(rectX + 7, rectY + 7, rectW - 14, rectH - 14, 11);
         ctx.stroke();
 
         // 1. Draw Leaf Logo
-        drawLeafLogo(centerX, 475);
+        drawLeafLogo(centerX, 515);
 
-        // 2. Draw "HUDA" brand name
+        // 2. Draw "HUDA" brand name (sharp, solid charcoal color)
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillStyle = '#1c1c1c';
+        ctx.fillStyle = '#0d0d0d';
         ctx.font = "bold 38px 'Cormorant Garamond', 'Times New Roman', serif";
         if ('letterSpacing' in ctx) {
           (ctx as any).letterSpacing = '1px';
         }
-        ctx.fillText('HUDA', centerX, 530);
+        ctx.fillText('HUDA', centerX, 562);
 
         // 3. Draw "— ESSENCE —"
-        ctx.font = "500 13px 'Cormorant Garamond', 'Times New Roman', serif";
+        ctx.font = "600 12.5px 'Cormorant Garamond', 'Times New Roman', serif";
         if ('letterSpacing' in ctx) {
           (ctx as any).letterSpacing = '5px';
         }
-        ctx.fillText('ESSENCE', centerX, 570);
+        ctx.fillText('ESSENCE', centerX, 595);
 
         // Reset letter spacing
         if ('letterSpacing' in ctx) {
@@ -289,34 +294,34 @@ export default function PerfumeImage({ product, className }: Props) {
 
         // 4. Draw separator line with diamond
         ctx.beginPath();
-        ctx.moveTo(centerX - 40, 610);
-        ctx.lineTo(centerX + 40, 610);
-        ctx.strokeStyle = 'rgba(28, 28, 28, 0.15)';
+        ctx.moveTo(centerX - 40, 625);
+        ctx.lineTo(centerX + 40, 625);
+        ctx.strokeStyle = 'rgba(28, 28, 28, 0.25)';
         ctx.lineWidth = 0.8;
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.moveTo(centerX, 606);
-        ctx.lineTo(centerX + 4, 610);
-        ctx.lineTo(centerX, 614);
-        ctx.lineTo(centerX - 4, 610);
+        ctx.moveTo(centerX, 621);
+        ctx.lineTo(centerX + 4, 625);
+        ctx.lineTo(centerX, 629);
+        ctx.lineTo(centerX - 4, 625);
         ctx.closePath();
-        ctx.fillStyle = '#b5945b';
+        ctx.fillStyle = goldColor;
         ctx.fill();
 
-        // 5. Draw "INSPIRED BY"
-        ctx.font = "600 10.5px 'Instrument Sans', 'Arial', sans-serif";
-        ctx.fillStyle = '#b5945b';
+        // 5. Draw "INSPIRED BY" (rich gold, bold)
+        ctx.font = "700 11px 'Instrument Sans', 'Arial', sans-serif";
+        ctx.fillStyle = goldColor;
         if ('letterSpacing' in ctx) {
           (ctx as any).letterSpacing = '2px';
         }
-        ctx.fillText('INSPIRED BY', centerX, 645);
+        ctx.fillText('INSPIRED BY', centerX, 655);
 
         if ('letterSpacing' in ctx) {
           (ctx as any).letterSpacing = '0px';
         }
 
-        // 6. Draw clean perfume name
+        // 6. Draw clean perfume name (bold, sharp, and title case)
         const cleanName = product.name
           .replace(/\s+(men|women|unisex|pour\s+homme|pour\s+femme|for\s+him|for\s+her)\b/gi, '')
           .trim();
@@ -335,28 +340,28 @@ export default function PerfumeImage({ product, className }: Props) {
         });
         if (currentLine) lines.push(currentLine);
 
-        let fontSize = 22;
-        let lineHeight = 26;
+        let fontSize = 21;
+        let lineHeight = 25;
         if (lines.length === 2) {
-          fontSize = 19;
-          lineHeight = 23;
+          fontSize = 18;
+          lineHeight = 22;
         } else if (lines.length >= 3) {
-          fontSize = 16;
-          lineHeight = 20;
+          fontSize = 15;
+          lineHeight = 18;
         }
 
         ctx.font = `700 ${fontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        ctx.fillStyle = '#1c1c1c';
+        ctx.fillStyle = '#0d0d0d';
         const totalHeight = lines.length * lineHeight;
-        const startY = 695 - (totalHeight / 2) + (lineHeight / 2);
+        const startY = 702 - (totalHeight / 2) + (lineHeight / 2);
         lines.forEach((line, index) => {
           ctx.fillText(line, centerX, startY + (index * lineHeight));
         });
 
         // 7. Draw Gender
-        ctx.font = "500 13px 'Cormorant Garamond', 'Times New Roman', serif";
-        ctx.fillStyle = 'rgba(28, 28, 28, 0.7)';
-        ctx.fillText(product.gender, centerX, 750);
+        ctx.font = "600 14px 'Cormorant Garamond', 'Times New Roman', serif";
+        ctx.fillStyle = '#444444';
+        ctx.fillText(product.gender, centerX, 752);
 
         try {
           const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
