@@ -5710,7 +5710,8 @@ export default function App() {
               Premium Impressions
             </div>
             <h1 className="text-[44px] sm:text-[56px] lg:text-[70px] leading-[1.0] tracking-[-0.015em] mt-6 text-[#7b1d2a]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
-              Perfume house
+              Branded Fragrances Ki Wohi Khushboo,<br />
+              Ab Har Kisi Ki Pohanch Mein.
             </h1>
             <p className="mt-[22px] text-[17px] leading-relaxed text-[#7b1d2a] font-[500] border-l-2 border-[#a36f24] pl-4 max-w-[540px] bg-[#a36f24]/5 py-2.5 pr-3 rounded-r-lg">
               Apni pasand ki fragrance ab sasti qeemat main...
