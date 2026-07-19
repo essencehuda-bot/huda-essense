@@ -169,12 +169,8 @@ export default function PerfumeImage({ product, className }: Props) {
     }
 
     const drawCanvasTemplate = () => {
-      // Determine the background image to draw
-      const baseImgPath = getScentThemeTemplate(product);
-      // If the image is a custom data URL (uploaded via admin), use it. Otherwise use the base template.
-      const bgSrc = (product.image && product.image.startsWith('data:image/')) 
-        ? product.image 
-        : baseImgPath;
+      // Use product.image directly if it exists (allows custom images/backgrounds), otherwise fall back to note-based template path
+      const bgSrc = product.image ? product.image : baseImgPath;
 
       const img = new Image();
 
@@ -303,35 +299,6 @@ export default function PerfumeImage({ product, className }: Props) {
           (ctx as any).letterSpacing = '0px';
         }
 
-        // 4. Draw separator line with diamond
-        ctx.beginPath();
-        ctx.moveTo(centerX - 40, 625);
-        ctx.lineTo(centerX + 40, 625);
-        ctx.strokeStyle = 'rgba(28, 28, 28, 0.25)';
-        ctx.lineWidth = 0.8;
-        ctx.stroke();
-
-        ctx.beginPath();
-        ctx.moveTo(centerX, 621);
-        ctx.lineTo(centerX + 4, 625);
-        ctx.lineTo(centerX, 629);
-        ctx.lineTo(centerX - 4, 625);
-        ctx.closePath();
-        ctx.fillStyle = goldColor;
-        ctx.fill();
-
-        // 5. Draw "INSPIRED BY" (rich gold, bold)
-        ctx.font = "700 11px 'Instrument Sans', 'Arial', sans-serif";
-        ctx.fillStyle = goldColor;
-        if ('letterSpacing' in ctx) {
-          (ctx as any).letterSpacing = '2px';
-        }
-        ctx.fillText('INSPIRED BY', centerX, 655);
-
-        if ('letterSpacing' in ctx) {
-          (ctx as any).letterSpacing = '0px';
-        }
-
         // 6. Draw clean perfume name (bold, sharp, and title case)
         const cleanName = product.name
           .replace(/\s+(men|women|unisex|pour\s+homme|pour\s+femme|for\s+him|for\s+her)\b/gi, '')
@@ -364,15 +331,16 @@ export default function PerfumeImage({ product, className }: Props) {
         ctx.font = `700 ${fontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
         ctx.fillStyle = '#0d0d0d';
         const totalHeight = lines.length * lineHeight;
-        const startY = 702 - (totalHeight / 2) + (lineHeight / 2);
+        // Shift startY up so the names are centered where the diamond and inspired by used to be
+        const startY = 665 - (totalHeight / 2) + (lineHeight / 2);
         lines.forEach((line, index) => {
-          ctx.fillText(line, centerX, startY + (index * lineHeight));
+          ctx.fillText(line.toUpperCase(), centerX, startY + (index * lineHeight));
         });
 
         // 7. Draw Gender
         ctx.font = "600 14px 'Cormorant Garamond', 'Times New Roman', serif";
         ctx.fillStyle = '#444444';
-        ctx.fillText(product.gender, centerX, 752);
+        ctx.fillText(product.gender.toUpperCase(), centerX, 735);
 
         try {
           const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
