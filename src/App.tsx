@@ -5707,7 +5707,7 @@ export default function App() {
           <div>
             <div className="inline-flex items-center gap-2 text-[11px] tracking-[0.20em] text-[#a36f24] uppercase font-[500]">
               <span className="w-[38px] h-px bg-[#d2b280]"></span>
-              Premium Impressions
+              PERFUME HOUSE HUDA ESSENCE
             </div>
             <h1 className="text-[44px] sm:text-[56px] lg:text-[70px] leading-[1.0] tracking-[-0.015em] mt-6 text-[#7b1d2a]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
               Branded Fragrances Ki Wohi Khushboo,<br />
