@@ -2238,7 +2238,7 @@ const DEFAULT_PRODUCTS: Product[] = [
       "Vetiver"
     ],
     "mood": "bold • modern • intoxicating",
-    "image": "/images/gucci-rush.png",
+    "image": "",
     "story": "An intoxicating and bold modern fragrance that leaves an unforgettable trail.",
     "sizes": [
       {
