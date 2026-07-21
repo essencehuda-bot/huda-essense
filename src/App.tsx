@@ -6187,16 +6187,35 @@ export default function App() {
             <h3 className="text-[40px] lg:text-[48px] leading-[0.95] mt-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Have a question?<br />We'd love to help.</h3>
             <div className="mt-6 space-y-4 text-[15px] text-[#4b3828]">
               {[
-                ["📱", "WhatsApp", `+${whatsappNum.replace(/(\d{2})(\d{3})(\d{7})/, "$1 $2 $3")}`],
-                ["📧", "Email", "hello@hudaessence.pk"],
-                ["📍", "Location", "Karachi, Pakistan"],
-                ["⏰", "Hours", "Mon–Sat 11am–10pm PKT"],
-              ].map(([icon, label, val]) => (
-                <div key={label} className="flex items-start gap-3">
-                  <span className="text-[20px]">{icon}</span>
-                  <div><div className="font-[600]">{label}</div><div className="text-[#7a6548]">{val}</div></div>
-                </div>
-              ))}
+                { icon: "📱", label: "WhatsApp", val: `+${whatsappNum.replace(/(\d{2})(\d{3})(\d{7})/, "$1 $2 $3")}`, href: `https://wa.me/${whatsappNum}` },
+                { icon: "📸", label: "Instagram", val: "@hudaessence2026", href: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" },
+                { icon: "📘", label: "Facebook", val: "Huda Essence", href: "https://www.facebook.com/share/18vFchSaVf/" },
+                { icon: "📧", label: "Email", val: "hello@hudaessence.pk", href: "mailto:hello@hudaessence.pk" },
+                { icon: "📍", label: "Location", val: "Karachi, Pakistan" },
+                { icon: "⏰", label: "Hours", val: "Mon–Sat 11am–10pm PKT" },
+              ].map(({ icon, label, val, href }) => {
+                const Content = () => (
+                  <>
+                    <span className="text-[20px]">{icon}</span>
+                    <div>
+                      <div className="font-[650] flex items-center gap-1 text-[#24160c]">
+                        {label}
+                        {href && <span className="text-[10px] text-[#b07a28] font-normal opacity-70 group-hover:translate-x-0.5 group-hover:opacity-100 transition-all">→</span>}
+                      </div>
+                      <div className="text-[#7a6548] group-hover:text-[#b07a28] transition-colors duration-200">{val}</div>
+                    </div>
+                  </>
+                );
+                return href ? (
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group cursor-pointer hover:translate-x-1 transition-all duration-200">
+                    <Content />
+                  </a>
+                ) : (
+                  <div key={label} className="flex items-start gap-3">
+                    <Content />
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div>
@@ -6218,6 +6237,18 @@ export default function App() {
           <div>
             <div onClick={() => setAdminClicks(c => c + 1)} className="cursor-default"><Logo size="footer" /></div>
             <p className="mt-4 text-[#9a836a] leading-relaxed">Premium impression perfumes inspired by the world's finest designer fragrances. Made for Pakistan.</p>
+            <div className="mt-6 flex gap-3">
+              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2a2018] flex items-center justify-center text-[#9a836a] hover:text-[#f0dcc0] hover:border-[#f0dcc0] hover:bg-[#1f1712] transition duration-200" title="Follow @hudaessence2026 on Instagram">
+                <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/share/18vFchSaVf/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2a2018] flex items-center justify-center text-[#9a836a] hover:text-[#f0dcc0] hover:border-[#f0dcc0] hover:bg-[#1f1712] transition duration-200" title="Follow us on Facebook">
+                <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                  <path d="M9 8H7v3h2v9h4v-9h3.625L17 8h-4V6.875C13 5.9 13.5 5.5 14.5 5.5h2.5V2h-3.625C9.75 2 9 3.5 9 5.625V8z" />
+                </svg>
+              </a>
+            </div>
           </div>
           <div>
             <div className="font-[650] mb-3 text-[#f0dcc0]">Shop</div>
