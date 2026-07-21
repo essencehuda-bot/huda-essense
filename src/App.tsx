@@ -42,15 +42,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -88,15 +88,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -131,15 +131,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -177,15 +177,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -215,15 +215,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -256,15 +256,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -296,15 +296,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -341,15 +341,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -385,15 +385,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -429,15 +429,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -468,15 +468,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.85,
@@ -512,15 +512,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.86,
@@ -555,15 +555,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.87,
@@ -598,15 +598,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.88,
@@ -642,15 +642,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.89,
@@ -684,15 +684,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.9,
@@ -727,15 +727,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.91,
@@ -769,15 +769,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.92,
@@ -812,15 +812,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.93,
@@ -854,15 +854,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.94,
@@ -898,15 +898,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -938,15 +938,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -983,15 +983,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -1023,15 +1023,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -1065,15 +1065,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -1106,15 +1106,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -1146,15 +1146,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -1190,15 +1190,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -1234,15 +1234,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -1275,15 +1275,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -1319,15 +1319,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.85,
@@ -1361,15 +1361,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.86,
@@ -1406,15 +1406,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.87,
@@ -1449,15 +1449,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.88,
@@ -1493,15 +1493,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.89,
@@ -1535,15 +1535,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.9,
@@ -1576,15 +1576,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.91,
@@ -1620,15 +1620,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.92,
@@ -1664,15 +1664,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.93,
@@ -1708,15 +1708,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.94,
@@ -1753,15 +1753,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -1797,15 +1797,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -1840,15 +1840,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -1880,15 +1880,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -1923,15 +1923,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -1964,15 +1964,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -2004,15 +2004,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -2044,15 +2044,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -2084,15 +2084,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -2124,15 +2124,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -2165,15 +2165,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -2202,15 +2202,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -2243,15 +2243,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -2284,15 +2284,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -2331,15 +2331,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -2374,15 +2374,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -2416,15 +2416,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -2459,15 +2459,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -2502,15 +2502,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -2544,15 +2544,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -2588,15 +2588,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.85,
@@ -2632,15 +2632,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.86,
@@ -2676,15 +2676,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.87,
@@ -2720,15 +2720,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.88,
@@ -2765,15 +2765,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.89,
@@ -2809,15 +2809,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.9,
@@ -2852,15 +2852,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.91,
@@ -2898,15 +2898,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.92,
@@ -2934,15 +2934,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.93,
@@ -2970,15 +2970,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.94,
@@ -3017,15 +3017,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -3056,15 +3056,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -3095,15 +3095,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -3138,15 +3138,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -3178,15 +3178,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -3221,15 +3221,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -3263,15 +3263,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -3307,15 +3307,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -3345,15 +3345,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -3385,15 +3385,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -3422,15 +3422,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.85,
@@ -3467,15 +3467,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.86,
@@ -3512,15 +3512,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.87,
@@ -3554,15 +3554,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.88,
@@ -3595,15 +3595,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.89,
@@ -3631,15 +3631,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.9,
@@ -3675,15 +3675,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.91,
@@ -3720,15 +3720,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.92,
@@ -3758,15 +3758,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.93,
@@ -3797,15 +3797,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.94,
@@ -3839,15 +3839,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -3883,15 +3883,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -3923,15 +3923,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -3966,15 +3966,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -4009,15 +4009,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -4048,15 +4048,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -4087,15 +4087,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -4125,15 +4125,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -4164,15 +4164,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -4204,15 +4204,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -4244,15 +4244,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -4287,15 +4287,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -4329,15 +4329,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -4371,15 +4371,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -4411,15 +4411,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -4452,15 +4452,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -4491,15 +4491,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -4533,15 +4533,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -4573,15 +4573,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -4615,15 +4615,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -4653,15 +4653,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.85,
@@ -4692,15 +4692,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.86,
@@ -4732,15 +4732,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.87,
@@ -4774,15 +4774,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.88,
@@ -4816,15 +4816,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.89,
@@ -4860,15 +4860,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.9,
@@ -4904,15 +4904,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.91,
@@ -4943,15 +4943,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.92,
@@ -4982,15 +4982,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.93,
@@ -5021,15 +5021,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.94,
@@ -5062,15 +5062,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.75,
@@ -5104,15 +5104,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.76,
@@ -5144,15 +5144,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.77,
@@ -5187,15 +5187,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.78,
@@ -5227,15 +5227,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.79,
@@ -5263,15 +5263,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.8,
@@ -5299,15 +5299,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.81,
@@ -5337,15 +5337,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.82,
@@ -5380,15 +5380,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.83,
@@ -5421,15 +5421,15 @@ const DEFAULT_PRODUCTS: Product[] = [
     "sizes": [
       {
         "ml": 10,
-        "price": 300
+        "price": 299
       },
       {
         "ml": 50,
-        "price": 1300
+        "price": 1299
       },
       {
         "ml": 100,
-        "price": 2500
+        "price": 2499
       }
     ],
     "rating": 4.84,
@@ -6100,7 +6100,7 @@ export default function App() {
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[960px] mx-auto">
             {[
               ["Premium Oils", "High-quality fragrance oils sourced for long-lasting performance."],
-              ["Affordable Luxury", "Designer-inspired scents from just PKR 300 for 10ml."],
+              ["Affordable Luxury", "Designer-inspired scents from just PKR 299 for 10ml."],
               ["Made for Pakistan", "Formulated to perform in our hot and humid climate."],
               ["Flat Delivery", `Flat PKR ${deliveryCharge} delivery charge within Karachi only.`],
               ["Prepayment Required", "Payment via JazzCash, EasyPaisa, or Bank Transfer."],
@@ -6123,7 +6123,7 @@ export default function App() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { name: "Fatima A.", city: "Karachi", text: "Tea Rose is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,300 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rose • 50ml", stars: 5 },
+            { name: "Fatima A.", city: "Karachi", text: "Tea Rose is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rose • 50ml", stars: 5 },
             { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 100ml", stars: 5 },
             { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 8+ hours.", scent: "Armani Code + Miss Dior", stars: 5 },
           ].map((r, i) => (
@@ -6175,7 +6175,7 @@ export default function App() {
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml PKR 300 • 50ml PKR 1,300 • 100ml PKR 2,500 — same price for every fragrance</div>
+          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml PKR 299 • 50ml PKR 1,299 • 100ml PKR 2,499 — same price for every fragrance</div>
         </div>
       </section>
 
@@ -6268,9 +6268,9 @@ export default function App() {
           <div>
             <div className="font-[650] mb-3 text-[#f0dcc0]">Pricing (PKR)</div>
             <ul className="space-y-2 text-[#a89070]">
-              <li>10ml — PKR 300</li>
-              <li>50ml — PKR 1,300</li>
-              <li>100ml — PKR 2,500</li>
+              <li>10ml — PKR 299</li>
+              <li>50ml — PKR 1,299</li>
+              <li>100ml — PKR 2,499</li>
               <li className="pt-1 text-[#c9a86c]">PKR {deliveryCharge} delivery (Karachi Only) • Prepayment only</li>
             </ul>
           </div>

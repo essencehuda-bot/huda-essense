@@ -81,7 +81,7 @@ const EMPTY_PRODUCT: ProductData = {
   heart: [],
   base: [],
   mood: "",
-  sizes: [{ ml: 10, price: 300 }, { ml: 50, price: 1300 }, { ml: 100, price: 2500 }],
+  sizes: [{ ml: 10, price: 299 }, { ml: 50, price: 1299 }, { ml: 100, price: 2499 }],
   image: "",
   bestseller: false,
   nouveau: false,
