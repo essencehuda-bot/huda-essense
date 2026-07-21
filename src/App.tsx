@@ -5949,13 +5949,13 @@ export default function App() {
                 {group.items.map(p => (
                   <div key={p.id} className="group bg-white rounded-[26px] border border-[#ead9bf] overflow-hidden hover:shadow-[0_30px_80px_rgba(120,90,40,0.18)] hover:-translate-y-1.5 transition-all duration-500">
                     <div className="relative overflow-hidden">
-                      <PerfumeImage product={p} className="h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
+                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700 cursor-pointer" />
                       <div className="absolute top-4 left-4 flex gap-2">
                         {p.bestseller && <span className="bg-[#19120d] text-[#f4e2c2] px-3.5 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] font-[600] uppercase">Bestseller</span>}
                         {p.nouveau && <span className="bg-[#7b1d2a] text-white px-3.5 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] font-[600] uppercase">New</span>}
                       </div>
                       <button
-                        onClick={() => toggleWish(p.id)}
+                        onClick={(e) => { e.stopPropagation(); toggleWish(p.id); }}
                         className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/95 grid place-items-center border border-[#efdcc1] hover:scale-110 transition-transform"
                       >
                         <svg width="17" height="17" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#b32d3a" : "none"} stroke={wishlist.includes(p.id) ? "#b32d3a" : "#5b4b3a"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
@@ -5963,7 +5963,7 @@ export default function App() {
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                         <div className="flex gap-2 justify-center">
                           {p.sizes.map(s => (
-                            <button key={s.ml} onClick={() => addToCart(p.id, s.ml)} className="px-3 py-2 rounded-xl bg-white/95 text-[12.5px] font-[600] text-[#2a1c11] hover:bg-[#f5e5c8] transition">
+                            <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-3 py-2 rounded-xl bg-white/95 text-[12.5px] font-[600] text-[#2a1c11] hover:bg-[#f5e5c8] transition">
                               {s.ml}ml — {PKR(s.price)}
                             </button>
                           ))}

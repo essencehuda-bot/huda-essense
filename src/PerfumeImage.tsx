@@ -9,6 +9,7 @@ const imageCache: Record<string, string> = {};
 interface Props {
   product: Product;
   className?: string;
+  onClick?: () => void;
 }
 
 // Automatically select the template based on the fragrance's family, name, and notes
@@ -158,7 +159,7 @@ function getScentThemeTemplate(product: Product): string {
   return themeMap[selectedTheme] || '/images/base_spicy.png';
 }
 
-export default function PerfumeImage({ product, className }: Props) {
+export default function PerfumeImage({ product, className, onClick }: Props) {
   const [src, setSrc] = useState<string>('');
 
   useEffect(() => {
@@ -557,9 +558,9 @@ export default function PerfumeImage({ product, className }: Props) {
   }, [product]);
 
   return src ? (
-    <img src={src} alt={product.name} className={className} />
+    <img src={src} alt={product.name} className={className} onClick={onClick} />
   ) : (
     // Fallback: render the empty base image while canvas is drawing
-    <div className={`bg-[#f0ece4] animate-pulse ${className}`} />
+    <div className={`bg-[#f0ece4] animate-pulse ${className}`} onClick={onClick} />
   );
 }
