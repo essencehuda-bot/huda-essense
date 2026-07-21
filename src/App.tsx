@@ -5505,7 +5505,7 @@ export default function App() {
     return () => lenis.destroy();
   }, []);
 
-  // Global Tap/Click Easter Egg: Spawns "HUDA ESSENCE ❤️" with floating/exploding hearts
+  // Global Tap/Click Easter Egg: Spawns a small, elegant "HUDA ESSENCE ❤️" with slow-motion floating hearts
   useEffect(() => {
     // Inject the CSS animations
     const style = document.createElement("style");
@@ -5520,47 +5520,47 @@ export default function App() {
         justify-content: center;
       }
       .he-tap-bubble {
-        background: rgba(250, 246, 237, 0.96);
+        background: rgba(250, 246, 237, 0.97);
         color: #7b5e28;
-        border: 1px solid rgba(123, 94, 40, 0.28);
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 13px;
+        border: 1px solid rgba(123, 94, 40, 0.25);
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 11px;
         font-weight: bold;
-        letter-spacing: 1.2px;
+        letter-spacing: 0.8px;
         white-space: nowrap;
-        box-shadow: 0 4px 15px rgba(123, 94, 40, 0.16);
-        animation: floatUpFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        box-shadow: 0 3px 12px rgba(123, 94, 40, 0.12);
+        animation: floatUpFade 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         transform: translate(-50%, -50%);
-        text-shadow: 0 0 1px rgba(123, 94, 40, 0.1);
+        text-shadow: 0 0 1px rgba(123, 94, 40, 0.08);
       }
       .he-tap-heart {
         position: absolute;
-        font-size: 16px;
-        animation: heartPop 1.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        font-size: 12px;
+        animation: heartPop 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         transform: translate(-50%, -50%);
       }
       @keyframes floatUpFade {
         0% {
-          transform: translate(-50%, -50%) translateY(10px) scale(0.75);
+          transform: translate(-50%, -50%) translateY(8px) scale(0.8);
           opacity: 0;
         }
-        18% {
-          transform: translate(-50%, -50%) translateY(-5px) scale(1.06);
+        12% {
+          transform: translate(-50%, -50%) translateY(-2px) scale(1.02);
           opacity: 1;
         }
         100% {
-          transform: translate(-50%, -50%) translateY(-65px) scale(0.95);
+          transform: translate(-50%, -50%) translateY(-45px) scale(0.92);
           opacity: 0;
         }
       }
       @keyframes heartPop {
         0% {
-          transform: translate(-50%, -50%) translate(0, 0) scale(0.3) rotate(0deg);
+          transform: translate(-50%, -50%) translate(0, 0) scale(0.2) rotate(0deg);
           opacity: 0;
         }
-        25% {
-          opacity: 0.95;
+        20% {
+          opacity: 0.9;
         }
         100% {
           transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(var(--tscale)) rotate(var(--trotate));
@@ -5601,18 +5601,18 @@ export default function App() {
 
       // Create 5-7 scattering hearts/stars
       const icons = ["❤️", "💖", "✨", "❤️", "💕"];
-      const count = 6;
+      const count = 5;
       for (let i = 0; i < count; i++) {
         const heart = document.createElement("div");
         heart.className = "he-tap-heart";
         heart.innerText = icons[i % icons.length];
         
-        // Randomize direction and distance
-        const angle = (i * (360 / count) + Math.random() * 20) * (Math.PI / 180);
-        const distance = 35 + Math.random() * 30;
+        // Randomize direction and distance (more compact scatter)
+        const angle = (i * (360 / count) + Math.random() * 15) * (Math.PI / 180);
+        const distance = 25 + Math.random() * 20;
         const tx = Math.cos(angle) * distance;
-        const ty = Math.sin(angle) * distance - 20; // bias upwards slightly
-        const tscale = 0.6 + Math.random() * 0.6;
+        const ty = Math.sin(angle) * distance - 12; // bias upwards slightly
+        const tscale = 0.5 + Math.random() * 0.5;
         const trotate = `${(Math.random() - 0.5) * 60}deg`;
 
         heart.style.setProperty("--tx", `${tx}px`);
@@ -5621,17 +5621,17 @@ export default function App() {
         heart.style.setProperty("--trotate", trotate);
 
         // Random slight delay
-        heart.style.animationDelay = `${Math.random() * 0.08}s`;
+        heart.style.animationDelay = `${Math.random() * 0.12}s`;
 
         container.appendChild(heart);
       }
 
       document.body.appendChild(container);
 
-      // Cleanup
+      // Cleanup after slow-motion animation completes
       setTimeout(() => {
         container.remove();
-      }, 1300);
+      }, 2300);
     };
 
     window.addEventListener("click", handleClick);
