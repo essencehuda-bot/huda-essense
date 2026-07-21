@@ -5522,7 +5522,6 @@ export default function App() {
       .he-tap-bubble {
         background: rgba(250, 246, 237, 0.97);
         color: #7b5e28;
-        border: 1px solid rgba(123, 94, 40, 0.25);
         padding: 3px 8px;
         border-radius: 12px;
         font-size: 11px;
