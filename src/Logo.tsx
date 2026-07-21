@@ -6,6 +6,20 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
 
   return (
     <div className="inline-flex items-center gap-[10px]">
+      {size !== "footer" && (
+        <style dangerouslySetInnerHTML={{ __html: `
+          @keyframes hudaLogoGlow {
+            0%, 100% {
+              color: #1b1310;
+              text-shadow: 0 0 1px rgba(180, 138, 60, 0);
+            }
+            50% {
+              color: #b48a3c;
+              text-shadow: 0 0 10px rgba(180, 138, 60, 0.8), 0 0 20px rgba(123, 29, 42, 0.45);
+            }
+          }
+        `}} />
+      )}
       {/* Monogram HE */}
       <svg
         width={isLarge ? 48 : 38}
@@ -61,6 +75,7 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
             letterSpacing: "0.06em",
             lineHeight: 1,
             whiteSpace: "nowrap" as const,
+            animation: size !== "footer" ? "hudaLogoGlow 2.5s ease-in-out infinite" : undefined,
           }}
         >
           HUDA ESSENCE

@@ -2197,7 +2197,7 @@ const DEFAULT_PRODUCTS: Product[] = [
       "Honeysuckle"
     ],
     "mood": "floral • rich • enchanting",
-    "image": "/images/gucci-bloom.png",
+    "image": "",
     "story": "A rich white floral scent that transports you to a beautiful, blooming garden.",
     "sizes": [
       {
@@ -5569,9 +5569,12 @@ export default function App() {
     `;
     document.head.appendChild(style);
 
-    const handleClick = (e: MouseEvent) => {
-      // Don't trigger if clicked on controls/interactive tags
-      const target = e.target as HTMLElement;
+    let lastTouchTime = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+
+    const spawnBubble = (x: number, y: number, target: HTMLElement) => {
       if (
         target.closest('button') || 
         target.closest('input') || 
@@ -5582,9 +5585,6 @@ export default function App() {
       ) {
         return;
       }
-
-      const x = e.pageX;
-      const y = e.pageY;
 
       // Create container
       const container = document.createElement("div");
@@ -5633,9 +5633,42 @@ export default function App() {
       }, 2300);
     };
 
+    const handleClick = (e: MouseEvent) => {
+      // Prevent double-triggering on mobile tap
+      if (Date.now() - lastTouchTime < 600) return;
+      spawnBubble(e.pageX, e.pageY, e.target as HTMLElement);
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      if (!touch) return;
+      touchStartX = touch.pageX;
+      touchStartY = touch.pageY;
+      touchStartTime = Date.now();
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      const touch = e.changedTouches[0];
+      if (!touch) return;
+      const dx = touch.pageX - touchStartX;
+      const dy = touch.pageY - touchStartY;
+      const dt = Date.now() - touchStartTime;
+
+      // If touch stayed in a 10px area and duration is less than 300ms, it is a tap
+      if (Math.abs(dx) < 10 && Math.abs(dy) < 10 && dt < 300) {
+        lastTouchTime = Date.now();
+        spawnBubble(touch.pageX, touch.pageY, e.target as HTMLElement);
+      }
+    };
+
     window.addEventListener("click", handleClick);
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+
     return () => {
       window.removeEventListener("click", handleClick);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
       style.remove();
     };
   }, []);
@@ -5707,6 +5740,10 @@ export default function App() {
     const t = setTimeout(() => setToast(null), 2400);
     return () => clearTimeout(t);
   }, [toast]);
+
+  const heroP1 = PRODUCTS.find(p => p.id === "dior-sauvage") ?? PRODUCTS[0];
+  const heroP2 = PRODUCTS.find(p => p.id === "victoria-s-secret-bombshell") ?? PRODUCTS[1] ?? PRODUCTS[0];
+  const heroP3 = PRODUCTS.find(p => p.id === "baccarat-rouge-540") ?? PRODUCTS[2] ?? PRODUCTS[0];
 
   const filtered = useMemo(() => {
     let r = PRODUCTS.slice();
@@ -5867,9 +5904,12 @@ export default function App() {
 
           <div className="relative">
             <div className="rounded-[28px] overflow-hidden bg-[#ede4d6] shadow-[0_40px_90px_rgba(100,72,40,0.18)] relative h-[480px] lg:h-[580px]">
-              {/* Seamless looping dual-video component */}
-              <SeamlessHeroVideo />
-              <div className="absolute inset-0 rounded-[28px] bg-gradient-to-t from-[#19130d55] via-transparent to-transparent pointer-events-none z-10"></div>
+              <img 
+                src="/images/huda_essence_hero_all_sizes.png" 
+                alt="Huda Essence Bottles 10ml, 50ml, 100ml" 
+                className="absolute inset-0 w-full h-full object-cover" 
+              />
+              <div className="absolute inset-0 rounded-[28px] bg-gradient-to-t from-[#19130d33] via-transparent to-transparent pointer-events-none z-10"></div>
             </div>
           </div>
         </div>
@@ -5944,54 +5984,55 @@ export default function App() {
           ]).filter(g => g.items.length > 0).map((group, idx) => (
             <div key={idx}>
               {group.title && <h3 className="text-[34px] mb-6 text-[#2a221b] border-b border-[#ebdcb9] pb-3" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{group.title}</h3>}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-7">
                 {group.items.map(p => (
-                  <div key={p.id} className="group bg-white rounded-[26px] border border-[#ead9bf] overflow-hidden hover:shadow-[0_30px_80px_rgba(120,90,40,0.18)] hover:-translate-y-1.5 transition-all duration-500">
+                  <div key={p.id} className="group bg-white rounded-[16px] sm:rounded-[26px] border border-[#ead9bf] overflow-hidden hover:shadow-[0_30px_80px_rgba(120,90,40,0.18)] hover:-translate-y-1.5 transition-all duration-500">
                     <div className="relative overflow-hidden">
-                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700 cursor-pointer" />
-                      <div className="absolute top-4 left-4 flex gap-2">
-                        {p.bestseller && <span className="bg-[#19120d] text-[#f4e2c2] px-3.5 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] font-[600] uppercase">Bestseller</span>}
-                        {p.nouveau && <span className="bg-[#7b1d2a] text-white px-3.5 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] font-[600] uppercase">New</span>}
+                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700 cursor-pointer" />
+                      <div className="absolute top-2 sm:top-4 left-2 sm:left-4 flex gap-1 sm:gap-2">
+                        {p.bestseller && <span className="bg-[#19120d] text-[#f4e2c2] px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[8.5px] sm:text-[10.5px] tracking-[0.05em] sm:tracking-[0.1em] font-[600] uppercase">Bestseller</span>}
+                        {p.nouveau && <span className="bg-[#7b1d2a] text-white px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[8.5px] sm:text-[10.5px] tracking-[0.05em] sm:tracking-[0.1em] font-[600] uppercase">New</span>}
                       </div>
                       <button
                         onClick={(e) => { e.stopPropagation(); toggleWish(p.id); }}
-                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/95 grid place-items-center border border-[#efdcc1] hover:scale-110 transition-transform"
+                        className="absolute top-2 sm:top-4 right-2 sm:right-4 w-7 sm:w-10 h-7 sm:h-10 rounded-full bg-white/95 grid place-items-center border border-[#efdcc1] hover:scale-110 transition-transform"
                       >
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#b32d3a" : "none"} stroke={wishlist.includes(p.id) ? "#b32d3a" : "#5b4b3a"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
+                        <svg width="13" sm:width="17" height="13" sm:height="17" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#b32d3a" : "none"} stroke={wishlist.includes(p.id) ? "#b32d3a" : "#5b4b3a"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
                       </button>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <div className="flex gap-2 justify-center">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-2 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
                           {p.sizes.map(s => (
-                            <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-3 py-2 rounded-xl bg-white/95 text-[12.5px] font-[600] text-[#2a1c11] hover:bg-[#f5e5c8] transition">
+                            <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl bg-white/95 text-[9.5px] sm:text-[12.5px] font-[600] text-[#2a1c11] hover:bg-[#f5e5c8] transition">
                               {s.ml}ml — {PKR(s.price)}
                             </button>
                           ))}
                         </div>
                       </div>
                     </div>
-                    <div className="p-5 pb-6">
-                      <div className="flex items-start justify-between gap-3">
+                    <div className="p-3 sm:p-5 pb-4 sm:pb-6">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-3">
                         <div>
-                          <h3 className="text-[26px] leading-tight" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
-                          <div className="text-[12.5px] text-[#7a6652] mt-0.5">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
+                          <h3 className="text-[18px] sm:text-[26px] leading-tight" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
+                          <div className="text-[11px] sm:text-[12.5px] text-[#7a6652] mt-0.5">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
                         </div>
-                        <div className="text-right text-[12px] text-[#6e5c47] shrink-0">
-                          <Stars rating={p.rating} /> {p.rating}<br />
-                          <span className="text-[11px] text-[#9a8363]">{p.reviews} reviews</span>
+                        <div className="text-left sm:text-right text-[10px] sm:text-[12px] text-[#6e5c47] shrink-0 flex items-center sm:block gap-1">
+                          <div className="flex items-center gap-0.5"><Stars rating={p.rating} /> <span className="sm:hidden">{p.rating}</span></div>
+                          <span className="hidden sm:inline">{p.rating}<br /></span>
+                          <span className="text-[9px] sm:text-[11px] text-[#9a8363]">({p.reviews} reviews)</span>
                         </div>
                       </div>
-                      <div className="mt-2 text-[12.8px] text-[#6f5d48] italic">{p.mood}</div>
-                      <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+                      <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-[12.8px] text-[#6f5d48] italic line-clamp-1 sm:line-clamp-none">{p.mood}</div>
+                      <div className="mt-3 sm:mt-4 grid grid-cols-3 gap-1 sm:gap-2 text-center">
                         {p.sizes.map(s => (
-                          <div key={s.ml} className="bg-[#faf5ed] rounded-xl py-2 border border-[#efe0c9]">
-                            <div className="text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml</div>
-                            <div className="text-[14px] font-[700]">{PKR(s.price)}</div>
+                          <div key={s.ml} className="bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border border-[#efe0c9]">
+                            <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml</div>
+                            <div className="text-[10.5px] sm:text-[14px] font-[700]">{PKR(s.price)}</div>
                           </div>
                         ))}
                       </div>
-                      <div className="mt-5 flex items-center gap-2.5">
-                        <button onClick={() => setModal(p)} className="flex-1 py-[12px] rounded-full bg-[#1b1310] text-[#f6e7cc] text-[13.5px] font-[600] hover:bg-[#2a1f16] transition">View Details</button>
-                        <button onClick={() => addToCart(p.id)} className="px-5 py-[12px] rounded-full border border-[#dfc8a2] text-[13.5px] font-[600] text-[#5d4628] hover:bg-[#fff6e7] transition">+ Bag</button>
+                      <div className="mt-3 sm:mt-5 flex items-center gap-1.5 sm:gap-2.5">
+                        <button onClick={() => setModal(p)} className="flex-1 py-[8px] sm:py-[12px] rounded-full bg-[#1b1310] text-[#f6e7cc] text-[11px] sm:text-[13.5px] font-[600] hover:bg-[#2a1f16] transition">View Details</button>
+                        <button onClick={() => addToCart(p.id)} className="px-2.5 sm:px-5 py-[8px] sm:py-[12px] rounded-full border border-[#dfc8a2] text-[11px] sm:text-[13.5px] font-[600] text-[#5d4628] hover:bg-[#fff6e7] transition">+ Bag</button>
                       </div>
                     </div>
                   </div>
