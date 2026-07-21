@@ -5056,7 +5056,7 @@ const DEFAULT_PRODUCTS: Product[] = [
       "Madagascar Vanilla"
     ],
     "mood": "sweet • tropical • loud",
-    "image": "/images/xerjoff-erba-pura.png",
+    "image": "",
     "bestseller": true,
     "story": "A basket of delicious Mediterranean citrus fruits over a loud vanilla-musk base.",
     "sizes": [
@@ -5222,7 +5222,7 @@ const DEFAULT_PRODUCTS: Product[] = [
       "Woody Notes"
     ],
     "mood": "creamy • smooth • elegant",
-    "image": "/images/maison-francis-gentle-fluidity.png",
+    "image": "",
     "story": "A creamy, smooth fragrance featuring sweet vanilla and warm amber. Impossibly elegant.",
     "sizes": [
       {
