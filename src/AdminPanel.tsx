@@ -30,6 +30,46 @@ type Props = {
   onWhatsappChange: (num: string) => void;
 };
 
+const getAdminProductImage = (p: ProductData) => {
+  if (p.image && p.image.trim() !== "") {
+    return p.image;
+  }
+  
+  const family = (p.family || "").toLowerCase();
+  const name = (p.name || "").toLowerCase();
+  
+  // Scent template checks
+  if (name.includes('sauvage') || name.includes('bleu') || name.includes('cool water') || name.includes('hawas') || name.includes('chrome') || name.includes('explorer') || name.includes('acqua') || family.includes('aquatic') || family.includes('marine')) {
+    return '/images/base_aquatic.png';
+  }
+  if (name.includes('wood') || name.includes('oud') || name.includes('janan') || name.includes('prestige') || family.includes('wood') || family.includes('oud')) {
+    return '/images/base_woody.png';
+  }
+  if (name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger') || family.includes('spicy') || family.includes('amber') || family.includes('oriental')) {
+    return '/images/base_spicy.png';
+  }
+  if (name.includes('leather') || name.includes('suede') || name.includes('animalic') || family.includes('leather')) {
+    return '/images/base_leather.png';
+  }
+  if (name.includes('tweed') || name.includes('sage') || name.includes('legend') || name.includes('century') || family.includes('green') || family.includes('herbal')) {
+    return '/images/base_green.png';
+  }
+  if (name.includes('bloom') || name.includes('j\'adore') || name.includes('blue lady') || name.includes('jasmine') || name.includes('grace') || family.includes('white floral') || family.includes('jasmine')) {
+    return '/images/base_white_floral.png';
+  }
+  if (name.includes('yara') || name.includes('bombshell') || name.includes('cherry') || name.includes('rouge 540') || name.includes('baccarat') || name.includes('pear') || family.includes('fruity') || family.includes('sweet') || family.includes('gourmand')) {
+    return '/images/base_fruity.png';
+  }
+  if (name.includes('rose') || name.includes('flora') || name.includes('chance') || name.includes('bright crystal') || family.includes('floral') || family.includes('rose')) {
+    return '/images/base_floral.png';
+  }
+
+  // Fallbacks
+  if (p.gender === 'Men') return '/images/base_aquatic.png';
+  if (p.gender === 'Women') return '/images/base_floral.png';
+  return '/images/base_spicy.png';
+};
+
 const EMPTY_PRODUCT: ProductData = {
   id: "",
   name: "",
@@ -218,7 +258,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
       <div>
         <label className="text-[11px] uppercase tracking-wider text-[#8a7a60] font-[600]">Product Image</label>
         <div className="mt-1 flex items-center gap-4">
-          {data.image && <img src={data.image} alt="" className="w-16 h-16 rounded-xl object-cover border border-[#e0ccaa]" />}
+          <img src={getAdminProductImage(data)} alt="" className="w-16 h-16 rounded-xl object-cover border border-[#e0ccaa]" />
           <div className="flex-1">
             <input value={data.image} onChange={e => setData({ ...data, image: e.target.value })} className="w-full border border-[#d8c4a0] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b89050] bg-white" placeholder="Image URL or upload below" />
             <input
@@ -303,7 +343,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
             <div className="space-y-3">
               {products.map((p, idx) => (
                 <div key={p.id} className="flex items-center gap-4 bg-white rounded-2xl border border-[#ead9bf] p-3 hover:shadow-md transition">
-                  <img src={p.image} alt="" className="w-[70px] h-[70px] rounded-xl object-cover shrink-0 border border-[#e8d5be]" />
+                  <img src={getAdminProductImage(p)} alt="" className="w-[70px] h-[70px] rounded-xl object-cover shrink-0 border border-[#e8d5be]" />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <span className="text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</span>
