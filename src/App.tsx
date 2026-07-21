@@ -5522,21 +5522,21 @@ export default function App() {
       .he-tap-bubble {
         background: rgba(250, 246, 237, 0.97);
         color: #7b5e28;
-        padding: 3px 8px;
-        border-radius: 12px;
-        font-size: 11px;
+        padding: 2px 6px;
+        border-radius: 9px;
+        font-size: 9px;
         font-weight: bold;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.6px;
         white-space: nowrap;
         box-shadow: 0 3px 12px rgba(123, 94, 40, 0.12);
-        animation: floatUpFade 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: floatUpFade 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         transform: translate(-50%, -50%);
         text-shadow: 0 0 1px rgba(123, 94, 40, 0.08);
       }
       .he-tap-heart {
         position: absolute;
-        font-size: 12px;
-        animation: heartPop 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        font-size: 9px;
+        animation: heartPop 3.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         transform: translate(-50%, -50%);
       }
       @keyframes floatUpFade {
@@ -5549,7 +5549,7 @@ export default function App() {
           opacity: 1;
         }
         100% {
-          transform: translate(-50%, -50%) translateY(-45px) scale(0.92);
+          transform: translate(-50%, -50%) translateY(-55px) scale(0.92);
           opacity: 0;
         }
       }
@@ -5611,7 +5611,7 @@ export default function App() {
         const distance = 25 + Math.random() * 20;
         const tx = Math.cos(angle) * distance;
         const ty = Math.sin(angle) * distance - 12; // bias upwards slightly
-        const tscale = 0.5 + Math.random() * 0.5;
+        const tscale = 0.4 + Math.random() * 0.4;
         const trotate = `${(Math.random() - 0.5) * 60}deg`;
 
         heart.style.setProperty("--tx", `${tx}px`);
@@ -5630,7 +5630,7 @@ export default function App() {
       // Cleanup after slow-motion animation completes
       setTimeout(() => {
         container.remove();
-      }, 2300);
+      }, 3600);
     };
 
     const handleClick = (e: MouseEvent) => {
