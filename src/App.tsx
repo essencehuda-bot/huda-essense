@@ -5505,6 +5505,142 @@ export default function App() {
     return () => lenis.destroy();
   }, []);
 
+  // Global Tap/Click Easter Egg: Spawns "HUDA ESSENCE ❤️" with floating/exploding hearts
+  useEffect(() => {
+    // Inject the CSS animations
+    const style = document.createElement("style");
+    style.innerHTML = `
+      .he-tap-container {
+        position: absolute;
+        pointer-events: none;
+        z-index: 99999;
+        font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .he-tap-bubble {
+        background: rgba(250, 246, 237, 0.96);
+        color: #7b5e28;
+        border: 1px solid rgba(123, 94, 40, 0.28);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+        box-shadow: 0 4px 15px rgba(123, 94, 40, 0.16);
+        animation: floatUpFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0 1px rgba(123, 94, 40, 0.1);
+      }
+      .he-tap-heart {
+        position: absolute;
+        font-size: 16px;
+        animation: heartPop 1.0s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        transform: translate(-50%, -50%);
+      }
+      @keyframes floatUpFade {
+        0% {
+          transform: translate(-50%, -50%) translateY(10px) scale(0.75);
+          opacity: 0;
+        }
+        18% {
+          transform: translate(-50%, -50%) translateY(-5px) scale(1.06);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-50%, -50%) translateY(-65px) scale(0.95);
+          opacity: 0;
+        }
+      }
+      @keyframes heartPop {
+        0% {
+          transform: translate(-50%, -50%) translate(0, 0) scale(0.3) rotate(0deg);
+          opacity: 0;
+        }
+        25% {
+          opacity: 0.95;
+        }
+        100% {
+          transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(var(--tscale)) rotate(var(--trotate));
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    const handleClick = (e: MouseEvent) => {
+      // Don't trigger if clicked on controls/interactive tags
+      const target = e.target as HTMLElement;
+      if (
+        target.closest('button') || 
+        target.closest('input') || 
+        target.closest('select') || 
+        target.closest('textarea') || 
+        target.closest('a') ||
+        target.closest('.admin-panel')
+      ) {
+        return;
+      }
+
+      const x = e.pageX;
+      const y = e.pageY;
+
+      // Create container
+      const container = document.createElement("div");
+      container.className = "he-tap-container";
+      container.style.left = `${x}px`;
+      container.style.top = `${y}px`;
+
+      // Create main text bubble
+      const bubble = document.createElement("div");
+      bubble.className = "he-tap-bubble";
+      bubble.innerHTML = "HUDA ESSENCE ❤️";
+      container.appendChild(bubble);
+
+      // Create 5-7 scattering hearts/stars
+      const icons = ["❤️", "💖", "✨", "❤️", "💕"];
+      const count = 6;
+      for (let i = 0; i < count; i++) {
+        const heart = document.createElement("div");
+        heart.className = "he-tap-heart";
+        heart.innerText = icons[i % icons.length];
+        
+        // Randomize direction and distance
+        const angle = (i * (360 / count) + Math.random() * 20) * (Math.PI / 180);
+        const distance = 35 + Math.random() * 30;
+        const tx = Math.cos(angle) * distance;
+        const ty = Math.sin(angle) * distance - 20; // bias upwards slightly
+        const tscale = 0.6 + Math.random() * 0.6;
+        const trotate = `${(Math.random() - 0.5) * 60}deg`;
+
+        heart.style.setProperty("--tx", `${tx}px`);
+        heart.style.setProperty("--ty", `${ty}px`);
+        heart.style.setProperty("--tscale", `${tscale}`);
+        heart.style.setProperty("--trotate", trotate);
+
+        // Random slight delay
+        heart.style.animationDelay = `${Math.random() * 0.08}s`;
+
+        container.appendChild(heart);
+      }
+
+      document.body.appendChild(container);
+
+      // Cleanup
+      setTimeout(() => {
+        container.remove();
+      }, 1300);
+    };
+
+    window.addEventListener("click", handleClick);
+    return () => {
+      window.removeEventListener("click", handleClick);
+      style.remove();
+    };
+  }, []);
+
   /* secret admin access: click footer logo 5 times or #admin */
   useEffect(() => {
     if (window.location.hash === "#admin") setAdminOpen(true);
