@@ -5723,9 +5723,10 @@ export default function App() {
   };
 
   const canProceedStep1 = custName.trim().length >= 2 && custPhone.trim().length >= 10 && custAddress.trim().length >= 5;
-  const canConfirmOrder = canProceedStep1 && payScreenshot !== null;
+  const canConfirmOrder = canProceedStep1 && (payMethod === "cod" || payScreenshot !== null);
 
-  const paymentAccounts = {
+  const paymentAccounts: Record<string, { title: string; icon: string; color: string; number: string; name: string }> = {
+    cod: { title: "Cash on Delivery", icon: "💵", color: "#2E7D32", number: "Pay on delivery", name: "Delivery charges advance required" },
     easypaisa: { title: "EasyPaisa", icon: "📱", color: "#4CAF50", number: "0337-6760760", name: "Huda Essence" },
     jazzcash: { title: "JazzCash", icon: "📲", color: "#E53935", number: "0337-6760760", name: "Huda Essence" },
     bank: { title: "Bank Transfer", icon: "🏦", color: "#1565C0", number: "IBAN: PK36MEZN0003310107645678", name: "Huda Essence — Meezan Bank" }
@@ -5798,7 +5799,16 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#faf7f2] text-[#1b1714]">
 
-
+      {/* ═══════════ SALE BANNER ═══════════ */}
+      <div className="bg-gradient-to-r from-[#7b1d2a] via-[#a02535] to-[#7b1d2a] text-white py-2.5 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDgpIi8+PC9zdmc+')] opacity-50"></div>
+        <div className="relative flex items-center justify-center gap-3 text-[13px] sm:text-[14px] font-[600] tracking-[0.04em] animate-pulse">
+          <span className="text-[18px]">🔥</span>
+          <span>MEGA SALE — 50ml Perfumes Now <span className="line-through opacity-70">PKR 1,599</span> <span className="text-[#ffd700] font-[800] text-[15px] sm:text-[16px]">PKR 1,299</span></span>
+          <span className="hidden sm:inline text-[#ffc9c9]">• Limited Time Only!</span>
+          <span className="text-[18px]">🔥</span>
+        </div>
+      </div>
 
       {/* ═══════════ HEADER ═══════════ */}
       <header className="sticky top-0 z-40 bg-[#faf7f2ee] backdrop-blur-xl border-b border-[#e7dcc9]">
@@ -5921,7 +5931,7 @@ export default function App() {
           {[
             { icon: "✨", title: "Premium Quality", sub: "Long-lasting fragrances" },
             { icon: "🚚", title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
-            { icon: "💳", title: "Prepayment Required", sub: "JazzCash / EasyPaisa / Bank" },
+            { icon: "💵", title: "Cash on Delivery", sub: "Delivery charges advance" },
           ].map(t => (
             <div key={t.title} className="flex flex-col items-center gap-1">
               <span className="text-[22px]">{t.icon}</span>
@@ -6002,8 +6012,8 @@ export default function App() {
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-2 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                         <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
                           {p.sizes.map(s => (
-                            <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl bg-white/95 text-[9.5px] sm:text-[12.5px] font-[600] text-[#2a1c11] hover:bg-[#f5e5c8] transition">
-                              {s.ml}ml — {PKR(s.price)}
+                            <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className={`px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl text-[9.5px] sm:text-[12.5px] font-[600] transition ${s.ml === 50 ? 'bg-[#fff0f0] text-[#c0392b] hover:bg-[#ffe0e0] ring-1 ring-[#e8474c]/40' : 'bg-white/95 text-[#2a1c11] hover:bg-[#f5e5c8]'}`}>
+                              {s.ml === 50 ? <>{s.ml}ml — <span className="line-through text-[#999] text-[8px] sm:text-[10px]">1,599</span> {PKR(s.price)}</> : <>{s.ml}ml — {PKR(s.price)}</>}
                             </button>
                           ))}
                         </div>
@@ -6024,9 +6034,10 @@ export default function App() {
                       <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-[12.8px] text-[#6f5d48] italic line-clamp-1 sm:line-clamp-none">{p.mood}</div>
                       <div className="mt-3 sm:mt-4 grid grid-cols-3 gap-1 sm:gap-2 text-center">
                         {p.sizes.map(s => (
-                          <div key={s.ml} className="bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border border-[#efe0c9]">
-                            <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml</div>
-                            <div className="text-[10.5px] sm:text-[14px] font-[700]">{PKR(s.price)}</div>
+                          <div key={s.ml} className={`bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border ${s.ml === 50 ? 'border-[#e8474c] ring-1 ring-[#e8474c]/30' : 'border-[#efe0c9]'}`}>
+                            <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml {s.ml === 50 && <span className="text-[#e8474c] font-[700]">SALE</span>}</div>
+                            {s.ml === 50 && <div className="text-[8px] sm:text-[11px] text-[#9a8060] line-through">PKR 1,599</div>}
+                            <div className={`text-[10.5px] sm:text-[14px] font-[700] ${s.ml === 50 ? 'text-[#c0392b]' : ''}`}>{PKR(s.price)}</div>
                           </div>
                         ))}
                       </div>
@@ -6061,12 +6072,13 @@ export default function App() {
           <div className="mt-12 grid sm:grid-cols-3 gap-5 max-w-[820px] mx-auto">
             {[
               { ml: 10, price: 300, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
-              { ml: 50, price: 1300, label: "Most Popular", desc: "The sweet spot — lasts 2–3 months with daily wear", popular: true },
+              { ml: 50, price: 1299, originalPrice: 1599, label: "🔥 SALE", desc: "The sweet spot — lasts 2–3 months with daily wear", popular: true },
               { ml: 100, price: 2500, label: "Best Value", desc: "Maximum value — 5+ months of your signature scent" },
             ].map(s => (
               <div key={s.ml} className={`rounded-[24px] p-6 text-center border ${s.popular ? "bg-[#2e2117] border-[#c99a4a] scale-[1.04]" : "bg-[#1e1812] border-[#3a2b21]"}`}>
-                {s.popular && <div className="text-[10px] tracking-[0.22em] text-[#e8c06f] uppercase font-[700] mb-3">⭐ Most Popular</div>}
-                <div className="text-[18px] text-[#dcc7a8] font-[500]">{s.label}</div>
+                {s.popular && <div className="text-[10px] tracking-[0.22em] text-[#ff6b6b] uppercase font-[700] mb-3 animate-pulse">🔥 {s.label}</div>}
+                {!s.popular && <div className="text-[18px] text-[#dcc7a8] font-[500]">{s.label}</div>}
+                {s.popular && s.originalPrice && <div className="text-[18px] text-[#9a8060] line-through font-[500]">PKR {s.originalPrice.toLocaleString()}</div>}
                 <div className="text-[52px] font-[700] text-[#f6e8cc] mt-2 leading-none" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
                   PKR {s.price.toLocaleString()}
                 </div>
@@ -6103,7 +6115,7 @@ export default function App() {
               ["Affordable Luxury", "Designer-inspired scents from just PKR 299 for 10ml."],
               ["Made for Pakistan", "Formulated to perform in our hot and humid climate."],
               ["Flat Delivery", `Flat PKR ${deliveryCharge} delivery charge within Karachi only.`],
-              ["Prepayment Required", "Payment via JazzCash, EasyPaisa, or Bank Transfer."],
+              ["Cash on Delivery", "Pay in cash on delivery! Only delivery charges (PKR " + deliveryCharge + ") paid in advance via JazzCash, EasyPaisa, or Bank."],
             ].map(([t, s]) => (
               <div key={t} className="bg-white/70 rounded-2xl p-5 border border-[#e4d0b2]">
                 <div className="text-[20px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{t}</div>
@@ -6167,7 +6179,7 @@ export default function App() {
         <div className="mx-auto max-w-[900px] px-5 lg:px-10 py-16 lg:py-[80px] text-center">
           <div className="text-[11px] tracking-[0.24em] text-[#d8a757] uppercase font-[600]">Ready to smell amazing?</div>
           <h4 className="text-[42px] lg:text-[54px] mt-3 leading-[0.98]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Order your Huda Essence<br />perfume today.</h4>
-          <p className="mt-4 text-[#d6c1a3] text-[16px]">Delivery in Karachi only. Prepayment required.</p>
+          <p className="mt-4 text-[#d6c1a3] text-[16px]">Delivery in Karachi only. Cash on Delivery available! Delivery charges advance.</p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <button onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-[15px] rounded-full bg-[#e3b96a] text-[#24160c] font-[700] text-[15px] hover:bg-[#f0cc80] transition">Shop All Perfumes →</button>
             <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to place an order from Huda Essence`} target="_blank" rel="noopener" className="px-8 py-[15px] rounded-full border border-[#4b3728] text-[#f2dbc0] text-[15px] flex items-center gap-2 hover:bg-[#241a12] transition">
@@ -6175,7 +6187,7 @@ export default function App() {
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml PKR 299 • 50ml PKR 1,299 • 100ml PKR 2,499 — same price for every fragrance</div>
+          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml PKR 299 • 50ml <span className="line-through opacity-70">PKR 1,599</span> <span className="text-[#ff6b6b] font-[700]">PKR 1,299</span> • 100ml PKR 2,499</div>
         </div>
       </section>
 
@@ -6271,7 +6283,7 @@ export default function App() {
               <li>10ml — PKR 299</li>
               <li>50ml — PKR 1,299</li>
               <li>100ml — PKR 2,499</li>
-              <li className="pt-1 text-[#c9a86c]">PKR {deliveryCharge} delivery (Karachi Only) • Prepayment only</li>
+              <li className="pt-1 text-[#c9a86c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
             </ul>
           </div>
         </div>
@@ -6326,9 +6338,11 @@ export default function App() {
                   <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Select Your Size</div>
                   <div className="flex flex-wrap gap-3">
                     {modal.sizes.map(s => (
-                      <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[130px] transition ${sizePick === s.ml ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"}`}>
+                      <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[130px] transition relative ${sizePick === s.ml ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"} ${s.ml === 50 ? 'ring-1 ring-[#e8474c]/40' : ''}`}>
+                        {s.ml === 50 && <div className="absolute -top-2.5 -right-2 bg-[#e8474c] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>}
                         <div className="text-[15px] font-[700]">{s.ml} ml</div>
-                        <div className="text-[14px] text-[#6a5338] font-[600]">{PKR(s.price)}</div>
+                        {s.ml === 50 && <div className="text-[12px] text-[#9a8060] line-through">PKR 1,599</div>}
+                        <div className={`text-[14px] font-[600] ${s.ml === 50 ? 'text-[#c0392b]' : 'text-[#6a5338]'}`}>{PKR(s.price)}</div>
                       </button>
                     ))}
                   </div>
@@ -6347,7 +6361,8 @@ export default function App() {
                 </div>
                 <div className="mt-6 text-[12.6px] text-[#7c6348] border-t border-[#e5d0b2] pt-4 grid grid-cols-2 gap-3">
                   <div>✓ PKR {deliveryCharge} delivery (Karachi Only)</div>
-                  <div>✓ Prepayment Required</div>
+                  <div>✓ Cash on Delivery Available</div>
+                  <div>✓ Delivery charges advance only</div>
                   <div>✓ Premium quality oils</div>
                 </div>
               </div>
@@ -6407,7 +6422,7 @@ export default function App() {
               >
                 💳 Proceed to Checkout
               </button>
-              <div className="text-[11.5px] text-center text-[#9a7d5c] mt-2">Prepayment Required • EasyPaisa • JazzCash • Bank Transfer</div>
+              <div className="text-[11.5px] text-center text-[#9a7d5c] mt-2">Cash on Delivery Available • Delivery Charges Advance (EasyPaisa / JazzCash / Bank)</div>
             </>)}
           </div>
         </aside>
@@ -6522,8 +6537,8 @@ export default function App() {
                   {/* Payment Method Selection */}
                   <div>
                     <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-3 block">Select Payment Method *</label>
-                    <div className="grid grid-cols-3 gap-2">
-                      {(["easypaisa", "jazzcash", "bank"] as const).map(method => (
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                      {(["cod", "easypaisa", "jazzcash", "bank"] as (keyof typeof paymentAccounts)[]).map(method => (
                         <button
                           key={method}
                           onClick={() => setPayMethod(method)}
@@ -6537,30 +6552,52 @@ export default function App() {
                   </div>
 
                   {/* Payment Account Details */}
-                  <div className="bg-[#14100d] text-[#f6e7c9] rounded-2xl p-5">
-                    <div className="text-[10px] tracking-[0.2em] uppercase font-[600] text-[#d2a75a] mb-2">
-                      {paymentAccounts[payMethod].title} Account Details
+                  {payMethod === "cod" ? (
+                    <div className="bg-[#1a3a1a] text-[#d4f5d4] rounded-2xl p-5">
+                      <div className="text-[10px] tracking-[0.2em] uppercase font-[600] text-[#66bb6a] mb-2">
+                        💵 Cash on Delivery
+                      </div>
+                      <div className="text-[13px] text-[#a5d6a7] mb-3 leading-relaxed">Pay <span className="font-[700] text-white">{PKR(cartTotal)}</span> in cash when your order is delivered.</div>
+                      <div className="bg-[#0d290d] rounded-xl p-4 space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="text-[12px] text-[#81c784]">Product Amount (COD)</span>
+                          <span className="text-[18px] font-[700] text-[#a5d6a7]">{PKR(cartTotal)}</span>
+                        </div>
+                        <div className="flex justify-between items-center pt-2 border-t border-[#2e5a2e]">
+                          <span className="text-[12px] text-[#ffb74d] font-[600]">⚠️ Delivery Charges (Pay Now)</span>
+                          <span className="text-[18px] font-[700] text-[#ffb74d]">PKR {deliveryCharge}</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 text-[11.5px] text-[#81c784] bg-[#0d290d] rounded-lg p-3 border border-[#2e5a2e]">
+                        📋 <span className="font-[600]">How it works:</span> Pay PKR {deliveryCharge} delivery charges in advance via EasyPaisa/JazzCash/Bank. Remaining {PKR(cartTotal)} you pay in cash on delivery.
+                      </div>
                     </div>
-                    <div className="text-[11px] text-[#c5ad88] mb-3">Transfer the exact amount below and take a screenshot</div>
-                    <div className="bg-[#1e1812] rounded-xl p-4 space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-[12px] text-[#9a8163]">Account</span>
-                        <span className="text-[15px] font-[700] text-[#f6e8cc] tracking-wide">{paymentAccounts[payMethod].number}</span>
+                  ) : (
+                    <div className="bg-[#14100d] text-[#f6e7c9] rounded-2xl p-5">
+                      <div className="text-[10px] tracking-[0.2em] uppercase font-[600] text-[#d2a75a] mb-2">
+                        {paymentAccounts[payMethod].title} Account Details
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-[12px] text-[#9a8163]">Name</span>
-                        <span className="text-[14px] font-[600] text-[#e8d3b6]">{paymentAccounts[payMethod].name}</span>
-                      </div>
-                      <div className="flex justify-between items-center pt-2 border-t border-[#3a2b21]">
-                        <span className="text-[12px] text-[#c99a4a] font-[600]">Amount to Transfer</span>
-                        <span className="text-[20px] font-[700] text-[#e8c06f]">{PKR(cartTotal + deliveryCharge)}</span>
+                      <div className="text-[11px] text-[#c5ad88] mb-3">Transfer the exact amount below and take a screenshot</div>
+                      <div className="bg-[#1e1812] rounded-xl p-4 space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-[12px] text-[#9a8163]">Account</span>
+                          <span className="text-[15px] font-[700] text-[#f6e8cc] tracking-wide">{paymentAccounts[payMethod].number}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[12px] text-[#9a8163]">Name</span>
+                          <span className="text-[14px] font-[600] text-[#e8d3b6]">{paymentAccounts[payMethod].name}</span>
+                        </div>
+                        <div className="flex justify-between items-center pt-2 border-t border-[#3a2b21]">
+                          <span className="text-[12px] text-[#c99a4a] font-[600]">Amount to Transfer</span>
+                          <span className="text-[20px] font-[700] text-[#e8c06f]">{PKR(cartTotal + deliveryCharge)}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Screenshot Upload */}
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-2 block">Upload Payment Screenshot *</label>
+                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-2 block">{payMethod === "cod" ? "Upload Delivery Charges Screenshot (Optional for now)" : "Upload Payment Screenshot *"}</label>
                     <div
                       onClick={() => screenshotInputRef.current?.click()}
                       className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition hover:bg-[#fff8ee] ${payScreenshot ? "border-[#4CAF50] bg-[#f0faf0]" : "border-[#dcc49f] bg-white"
@@ -6610,8 +6647,12 @@ export default function App() {
                           `📦 *Order Items:*\n${orderItems}\n\n` +
                           `💰 Subtotal: ${PKR(cartTotal)}\n` +
                           `🚚 Delivery: PKR ${deliveryCharge}\n` +
-                          `✅ *Total Paid: ${PKR(cartTotal + deliveryCharge)}*\n\n` +
-                          `💳 *Payment:* ${paymentAccounts[payMethod].title}\n` +
+                          (payMethod === "cod" 
+                            ? `💵 *Payment: Cash on Delivery*\n` +
+                              `⚠️ Delivery charges PKR ${deliveryCharge} paid in advance\n` +
+                              `✅ *Total COD Amount: ${PKR(cartTotal)}*\n\n`
+                            : `✅ *Total Paid: ${PKR(cartTotal + deliveryCharge)}*\n\n` +
+                              `💳 *Payment:* ${paymentAccounts[payMethod].title}\n`) +
                           `📸 Screenshot uploaded in form\n\n` +
                           `Please confirm my order. JazakAllah! 🙏`;
                         window.open(`https://wa.me/${whatsappNum}?text=${encodeURIComponent(msg)}`, '_blank');
@@ -6630,7 +6671,7 @@ export default function App() {
 
                   {!canConfirmOrder && (
                     <div className="text-[12px] text-center text-[#b07a28] bg-[#fff8ee] rounded-xl py-2.5 border border-[#ead6b8]">
-                      ⚠️ Please upload your payment screenshot to confirm order
+                      ⚠️ {payMethod === "cod" ? "Please fill in your details to confirm order" : "Please upload your payment screenshot to confirm order"}
                     </div>
                   )}
                 </div>
