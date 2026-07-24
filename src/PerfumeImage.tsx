@@ -558,7 +558,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
   }, [product]);
 
   return src ? (
-    <img src={src} alt={product.name} className={className} onClick={onClick} />
+    <img src={src} alt={product.name} className={className} onClick={onClick} loading="lazy" />
   ) : (
     // Fallback: render the empty base image while canvas is drawing
     <div className={`bg-[#f0ece4] animate-pulse ${className}`} onClick={onClick} />

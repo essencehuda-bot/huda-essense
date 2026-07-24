@@ -5918,6 +5918,7 @@ export default function App() {
                 src="/images/huda_essence_hero_all_sizes.png" 
                 alt="Huda Essence Bottles 10ml, 50ml, 100ml" 
                 className="absolute inset-0 w-full h-full object-cover" 
+                fetchPriority="high"
               />
               <div className="absolute inset-0 rounded-[28px] bg-gradient-to-t from-[#19130d33] via-transparent to-transparent pointer-events-none z-10"></div>
             </div>
@@ -6605,7 +6606,7 @@ export default function App() {
                     >
                       {payScreenshot ? (
                         <div>
-                          <img src={payScreenshot} alt="Payment screenshot" className="max-h-[200px] mx-auto rounded-xl shadow-md mb-3" />
+                          <img src={payScreenshot} alt="Payment screenshot" className="max-h-[200px] mx-auto rounded-xl shadow-md mb-3" loading="lazy" />
                           <div className="text-[13px] text-[#4CAF50] font-[600]">✓ {payScreenshotName}</div>
                           <div className="text-[11px] text-[#8a7054] mt-1">Click to change</div>
                         </div>
