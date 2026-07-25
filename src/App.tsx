@@ -5823,7 +5823,7 @@ export default function App() {
             </span>
             <span className="text-white/40 hidden sm:inline">•</span>
             <span className="text-white">
-              50ml: <span className="line-through opacity-70 font-normal">Rs 1,599</span> <span className="text-[#ffe600] font-[800] animate-fire-glow">Rs 1,299</span>
+              50ml: <span className="line-through opacity-70 font-normal">Rs 1,600</span> <span className="text-[#ffe600] font-[800] animate-fire-glow">Rs 1,299</span>
             </span>
             <span className="text-white/40 hidden sm:inline">•</span>
             <span className="text-white">
@@ -6040,7 +6040,7 @@ export default function App() {
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-2 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                         <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
                           {p.sizes.map(s => {
-                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1599 : s.ml === 100 ? 3000 : null;
+                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
                             return (
                               <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl text-[9.5px] sm:text-[12.5px] font-[600] transition bg-[#fff0f0] text-[#c0392b] hover:bg-[#ffe0e0] ring-1 ring-[#e8474c]/40">
                                 {s.ml}ml — {orig ? <span className="line-through text-[#999] text-[8px] sm:text-[10px]">Rs {orig.toLocaleString()}</span> : null} {PKR(s.price)}
@@ -6065,7 +6065,7 @@ export default function App() {
                       <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-[12.8px] text-[#6f5d48] italic line-clamp-1 sm:line-clamp-none">{p.mood}</div>
                       <div className="mt-3 sm:mt-4 grid grid-cols-3 gap-1 sm:gap-2 text-center">
                         {p.sizes.map(s => {
-                          const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1599 : s.ml === 100 ? 3000 : null;
+                          const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
                           return (
                             <div key={s.ml} className="bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border border-[#e8474c]/30 ring-1 ring-[#e8474c]/20">
                               <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml <span className="text-[#e8474c] font-[700]">SALE</span></div>
@@ -6106,7 +6106,7 @@ export default function App() {
           <div className="mt-12 grid sm:grid-cols-3 gap-5 max-w-[820px] mx-auto">
             {[
               { ml: 10, price: 299, originalPrice: 500, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
-              { ml: 50, price: 1299, originalPrice: 1599, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear" },
+              { ml: 50, price: 1299, originalPrice: 1600, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear" },
               { ml: 100, price: 2399, originalPrice: 3000, label: "Best Value Sale", desc: "Maximum value — 5+ months of your signature scent", popular: true },
             ].map(s => (
               <div key={s.ml} className={`rounded-[24px] p-6 text-center border ${s.popular ? "bg-[#2e2117] border-[#c99a4a] scale-[1.04]" : "bg-[#1e1812] border-[#3a2b21]"}`}>
@@ -6220,7 +6220,7 @@ export default function App() {
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml: <span className="line-through opacity-70">Rs 500</span> <span className="text-[#ff6b6b] font-[700]">Rs 299</span> • 50ml: <span className="line-through opacity-70">Rs 1,599</span> <span className="text-[#ff6b6b] font-[700]">Rs 1,299</span> • 100ml: <span className="line-through opacity-70">Rs 3,000</span> <span className="text-[#ff6b6b] font-[700]">Rs 2,399</span></div>
+          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml: <span className="line-through opacity-70">Rs 500</span> <span className="text-[#ff6b6b] font-[700]">Rs 299</span> • 50ml: <span className="line-through opacity-70">Rs 1,600</span> <span className="text-[#ff6b6b] font-[700]">Rs 1,299</span> • 100ml: <span className="line-through opacity-70">Rs 3,000</span> <span className="text-[#ff6b6b] font-[700]">Rs 2,399</span></div>
         </div>
       </section>
 
@@ -6314,7 +6314,7 @@ export default function App() {
             <div className="font-[650] mb-3 text-[#f0dcc0]">Pricing</div>
             <ul className="space-y-2 text-[#a89070]">
               <li>10ml — Original: <span className="line-through opacity-70">Rs 500</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 299</span></li>
-              <li>50ml — Original: <span className="line-through opacity-70">Rs 1,599</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 1,299</span></li>
+              <li>50ml — Original: <span className="line-through opacity-70">Rs 1,600</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 1,299</span></li>
               <li>100ml — Original: <span className="line-through opacity-70">Rs 3,000</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 2,399</span></li>
               <li>100ml — PKR 2,499</li>
               <li className="pt-1 text-[#c9a86c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
@@ -6372,7 +6372,7 @@ export default function App() {
                   <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Select Your Size</div>
                   <div className="flex flex-wrap gap-3">
                     {modal.sizes.map(s => {
-                      const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1599 : s.ml === 100 ? 3000 : null;
+                      const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
                       return (
                         <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[140px] transition relative ${sizePick === s.ml ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"} ring-1 ring-[#e8474c]/30`}>
                           <div className="absolute -top-2.5 -right-2 bg-[#e8474c] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>
