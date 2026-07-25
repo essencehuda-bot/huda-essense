@@ -5925,7 +5925,7 @@ export default function App() {
 
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 bg-[#f0e3ce] border border-[#d9c4a5] px-3.5 py-1.5 rounded-full text-[#7b1d2a] font-[700] text-[13px] shadow-sm">
-                ⏰ 6 to 8 Hours Lasting Guarantee
+                ⏰ 6 to 8 Hours Lasting
               </span>
               <span className="hidden sm:inline text-[#c4aa87]">•</span>
               <span className="text-[14px] text-[#5c4835] font-[500]">Long-lasting Premium Fragrance Oils</span>
