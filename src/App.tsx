@@ -5831,7 +5831,7 @@ export default function App() {
             </span>
           </div>
           <span className="hidden lg:inline-block bg-[#000000]/30 px-3 py-1 rounded-full text-[11px] font-[700] text-[#ffcc00] border border-[#ffaa00]/40 uppercase tracking-widest animate-pulse">
-            ⏰ 6 to 8 Hours Lasting
+            ⚡ Limited Stock
           </span>
           <span className="text-[20px] sm:text-[24px] animate-fire-icon" style={{ animationDelay: '0.6s' }}>🔥</span>
         </div>
@@ -5923,14 +5923,6 @@ export default function App() {
               Ab Har Kisi Ki Pohanch Mein.
             </h1>
 
-            <div className="mt-4 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 bg-[#f0e3ce] border border-[#d9c4a5] px-3.5 py-1.5 rounded-full text-[#7b1d2a] font-[700] text-[13px] shadow-sm">
-                ⏰ 6 to 8 Hours Lasting
-              </span>
-              <span className="hidden sm:inline text-[#c4aa87]">•</span>
-              <span className="text-[14px] text-[#5c4835] font-[500]">Long-lasting Premium Fragrance Oils</span>
-            </div>
-
             <div className="mt-7 flex flex-wrap gap-3">
               <button
                 onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })}
@@ -5965,7 +5957,7 @@ export default function App() {
       <div className="border-y border-[#e5d8c3] bg-[#f5eee2]">
         <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-5 grid grid-cols-3 gap-4 text-center">
           {[
-            { icon: "⏰", title: "6 to 8 Hours Lasting", sub: "Long-lasting performance" },
+            { icon: "✨", title: "Premium Quality", sub: "Long-lasting fragrances" },
             { icon: "🚚", title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
             { icon: "💵", title: "Cash on Delivery", sub: "Delivery charges advance" },
           ].map(t => (
