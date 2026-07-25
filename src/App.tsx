@@ -6170,7 +6170,7 @@ export default function App() {
           {[
             { name: "Fatima A.", city: "Karachi", text: "Tea Rose is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rose • 50ml", stars: 5 },
             { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 100ml", stars: 5 },
-            { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 8+ hours.", scent: "Armani Code + Miss Dior", stars: 5 },
+            { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 6 to 8 hours.", scent: "Armani Code + Miss Dior", stars: 5 },
           ].map((r, i) => (
             <div key={i} className="bg-white rounded-[24px] border border-[#ead6b8] p-6">
               <div className="text-[#c68f2a] text-[16px]">{"★".repeat(r.stars)}</div>
@@ -6194,7 +6194,7 @@ export default function App() {
             {[
               { emoji: "💎", title: "Designer Quality", desc: "Premium impression oils that rival originals costing 10x more" },
               { emoji: "🇵🇰", title: "Made in Pakistan", desc: "Proudly crafted for Pakistani customers and our climate" },
-              { emoji: "⏰", title: "Long Lasting", desc: "6-10+ hours of beautiful fragrance performance" },
+              { emoji: "⏰", title: "Long Lasting", desc: "6 to 8 hours of beautiful fragrance performance" },
               { emoji: "🎁", title: "Perfect Gift", desc: "Beautiful packaging makes every order gift-ready" },
             ].map(item => (
               <div key={item.title} className="text-center bg-white rounded-2xl p-6 border border-[#e4d0b2]">
