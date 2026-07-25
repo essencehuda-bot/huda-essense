@@ -5800,13 +5800,40 @@ export default function App() {
     <div className="min-h-screen bg-[#faf7f2] text-[#1b1714]">
 
       {/* ═══════════ SALE BANNER ═══════════ */}
-      <div className="bg-gradient-to-r from-[#7b1d2a] via-[#a02535] to-[#7b1d2a] text-white py-2.5 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDgpIi8+PC9zdmc+')] opacity-50"></div>
-        <div className="relative flex items-center justify-center gap-3 text-[13px] sm:text-[14px] font-[600] tracking-[0.04em] animate-pulse">
-          <span className="text-[18px]">🔥</span>
-          <span>MEGA SALE — 50ml Perfumes Now <span className="line-through opacity-70">PKR 1,599</span> <span className="text-[#ffd700] font-[800] text-[15px] sm:text-[16px]">PKR 1,299</span></span>
-          <span className="hidden sm:inline text-[#ffc9c9]">• Limited Time Only!</span>
-          <span className="text-[18px]">🔥</span>
+      {/* ═══════════ FIRE SALE BANNER ═══════════ */}
+      <div className="relative bg-gradient-to-r from-[#600a18] via-[#b31e30] via-[#e65c00] via-[#b31e30] to-[#600a18] animate-flame-bg text-white py-3 text-center overflow-hidden border-b border-[#ff8800]/40 shadow-[0_4px_25px_rgba(230,92,0,0.35)] z-50">
+        {/* Animated rising sparks */}
+        <div className="absolute inset-0 pointer-events-none opacity-80 overflow-hidden">
+          <span className="spark-particle w-1.5 h-1.5 left-[8%]" style={{ animationDelay: '0s', animationDuration: '2.1s' }} />
+          <span className="spark-particle w-2 h-2 left-[22%]" style={{ animationDelay: '0.4s', animationDuration: '2.6s' }} />
+          <span className="spark-particle w-1 h-1 left-[40%]" style={{ animationDelay: '0.9s', animationDuration: '1.8s' }} />
+          <span className="spark-particle w-2.5 h-2.5 left-[58%]" style={{ animationDelay: '0.2s', animationDuration: '2.4s' }} />
+          <span className="spark-particle w-1.5 h-1.5 left-[76%]" style={{ animationDelay: '1.2s', animationDuration: '2.0s' }} />
+          <span className="spark-particle w-2 h-2 left-[92%]" style={{ animationDelay: '0.7s', animationDuration: '2.5s' }} />
+        </div>
+
+        <div className="relative flex items-center justify-center gap-2 sm:gap-4 text-[13px] sm:text-[14.5px] font-[700] tracking-[0.04em]">
+          <span className="text-[20px] sm:text-[24px] animate-fire-icon">🔥</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            <span className="bg-[#ff2200]/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11.5px] font-[800] uppercase tracking-wider text-[#ffe600] border border-[#ffaa00]/60 animate-fire-glow shadow-inner">
+              🔥 MEGA FIRE SALE
+            </span>
+            <span className="text-white">
+              10ml: <span className="line-through opacity-70 font-normal">Rs 500</span> <span className="text-[#ffe600] font-[800] animate-fire-glow">Rs 299</span>
+            </span>
+            <span className="text-white/40 hidden sm:inline">•</span>
+            <span className="text-white">
+              50ml: <span className="line-through opacity-70 font-normal">Rs 1,599</span> <span className="text-[#ffe600] font-[800] animate-fire-glow">Rs 1,299</span>
+            </span>
+            <span className="text-white/40 hidden sm:inline">•</span>
+            <span className="text-white">
+              100ml: <span className="line-through opacity-70 font-normal">Rs 3,000</span> <span className="text-[#ffe600] font-[900] text-[15px] sm:text-[16.5px] animate-fire-glow">Rs 2,399</span>
+            </span>
+          </div>
+          <span className="hidden lg:inline-block bg-[#000000]/30 px-3 py-1 rounded-full text-[11px] font-[700] text-[#ffcc00] border border-[#ffaa00]/40 uppercase tracking-widest animate-pulse">
+            ⚡ Limited Stock
+          </span>
+          <span className="text-[20px] sm:text-[24px] animate-fire-icon" style={{ animationDelay: '0.6s' }}>🔥</span>
         </div>
       </div>
 
@@ -6012,11 +6039,14 @@ export default function App() {
                       </button>
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-2 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                         <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
-                          {p.sizes.map(s => (
-                            <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className={`px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl text-[9.5px] sm:text-[12.5px] font-[600] transition ${s.ml === 50 ? 'bg-[#fff0f0] text-[#c0392b] hover:bg-[#ffe0e0] ring-1 ring-[#e8474c]/40' : 'bg-white/95 text-[#2a1c11] hover:bg-[#f5e5c8]'}`}>
-                              {s.ml === 50 ? <>{s.ml}ml — <span className="line-through text-[#999] text-[8px] sm:text-[10px]">1,599</span> {PKR(s.price)}</> : <>{s.ml}ml — {PKR(s.price)}</>}
-                            </button>
-                          ))}
+                          {p.sizes.map(s => {
+                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1599 : s.ml === 100 ? 3000 : null;
+                            return (
+                              <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl text-[9.5px] sm:text-[12.5px] font-[600] transition bg-[#fff0f0] text-[#c0392b] hover:bg-[#ffe0e0] ring-1 ring-[#e8474c]/40">
+                                {s.ml}ml — {orig ? <span className="line-through text-[#999] text-[8px] sm:text-[10px]">Rs {orig.toLocaleString()}</span> : null} {PKR(s.price)}
+                              </button>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
@@ -6034,13 +6064,16 @@ export default function App() {
                       </div>
                       <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-[12.8px] text-[#6f5d48] italic line-clamp-1 sm:line-clamp-none">{p.mood}</div>
                       <div className="mt-3 sm:mt-4 grid grid-cols-3 gap-1 sm:gap-2 text-center">
-                        {p.sizes.map(s => (
-                          <div key={s.ml} className={`bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border ${s.ml === 50 ? 'border-[#e8474c] ring-1 ring-[#e8474c]/30' : 'border-[#efe0c9]'}`}>
-                            <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml {s.ml === 50 && <span className="text-[#e8474c] font-[700]">SALE</span>}</div>
-                            {s.ml === 50 && <div className="text-[8px] sm:text-[11px] text-[#9a8060] line-through">PKR 1,599</div>}
-                            <div className={`text-[10.5px] sm:text-[14px] font-[700] ${s.ml === 50 ? 'text-[#c0392b]' : ''}`}>{PKR(s.price)}</div>
-                          </div>
-                        ))}
+                        {p.sizes.map(s => {
+                          const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1599 : s.ml === 100 ? 3000 : null;
+                          return (
+                            <div key={s.ml} className="bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border border-[#e8474c]/30 ring-1 ring-[#e8474c]/20">
+                              <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml <span className="text-[#e8474c] font-[700]">SALE</span></div>
+                              {orig && <div className="text-[8px] sm:text-[11px] text-[#9a8060] line-through">Rs {orig.toLocaleString()}</div>}
+                              <div className="text-[10.5px] sm:text-[14px] font-[700] text-[#c0392b]">{PKR(s.price)}</div>
+                            </div>
+                          );
+                        })}
                       </div>
                       <div className="mt-3 sm:mt-5 flex items-center gap-1.5 sm:gap-2.5">
                         <button onClick={() => setModal(p)} className="flex-1 py-[8px] sm:py-[12px] rounded-full bg-[#1b1310] text-[#f6e7cc] text-[11px] sm:text-[13.5px] font-[600] hover:bg-[#2a1f16] transition">View Details</button>
@@ -6072,18 +6105,17 @@ export default function App() {
           </div>
           <div className="mt-12 grid sm:grid-cols-3 gap-5 max-w-[820px] mx-auto">
             {[
-              { ml: 10, price: 300, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
-              { ml: 50, price: 1299, originalPrice: 1599, label: "🔥 SALE", desc: "The sweet spot — lasts 2–3 months with daily wear", popular: true },
-              { ml: 100, price: 2500, label: "Best Value", desc: "Maximum value — 5+ months of your signature scent" },
+              { ml: 10, price: 299, originalPrice: 500, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
+              { ml: 50, price: 1299, originalPrice: 1599, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear" },
+              { ml: 100, price: 2399, originalPrice: 3000, label: "Best Value Sale", desc: "Maximum value — 5+ months of your signature scent", popular: true },
             ].map(s => (
               <div key={s.ml} className={`rounded-[24px] p-6 text-center border ${s.popular ? "bg-[#2e2117] border-[#c99a4a] scale-[1.04]" : "bg-[#1e1812] border-[#3a2b21]"}`}>
-                {s.popular && <div className="text-[10px] tracking-[0.22em] text-[#ff6b6b] uppercase font-[700] mb-3 animate-pulse">🔥 {s.label}</div>}
-                {!s.popular && <div className="text-[18px] text-[#dcc7a8] font-[500]">{s.label}</div>}
-                {s.popular && s.originalPrice && <div className="text-[18px] text-[#9a8060] line-through font-[500]">PKR {s.originalPrice.toLocaleString()}</div>}
-                <div className="text-[52px] font-[700] text-[#f6e8cc] mt-2 leading-none" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
-                  PKR {s.price.toLocaleString()}
+                <div className="text-[10px] tracking-[0.22em] text-[#ff6b6b] uppercase font-[700] mb-2">🔥 {s.label}</div>
+                <div className="text-[14px] text-[#9a8060] line-through font-[500]">Original price: Rs {s.originalPrice.toLocaleString()}</div>
+                <div className="text-[34px] sm:text-[40px] font-[700] text-[#f6e8cc] mt-1 leading-none" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+                  Sale price: Rs {s.price.toLocaleString()}
                 </div>
-                <div className="text-[16px] text-[#c5ad88] mt-1">{s.ml} ml</div>
+                <div className="text-[16px] text-[#c5ad88] mt-2 font-[600]">{s.ml} ml Perfume</div>
                 <div className="text-[13px] text-[#a08a6c] mt-3 leading-relaxed">{s.desc}</div>
                 <button
                   onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })}
@@ -6188,7 +6220,7 @@ export default function App() {
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml PKR 299 • 50ml <span className="line-through opacity-70">PKR 1,599</span> <span className="text-[#ff6b6b] font-[700]">PKR 1,299</span> • 100ml PKR 2,499</div>
+          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml: <span className="line-through opacity-70">Rs 500</span> <span className="text-[#ff6b6b] font-[700]">Rs 299</span> • 50ml: <span className="line-through opacity-70">Rs 1,599</span> <span className="text-[#ff6b6b] font-[700]">Rs 1,299</span> • 100ml: <span className="line-through opacity-70">Rs 3,000</span> <span className="text-[#ff6b6b] font-[700]">Rs 2,399</span></div>
         </div>
       </section>
 
@@ -6279,10 +6311,11 @@ export default function App() {
             </ul>
           </div>
           <div>
-            <div className="font-[650] mb-3 text-[#f0dcc0]">Pricing (PKR)</div>
+            <div className="font-[650] mb-3 text-[#f0dcc0]">Pricing</div>
             <ul className="space-y-2 text-[#a89070]">
-              <li>10ml — PKR 299</li>
-              <li>50ml — PKR 1,299</li>
+              <li>10ml — Original: <span className="line-through opacity-70">Rs 500</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 299</span></li>
+              <li>50ml — Original: <span className="line-through opacity-70">Rs 1,599</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 1,299</span></li>
+              <li>100ml — Original: <span className="line-through opacity-70">Rs 3,000</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 2,399</span></li>
               <li>100ml — PKR 2,499</li>
               <li className="pt-1 text-[#c9a86c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
             </ul>
@@ -6338,14 +6371,17 @@ export default function App() {
                 <div className="mt-6">
                   <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Select Your Size</div>
                   <div className="flex flex-wrap gap-3">
-                    {modal.sizes.map(s => (
-                      <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[130px] transition relative ${sizePick === s.ml ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"} ${s.ml === 50 ? 'ring-1 ring-[#e8474c]/40' : ''}`}>
-                        {s.ml === 50 && <div className="absolute -top-2.5 -right-2 bg-[#e8474c] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>}
-                        <div className="text-[15px] font-[700]">{s.ml} ml</div>
-                        {s.ml === 50 && <div className="text-[12px] text-[#9a8060] line-through">PKR 1,599</div>}
-                        <div className={`text-[14px] font-[600] ${s.ml === 50 ? 'text-[#c0392b]' : 'text-[#6a5338]'}`}>{PKR(s.price)}</div>
-                      </button>
-                    ))}
+                    {modal.sizes.map(s => {
+                      const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1599 : s.ml === 100 ? 3000 : null;
+                      return (
+                        <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[140px] transition relative ${sizePick === s.ml ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"} ring-1 ring-[#e8474c]/30`}>
+                          <div className="absolute -top-2.5 -right-2 bg-[#e8474c] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>
+                          <div className="text-[15px] font-[700]">{s.ml} ml Perfume</div>
+                          {orig && <div className="text-[12px] text-[#9a8060] line-through">Original: Rs {orig.toLocaleString()}</div>}
+                          <div className="text-[14px] font-[700] text-[#c0392b]">Sale: Rs {s.price.toLocaleString()}</div>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="mt-6 flex gap-3 flex-wrap">
