@@ -12,7 +12,50 @@ const PKR = (n: number) => `PKR ${n.toLocaleString("en-PK")}`;
 
 /* ── All 12 Products (Matched) ──────────────────── */
 const DEFAULT_PRODUCTS: Product[] = [
-
+  {
+    "id": "afnan-9-pm",
+    "name": "Afnan 9 PM",
+    "inspiredBy": "9 PM by Afnan",
+    "gender": "Men",
+    "concentration": "Eau de Parfum",
+    "family": "Amber Vanilla",
+    "top": [
+      "Apple",
+      "Cinnamon",
+      "Wild Lavender",
+      "Bergamot"
+    ],
+    "heart": [
+      "Orange Blossom",
+      "Lily-of-the-Valley"
+    ],
+    "base": [
+      "Vanilla",
+      "Tonka Bean",
+      "Amber",
+      "Patchouli"
+    ],
+    "mood": "seductive • night out • magnetic",
+    "image": "/images/afnan-9-pm.jpeg",
+    "bestseller": true,
+    "story": "An irresistible blast of juicy apple, warm cinnamon, and rich vanilla. 9 PM by Afnan is legendary for date nights and evening allure.",
+    "sizes": [
+      {
+        "ml": 10,
+        "price": 299
+      },
+      {
+        "ml": 50,
+        "price": 1299
+      },
+      {
+        "ml": 100,
+        "price": 2499
+      }
+    ],
+    "rating": 4.9,
+    "reviews": 142
+  },
   {
     "id": "dior-sauvage",
     "name": "Dior Sauvage",

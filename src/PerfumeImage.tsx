@@ -112,7 +112,7 @@ function getScentThemeTemplate(product: Product): string {
   if (name.includes('wood') || name.includes('oud') || name.includes('janan') || name.includes('prestige')) {
     scores.woody += 12;
   }
-  if (name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger')) {
+  if (name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger') || name.includes('9 pm') || name.includes('afnan')) {
     scores.spicy += 12;
   }
   if (name.includes('black opium') || name.includes('la nuit') || name.includes('desire') || name.includes('eros') || name.includes('1 million')) {
