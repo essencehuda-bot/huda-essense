@@ -250,17 +250,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         goldGradLight.addColorStop(0.5, '#d4a95a');
         goldGradLight.addColorStop(1, '#b08d46');
 
-        // ─── Black label background ───
-        const labelBgGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
-        labelBgGrad.addColorStop(0, '#080808');
-        labelBgGrad.addColorStop(0.1, '#0f0f0f');
-        labelBgGrad.addColorStop(0.5, '#181818');
-        labelBgGrad.addColorStop(0.9, '#0f0f0f');
-        labelBgGrad.addColorStop(1, '#080808');
-
-        oCtx.fillStyle = labelBgGrad;
-        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
-        oCtx.fill();
+        // ─── Label background: transparent (no fill — gold prints directly on glass) ───
 
         // Outer gold border
         oCtx.strokeStyle = goldGrad;
