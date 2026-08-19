@@ -210,10 +210,10 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         }
 
         const centerX = img.width / 2;
-        const rectW = 380 * scale;
-        const rectH = 330 * scale;
+        const rectW = 370 * scale;
+        const rectH = 340 * scale;
         const rectX = centerX - rectW / 2;
-        const rectY = 460 * scale;
+        const rectY = 455 * scale;
 
         const drawRoundedRect = (
           c: CanvasRenderingContext2D,
@@ -232,190 +232,208 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
           c.closePath();
         };
 
-        // Create metallic gold gradient for foil-like appearance on borders, logo & HUDA
+        // ══════════ BLACK & GOLD LUXURY LABEL (matching HUDA ESSENCE master reference) ══════════
+
+        // Metallic gold gradient for text, borders, and logo
         const goldGrad = oCtx.createLinearGradient(rectX, rectY, rectX + rectW, rectY + rectH);
-        goldGrad.addColorStop(0, '#3a2b0e');    // darker deep bronze shadow
-        goldGrad.addColorStop(0.25, '#7b5e28');  // rich antique gold
-        goldGrad.addColorStop(0.5, '#b08d46');   // warm metallic shine (deeper gold)
-        goldGrad.addColorStop(0.75, '#7b5e28');  // rich antique gold
-        goldGrad.addColorStop(1, '#3a2b0e');     // darker deep bronze shadow
+        goldGrad.addColorStop(0, '#8a6d2f');
+        goldGrad.addColorStop(0.2, '#c9993f');
+        goldGrad.addColorStop(0.4, '#d4a95a');
+        goldGrad.addColorStop(0.5, '#e8c06a');
+        goldGrad.addColorStop(0.6, '#d4a95a');
+        goldGrad.addColorStop(0.8, '#c9993f');
+        goldGrad.addColorStop(1, '#8a6d2f');
 
-        // Cylindrical 3D gradient for label background
-        const labelGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
-        labelGrad.addColorStop(0, '#e8ddcc');    // shadow on left edge
-        labelGrad.addColorStop(0.12, '#faf6ed'); // transition
-        labelGrad.addColorStop(0.5, '#fffefa');  // pearly warm white highlight
-        labelGrad.addColorStop(0.88, '#faf6ed'); // transition
-        labelGrad.addColorStop(1, '#e8ddcc');    // shadow on right edge
+        // Lighter gold for secondary text
+        const goldGradLight = oCtx.createLinearGradient(rectX, rectY + rectH * 0.3, rectX + rectW, rectY + rectH * 0.7);
+        goldGradLight.addColorStop(0, '#b08d46');
+        goldGradLight.addColorStop(0.5, '#d4a95a');
+        goldGradLight.addColorStop(1, '#b08d46');
 
-        // Draw flat background
-        oCtx.fillStyle = labelGrad;
-        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 16 * scale);
+        // ─── Black label background ───
+        const labelBgGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
+        labelBgGrad.addColorStop(0, '#080808');
+        labelBgGrad.addColorStop(0.1, '#0f0f0f');
+        labelBgGrad.addColorStop(0.5, '#181818');
+        labelBgGrad.addColorStop(0.9, '#0f0f0f');
+        labelBgGrad.addColorStop(1, '#080808');
+
+        oCtx.fillStyle = labelBgGrad;
+        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
         oCtx.fill();
 
-        // Draw outer gold border
+        // Outer gold border
         oCtx.strokeStyle = goldGrad;
         oCtx.lineWidth = 1.8 * scale;
-        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 16 * scale);
+        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
         oCtx.stroke();
 
-        // Draw inner gold border (inset by 7 * scale)
-        oCtx.lineWidth = 0.8 * scale;
-        drawRoundedRect(oCtx, rectX + 7 * scale, rectY + 7 * scale, rectW - 14 * scale, rectH - 14 * scale, 11 * scale);
+        // Inner gold border
+        oCtx.lineWidth = 0.5 * scale;
+        drawRoundedRect(oCtx, rectX + 7 * scale, rectY + 7 * scale, rectW - 14 * scale, rectH - 14 * scale, 9 * scale);
         oCtx.stroke();
 
-        const drawLeafLogo = (c: CanvasRenderingContext2D, cx: number, cy: number) => {
-          c.save();
-          c.fillStyle = goldGrad;
-          c.strokeStyle = goldGrad;
-          c.lineWidth = 2.0 * scale; // Bolder stem
-          
-          // Draw stem
-          c.beginPath();
-          c.moveTo(cx, cy + 22 * scale);
-          c.quadraticCurveTo(cx - 2 * scale, cy + 5 * scale, cx, cy - 15 * scale);
-          c.stroke();
-          
-          // Helper to draw a single leaf pointing at an angle
-          const drawLeaf = (x: number, y: number, w: number, h: number, angle: number) => {
-            c.save();
-            c.translate(x, y);
-            c.rotate(angle);
-            c.beginPath();
-            c.moveTo(0, 0);
-            c.quadraticCurveTo(w / 2, -h / 2, w, 0);
-            c.quadraticCurveTo(w / 2, h / 2, 0, 0);
-            c.fill();
-            c.restore();
-          };
-
-          // Top center leaf (slightly larger)
-          drawLeaf(cx, cy - 15 * scale, 16.5 * scale, 8.5 * scale, -Math.PI / 2);
-          
-          // Upper left leaf
-          drawLeaf(cx - 2 * scale, cy - 3 * scale, 15.5 * scale, 7.5 * scale, -Math.PI * 0.7);
-          // Upper right leaf
-          drawLeaf(cx + 2 * scale, cy - 3 * scale, 15.5 * scale, 7.5 * scale, -Math.PI * 0.3);
-          
-          // Lower left leaf
-          drawLeaf(cx - 3 * scale, cy + 10 * scale, 16.5 * scale, 8 * scale, -Math.PI * 0.8);
-          // Lower right leaf
-          drawLeaf(cx + 3 * scale, cy + 10 * scale, 16.5 * scale, 8 * scale, -Math.PI * 0.2);
-          
-          c.restore();
-        };
-
-        // Enable a very subtle letterpress shadow for printed elements to feel physical
-        oCtx.shadowColor = 'rgba(0, 0, 0, 0.12)';
-        oCtx.shadowBlur = 1 * scale;
-        oCtx.shadowOffsetX = 0.5 * scale;
-        oCtx.shadowOffsetY = 0.5 * scale;
-
-        // 1. Draw Leaf Logo (shifted up slightly for larger label)
-        drawLeafLogo(oCtx, centerX, 502 * scale);
-
-        // 2. Draw "HUDA" brand name (gold, bold serif, scaled up for high readability)
+        // ─── Setup text rendering ───
         oCtx.textAlign = 'center';
         oCtx.textBaseline = 'middle';
-        oCtx.fillStyle = goldGrad;
-        oCtx.font = `bold ${Math.round(48 * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        if ('letterSpacing' in oCtx) {
-          (oCtx as any).letterSpacing = (1.2 * scale) + 'px';
-        }
-        oCtx.fillText('HUDA', centerX, 550 * scale);
+        oCtx.shadowColor = 'rgba(212, 169, 90, 0.18)';
+        oCtx.shadowBlur = 2 * scale;
+        oCtx.shadowOffsetX = 0;
+        oCtx.shadowOffsetY = 0.5 * scale;
 
-        // 3. Draw "— ESSENCE —" (gold, bold, scaled up for high readability)
-        oCtx.fillStyle = goldGrad;
-        oCtx.font = `bold ${Math.round(16 * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        if ('letterSpacing' in oCtx) {
-          (oCtx as any).letterSpacing = (5.5 * scale) + 'px';
-        }
-        oCtx.fillText('— ESSENCE —', centerX, 588 * scale);
+        // ═══════ ALL POSITIONS RELATIVE TO STICKER RECT ═══════
+        // This ensures the layout scales and fits any bottle size
 
-        // Reset letter spacing
+        // ─── 1. HE Monogram (top 35% of sticker) ───
+        const monoY = rectY + rectH * 0.20;
+        const monoFontSize = Math.round(rectH * 0.16);
+
+        oCtx.font = `600 ${monoFontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        oCtx.fillStyle = goldGrad;
+        if ('letterSpacing' in oCtx) {
+          (oCtx as any).letterSpacing = '0px';
+        }
+        oCtx.fillText('H', centerX - monoFontSize * 0.28, monoY);
+
+        oCtx.fillStyle = goldGradLight;
+        oCtx.fillText('E', centerX + monoFontSize * 0.30, monoY);
+
+        // ─── Perfume bottle icon on top of the H ───
+        oCtx.save();
+        oCtx.fillStyle = goldGrad;
+        oCtx.strokeStyle = goldGrad;
+        const bx = centerX - monoFontSize * 0.04;
+        const by = monoY - monoFontSize * 0.62;
+        const bw = monoFontSize * 0.17;
+        const bh = monoFontSize * 0.28;
+
+        // Bottle body
+        oCtx.lineWidth = 1.0 * scale;
+        oCtx.beginPath();
+        oCtx.moveTo(bx - bw * 0.7, by);
+        oCtx.lineTo(bx - bw * 0.45, by - bh * 0.3);
+        oCtx.lineTo(bx + bw * 0.45, by - bh * 0.3);
+        oCtx.lineTo(bx + bw * 0.7, by);
+        oCtx.lineTo(bx + bw * 0.7, by + bh * 0.55);
+        oCtx.lineTo(bx - bw * 0.7, by + bh * 0.55);
+        oCtx.closePath();
+        oCtx.stroke();
+
+        // Bottle cap
+        oCtx.fillRect(bx - bw * 0.3, by - bh * 0.55, bw * 0.6, bh * 0.25);
+
+        // Cap diamond
+        oCtx.beginPath();
+        oCtx.moveTo(bx, by - bh * 0.55);
+        oCtx.lineTo(bx + bw * 0.22, by - bh * 0.65);
+        oCtx.lineTo(bx, by - bh * 0.78);
+        oCtx.lineTo(bx - bw * 0.22, by - bh * 0.65);
+        oCtx.closePath();
+        oCtx.fill();
+        oCtx.restore();
+
+        // ─── Spray dots ───
+        oCtx.save();
+        oCtx.fillStyle = goldGrad;
+        const sprayOX = bx + bw * 0.7;
+        const sprayOY = by - bh * 0.5;
+
+        for (let i = 0; i < 30; i++) {
+          const angle = -Math.PI * 0.35 + Math.random() * (Math.PI * 0.4);
+          const dist = (6 + Math.random() * 25) * scale;
+          const dotR = (0.4 + Math.random() * 1.0) * scale;
+          oCtx.globalAlpha = 0.25 + Math.random() * 0.5;
+          oCtx.beginPath();
+          oCtx.arc(sprayOX + Math.cos(angle) * dist, sprayOY + Math.sin(angle) * dist, dotR, 0, Math.PI * 2);
+          oCtx.fill();
+        }
+        oCtx.globalAlpha = 1.0;
+        oCtx.restore();
+
+        // ─── 2. "HUDA ESSENCE" brand text (at ~42% of sticker) ───
+        const brandY = rectY + rectH * 0.42;
+        const brandFontSize = Math.round(rectH * 0.065);
+        oCtx.fillStyle = goldGrad;
+        oCtx.font = `600 ${brandFontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        if ('letterSpacing' in oCtx) {
+          (oCtx as any).letterSpacing = (3.5 * scale) + 'px';
+        }
+        oCtx.fillText('HUDA ESSENCE', centerX, brandY);
         if ('letterSpacing' in oCtx) {
           (oCtx as any).letterSpacing = '0px';
         }
 
-        // 4. Draw separator line with diamond
-        oCtx.beginPath();
-        oCtx.moveTo(centerX - 60 * scale, 616 * scale);
-        oCtx.lineTo(centerX + 60 * scale, 616 * scale);
+        // ─── 3. Decorative lines with heart (at ~50%) ───
+        const heartY = rectY + rectH * 0.50;
+        const lineLen = rectW * 0.17;
+        const hs = rectH * 0.018;
+
+        // Left line
         oCtx.strokeStyle = goldGrad;
-        oCtx.lineWidth = 1.0 * scale;
+        oCtx.lineWidth = 0.8 * scale;
+        oCtx.beginPath();
+        oCtx.moveTo(centerX - 12 * scale, heartY);
+        oCtx.lineTo(centerX - 12 * scale - lineLen, heartY);
+        oCtx.stroke();
+        // Right line
+        oCtx.beginPath();
+        oCtx.moveTo(centerX + 12 * scale, heartY);
+        oCtx.lineTo(centerX + 12 * scale + lineLen, heartY);
         oCtx.stroke();
 
+        // Heart
+        oCtx.save();
+        oCtx.fillStyle = goldGrad;
         oCtx.beginPath();
-        oCtx.moveTo(centerX, 612 * scale);
-        oCtx.lineTo(centerX + 5 * scale, 616 * scale);
-        oCtx.lineTo(centerX, 620 * scale);
-        oCtx.lineTo(centerX - 5 * scale, 616 * scale);
+        oCtx.moveTo(centerX, heartY + hs * 0.8);
+        oCtx.bezierCurveTo(centerX - hs * 1.3, heartY - hs * 0.2, centerX - hs * 0.7, heartY - hs * 1.0, centerX, heartY - hs * 0.05);
+        oCtx.bezierCurveTo(centerX + hs * 0.7, heartY - hs * 1.0, centerX + hs * 1.3, heartY - hs * 0.2, centerX, heartY + hs * 0.8);
         oCtx.closePath();
-        oCtx.fillStyle = goldGrad;
         oCtx.fill();
+        oCtx.restore();
 
-        // 5. Draw "INSPIRED BY" with flanking lines (bold, scaled up)
-        oCtx.font = `bold ${Math.round(13 * scale)}px 'Instrument Sans', 'Arial', sans-serif`;
-        oCtx.fillStyle = goldGrad;
+        // ─── 4. "INSPIRED BY" (at ~58%) ───
+        const inspLabelY = rectY + rectH * 0.59;
+        const inspFontSize = Math.round(rectH * 0.032);
+        oCtx.font = `500 ${inspFontSize}px 'Instrument Sans', 'Arial', sans-serif`;
+        oCtx.fillStyle = goldGradLight;
         if ('letterSpacing' in oCtx) {
           (oCtx as any).letterSpacing = (2.2 * scale) + 'px';
         }
-        const inspiredText = 'INSPIRED BY';
-        oCtx.fillText(inspiredText, centerX, 650 * scale);
-
-        // Measure text for flanking lines
-        const inspiredWidth = oCtx.measureText(inspiredText).width;
+        oCtx.fillText('INSPIRED BY', centerX, inspLabelY);
         if ('letterSpacing' in oCtx) {
           (oCtx as any).letterSpacing = '0px';
         }
 
-        oCtx.strokeStyle = goldGrad;
-        oCtx.lineWidth = 1.0 * scale;
-        // Left line flanking INSPIRED BY
-        oCtx.beginPath();
-        oCtx.moveTo(centerX - inspiredWidth / 2 - 14 * scale, 650 * scale);
-        oCtx.lineTo(centerX - inspiredWidth / 2 - 50 * scale, 650 * scale);
-        oCtx.stroke();
-
-        // Right line flanking INSPIRED BY
-        oCtx.beginPath();
-        oCtx.moveTo(centerX + inspiredWidth / 2 + 14 * scale, 650 * scale);
-        oCtx.lineTo(centerX + inspiredWidth / 2 + 50 * scale, 650 * scale);
-        oCtx.stroke();
-
-        // 6. Draw perfume name (automatically wrap onto multiple lines, start at 28px and bold weight)
-        let fontSize = 28 * scale;
-        let lineHeight = 32 * scale;
-        let lines: string[] = [];
+        // ─── 5. Product name — dynamic from product.name (at ~70%) ───
+        const nameText = product.name.toUpperCase();
         const maxWidth = rectW - 40 * scale;
+        const nameTargetY = rectY + rectH * 0.70;
 
-        // Try sizes from 28 down to 16 to find the one that fits nicely and stays bold
-        for (let size = 28; size >= 16; size -= 1) {
-          oCtx.font = `bold ${Math.round(size * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        let fontSize = 24 * scale;
+        let lineHeight = 28 * scale;
+        let lines: string[] = [];
+
+        for (let size = 24; size >= 12; size -= 1) {
+          oCtx.font = `italic 600 ${Math.round(size * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
           lines = [];
-          const words = product.name.split(/\s+/);
+          const words = nameText.split(/\s+/);
           let currentLine = words[0] || '';
           let ok = true;
 
           for (let i = 1; i < words.length; i++) {
-            const word = words[i];
-            const testLine = currentLine + " " + word;
-            const width = oCtx.measureText(testLine).width;
-            if (width <= maxWidth) {
+            const testLine = currentLine + " " + words[i];
+            if (oCtx.measureText(testLine).width <= maxWidth) {
               currentLine = testLine;
             } else {
               lines.push(currentLine);
-              currentLine = word;
-              if (oCtx.measureText(word).width > maxWidth) {
-                ok = false;
-              }
+              currentLine = words[i];
+              if (oCtx.measureText(words[i]).width > maxWidth) ok = false;
             }
           }
-          if (currentLine) {
-            lines.push(currentLine);
-          }
+          if (currentLine) lines.push(currentLine);
 
-          if (ok && lines.length <= (product.name.length > 25 ? 3 : 2)) {
+          if (ok && lines.length <= (nameText.length > 25 ? 3 : 2)) {
             fontSize = size * scale;
             lineHeight = (size + 4) * scale;
             break;
@@ -423,52 +441,62 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         }
 
         oCtx.save();
-        oCtx.font = `bold ${Math.round(fontSize)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        oCtx.fillStyle = '#000000';
-        // Add premium high-contrast letterpress shadow to make the text pop off the card
-        oCtx.shadowColor = 'rgba(0, 0, 0, 0.28)';
-        oCtx.shadowBlur = 1.8 * scale;
-        oCtx.shadowOffsetX = 0.6 * scale;
-        oCtx.shadowOffsetY = 0.9 * scale;
-        
-        // Center the perfume name vertically in the lower half (between 650 and 785)
+        oCtx.font = `italic 600 ${Math.round(fontSize)}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        oCtx.fillStyle = goldGrad;
+        oCtx.shadowColor = 'rgba(212, 169, 90, 0.25)';
+        oCtx.shadowBlur = 2.5 * scale;
+
         const totalHeight = lines.length * lineHeight;
-        const startY = (718 * scale) - (totalHeight / 2) + (lineHeight / 2) - 4 * scale;
+        const nameStartY = nameTargetY - totalHeight / 2 + lineHeight / 2;
         lines.forEach((line, index) => {
-          oCtx.fillText(line, centerX, startY + (index * lineHeight));
+          oCtx.fillText(line, centerX, nameStartY + (index * lineHeight));
         });
         oCtx.restore();
 
-        const imgData = oCtx.getImageData(rectX, rectY, rectW, rectH);
-        const data = imgData.data;
-        for (let i = 0; i < data.length; i += 4) {
-          if (data[i+3] > 0) { 
-            const noise = (Math.random() - 0.5) * 6;
-            data[i] = Math.max(0, Math.min(255, data[i] + noise));
-            data[i+1] = Math.max(0, Math.min(255, data[i+1] + noise));
-            data[i+2] = Math.max(0, Math.min(255, data[i+2] + noise));
-          }
+        // ─── 6. EXTRAIT DE PARFUM (at ~84%) ───
+        const edpY = rectY + rectH * 0.84;
+        oCtx.font = `400 ${Math.round(rectH * 0.024)}px 'Instrument Sans', 'Arial', sans-serif`;
+        oCtx.fillStyle = goldGradLight;
+        oCtx.globalAlpha = 0.8;
+        if ('letterSpacing' in oCtx) {
+          (oCtx as any).letterSpacing = (1.5 * scale) + 'px';
         }
-        oCtx.putImageData(imgData, rectX, rectY);
+        oCtx.fillText('EXTRAIT DE PARFUM', centerX, edpY);
 
-        // Overlay the diagonal glass reflection
+        // ─── 7. 50ML | 1.7 FL.OZ (at ~91%) ───
+        const sizeTextY = rectY + rectH * 0.91;
+        oCtx.font = `400 ${Math.round(rectH * 0.020)}px 'Instrument Sans', 'Arial', sans-serif`;
+        if ('letterSpacing' in oCtx) {
+          (oCtx as any).letterSpacing = (1.2 * scale) + 'px';
+        }
+        oCtx.fillText('50ML | 1.7 FL.OZ', centerX, sizeTextY);
+
+        // Reset state
+        oCtx.globalAlpha = 1.0;
+        if ('letterSpacing' in oCtx) {
+          (oCtx as any).letterSpacing = '0px';
+        }
+        oCtx.shadowColor = 'transparent';
+        oCtx.shadowBlur = 0;
+
+        // ─── Subtle diagonal gloss reflection ───
         oCtx.save();
-        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 16 * scale);
+        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
         oCtx.clip();
 
-        const reflectGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
+        const reflectGrad = oCtx.createLinearGradient(rectX, rectY, rectX + rectW, rectY + rectH);
         reflectGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
-        reflectGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.02)');
-        reflectGrad.addColorStop(0.65, 'rgba(255, 255, 255, 0.12)');
-        reflectGrad.addColorStop(0.75, 'rgba(255, 255, 255, 0.02)');
+        reflectGrad.addColorStop(0.38, 'rgba(255, 255, 255, 0)');
+        reflectGrad.addColorStop(0.50, 'rgba(255, 255, 255, 0.05)');
+        reflectGrad.addColorStop(0.62, 'rgba(255, 255, 255, 0)');
         reflectGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
 
         oCtx.fillStyle = reflectGrad;
         oCtx.beginPath();
-        oCtx.moveTo(rectX - 100 * scale, rectY);
-        oCtx.lineTo(rectX + rectW, rectY);
-        oCtx.lineTo(rectX + rectW + 100 * scale, rectY + rectH);
-        oCtx.lineTo(rectX, rectY + rectH);
+        oCtx.moveTo(rectX, rectY);
+        oCtx.lineTo(rectX + rectW * 0.6, rectY);
+        oCtx.lineTo(rectX + rectW, rectY + rectH);
+        oCtx.lineTo(rectX + rectW * 0.4, rectY + rectH);
         oCtx.closePath();
         oCtx.fill();
         oCtx.restore();
@@ -484,7 +512,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         const thetaMax = 0.38;
         const sinThetaMax = Math.sin(thetaMax);
 
-        ctx.fillStyle = '#ebdcc5';
+        ctx.fillStyle = '#0e0e0e';
         ctx.beginPath();
         for (let x = 0; x <= rectW; x++) {
           const normX = (x - rectW / 2) / (rectW / 2);
