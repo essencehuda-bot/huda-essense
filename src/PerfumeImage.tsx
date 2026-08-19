@@ -172,10 +172,9 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
     const baseImgPath = getScentThemeTemplate(product);
 
     const drawCanvasTemplate = () => {
-      // Load the original unique photographed bottle image (.jpeg) as the background template!
-      // This preserves the unique bottle shape, cap, shadows, and background photographed in the studio.
+      // Load the transparent .png bottle image for clear/transparent background
       const bgSrc = (product.image && !product.image.startsWith('data:image/'))
-        ? product.image.replace(/\.png$/, '.jpeg')
+        ? product.image.replace(/\.jpeg$/, '.png')
         : (product.image || baseImgPath);
 
       const img = new Image();
@@ -501,49 +500,6 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         oCtx.fill();
         oCtx.restore();
 
-        // ────────── COVER ORIGINAL WHITE STICKER FIRST ──────────
-        // Paint a larger dark area on the main canvas to completely hide
-        // the old white sticker before placing our black & gold label on top.
-        // The cover area extends beyond the label rect on all sides.
-        const coverPad = 20 * scale;
-        const coverX = rectX - coverPad;
-        const coverY = rectY - coverPad;
-        const coverW = rectW + coverPad * 2;
-        const coverH = rectH + coverPad * 2;
-
-        // Sample the average background color from the edges of the bottle image
-        // to blend the cover area naturally with the bottle surface
-        const sampleSize = 4;
-        const edgePixels = ctx.getImageData(
-          Math.max(0, Math.round(centerX - rectW / 2 - 30 * scale)),
-          Math.round(rectY + rectH * 0.3),
-          sampleSize, sampleSize
-        );
-        let avgR = 0, avgG = 0, avgB = 0;
-        for (let i = 0; i < edgePixels.data.length; i += 4) {
-          avgR += edgePixels.data[i];
-          avgG += edgePixels.data[i + 1];
-          avgB += edgePixels.data[i + 2];
-        }
-        const pixelCount = edgePixels.data.length / 4;
-        avgR = Math.round(avgR / pixelCount);
-        avgG = Math.round(avgG / pixelCount);
-        avgB = Math.round(avgB / pixelCount);
-
-        // Draw the cover rect with sampled bottle color to blend naturally
-        ctx.save();
-        ctx.beginPath();
-        const cr = 18 * scale;
-        ctx.moveTo(coverX + cr, coverY);
-        ctx.arcTo(coverX + coverW, coverY, coverX + coverW, coverY + coverH, cr);
-        ctx.arcTo(coverX + coverW, coverY + coverH, coverX, coverY + coverH, cr);
-        ctx.arcTo(coverX, coverY + coverH, coverX, coverY, cr);
-        ctx.arcTo(coverX, coverY, coverX + coverW, coverY, cr);
-        ctx.closePath();
-        ctx.fillStyle = `rgb(${avgR}, ${avgG}, ${avgB})`;
-        ctx.fill();
-        ctx.restore();
-
         // ────────── WARP AND BEND ONTO MAIN CANVAS ──────────
         ctx.save();
         ctx.shadowColor = 'rgba(15, 10, 5, 0.22)';
@@ -592,7 +548,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         }
 
         try {
-          const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+          const dataUrl = canvas.toDataURL('image/png');
           imageCache[product.id] = dataUrl;
           setSrc(dataUrl);
         } catch (err) {
