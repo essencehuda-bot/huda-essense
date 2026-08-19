@@ -35,7 +35,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "seductive \u2022 night out \u2022 magnetic",
-        "image": "/images/huda-essence-afnan-9-pm.webp",
+        "image": "/images/huda-essence-afnan-9-pm.jpg",
         "bestseller": true,
         "story": "An irresistible blast of juicy apple, warm cinnamon, and rich vanilla. 9 PM by Afnan is legendary for date nights and evening allure.",
         "sizes": [
@@ -78,7 +78,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Labdanum"
         ],
         "mood": "raw \u2022 wild \u2022 magnetic",
-        "image": "/images/huda-essence-dior-sauvage.webp",
+        "image": "/images/huda-essence-dior-sauvage.jpg",
         "bestseller": true,
         "story": "An explosive blast of fresh bergamot and raw ambroxan. A fragrance that projects confidence and turns heads.",
         "sizes": [
@@ -124,7 +124,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "fresh \u2022 clean \u2022 commanding",
-        "image": "/images/huda-essence-bleu-de-chanel.webp",
+        "image": "/images/huda-essence-bleu-de-chanel.jpg",
         "bestseller": true,
         "story": "A tribute to masculine freedom. Our Bleu impression is crisp, powerful, and impossibly versatile.",
         "sizes": [
@@ -168,7 +168,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "White Musk"
         ],
         "mood": "fresh \u2022 athletic \u2022 dynamic",
-        "image": "/images/huda-essence-chanel-allure-homme-sport.webp",
+        "image": "/images/huda-essence-chanel-allure-homme-sport.jpg",
         "story": "A fresh and sensual scent that evokes the simplicity of allure. Clean citrus meets warm tonka bean.",
         "sizes": [
             {
@@ -213,7 +213,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vanilla"
         ],
         "mood": "bold \u2022 legendary \u2022 powerful",
-        "image": "/images/huda-essence-creed-aventus.webp",
+        "image": "/images/huda-essence-creed-aventus.jpg",
         "bestseller": true,
         "story": "Inspired by the dramatic life of an emperor, celebrating strength, power, and success.",
         "sizes": [
@@ -252,7 +252,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "fresh \u2022 country-side \u2022 sophisticated",
-        "image": "/images/huda-essence-creed-green-irish-tweed.webp",
+        "image": "/images/huda-essence-creed-green-irish-tweed.jpg",
         "story": "Like a walk through the Irish countryside, Green Irish Tweed is fresh, green, and classically elegant.",
         "sizes": [
             {
@@ -293,7 +293,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Galbanum"
         ],
         "mood": "crisp \u2022 fresh \u2022 mountain-air",
-        "image": "/images/huda-essence-creed-silver-mountain.webp",
+        "image": "/images/huda-essence-creed-silver-mountain.jpg",
         "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
         "sizes": [
             {
@@ -333,7 +333,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Tonka Bean"
         ],
         "mood": "mysterious \u2022 seductive \u2022 sophisticated",
-        "image": "/images/huda-essence-armani-code.webp",
+        "image": "/images/huda-essence-armani-code.jpg",
         "story": "A mysterious, sophisticated, and utterly seductive fragrance.",
         "sizes": [
             {
@@ -378,7 +378,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "aquatic \u2022 fresh \u2022 sunny",
-        "image": "/images/huda-essence-acqua-di-gio.webp",
+        "image": "/images/huda-essence-acqua-di-gio.jpg",
         "story": "A clean fragrance inspired by the Mediterranean sea, combining salty marine notes with sweet citrus.",
         "sizes": [
             {
@@ -421,7 +421,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Suede"
         ],
         "mood": "warm \u2022 sweet \u2022 irresistible",
-        "image": "/images/huda-essence-stronger-with-you.webp",
+        "image": "/images/huda-essence-stronger-with-you.jpg",
         "bestseller": true,
         "story": "A warm, addictive embrace in a bottle. Sweet chestnut and vanilla merge with spicy cardamom.",
         "sizes": [
@@ -465,7 +465,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Olibanum"
         ],
         "mood": "fresh \u2022 masculine \u2022 intense",
-        "image": "/images/huda-essence-ysl-y.webp",
+        "image": "/images/huda-essence-ysl-y.jpg",
         "bestseller": true,
         "story": "A deep, fresh and masculine scent representing the creative spirit of self-accomplishment.",
         "sizes": [
@@ -505,7 +505,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Caraway"
         ],
         "mood": "suave \u2022 nocturnal \u2022 magnetic",
-        "image": "/images/huda-essence-la-nuit-de-l-homme.webp",
+        "image": "/images/huda-essence-la-nuit-de-l-homme.jpg",
         "story": "The ultimate weapon of seduction. Fresh cardamom and sweet lavender blended on deep, dark vetiver.",
         "sizes": [
             {
@@ -548,7 +548,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Oakmoss"
         ],
         "mood": "passionate \u2022 bold \u2022 addictive",
-        "image": "/images/huda-essence-versace-eros.webp",
+        "image": "/images/huda-essence-versace-eros.jpg",
         "bestseller": true,
         "story": "Inspired by Greek mythology, Eros is the fragrance that depicts passion, desire and love.",
         "sizes": [
@@ -592,7 +592,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Saffron"
         ],
         "mood": "sensual \u2022 modern \u2022 charismatic",
-        "image": "/images/huda-essence-versace-dylan-blue.webp",
+        "image": "/images/huda-essence-versace-dylan-blue.jpg",
         "story": "A highly sensual fragrance with woody aroma and fresh aquatic accents.",
         "sizes": [
             {
@@ -635,7 +635,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "clean \u2022 Mediterranean \u2022 classic",
-        "image": "/images/huda-essence-versace-pour-homme.webp",
+        "image": "/images/huda-essence-versace-pour-homme.jpg",
         "story": "An elegant, classic fragrance inspired by the fresh air of the Mediterranean coast.",
         "sizes": [
             {
@@ -678,7 +678,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "bold \u2022 luxurious \u2022 nocturnal",
-        "image": "/images/huda-essence-paco-rabanne-1-million.webp",
+        "image": "/images/huda-essence-paco-rabanne-1-million.jpg",
         "bestseller": true,
         "story": "The scent of success and luxury. A rich, spicy-sweet blend of cinnamon, leather, and blood mandarin.",
         "sizes": [
@@ -721,7 +721,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "fresh \u2022 victorious \u2022 dynamic",
-        "image": "/images/huda-essence-invictus.webp",
+        "image": "/images/huda-essence-invictus.jpg",
         "story": "A fresh and dynamic fragrance that embodies victory and physical energy.",
         "sizes": [
             {
@@ -764,7 +764,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "futuristic \u2022 sweet \u2022 energetic",
-        "image": "/images/huda-essence-phantom.webp",
+        "image": "/images/huda-essence-phantom.jpg",
         "story": "A futuristic fragrance born from the clash between luxury craftsmanship and new-tech.",
         "sizes": [
             {
@@ -806,7 +806,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "sensual \u2022 hot \u2022 confident",
-        "image": "/images/huda-essence-dunhill-desire-red.webp",
+        "image": "/images/huda-essence-dunhill-desire-red.jpg",
         "story": "A masculine scent designed for the self-confident man who wants to be at the center of attention.",
         "sizes": [
             {
@@ -849,7 +849,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Oakmoss"
         ],
         "mood": "sophisticated \u2022 classic \u2022 executive",
-        "image": "/images/huda-essence-dunhill-icon.webp",
+        "image": "/images/huda-essence-dunhill-icon.jpg",
         "story": "The perfect blend of classic elegance and modern sophistication. Woody base meets fresh spices.",
         "sizes": [
             {
@@ -891,7 +891,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "clean \u2022 bright \u2022 futuristic",
-        "image": "/images/huda-essence-dunhill-century.webp",
+        "image": "/images/huda-essence-dunhill-century.jpg",
         "story": "An uplifting and bright fragrance that combines fresh citruses with cardamoms and warm sandalwood.",
         "sizes": [
             {
@@ -935,7 +935,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "elegant \u2022 versatile \u2022 professional",
-        "image": "/images/huda-essence-hugo-boss-bottled.webp",
+        "image": "/images/huda-essence-hugo-boss-bottled.jpg",
         "story": "An elegant, modern scent that balances fresh fruity notes with warm spicy elements.",
         "sizes": [
             {
@@ -975,7 +975,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woody Notes"
         ],
         "mood": "seductive \u2022 warm \u2022 magnetic",
-        "image": "/images/huda-essence-boss-the-scent.webp",
+        "image": "/images/huda-essence-boss-the-scent.jpg",
         "story": "A seductive fragrance that captures the mind with a unique note of African Maninka fruit.",
         "sizes": [
             {
@@ -1020,7 +1020,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "adventurous \u2022 fresh \u2022 clean",
-        "image": "/images/huda-essence-hugo-man.webp",
+        "image": "/images/huda-essence-hugo-man.jpg",
         "story": "An aromatic green scent designed for the man who lives life on his own terms.",
         "sizes": [
             {
@@ -1059,7 +1059,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "raw \u2022 wild \u2022 luxurious",
-        "image": "/images/huda-essence-tom-ford-ombre-leather.webp",
+        "image": "/images/huda-essence-tom-ford-ombre-leather.jpg",
         "bestseller": true,
         "story": "A rich, smoky leather fragrance that captures the wide-open spaces of the American West.",
         "sizes": [
@@ -1102,7 +1102,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "opulent \u2022 smoky \u2022 sophisticated",
-        "image": "/images/huda-essence-tom-ford-tuscan-leather.webp",
+        "image": "/images/huda-essence-tom-ford-tuscan-leather.jpg",
         "story": "A dark, rich leather scent sweetened with raspberry and spiced with saffron. Impossibly opulent.",
         "sizes": [
             {
@@ -1143,7 +1143,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "smoky \u2022 royal \u2022 warming",
-        "image": "/images/huda-essence-tom-ford-oud-wood.webp",
+        "image": "/images/huda-essence-tom-ford-oud-wood.jpg",
         "story": "Rare and expensive oud wood blended with warm spices, amber, and vanilla.",
         "sizes": [
             {
@@ -1183,7 +1183,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woody Notes"
         ],
         "mood": "opulent \u2022 sweet \u2022 warm",
-        "image": "/images/huda-essence-tom-ford-tobacco-vanille.webp",
+        "image": "/images/huda-essence-tom-ford-tobacco-vanille.jpg",
         "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
         "sizes": [
             {
@@ -1227,7 +1227,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "sporty \u2022 sweet \u2022 energetic",
-        "image": "/images/huda-essence-ferrari-black.webp",
+        "image": "/images/huda-essence-ferrari-black.jpg",
         "story": "A sporty and fresh fragrance that settles into a sweet apple and warm vanilla note.",
         "sizes": [
             {
@@ -1271,7 +1271,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "expressive \u2022 charismatic \u2022 fresh",
-        "image": "/images/huda-essence-jaguar-classic-black.webp",
+        "image": "/images/huda-essence-jaguar-classic-black.jpg",
         "story": "An expressive and elegant fragrance that is fresh, spicy and deeply masculine.",
         "sizes": [
             {
@@ -1312,7 +1312,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "warm \u2022 sweet \u2022 captivating",
-        "image": "/images/huda-essence-jaguar-classic-gold.webp",
+        "image": "/images/huda-essence-jaguar-classic-gold.jpg",
         "story": "A warm and sweet woody aromatic fragrance that turns heads with its vanilla and teak wood notes.",
         "sizes": [
             {
@@ -1356,7 +1356,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "boozy \u2022 dark \u2022 rich",
-        "image": "/images/huda-essence-bentley-intense.webp",
+        "image": "/images/huda-essence-bentley-intense.jpg",
         "story": "A rich and boozy fragrance featuring black pepper, rum and incense. Truly premium projection.",
         "sizes": [
             {
@@ -1398,7 +1398,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Moss"
         ],
         "mood": "smoky \u2022 dark \u2022 woody",
-        "image": "/images/huda-essence-bentley-absolute.webp",
+        "image": "/images/huda-essence-bentley-absolute.jpg",
         "story": "An intensely woody and smoky fragrance with heavy notes of cedar, sandalwood, and oud.",
         "sizes": [
             {
@@ -1443,7 +1443,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "fresh \u2022 aquatic \u2022 classic",
-        "image": "/images/huda-essence-davidoff-cool-water.webp",
+        "image": "/images/huda-essence-davidoff-cool-water.jpg",
         "story": "The classic aquatic fragrance. Fresh, clean sea notes blended with mint and rosemary.",
         "sizes": [
             {
@@ -1486,7 +1486,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "clean \u2022 bright \u2022 casual",
-        "image": "/images/huda-essence-ck-one.webp",
+        "image": "/images/huda-essence-ck-one.jpg",
         "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
         "sizes": [
             {
@@ -1530,7 +1530,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vanilla"
         ],
         "mood": "intimate \u2022 warm \u2022 clean",
-        "image": "/images/huda-essence-ck-be.webp",
+        "image": "/images/huda-essence-ck-be.jpg",
         "story": "A warm, fresh woody fragrance with a highly intimate musk base that sits close to the skin.",
         "sizes": [
             {
@@ -1572,7 +1572,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "confident \u2022 charismatic \u2022 smooth",
-        "image": "/images/huda-essence-mont-blanc-legend.webp",
+        "image": "/images/huda-essence-mont-blanc-legend.jpg",
         "story": "Designed for the confident and charismatic man. A fresh, fruity aromatic foug\u00e8re.",
         "sizes": [
             {
@@ -1613,7 +1613,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "adventurous \u2022 woody \u2022 fresh",
-        "image": "/images/huda-essence-mont-blanc-explorer.webp",
+        "image": "/images/huda-essence-mont-blanc-explorer.jpg",
         "story": "An unconventional woody aromatic scent that takes you on a journey of discovery.",
         "sizes": [
             {
@@ -1657,7 +1657,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Haitian Vetiver"
         ],
         "mood": "bold \u2022 magnetic \u2022 irresistible",
-        "image": "/images/huda-essence-azzaro-wanted.webp",
+        "image": "/images/huda-essence-azzaro-wanted.jpg",
         "story": "A bold, magnetic, and irresistible fragrance for the confident man.",
         "sizes": [
             {
@@ -1701,7 +1701,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "fresh \u2022 clean \u2022 metallic",
-        "image": "/images/huda-essence-azzaro-chrome.webp",
+        "image": "/images/huda-essence-azzaro-chrome.jpg",
         "story": "A fresh and clean citrus fragrance with crisp metallic accents and woody notes.",
         "sizes": [
             {
@@ -1744,7 +1744,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woodsy Notes"
         ],
         "mood": "fresh \u2022 aquatic \u2022 powerful",
-        "image": "/images/huda-essence-rasasi-hawas.webp",
+        "image": "/images/huda-essence-rasasi-hawas.jpg",
         "bestseller": true,
         "story": "A fresh aquatic powerhouse combining crisp marine notes with warm amber. Beast-mode projection.",
         "sizes": [
@@ -1789,7 +1789,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vanilla"
         ],
         "mood": "smoky \u2022 citrusy \u2022 beast-mode",
-        "image": "/images/huda-essence-armaf-club-de-nuit-intense.webp",
+        "image": "/images/huda-essence-armaf-club-de-nuit-intense.jpg",
         "bestseller": true,
         "story": "A legendary smoky pineapple beast-mode fragrance that commands attention.",
         "sizes": [
@@ -1833,7 +1833,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Benzoin"
         ],
         "mood": "spicy \u2022 warm \u2022 beast-mode",
-        "image": "/images/huda-essence-lattafa-asad.webp",
+        "image": "/images/huda-essence-lattafa-asad.jpg",
         "bestseller": true,
         "story": "A rich, spicy amber fragrance with a bold performance. Deep black pepper meets sweet vanilla.",
         "sizes": [
@@ -1876,7 +1876,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Myrrh"
         ],
         "mood": "sweet \u2022 boozy \u2022 warm",
-        "image": "/images/huda-essence-lattafa-khamrah.webp",
+        "image": "/images/huda-essence-lattafa-khamrah.jpg",
         "bestseller": true,
         "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
         "sizes": [
@@ -1917,7 +1917,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Herbal Notes"
         ],
         "mood": "warm \u2022 sweet \u2022 oriental",
-        "image": "/images/huda-essence-ameer-al-oud.webp",
+        "image": "/images/huda-essence-ameer-al-oud.jpg",
         "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
         "sizes": [
             {
@@ -1960,7 +1960,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Incense"
         ],
         "mood": "sweet \u2022 warm \u2022 royal",
-        "image": "/images/huda-essence-oud-mood.webp",
+        "image": "/images/huda-essence-oud-mood.jpg",
         "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud and saffron.",
         "sizes": [
             {
@@ -2001,7 +2001,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "royal \u2022 spicy \u2022 oriental",
-        "image": "/images/huda-essence-j-janan-gold.webp",
+        "image": "/images/huda-essence-j-janan-gold.jpg",
         "story": "A majestic Pakistani blend featuring fresh citruses, rich rose, and a base of sweet amber and oud.",
         "sizes": [
             {
@@ -2041,7 +2041,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "fresh \u2022 modern \u2022 executive",
-        "image": "/images/huda-essence-j-janan-platinum.webp",
+        "image": "/images/huda-essence-j-janan-platinum.jpg",
         "story": "A modern executive fragrance that combines fresh grapefruit with dry cedarwood and white musk.",
         "sizes": [
             {
@@ -2081,7 +2081,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "sporty \u2022 fresh \u2022 clean",
-        "image": "/images/huda-essence-bonanza-satrangi-pour-homme.webp",
+        "image": "/images/huda-essence-bonanza-satrangi-pour-homme.jpg",
         "story": "A fresh and sporty aromatic fragrance that keeps you clean and active all day.",
         "sizes": [
             {
@@ -2121,7 +2121,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "energetic \u2022 fresh \u2022 aquatic",
-        "image": "/images/huda-essence-scents-n-stories-hero.webp",
+        "image": "/images/huda-essence-scents-n-stories-hero.jpg",
         "story": "A high-performance fresh fragrance designed to beat the heat with citrus and mint.",
         "sizes": [
             {
@@ -2161,7 +2161,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "charismatic \u2022 refined \u2022 classic",
-        "image": "/images/huda-essence-wb-by-hemani-prestige.webp",
+        "image": "/images/huda-essence-wb-by-hemani-prestige.jpg",
         "story": "A classic charismatic scent with premium woody notes, fresh spices, and a touch of leather.",
         "sizes": [
             {
@@ -2202,7 +2202,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Pink Pepper"
         ],
         "mood": "elegant \u2022 sensual \u2022 floral",
-        "image": "/images/huda-essence-gucci-flora.webp",
+        "image": "/images/huda-essence-gucci-flora.jpg",
         "story": "An elegant and sensual floral bouquet that celebrates the youthful spirit of femininity.",
         "sizes": [
             {
@@ -2239,7 +2239,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Honeysuckle"
         ],
         "mood": "floral \u2022 rich \u2022 enchanting",
-        "image": "/images/huda-essence-gucci-bloom.webp",
+        "image": "/images/huda-essence-gucci-bloom.jpg",
         "story": "A rich white floral scent that transports you to a beautiful, blooming garden.",
         "sizes": [
             {
@@ -2280,7 +2280,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "bold \u2022 modern \u2022 intoxicating",
-        "image": "/images/huda-essence-gucci-rush.webp",
+        "image": "/images/huda-essence-gucci-rush.jpg",
         "story": "An intoxicating and bold modern fragrance that leaves an unforgettable trail.",
         "sizes": [
             {
@@ -2321,7 +2321,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Rosewood"
         ],
         "mood": "feminine \u2022 fresh \u2022 romantic",
-        "image": "/images/huda-essence-miss-dior.webp",
+        "image": "/images/huda-essence-miss-dior.jpg",
         "story": "A modern feminine icon. Captures the romantic freshness of peony and rose, balanced with a warm patchouli base.",
         "sizes": [
             {
@@ -2367,7 +2367,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "glamorous \u2022 golden \u2022 opulent",
-        "image": "/images/huda-essence-j-adore-dior.webp",
+        "image": "/images/huda-essence-j-adore-dior.jpg",
         "bestseller": true,
         "story": "An opulent, golden floral fragrance that shimmers on the skin. A tribute to modern luxury.",
         "sizes": [
@@ -2411,7 +2411,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Heliotrope"
         ],
         "mood": "delicious \u2022 toxic \u2022 sensual",
-        "image": "/images/huda-essence-dior-poison-girl.webp",
+        "image": "/images/huda-essence-dior-poison-girl.jpg",
         "story": "A delicious, bitter-sweet floral fragrance with mouthwatering notes of vanilla and almond.",
         "sizes": [
             {
@@ -2452,7 +2452,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "elegant \u2022 chic \u2022 captivating",
-        "image": "/images/huda-essence-chanel-coco-mademoiselle.webp",
+        "image": "/images/huda-essence-chanel-coco-mademoiselle.jpg",
         "bestseller": true,
         "story": "A spirited and voluptuous fragrance. Sparkly orange notes meet a clear heart of rose and jasmine.",
         "sizes": [
@@ -2496,7 +2496,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "unexpected \u2022 sparkling \u2022 energetic",
-        "image": "/images/huda-essence-chanel-chance.webp",
+        "image": "/images/huda-essence-chanel-chance.jpg",
         "story": "A spin of fortune. A sparkling floral fragrance where pink pepper and jasmine intertwine.",
         "sizes": [
             {
@@ -2539,7 +2539,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cashmeran"
         ],
         "mood": "luminous \u2022 solar \u2022 pure",
-        "image": "/images/huda-essence-chanel-gabrielle.webp",
+        "image": "/images/huda-essence-chanel-gabrielle.jpg",
         "story": "A solar fragrance created around four white flowers \u2014 a pure floral heart.",
         "sizes": [
             {
@@ -2581,7 +2581,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "bright \u2022 fresh \u2022 glamorous",
-        "image": "/images/huda-essence-versace-bright-crystal.webp",
+        "image": "/images/huda-essence-versace-bright-crystal.jpg",
         "story": "A fresh, vibrant floral fragrance featuring pomegranate and peony with a warm musk finish.",
         "sizes": [
             {
@@ -2624,7 +2624,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "dark \u2022 sensual \u2022 mysterious",
-        "image": "/images/huda-essence-versace-crystal-noir.webp",
+        "image": "/images/huda-essence-versace-crystal-noir.jpg",
         "bestseller": true,
         "story": "A dark, mysterious fragrance featuring creamy coconut blended with rich gardenia and spices.",
         "sizes": [
@@ -2669,7 +2669,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "airy \u2022 bright \u2022 solar",
-        "image": "/images/huda-essence-versace-yellow-diamond.webp",
+        "image": "/images/huda-essence-versace-yellow-diamond.jpg",
         "story": "A bright, solar floral fragrance that sparkles like a diamond under the sun.",
         "sizes": [
             {
@@ -2712,7 +2712,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "free \u2022 bold \u2022 charismatic",
-        "image": "/images/huda-essence-ysl-libre.webp",
+        "image": "/images/huda-essence-ysl-libre.jpg",
         "bestseller": true,
         "story": "A grand floral fragrance of freedom. Tension between French lavender and Moroccan orange blossom.",
         "sizes": [
@@ -2757,7 +2757,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "passionate \u2022 sweet \u2022 romantic",
-        "image": "/images/huda-essence-mon-paris.webp",
+        "image": "/images/huda-essence-mon-paris.jpg",
         "story": "A passionate love fragrance capturing the spirit of Paris. Sweet berries meet patchouli.",
         "sizes": [
             {
@@ -2801,7 +2801,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "addictive \u2022 nocturnal \u2022 warm",
-        "image": "/images/huda-essence-black-opium.webp",
+        "image": "/images/huda-essence-black-opium.jpg",
         "bestseller": true,
         "story": "A highly addictive feminine fragrance. Black coffee combined with sweet vanilla and white florals.",
         "sizes": [
@@ -2846,7 +2846,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Oakmoss"
         ],
         "mood": "sweet \u2022 energetic \u2022 youthful",
-        "image": "/images/huda-essence-burberry-her.webp",
+        "image": "/images/huda-essence-burberry-her.jpg",
         "story": "A burst of sweet berries blended with jasmine and a warm, woody-musky base.",
         "sizes": [
             {
@@ -2889,7 +2889,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "intimate \u2022 warm \u2022 sensual",
-        "image": "/images/huda-essence-burberry-body.webp",
+        "image": "/images/huda-essence-burberry-body.jpg",
         "story": "An intimate and sensual fragrance that wraps the skin like a warm cashmere blanket.",
         "sizes": [
             {
@@ -2934,7 +2934,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Oakmoss"
         ],
         "mood": "glamorous \u2022 confident \u2022 playful",
-        "image": "/images/huda-essence-victoria-s-secret-bombshell.webp",
+        "image": "/images/huda-essence-victoria-s-secret-bombshell.jpg",
         "bestseller": true,
         "story": "A glamorous and confident blend of purple passionfruit, Shangri-la peony and vanilla orchid.",
         "sizes": [
@@ -2971,7 +2971,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vanilla"
         ],
         "mood": "passionate \u2022 bold \u2022 sultry",
-        "image": "/images/huda-essence-bombshell-intense.webp",
+        "image": "/images/huda-essence-bombshell-intense.jpg",
         "story": "A sultry, rich blend of decadent cherry, red peony and warm vanilla. Pure passion.",
         "sizes": [
             {
@@ -3007,7 +3007,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Velvet Musk"
         ],
         "mood": "intimate \u2022 airy \u2022 warm",
-        "image": "/images/huda-essence-bombshell-seduction.webp",
+        "image": "/images/huda-essence-bombshell-seduction.jpg",
         "story": "An intimate, airy floral fragrance with a warm, skin-like velvet musk base.",
         "sizes": [
             {
@@ -3053,7 +3053,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Praline"
         ],
         "mood": "bold \u2022 glamorous \u2022 dual-natured",
-        "image": "/images/huda-essence-carolina-herrera-good-girl.webp",
+        "image": "/images/huda-essence-carolina-herrera-good-girl.jpg",
         "bestseller": true,
         "story": "Sweet jasmine and cocoa meet bold coffee and tonka bean. A glamorous, confident scent.",
         "sizes": [
@@ -3093,7 +3093,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Coumarin"
         ],
         "mood": "powdery \u2022 romantic \u2022 sweet",
-        "image": "/images/huda-essence-good-girl-blush.webp",
+        "image": "/images/huda-essence-good-girl-blush.jpg",
         "story": "A powdery, romantic floral fragrance featuring sweet vanilla and fresh peonies.",
         "sizes": [
             {
@@ -3132,7 +3132,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "festive \u2022 sparkling \u2022 glamorous",
-        "image": "/images/huda-essence-212-vip-rose.webp",
+        "image": "/images/huda-essence-212-vip-rose.jpg",
         "story": "A sparkling champagne fragrance with sweet peach blossom and a warm, woody-musk base.",
         "sizes": [
             {
@@ -3174,7 +3174,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Tonka Bean"
         ],
         "mood": "sweet \u2022 joyful \u2022 iconic",
-        "image": "/images/huda-essence-lancome-la-vie-est-belle.webp",
+        "image": "/images/huda-essence-lancome-la-vie-est-belle.jpg",
         "bestseller": true,
         "story": "Life is beautiful. A rich gourmand blend of sweet praline, warm vanilla, and iris.",
         "sizes": [
@@ -3215,7 +3215,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vanilla"
         ],
         "mood": "clean \u2022 modern \u2022 inspiring",
-        "image": "/images/huda-essence-idole.webp",
+        "image": "/images/huda-essence-idole.jpg",
         "story": "For the future leaders. A clean, modern rose fragrance with a delicate white musk base.",
         "sizes": [
             {
@@ -3258,7 +3258,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "fresh \u2022 sunny \u2022 Mediterranean",
-        "image": "/images/huda-essence-dolce-gabbana-light-blue.webp",
+        "image": "/images/huda-essence-dolce-gabbana-light-blue.jpg",
         "story": "A fresh and sunny Mediterranean scent combining crisp apple and lemon with bamboo.",
         "sizes": [
             {
@@ -3300,7 +3300,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "creamy \u2022 sweet \u2022 tropical",
-        "image": "/images/huda-essence-dolce-garden.webp",
+        "image": "/images/huda-essence-dolce-garden.jpg",
         "story": "A delicious tropical garden scent featuring creamy coconut and sweet frangipani blossoms.",
         "sizes": [
             {
@@ -3344,7 +3344,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "pure \u2022 fresh \u2022 peaceful",
-        "image": "/images/huda-essence-issey-miyake-l-eau-d-issey.webp",
+        "image": "/images/huda-essence-issey-miyake-l-eau-d-issey.jpg",
         "story": "A pure and fresh aquatic floral fragrance, clean as spring water.",
         "sizes": [
             {
@@ -3382,7 +3382,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "garden \u2022 rich \u2022 white floral",
-        "image": "/images/huda-essence-blue-lady.webp",
+        "image": "/images/huda-essence-blue-lady.jpg",
         "story": "A rich white floral garden in a bottle. Lush, creamy tuberose and jasmine experience.",
         "sizes": [
             {
@@ -3422,7 +3422,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "clean \u2022 green \u2022 pure",
-        "image": "/images/huda-essence-chastity.webp",
+        "image": "/images/huda-essence-chastity.jpg",
         "story": "A clean, pure green-floral fragrance that brings a burst of freshness in warm weather.",
         "sizes": [
             {
@@ -3459,7 +3459,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Violet"
         ],
         "mood": "fresh \u2022 classic \u2022 rose",
-        "image": "/images/huda-essence-tea-rose.webp",
+        "image": "/images/huda-essence-tea-rose.jpg",
         "story": "The ultimate fresh rose. Captures the true aroma of a rose garden in full bloom.",
         "sizes": [
             {
@@ -3504,7 +3504,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "velvety \u2022 clean \u2022 comforting",
-        "image": "/images/huda-essence-white-musk.webp",
+        "image": "/images/huda-essence-white-musk.jpg",
         "story": "A velvety, clean, and comforting musk fragrance. A classic signature scent.",
         "sizes": [
             {
@@ -3549,7 +3549,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "glamorous \u2022 classic \u2022 opulent",
-        "image": "/images/huda-essence-red-door.webp",
+        "image": "/images/huda-essence-red-door.jpg",
         "story": "An opulent, classic floral fragrance. A rich bouquet of rose, jasmine, and sweet honey.",
         "sizes": [
             {
@@ -3591,7 +3591,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Olibanum"
         ],
         "mood": "charming \u2022 sweet \u2022 seductive",
-        "image": "/images/huda-essence-guess-seductive.webp",
+        "image": "/images/huda-essence-guess-seductive.jpg",
         "story": "A charming, sweet floral fragrance with a warm, seductive vanilla base.",
         "sizes": [
             {
@@ -3632,7 +3632,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "youthful \u2022 playful \u2022 fresh",
-        "image": "/images/huda-essence-guess-girl.webp",
+        "image": "/images/huda-essence-guess-girl.jpg",
         "story": "A playful, youthful floral-fruity scent with sweet raspberry and soft sandalwood.",
         "sizes": [
             {
@@ -3668,7 +3668,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Tonka Bean"
         ],
         "mood": "sweet \u2022 fresh \u2022 cheerful",
-        "image": "/images/huda-essence-escada-cherry-in-japan.webp",
+        "image": "/images/huda-essence-escada-cherry-in-japan.jpg",
         "story": "A cheerful, sweet fragrance that captures the beauty of cherry blossoms in Tokyo.",
         "sizes": [
             {
@@ -3712,7 +3712,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Benzoin"
         ],
         "mood": "sweet \u2022 magnetic \u2022 addictive",
-        "image": "/images/huda-essence-escada-magnetism.webp",
+        "image": "/images/huda-essence-escada-magnetism.jpg",
         "story": "A sweet, magnetic fragrance featuring delicious caramel, vanilla, and red berries.",
         "sizes": [
             {
@@ -3757,7 +3757,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vetiver"
         ],
         "mood": "elegant \u2022 bold \u2022 glamorous",
-        "image": "/images/huda-essence-armaf-club-de-nuit-women.webp",
+        "image": "/images/huda-essence-armaf-club-de-nuit-women.jpg",
         "story": "An elegant and bold fragrance that is sweet, fresh, and projects beautifully.",
         "sizes": [
             {
@@ -3795,7 +3795,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Ambergris"
         ],
         "mood": "clean \u2022 fresh \u2022 dewy",
-        "image": "/images/huda-essence-ajmal-raindrops.webp",
+        "image": "/images/huda-essence-ajmal-raindrops.jpg",
         "story": "A clean, fresh, and dewy fragrance that feels like fresh raindrops on dry earth.",
         "sizes": [
             {
@@ -3834,7 +3834,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "warm \u2022 sweet \u2022 magnetic",
-        "image": "/images/huda-essence-ajmal-sacrifice-for-her.webp",
+        "image": "/images/huda-essence-ajmal-sacrifice-for-her.jpg",
         "story": "A warm and sweet floral amber fragrance featuring Jasmine and rich musk.",
         "sizes": [
             {
@@ -3875,7 +3875,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "creamy \u2022 sweet \u2022 viral",
-        "image": "/images/huda-essence-lattafa-yara.webp",
+        "image": "/images/huda-essence-lattafa-yara.jpg",
         "bestseller": true,
         "story": "The viral sensation. Creamy strawberry-vanilla milkshake vibe with rich white florals.",
         "sizes": [
@@ -3920,7 +3920,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "creamy \u2022 white-floral \u2022 elegant",
-        "image": "/images/huda-essence-lattafa-fakhar-women.webp",
+        "image": "/images/huda-essence-lattafa-fakhar-women.jpg",
         "story": "A creamy, opulent white floral bouquet with pomegranate and a sweet vanilla base.",
         "sizes": [
             {
@@ -3960,7 +3960,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "rich \u2022 sweet \u2022 woody",
-        "image": "/images/huda-essence-lattafa-ana-abiyedh-rouge.webp",
+        "image": "/images/huda-essence-lattafa-ana-abiyedh-rouge.jpg",
         "story": "A sweet and woody amber fragrance with warm saffron. Similar to high-end luxury scents.",
         "sizes": [
             {
@@ -4003,7 +4003,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "festive \u2022 sweet \u2022 sparkling",
-        "image": "/images/huda-essence-lattafa-haya.webp",
+        "image": "/images/huda-essence-lattafa-haya.jpg",
         "story": "A sweet, sparkling floral fragrance with notes of strawberry, rose, and gardenia.",
         "sizes": [
             {
@@ -4046,7 +4046,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Vanilla"
         ],
         "mood": "bold \u2022 smoky \u2022 alluring",
-        "image": "/images/huda-essence-j-janan.webp",
+        "image": "/images/huda-essence-j-janan.jpg",
         "story": "A legendary Pakistani scent reimagined. Rich floral notes blend with a warm amber base.",
         "sizes": [
             {
@@ -4085,7 +4085,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "soft \u2022 powdery \u2022 feminine",
-        "image": "/images/huda-essence-bonanza-satrangi-femme.webp",
+        "image": "/images/huda-essence-bonanza-satrangi-femme.jpg",
         "story": "A soft, powdery floral fragrance that stays fresh and elegant throughout the day.",
         "sizes": [
             {
@@ -4124,7 +4124,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "cheerful \u2022 fresh \u2022 clean",
-        "image": "/images/huda-essence-sapphire-femme.webp",
+        "image": "/images/huda-essence-sapphire-femme.jpg",
         "story": "A cheerful and fresh daily-wear scent featuring crisp apple, jasmine, and white musk.",
         "sizes": [
             {
@@ -4162,7 +4162,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "White Musk"
         ],
         "mood": "clean \u2022 light \u2022 floral",
-        "image": "/images/huda-essence-khaadi-bloom.webp",
+        "image": "/images/huda-essence-khaadi-bloom.jpg",
         "story": "A light, clean floral scent that evokes the freshness of spring gardens.",
         "sizes": [
             {
@@ -4201,7 +4201,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "graceful \u2022 fresh \u2022 elegant",
-        "image": "/images/huda-essence-wb-by-hemani-grace.webp",
+        "image": "/images/huda-essence-wb-by-hemani-grace.jpg",
         "story": "A graceful daily fragrance with fresh citruses, white jasmine, and soft sandalwood.",
         "sizes": [
             {
@@ -4241,7 +4241,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cashmeran"
         ],
         "mood": "sweet \u2022 romantic \u2022 fresh",
-        "image": "/images/huda-essence-scents-n-stories-belle.webp",
+        "image": "/images/huda-essence-scents-n-stories-belle.jpg",
         "story": "A sweet and romantic rose fragrance that projects beautifully in hot weather.",
         "sizes": [
             {
@@ -4280,7 +4280,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "radiant \u2022 complex \u2022 luxurious",
-        "image": "/images/huda-essence-baccarat-rouge-540.webp",
+        "image": "/images/huda-essence-baccarat-rouge-540.jpg",
         "bestseller": true,
         "story": "A luminous and sophisticated fragrance that lays on the skin like an amber floral and woody breeze.",
         "sizes": [
@@ -4324,7 +4324,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "clean \u2022 bright \u2022 casual",
-        "image": "/images/huda-essence-ck-one-unisex.webp",
+        "image": "/images/huda-essence-ck-one-unisex.jpg",
         "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
         "sizes": [
             {
@@ -4365,7 +4365,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "smoky \u2022 royal \u2022 warming",
-        "image": "/images/huda-essence-tom-ford-oud-wood-unisex.webp",
+        "image": "/images/huda-essence-tom-ford-oud-wood-unisex.jpg",
         "bestseller": true,
         "story": "One of the most rare and expensive ingredients in a perfumer's arsenal, oud wood is blended here with warm spices.",
         "sizes": [
@@ -4408,7 +4408,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Ambrette"
         ],
         "mood": "fresh \u2022 citrusy \u2022 summer",
-        "image": "/images/huda-essence-tom-ford-neroli-portofino.webp",
+        "image": "/images/huda-essence-tom-ford-neroli-portofino.jpg",
         "story": "A vibrant, sparkling citrus scent that captures the cool breezes and clear water of Italy.",
         "sizes": [
             {
@@ -4448,7 +4448,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woody Notes"
         ],
         "mood": "opulent \u2022 sweet \u2022 warm",
-        "image": "/images/huda-essence-tobacco-vanille.webp",
+        "image": "/images/huda-essence-tobacco-vanille.jpg",
         "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
         "sizes": [
             {
@@ -4489,7 +4489,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "soft \u2022 woody \u2022 spiritual",
-        "image": "/images/huda-essence-white-oud.webp",
+        "image": "/images/huda-essence-white-oud.jpg",
         "story": "A soft, creamy woody fragrance featuring sweet white oud blended with amber and saffron.",
         "sizes": [
             {
@@ -4528,7 +4528,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Herbal Notes"
         ],
         "mood": "warm \u2022 sweet \u2022 oriental",
-        "image": "/images/huda-essence-ameer-al-oud-unisex.webp",
+        "image": "/images/huda-essence-ameer-al-oud-unisex.jpg",
         "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
         "sizes": [
             {
@@ -4569,7 +4569,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Benzoin"
         ],
         "mood": "dark \u2022 majestic \u2022 opulent",
-        "image": "/images/huda-essence-ombre-nomade.webp",
+        "image": "/images/huda-essence-ombre-nomade.jpg",
         "bestseller": true,
         "story": "An opulent, dark fragrance designed for lovers of rare essences. Rich oud meets smoky incense.",
         "sizes": [
@@ -4610,7 +4610,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woody Notes"
         ],
         "mood": "sweet \u2022 warm \u2022 royal",
-        "image": "/images/huda-essence-oud-mood-unisex.webp",
+        "image": "/images/huda-essence-oud-mood-unisex.jpg",
         "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud.",
         "sizes": [
             {
@@ -4652,7 +4652,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "sweet \u2022 fruity \u2022 woody",
-        "image": "/images/huda-essence-amber-oud.webp",
+        "image": "/images/huda-essence-amber-oud.jpg",
         "story": "A rich, sweet woody fragrance featuring delicious tropical fruits and sweet amber notes.",
         "sizes": [
             {
@@ -4690,7 +4690,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "clean \u2022 powdery \u2022 pure",
-        "image": "/images/huda-essence-musk-rijali.webp",
+        "image": "/images/huda-essence-musk-rijali.jpg",
         "story": "A clean, powdery, and pure white musk fragrance that is a timeless classic.",
         "sizes": [
             {
@@ -4729,7 +4729,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "thick \u2022 clean \u2022 pure",
-        "image": "/images/huda-essence-musk-al-tahara.webp",
+        "image": "/images/huda-essence-musk-al-tahara.jpg",
         "story": "The ultimate clean scent. A thick, velvety white musk that feels like fresh laundry.",
         "sizes": [
             {
@@ -4769,7 +4769,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "spicy \u2022 clean \u2022 woody",
-        "image": "/images/huda-essence-sheikh-al-shuyukh.webp",
+        "image": "/images/huda-essence-sheikh-al-shuyukh.jpg",
         "story": "A clean and spicy woody fragrance with aromatic lavender and a deep cedar-oud base.",
         "sizes": [
             {
@@ -4811,7 +4811,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Myrrh"
         ],
         "mood": "sweet \u2022 boozy \u2022 warm",
-        "image": "/images/huda-essence-lattafa-khamrah-unisex.webp",
+        "image": "/images/huda-essence-lattafa-khamrah-unisex.jpg",
         "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
         "sizes": [
             {
@@ -4852,7 +4852,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woody Notes"
         ],
         "mood": "fruity \u2022 earthy \u2022 beast-mode",
-        "image": "/images/huda-essence-nishane-hacivat.webp",
+        "image": "/images/huda-essence-nishane-hacivat.jpg",
         "bestseller": true,
         "story": "A tribute to elegance, competence, and love of art. Smoky pineapple and heavy oakmoss.",
         "sizes": [
@@ -4897,7 +4897,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Moss"
         ],
         "mood": "fresh \u2022 woody \u2022 versatile",
-        "image": "/images/huda-essence-mancera-cedrat-boise.webp",
+        "image": "/images/huda-essence-mancera-cedrat-boise.jpg",
         "story": "A fresh citrus and blackcurrant blend with a rich woody leather base. Impossibly versatile.",
         "sizes": [
             {
@@ -4940,7 +4940,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "intense \u2022 warm \u2022 beast-mode",
-        "image": "/images/huda-essence-mancera-red-tobacco.webp",
+        "image": "/images/huda-essence-mancera-red-tobacco.jpg",
         "bestseller": true,
         "story": "An incredibly intense warm fragrance. Heavy tobacco and sweet cinnamon. Beast-mode projection.",
         "sizes": [
@@ -4980,7 +4980,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Labdanum"
         ],
         "mood": "dark \u2022 gothic \u2022 powerful",
-        "image": "/images/huda-essence-montale-black-aoud.webp",
+        "image": "/images/huda-essence-montale-black-aoud.jpg",
         "story": "A dark, gothic masterpiece. Deep Cambodian oud blended with rich, velvety red roses.",
         "sizes": [
             {
@@ -5019,7 +5019,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "cozy \u2022 sweet \u2022 addictive",
-        "image": "/images/huda-essence-montale-intense-cafe.webp",
+        "image": "/images/huda-essence-montale-intense-cafe.jpg",
         "story": "A cozy and addictive scent featuring fresh coffee blended with sweet vanilla and roses.",
         "sizes": [
             {
@@ -5058,7 +5058,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk"
         ],
         "mood": "mystical \u2022 royal \u2022 powerful",
-        "image": "/images/huda-essence-initio-oud-for-greatness.webp",
+        "image": "/images/huda-essence-initio-oud-for-greatness.jpg",
         "story": "A mystical and powerful fragrance featuring raw oud wood, warm saffron, and lavender.",
         "sizes": [
             {
@@ -5098,7 +5098,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Madagascar Vanilla"
         ],
         "mood": "sweet \u2022 tropical \u2022 loud",
-        "image": "/images/huda-essence-xerjoff-erba-pura.webp",
+        "image": "/images/huda-essence-xerjoff-erba-pura.jpg",
         "bestseller": true,
         "story": "A basket of delicious Mediterranean citrus fruits over a loud vanilla-musk base.",
         "sizes": [
@@ -5140,7 +5140,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "minimalist \u2022 leather \u2022 woody",
-        "image": "/images/huda-essence-le-labo-santal-33.webp",
+        "image": "/images/huda-essence-le-labo-santal-33.jpg",
         "bestseller": true,
         "story": "The iconic scent of the American West. Smoky sandalwood, dry papyrus, and leather.",
         "sizes": [
@@ -5181,7 +5181,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Cedar"
         ],
         "mood": "airy \u2022 powdery \u2022 delicate",
-        "image": "/images/huda-essence-byredo-mojave-ghost.webp",
+        "image": "/images/huda-essence-byredo-mojave-ghost.jpg",
         "story": "A woody composition inspired by the soulful beauty of the Mojave Desert. Delicate and powdery.",
         "sizes": [
             {
@@ -5224,7 +5224,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "earthy \u2022 free-spirited \u2022 fresh",
-        "image": "/images/huda-essence-byredo-gypsy-water.webp",
+        "image": "/images/huda-essence-byredo-gypsy-water.jpg",
         "story": "A glamorization of the Romany lifestyle. Earthy pine needles, incense, and warm vanilla.",
         "sizes": [
             {
@@ -5264,7 +5264,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Woody Notes"
         ],
         "mood": "creamy \u2022 smooth \u2022 elegant",
-        "image": "/images/huda-essence-maison-francis-gentle-fluidity.webp",
+        "image": "/images/huda-essence-maison-francis-gentle-fluidity.jpg",
         "story": "A creamy, smooth fragrance featuring sweet vanilla and warm amber. Impossibly elegant.",
         "sizes": [
             {
@@ -5300,7 +5300,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sage"
         ],
         "mood": "salty \u2022 windy \u2022 fresh",
-        "image": "/images/huda-essence-jo-malone-wood-sage-sea-salt.webp",
+        "image": "/images/huda-essence-jo-malone-wood-sage-sea-salt.jpg",
         "story": "Escape the everyday along the windswept shore. Waves breaking white, the air fresh with sea salt.",
         "sizes": [
             {
@@ -5336,7 +5336,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "fresh \u2022 juicy \u2022 autumnal",
-        "image": "/images/huda-essence-jo-malone-english-pear-freesia.webp",
+        "image": "/images/huda-essence-jo-malone-english-pear-freesia.jpg",
         "story": "The essence of autumn. The sensuous freshness of just-ripe pears wrapped in a bouquet of white freesias.",
         "sizes": [
             {
@@ -5374,7 +5374,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Amber"
         ],
         "mood": "green \u2022 frosty \u2022 leather",
-        "image": "/images/huda-essence-memo-irish-leather.webp",
+        "image": "/images/huda-essence-memo-irish-leather.jpg",
         "story": "Frosty gallop on a horse. A green leather fragrance that is crisp and deep.",
         "sizes": [
             {
@@ -5417,7 +5417,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Sandalwood"
         ],
         "mood": "smoky \u2022 chaotic \u2022 royal",
-        "image": "/images/huda-essence-amouage-interlude.webp",
+        "image": "/images/huda-essence-amouage-interlude.jpg",
         "story": "Known as the 'Blue Beast'. An incredibly smoky, chaotic blend of incense, leather, and oud.",
         "sizes": [
             {
@@ -5458,7 +5458,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Galbanum"
         ],
         "mood": "crisp \u2022 fresh \u2022 mountain-air",
-        "image": "/images/huda-essence-creed-silver-mountain-water-unisex.webp",
+        "image": "/images/huda-essence-creed-silver-mountain-water-unisex.jpg",
         "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
         "sizes": [
             {
