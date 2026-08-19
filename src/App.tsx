@@ -5882,7 +5882,7 @@ export default function App() {
 
       {/* ═══════════ HEADER ═══════════ */}
       <header className="sticky top-0 z-40 bg-[#faf7f2ee] backdrop-blur-xl border-b border-[#e7dcc9]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 h-[78px] flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 h-[86px] sm:h-[92px] flex items-center justify-between gap-6">
           <button onClick={() => setMobileMenu(!mobileMenu)} className="lg:hidden w-9 h-9 grid place-items-center">
             <div className="w-5">
               <div className={`h-[1.8px] bg-[#221e19] transition-all ${mobileMenu ? "rotate-45 translate-y-[5.4px]" : "mb-1.5"}`}></div>
