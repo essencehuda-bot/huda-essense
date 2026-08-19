@@ -250,13 +250,13 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         goldGradLight.addColorStop(0.5, '#d4a95a');
         goldGradLight.addColorStop(1, '#b08d46');
 
-        // ─── Black label background ───
+        // ─── Semi-transparent label background (glass shows through) ───
         const labelBgGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
-        labelBgGrad.addColorStop(0, '#080808');
-        labelBgGrad.addColorStop(0.1, '#0f0f0f');
-        labelBgGrad.addColorStop(0.5, '#181818');
-        labelBgGrad.addColorStop(0.9, '#0f0f0f');
-        labelBgGrad.addColorStop(1, '#080808');
+        labelBgGrad.addColorStop(0, 'rgba(8, 8, 8, 0.55)');
+        labelBgGrad.addColorStop(0.1, 'rgba(15, 15, 15, 0.55)');
+        labelBgGrad.addColorStop(0.5, 'rgba(24, 24, 24, 0.55)');
+        labelBgGrad.addColorStop(0.9, 'rgba(15, 15, 15, 0.55)');
+        labelBgGrad.addColorStop(1, 'rgba(8, 8, 8, 0.55)');
 
         oCtx.fillStyle = labelBgGrad;
         drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
@@ -512,7 +512,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         const thetaMax = 0.38;
         const sinThetaMax = Math.sin(thetaMax);
 
-        ctx.fillStyle = '#0e0e0e';
+        ctx.fillStyle = 'rgba(14, 14, 14, 0.55)';
         ctx.beginPath();
         for (let x = 0; x <= rectW; x++) {
           const normX = (x - rectW / 2) / (rectW / 2);
