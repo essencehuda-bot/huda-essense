@@ -3114,8 +3114,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
     },
     {
         "id": "212-vip-rose",
-        "name": "212 VIP Rosée",
-        "inspiredBy": "212 VIP Rosé\u00e9 by Carolina Herrera",
+        "name": "212 VIP Roséée",
+        "inspiredBy": "212 VIP Roséé\u00e9 by Carolina Herrera",
         "gender": "Women",
         "concentration": "Eau de Parfum",
         "family": "Floral Fruity",
