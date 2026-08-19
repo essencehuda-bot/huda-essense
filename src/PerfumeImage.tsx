@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ProductData } from './AdminPanel';
 
 type Product = ProductData;
@@ -8,23 +9,7 @@ interface Props {
   onClick?: () => void;
 }
 
-// Check if this product has a uniquely generated image with correct pre-printed name
-const UNIQUE_GENERATED_PRODUCTS = new Set([
-  'afnan-9-pm',
-  'dior-sauvage',
-  'bleu-de-chanel',
-  'chanel-allure-homme-sport',
-  'creed-aventus',
-  'creed-green-irish-tweed',
-  'creed-silver-mountain',
-  'armani-code',
-  'acqua-di-gio',
-  'stronger-with-you',
-  'ysl-y',
-  'la-nuit-de-l-homme'
-]);
-
-// Map product details to the correct clean template base image
+// Map product details to the correct clean template base image (fallback only)
 function getCleanTemplate(product: Product): string {
   const family = (product.family || '').toLowerCase();
   const name = (product.name || '').toLowerCase();
@@ -85,13 +70,11 @@ function getCleanTemplate(product: Product): string {
 }
 
 export default function PerfumeImage({ product, className, onClick }: Props) {
-  const isUnique = UNIQUE_GENERATED_PRODUCTS.has(product.id);
-  
-  // For the 12 unique products, load their full image directly.
-  // For others, load the clean base color template.
-  const imgSrc = isUnique 
-    ? `/images/huda-essence-${product.id}.jpg`
-    : getCleanTemplate(product);
+  const [imgError, setImgError] = useState(false);
+
+  // Use product's pre-printed image if available, else construct path or fallback
+  const primaryImgSrc = product.image || `/images/huda-essence-${product.id}.jpg`;
+  const imgSrc = imgError ? getCleanTemplate(product) : primaryImgSrc;
 
   return (
     <div 
@@ -105,33 +88,34 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         alt={product.name} 
         className="w-full h-full object-cover block"
         loading="lazy"
+        onError={() => setImgError(true)}
       />
       
-      {/* If it's a shared template, render the perfume name dynamically in the empty slot */}
-      {!isUnique && (
+      {/* If fallback clean template is loaded, overlay perfume name dynamically */}
+      {imgError && (
         <div 
           className="absolute left-0 right-0 flex items-center justify-center pointer-events-none"
           style={{
-            bottom: '22%', // Positioned exactly in the blank space under "INSPIRED BY"
-            height: '10%',
+            top: '66.5%',
+            height: '13.5%',
             textAlign: 'center',
-            padding: '0 10%'
+            padding: '0 8%'
           }}
         >
           <span 
             style={{
               fontFamily: "'Playfair Display', 'Cormorant Garamond', 'Georgia', serif",
-              fontSize: 'clamp(10px, 2.4vw, 20px)',
-              fontWeight: 400,
+              fontSize: 'clamp(10px, 2.2vw, 18px)',
+              fontWeight: 500,
               fontStyle: 'italic',
               // Rich gold metallic color with subtle glow
               color: '#d4a95a',
-              textShadow: '0 1px 2px rgba(0,0,0,0.8), 0 0 4px rgba(212,169,90,0.3)',
+              textShadow: '0 1px 2px rgba(0,0,0,0.9), 0 0 6px rgba(212,169,90,0.4)',
               letterSpacing: '0.5px',
-              lineHeight: 1.2,
+              lineHeight: 1.15,
               display: 'inline-block',
               maxWidth: '100%',
-              wordWrap: 'break-word'
+              wordBreak: 'break-word'
             }}
           >
             {product.name}
