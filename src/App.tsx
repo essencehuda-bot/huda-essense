@@ -11,5473 +11,5342 @@ type Product = ProductData;
 const PKR = (n: number) => `PKR ${n.toLocaleString("en-PK")}`;
 
 /* ── All 12 Products (Matched) ──────────────────── */
-const DEFAULT_PRODUCTS: Product[] = [
-  {
-    "id": "afnan-9-pm",
-    "name": "Afnan 9 PM",
-    "inspiredBy": "9 PM by Afnan",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Apple",
-      "Cinnamon",
-      "Wild Lavender",
-      "Bergamot"
-    ],
-    "heart": [
-      "Orange Blossom",
-      "Lily-of-the-Valley"
-    ],
-    "base": [
-      "Vanilla",
-      "Tonka Bean",
-      "Amber",
-      "Patchouli"
-    ],
-    "mood": "seductive • night out • magnetic",
-    "image": "/images/afnan-9-pm.jpeg",
-    "bestseller": true,
-    "story": "An irresistible blast of juicy apple, warm cinnamon, and rich vanilla. 9 PM by Afnan is legendary for date nights and evening allure.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.9,
-    "reviews": 142
-  },
-  {
-    "id": "dior-sauvage",
-    "name": "Dior Sauvage",
-    "inspiredBy": "Sauvage by Dior",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Calabrian Bergamot",
-      "Pepper"
-    ],
-    "heart": [
-      "Sichuan Pepper",
-      "Lavender",
-      "Vetiver",
-      "Patchouli"
-    ],
-    "base": [
-      "Ambroxan",
-      "Cedar",
-      "Labdanum"
-    ],
-    "mood": "raw • wild • magnetic",
-    "image": "/images/dior-sauvage.png",
-    "bestseller": true,
-    "story": "An explosive blast of fresh bergamot and raw ambroxan. A fragrance that projects confidence and turns heads.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 120
-  },
-  {
-    "id": "bleu-de-chanel",
-    "name": "Bleu de Chanel",
-    "inspiredBy": "Bleu de Chanel by Chanel",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Woody",
-    "top": [
-      "Grapefruit",
-      "Lemon",
-      "Mint",
-      "Pink Pepper"
-    ],
-    "heart": [
-      "Ginger",
-      "Nutmeg",
-      "Jasmine"
-    ],
-    "base": [
-      "Incense",
-      "Vetiver",
-      "Cedar",
-      "Sandalwood",
-      "Patchouli"
-    ],
-    "mood": "fresh • clean • commanding",
-    "image": "/images/bleu-de-chanel.png",
-    "bestseller": true,
-    "story": "A tribute to masculine freedom. Our Bleu impression is crisp, powerful, and impossibly versatile.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 207
-  },
-  {
-    "id": "chanel-allure-homme-sport",
-    "name": "Chanel Allure Homme Sport",
-    "inspiredBy": "Allure Homme Sport by Chanel",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Spicy",
-    "top": [
-      "Orange",
-      "Mandarin Orange",
-      "Sea Notes"
-    ],
-    "heart": [
-      "Black Pepper",
-      "Neroli",
-      "Cedar"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Vanilla",
-      "Amber",
-      "White Musk"
-    ],
-    "mood": "fresh • athletic • dynamic",
-    "image": "/images/chanel-allure-homme-sport.png",
-    "story": "A fresh and sensual scent that evokes the simplicity of allure. Clean citrus meets warm tonka bean.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 294
-  },
-  {
-    "id": "creed-aventus",
-    "name": "Creed Aventus",
-    "inspiredBy": "Aventus by Creed",
-    "gender": "Men",
-    "concentration": "Extrait de Parfum",
-    "family": "Chypre Fruity",
-    "top": [
-      "Pineapple",
-      "Bergamot",
-      "Blackcurrant",
-      "Apple"
-    ],
-    "heart": [
-      "Birch",
-      "Patchouli",
-      "Moroccan Jasmine",
-      "Rose"
-    ],
-    "base": [
-      "Musk",
-      "Oakmoss",
-      "Ambergris",
-      "Vanilla"
-    ],
-    "mood": "bold • legendary • powerful",
-    "image": "/images/creed-aventus.png",
-    "bestseller": true,
-    "story": "Inspired by the dramatic life of an emperor, celebrating strength, power, and success.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 381
-  },
-  {
-    "id": "creed-green-irish-tweed",
-    "name": "Creed Green Irish Tweed",
-    "inspiredBy": "Green Irish Tweed by Creed",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Floral Musk",
-    "top": [
-      "Lemon Verbena",
-      "Iris"
-    ],
-    "heart": [
-      "Violet Leaf"
-    ],
-    "base": [
-      "Ambergris",
-      "Sandalwood"
-    ],
-    "mood": "fresh • country-side • sophisticated",
-    "image": "/images/creed-green-irish-tweed.png",
-    "story": "Like a walk through the Irish countryside, Green Irish Tweed is fresh, green, and classically elegant.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 468
-  },
-  {
-    "id": "creed-silver-mountain",
-    "name": "Creed Silver Mountain Water",
-    "inspiredBy": "Silver Mountain Water by Creed",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic",
-    "top": [
-      "Bergamot",
-      "Mandarin Orange"
-    ],
-    "heart": [
-      "Green Tea",
-      "Black Currant"
-    ],
-    "base": [
-      "Musk",
-      "Petitgrain",
-      "Sandalwood",
-      "Galbanum"
-    ],
-    "mood": "crisp • fresh • mountain-air",
-    "image": "/images/creed-silver-mountain.png",
-    "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 555
-  },
-  {
-    "id": "armani-code",
-    "name": "Armani Code",
-    "inspiredBy": "Armani Code by Giorgio Armani",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Lemon",
-      "Bergamot"
-    ],
-    "heart": [
-      "Star Anise",
-      "Olive Blossom"
-    ],
-    "base": [
-      "Leather",
-      "Tobacco",
-      "Tonka Bean"
-    ],
-    "mood": "mysterious • seductive • sophisticated",
-    "image": "/images/armani-code.png",
-    "story": "A mysterious, sophisticated, and utterly seductive fragrance.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 642
-  },
-  {
-    "id": "acqua-di-gio",
-    "name": "Acqua di Gio",
-    "inspiredBy": "Acqua di Gio by Giorgio Armani",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Aquatic",
-    "top": [
-      "Lime",
-      "Lemon",
-      "Bergamot",
-      "Jasmine"
-    ],
-    "heart": [
-      "Sea Notes",
-      "Peach",
-      "Freesia",
-      "Calone"
-    ],
-    "base": [
-      "White Musk",
-      "Cedar",
-      "Oakmoss",
-      "Patchouli"
-    ],
-    "mood": "aquatic • fresh • sunny",
-    "image": "/images/acqua-di-gio.png",
-    "story": "A clean fragrance inspired by the Mediterranean sea, combining salty marine notes with sweet citrus.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 729
-  },
-  {
-    "id": "stronger-with-you",
-    "name": "Stronger With You",
-    "inspiredBy": "Stronger With You by Emporio Armani",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Cardamom",
-      "Pink Pepper",
-      "Violet Leaf"
-    ],
-    "heart": [
-      "Sage",
-      "Cinnamon",
-      "Meringue"
-    ],
-    "base": [
-      "Vanilla",
-      "Chestnut",
-      "Amber",
-      "Suede"
-    ],
-    "mood": "warm • sweet • irresistible",
-    "image": "/images/stronger-with-you.png",
-    "bestseller": true,
-    "story": "A warm, addictive embrace in a bottle. Sweet chestnut and vanilla merge with spicy cardamom.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 816
-  },
-  {
-    "id": "ysl-y",
-    "name": "YSL Y",
-    "inspiredBy": "Y Eau de Parfum by Yves Saint Laurent",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Apple",
-      "Ginger",
-      "Bergamot"
-    ],
-    "heart": [
-      "Sage",
-      "Juniper Berries",
-      "Geranium"
-    ],
-    "base": [
-      "Amberwood",
-      "Tonka Bean",
-      "Cedar",
-      "Olibanum"
-    ],
-    "mood": "fresh • masculine • intense",
-    "image": "/images/ysl-y.png",
-    "bestseller": true,
-    "story": "A deep, fresh and masculine scent representing the creative spirit of self-accomplishment.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 903
-  },
-  {
-    "id": "la-nuit-de-l-homme",
-    "name": "La Nuit De L'Homme",
-    "inspiredBy": "La Nuit de L'Homme by Yves Saint Laurent",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Cardamom"
-    ],
-    "heart": [
-      "Lavender",
-      "Virginia Cedar",
-      "Bergamot"
-    ],
-    "base": [
-      "Vetiver",
-      "Caraway"
-    ],
-    "mood": "suave • nocturnal • magnetic",
-    "image": "/images/la-nuit-de-l-homme.png",
-    "story": "The ultimate weapon of seduction. Fresh cardamom and sweet lavender blended on deep, dark vetiver.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.85,
-    "reviews": 990
-  },
-  {
-    "id": "versace-eros",
-    "name": "Versace Eros",
-    "inspiredBy": "Eros by Versace",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Mint",
-      "Green Apple",
-      "Lemon"
-    ],
-    "heart": [
-      "Tonka Bean",
-      "Ambroxan",
-      "Geranium"
-    ],
-    "base": [
-      "Madagascar Vanilla",
-      "Cedar",
-      "Vetiver",
-      "Oakmoss"
-    ],
-    "mood": "passionate • bold • addictive",
-    "image": "/images/versace-eros.png",
-    "bestseller": true,
-    "story": "Inspired by Greek mythology, Eros is the fragrance that depicts passion, desire and love.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.86,
-    "reviews": 1077
-  },
-  {
-    "id": "versace-dylan-blue",
-    "name": "Versace Dylan Blue",
-    "inspiredBy": "Dylan Blue by Versace",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Calabrian Bergamot",
-      "Water Notes",
-      "Grapefruit"
-    ],
-    "heart": [
-      "Ambroxan",
-      "Black Pepper",
-      "Patchouli"
-    ],
-    "base": [
-      "Incense",
-      "Musk",
-      "Tonka Bean",
-      "Saffron"
-    ],
-    "mood": "sensual • modern • charismatic",
-    "image": "/images/versace-dylan-blue.png",
-    "story": "A highly sensual fragrance with woody aroma and fresh aquatic accents.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.87,
-    "reviews": 1164
-  },
-  {
-    "id": "versace-pour-homme",
-    "name": "Versace Pour Homme",
-    "inspiredBy": "Versace Pour Homme by Versace",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Lemon",
-      "Neroli",
-      "Bergamot"
-    ],
-    "heart": [
-      "Hyacinth",
-      "Clary Sage",
-      "Cedar",
-      "Geranium"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Musk",
-      "Amber"
-    ],
-    "mood": "clean • Mediterranean • classic",
-    "image": "/images/versace-pour-homme.png",
-    "story": "An elegant, classic fragrance inspired by the fresh air of the Mediterranean coast.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.88,
-    "reviews": 1251
-  },
-  {
-    "id": "paco-rabanne-1-million",
-    "name": "Paco Rabanne 1 Million",
-    "inspiredBy": "1 Million by Paco Rabanne",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Blood Mandarin",
-      "Grapefruit",
-      "Mint"
-    ],
-    "heart": [
-      "Cinnamon",
-      "Spicy Notes",
-      "Rose"
-    ],
-    "base": [
-      "Amber",
-      "Leather",
-      "Woody Notes",
-      "Patchouli"
-    ],
-    "mood": "bold • luxurious • nocturnal",
-    "image": "/images/paco-rabanne-1-million.png",
-    "bestseller": true,
-    "story": "The scent of success and luxury. A rich, spicy-sweet blend of cinnamon, leather, and blood mandarin.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.89,
-    "reviews": 1338
-  },
-  {
-    "id": "invictus",
-    "name": "Invictus",
-    "inspiredBy": "Invictus by Paco Rabanne",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Aquatic",
-    "top": [
-      "Sea Notes",
-      "Grapefruit",
-      "Mandarin Orange"
-    ],
-    "heart": [
-      "Bay Leaf",
-      "Jasmine"
-    ],
-    "base": [
-      "Ambergris",
-      "Guaiac Wood",
-      "Oakmoss",
-      "Patchouli"
-    ],
-    "mood": "fresh • victorious • dynamic",
-    "image": "/images/invictus.png",
-    "story": "A fresh and dynamic fragrance that embodies victory and physical energy.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.9,
-    "reviews": 120
-  },
-  {
-    "id": "phantom",
-    "name": "Phantom",
-    "inspiredBy": "Phantom by Paco Rabanne",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Lavender",
-      "Lemon Zest",
-      "Amalfi Lemon"
-    ],
-    "heart": [
-      "Lavender",
-      "Apple",
-      "Smoke",
-      "Patchouli"
-    ],
-    "base": [
-      "Vanilla",
-      "Lavender",
-      "Vetiver"
-    ],
-    "mood": "futuristic • sweet • energetic",
-    "image": "/images/phantom.png",
-    "story": "A futuristic fragrance born from the clash between luxury craftsmanship and new-tech.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.91,
-    "reviews": 207
-  },
-  {
-    "id": "dunhill-desire-red",
-    "name": "Dunhill Desire Red",
-    "inspiredBy": "Desire Red by Alfred Dunhill",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Apple",
-      "Lemon",
-      "Neroli",
-      "Bergamot"
-    ],
-    "heart": [
-      "Patchouli",
-      "Teak Wood",
-      "Rose"
-    ],
-    "base": [
-      "Vanilla",
-      "Musk"
-    ],
-    "mood": "sensual • hot • confident",
-    "image": "/images/dunhill-desire-red.png",
-    "story": "A masculine scent designed for the self-confident man who wants to be at the center of attention.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.92,
-    "reviews": 294
-  },
-  {
-    "id": "dunhill-icon",
-    "name": "Dunhill Icon",
-    "inspiredBy": "Icon by Alfred Dunhill",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Aromatic",
-    "top": [
-      "Neroli",
-      "Bergamot",
-      "Black Pepper"
-    ],
-    "heart": [
-      "Lavender",
-      "Cardamom",
-      "Sage"
-    ],
-    "base": [
-      "Vetiver",
-      "Leather",
-      "Oud",
-      "Oakmoss"
-    ],
-    "mood": "sophisticated • classic • executive",
-    "image": "/images/dunhill-icon.png",
-    "story": "The perfect blend of classic elegance and modern sophistication. Woody base meets fresh spices.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.93,
-    "reviews": 381
-  },
-  {
-    "id": "dunhill-century",
-    "name": "Dunhill Century",
-    "inspiredBy": "Century by Alfred Dunhill",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Citrus Aromatic",
-    "top": [
-      "Mandarin Orange",
-      "Grapefruit",
-      "Bergamot"
-    ],
-    "heart": [
-      "Neroli",
-      "Cardamom",
-      "Olibanum"
-    ],
-    "base": [
-      "Cypriol Oil",
-      "Sandalwood",
-      "Musk"
-    ],
-    "mood": "clean • bright • futuristic",
-    "image": "/images/dunhill-century.png",
-    "story": "An uplifting and bright fragrance that combines fresh citruses with cardamoms and warm sandalwood.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.94,
-    "reviews": 468
-  },
-  {
-    "id": "hugo-boss-bottled",
-    "name": "Hugo Boss Bottled",
-    "inspiredBy": "Boss Bottled by Hugo Boss",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Spicy",
-    "top": [
-      "Apple",
-      "Plum",
-      "Bergamot",
-      "Lemon"
-    ],
-    "heart": [
-      "Cinnamon",
-      "Mahogany",
-      "Carnation"
-    ],
-    "base": [
-      "Vanilla",
-      "Sandalwood",
-      "Cedar",
-      "Vetiver"
-    ],
-    "mood": "elegant • versatile • professional",
-    "image": "/images/hugo-boss-bottled.png",
-    "story": "An elegant, modern scent that balances fresh fruity notes with warm spicy elements.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 555
-  },
-  {
-    "id": "boss-the-scent",
-    "name": "Boss The Scent",
-    "inspiredBy": "Boss The Scent by Hugo Boss",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Spicy",
-    "top": [
-      "Ginger",
-      "Mandarin Orange",
-      "Bergamot"
-    ],
-    "heart": [
-      "Maninka Fruit",
-      "Lavender"
-    ],
-    "base": [
-      "Leather",
-      "Woody Notes"
-    ],
-    "mood": "seductive • warm • magnetic",
-    "image": "/images/boss-the-scent.png",
-    "story": "A seductive fragrance that captures the mind with a unique note of African Maninka fruit.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 642
-  },
-  {
-    "id": "hugo-man",
-    "name": "Hugo Man",
-    "inspiredBy": "Hugo Man by Hugo Boss",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Green",
-    "top": [
-      "Green Apple",
-      "Lavender",
-      "Mint",
-      "Grapefruit"
-    ],
-    "heart": [
-      "Sage",
-      "Geranium",
-      "Carnation",
-      "Jasmine"
-    ],
-    "base": [
-      "Fir",
-      "Pine Tree",
-      "Cedar",
-      "Patchouli"
-    ],
-    "mood": "adventurous • fresh • clean",
-    "image": "/images/hugo-man.png",
-    "story": "An aromatic green scent designed for the man who lives life on his own terms.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 729
-  },
-  {
-    "id": "tom-ford-ombre-leather",
-    "name": "Tom Ford Ombre Leather",
-    "inspiredBy": "Ombre Leather by Tom Ford",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Leather",
-    "top": [
-      "Cardamom"
-    ],
-    "heart": [
-      "Leather",
-      "Jasmine Sambac"
-    ],
-    "base": [
-      "Amber",
-      "Moss",
-      "Patchouli"
-    ],
-    "mood": "raw • wild • luxurious",
-    "image": "/images/tom-ford-ombre-leather.png",
-    "bestseller": true,
-    "story": "A rich, smoky leather fragrance that captures the wide-open spaces of the American West.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 816
-  },
-  {
-    "id": "tom-ford-tuscan-leather",
-    "name": "Tom Ford Tuscan Leather",
-    "inspiredBy": "Tuscan Leather by Tom Ford",
-    "gender": "Men",
-    "concentration": "Extrait de Parfum",
-    "family": "Leather",
-    "top": [
-      "Raspberry",
-      "Saffron",
-      "Thyme"
-    ],
-    "heart": [
-      "Olibanum",
-      "Jasmine"
-    ],
-    "base": [
-      "Leather",
-      "Suede",
-      "Woody Notes",
-      "Amber"
-    ],
-    "mood": "opulent • smoky • sophisticated",
-    "image": "/images/tom-ford-tuscan-leather.png",
-    "story": "A dark, rich leather scent sweetened with raspberry and spiced with saffron. Impossibly opulent.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 903
-  },
-  {
-    "id": "tom-ford-oud-wood",
-    "name": "Tom Ford Oud Wood",
-    "inspiredBy": "Oud Wood by Tom Ford",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Sichuan Pepper",
-      "Cardamom"
-    ],
-    "heart": [
-      "Oud",
-      "Sandalwood",
-      "Vetiver"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Vanilla",
-      "Amber"
-    ],
-    "mood": "smoky • royal • warming",
-    "image": "/images/tom-ford-oud-wood.png",
-    "story": "Rare and expensive oud wood blended with warm spices, amber, and vanilla.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 990
-  },
-  {
-    "id": "tom-ford-tobacco-vanille",
-    "name": "Tom Ford Tobacco Vanille",
-    "inspiredBy": "Tobacco Vanille by Tom Ford",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Tobacco Leaf",
-      "Spicy Notes"
-    ],
-    "heart": [
-      "Vanilla",
-      "Cocoa",
-      "Tonka Bean"
-    ],
-    "base": [
-      "Dried Fruits",
-      "Woody Notes"
-    ],
-    "mood": "opulent • sweet • warm",
-    "image": "/images/tom-ford-tobacco-vanille.png",
-    "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 1077
-  },
-  {
-    "id": "ferrari-black",
-    "name": "Ferrari Black",
-    "inspiredBy": "Ferrari Black by Ferrari",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Red Apple",
-      "Plum",
-      "Lime",
-      "Bergamot"
-    ],
-    "heart": [
-      "Cinnamon",
-      "Jasmine",
-      "Rose"
-    ],
-    "base": [
-      "Vanilla",
-      "Amber",
-      "Musk",
-      "Cedar"
-    ],
-    "mood": "sporty • sweet • energetic",
-    "image": "/images/ferrari-black.png",
-    "story": "A sporty and fresh fragrance that settles into a sweet apple and warm vanilla note.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 1164
-  },
-  {
-    "id": "jaguar-classic-black",
-    "name": "Jaguar Classic Black",
-    "inspiredBy": "Classic Black by Jaguar",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Oriental Fougère",
-    "top": [
-      "Granny Smith Apple",
-      "Mandarin",
-      "Bitter Orange"
-    ],
-    "heart": [
-      "Tea",
-      "Sea Water",
-      "Geranium",
-      "Cardamom"
-    ],
-    "base": [
-      "Musk",
-      "Virginia Cedar",
-      "Tonka Bean",
-      "Sandalwood"
-    ],
-    "mood": "expressive • charismatic • fresh",
-    "image": "/images/jaguar-classic-black.png",
-    "story": "An expressive and elegant fragrance that is fresh, spicy and deeply masculine.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 1251
-  },
-  {
-    "id": "jaguar-classic-gold",
-    "name": "Jaguar Classic Gold",
-    "inspiredBy": "Classic Gold by Jaguar",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Aromatic",
-    "top": [
-      "Apple",
-      "Lime",
-      "Bergamot"
-    ],
-    "heart": [
-      "Orange Blossom",
-      "Teak Wood"
-    ],
-    "base": [
-      "Vanilla",
-      "Patchouli",
-      "Musk"
-    ],
-    "mood": "warm • sweet • captivating",
-    "image": "/images/jaguar-classic-gold.png",
-    "story": "A warm and sweet woody aromatic fragrance that turns heads with its vanilla and teak wood notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 1338
-  },
-  {
-    "id": "bentley-intense",
-    "name": "Bentley Intense",
-    "inspiredBy": "Bentley for Men Intense by Bentley",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Black Pepper",
-      "Bay Leaf",
-      "Bergamot"
-    ],
-    "heart": [
-      "Rum",
-      "Woody Notes",
-      "Cinnamon",
-      "Clary Sage"
-    ],
-    "base": [
-      "Incense",
-      "Leather",
-      "Benzoin",
-      "Patchouli"
-    ],
-    "mood": "boozy • dark • rich",
-    "image": "/images/bentley-intense.png",
-    "story": "A rich and boozy fragrance featuring black pepper, rum and incense. Truly premium projection.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.85,
-    "reviews": 120
-  },
-  {
-    "id": "bentley-absolute",
-    "name": "Bentley Absolute",
-    "inspiredBy": "Bentley for Men Absolute by Bentley",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Ginger",
-      "Pink Pepper"
-    ],
-    "heart": [
-      "Olibanum",
-      "Sandalwood",
-      "Papyrus"
-    ],
-    "base": [
-      "Cedar",
-      "Amber",
-      "Oud",
-      "Moss"
-    ],
-    "mood": "smoky • dark • woody",
-    "image": "/images/bentley-absolute.png",
-    "story": "An intensely woody and smoky fragrance with heavy notes of cedar, sandalwood, and oud.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.86,
-    "reviews": 207
-  },
-  {
-    "id": "davidoff-cool-water",
-    "name": "Davidoff Cool Water",
-    "inspiredBy": "Cool Water by Davidoff",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Aquatic",
-    "top": [
-      "Sea Water",
-      "Mint",
-      "Lavender",
-      "Coriander"
-    ],
-    "heart": [
-      "Sandalwood",
-      "Jasmine",
-      "Neroli",
-      "Geranium"
-    ],
-    "base": [
-      "Musk",
-      "Oakmoss",
-      "Tobacco",
-      "Cedar"
-    ],
-    "mood": "fresh • aquatic • classic",
-    "image": "/images/davidoff-cool-water.png",
-    "story": "The classic aquatic fragrance. Fresh, clean sea notes blended with mint and rosemary.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.87,
-    "reviews": 294
-  },
-  {
-    "id": "ck-one",
-    "name": "CK One",
-    "inspiredBy": "CK One by Calvin Klein",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Citrus Aromatic",
-    "top": [
-      "Lemon",
-      "Green Notes",
-      "Bergamot",
-      "Pineapple"
-    ],
-    "heart": [
-      "Lily of the Valley",
-      "Jasmine",
-      "Violet"
-    ],
-    "base": [
-      "Musk",
-      "Cedar",
-      "Sandalwood"
-    ],
-    "mood": "clean • bright • casual",
-    "image": "/images/ck-one.png",
-    "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.88,
-    "reviews": 381
-  },
-  {
-    "id": "ck-be",
-    "name": "CK Be",
-    "inspiredBy": "CK Be by Calvin Klein",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Woody Musk",
-    "top": [
-      "Lavender",
-      "Green Notes",
-      "Mint",
-      "Bergamot"
-    ],
-    "heart": [
-      "Green Grass",
-      "Peach",
-      "Jasmine"
-    ],
-    "base": [
-      "Musk",
-      "Sandalwood",
-      "Cedar",
-      "Vanilla"
-    ],
-    "mood": "intimate • warm • clean",
-    "image": "/images/ck-be.png",
-    "story": "A warm, fresh woody fragrance with a highly intimate musk base that sits close to the skin.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.89,
-    "reviews": 468
-  },
-  {
-    "id": "mont-blanc-legend",
-    "name": "Mont Blanc Legend",
-    "inspiredBy": "Legend by Mont Blanc",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Fougère",
-    "top": [
-      "Lavender",
-      "Pineapple",
-      "Bergamot",
-      "Lemon Verbena"
-    ],
-    "heart": [
-      "Red Apple",
-      "Dried Fruits",
-      "Oakmoss"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Sandalwood"
-    ],
-    "mood": "confident • charismatic • smooth",
-    "image": "/images/mont-blanc-legend.png",
-    "story": "Designed for the confident and charismatic man. A fresh, fruity aromatic fougère.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.9,
-    "reviews": 555
-  },
-  {
-    "id": "mont-blanc-explorer",
-    "name": "Mont Blanc Explorer",
-    "inspiredBy": "Explorer by Mont Blanc",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Aromatic",
-    "top": [
-      "Bergamot",
-      "Pink Pepper",
-      "Clary Sage"
-    ],
-    "heart": [
-      "Haitian Vetiver",
-      "Leather"
-    ],
-    "base": [
-      "Ambroxan",
-      "Akigalawood",
-      "Patchouli"
-    ],
-    "mood": "adventurous • woody • fresh",
-    "image": "/images/mont-blanc-explorer.png",
-    "story": "An unconventional woody aromatic scent that takes you on a journey of discovery.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.91,
-    "reviews": 642
-  },
-  {
-    "id": "azzaro-wanted",
-    "name": "Azzaro Wanted",
-    "inspiredBy": "Wanted by Azzaro",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Spicy",
-    "top": [
-      "Lemon",
-      "Ginger",
-      "Lavender",
-      "Mint"
-    ],
-    "heart": [
-      "Apple",
-      "Juniper",
-      "Guatemalan Cardamom",
-      "Geranium"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Amberwood",
-      "Haitian Vetiver"
-    ],
-    "mood": "bold • magnetic • irresistible",
-    "image": "/images/azzaro-wanted.png",
-    "story": "A bold, magnetic, and irresistible fragrance for the confident man.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.92,
-    "reviews": 729
-  },
-  {
-    "id": "azzaro-chrome",
-    "name": "Azzaro Chrome",
-    "inspiredBy": "Chrome by Azzaro",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Citrus Aromatic",
-    "top": [
-      "Lemon",
-      "Rosemary",
-      "Bergamot",
-      "Neroli"
-    ],
-    "heart": [
-      "Jasmine",
-      "Cyclamen",
-      "Coriander"
-    ],
-    "base": [
-      "Musk",
-      "Oakmoss",
-      "Cedar",
-      "Sandalwood"
-    ],
-    "mood": "fresh • clean • metallic",
-    "image": "/images/azzaro-chrome.png",
-    "story": "A fresh and clean citrus fragrance with crisp metallic accents and woody notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.93,
-    "reviews": 816
-  },
-  {
-    "id": "rasasi-hawas",
-    "name": "Rasasi Hawas",
-    "inspiredBy": "Hawas by Rasasi",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Aquatic",
-    "top": [
-      "Bergamot",
-      "Cinnamon",
-      "Green Apple"
-    ],
-    "heart": [
-      "Marine Notes",
-      "Ambroxan",
-      "Silver Sage"
-    ],
-    "base": [
-      "Musk",
-      "Amber",
-      "Patchouli",
-      "Woodsy Notes"
-    ],
-    "mood": "fresh • aquatic • powerful",
-    "image": "/images/rasasi-hawas.png",
-    "bestseller": true,
-    "story": "A fresh aquatic powerhouse combining crisp marine notes with warm amber. Beast-mode projection.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.94,
-    "reviews": 903
-  },
-  {
-    "id": "armaf-club-de-nuit-intense",
-    "name": "Armaf Club De Nuit Intense Man",
-    "inspiredBy": "Club de Nuit Intense Man by Armaf",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Spicy",
-    "top": [
-      "Lemon",
-      "Pineapple",
-      "Blackcurrant",
-      "Bergamot"
-    ],
-    "heart": [
-      "Birch",
-      "Jasmine",
-      "Rose"
-    ],
-    "base": [
-      "Musk",
-      "Ambergris",
-      "Patchouli",
-      "Vanilla"
-    ],
-    "mood": "smoky • citrusy • beast-mode",
-    "image": "/images/armaf-club-de-nuit-intense.png",
-    "bestseller": true,
-    "story": "A legendary smoky pineapple beast-mode fragrance that commands attention.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 990
-  },
-  {
-    "id": "lattafa-asad",
-    "name": "Lattafa Asad",
-    "inspiredBy": "Asad by Lattafa",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Black Pepper",
-      "Pineapple",
-      "Tobacco"
-    ],
-    "heart": [
-      "Coffee",
-      "Patchouli",
-      "Iris"
-    ],
-    "base": [
-      "Vanilla",
-      "Amber",
-      "Dry Wood",
-      "Benzoin"
-    ],
-    "mood": "spicy • warm • beast-mode",
-    "image": "/images/lattafa-asad.png",
-    "bestseller": true,
-    "story": "A rich, spicy amber fragrance with a bold performance. Deep black pepper meets sweet vanilla.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 1077
-  },
-  {
-    "id": "lattafa-khamrah",
-    "name": "Lattafa Khamrah",
-    "inspiredBy": "Khamrah by Lattafa",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Cinnamon",
-      "Nutmeg",
-      "Bergamot"
-    ],
-    "heart": [
-      "Dates",
-      "Praline",
-      "Tuberose"
-    ],
-    "base": [
-      "Vanilla",
-      "Tonka Bean",
-      "Myrrh"
-    ],
-    "mood": "sweet • boozy • warm",
-    "image": "/images/lattafa-khamrah.png",
-    "bestseller": true,
-    "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 1164
-  },
-  {
-    "id": "ameer-al-oud",
-    "name": "Ameer Al Oud",
-    "inspiredBy": "Ameer Al Oudh Intense Oud by Lattafa",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Agarwood (Oud)",
-      "Woody Notes"
-    ],
-    "heart": [
-      "Vanilla",
-      "Sugar"
-    ],
-    "base": [
-      "Agarwood (Oud)",
-      "Sandalwood",
-      "Herbal Notes"
-    ],
-    "mood": "warm • sweet • oriental",
-    "image": "/images/ameer-al-oud.png",
-    "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 1251
-  },
-  {
-    "id": "oud-mood",
-    "name": "Oud Mood",
-    "inspiredBy": "Oud Mood by Lattafa",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Rose",
-      "Saffron",
-      "Pimento"
-    ],
-    "heart": [
-      "Oud",
-      "Caramel",
-      "Patchouli"
-    ],
-    "base": [
-      "Resin",
-      "Amber",
-      "Woody Notes",
-      "Incense"
-    ],
-    "mood": "sweet • warm • royal",
-    "image": "/images/oud-mood.png",
-    "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud and saffron.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 1338
-  },
-  {
-    "id": "j-janan-gold",
-    "name": "J. Janan Gold",
-    "inspiredBy": "Janan Gold by J.",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Bergamot",
-      "Pink Pepper"
-    ],
-    "heart": [
-      "Jasmine",
-      "Rose",
-      "Patchouli"
-    ],
-    "base": [
-      "Oud",
-      "Amber",
-      "Sandalwood"
-    ],
-    "mood": "royal • spicy • oriental",
-    "image": "/images/j-janan-gold.png",
-    "story": "A majestic Pakistani blend featuring fresh citruses, rich rose, and a base of sweet amber and oud.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 120
-  },
-  {
-    "id": "j-janan-platinum",
-    "name": "J. Janan Platinum",
-    "inspiredBy": "Janan Platinum by J.",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Woody",
-    "top": [
-      "Grapefruit",
-      "Mint"
-    ],
-    "heart": [
-      "Cedar",
-      "Jasmine"
-    ],
-    "base": [
-      "Vetiver",
-      "Musk",
-      "Sandalwood"
-    ],
-    "mood": "fresh • modern • executive",
-    "image": "/images/j-janan-platinum.png",
-    "story": "A modern executive fragrance that combines fresh grapefruit with dry cedarwood and white musk.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 207
-  },
-  {
-    "id": "bonanza-satrangi-pour-homme",
-    "name": "Bonanza Satrangi Pour Homme",
-    "inspiredBy": "Pour Homme by Bonanza Satrangi",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Woody",
-    "top": [
-      "Bergamot",
-      "Pineapple"
-    ],
-    "heart": [
-      "Jasmine",
-      "Cedarwood"
-    ],
-    "base": [
-      "Oakmoss",
-      "Musk",
-      "Amber"
-    ],
-    "mood": "sporty • fresh • clean",
-    "image": "/images/bonanza-satrangi-pour-homme.png",
-    "story": "A fresh and sporty aromatic fragrance that keeps you clean and active all day.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 294
-  },
-  {
-    "id": "scents-n-stories-hero",
-    "name": "Scents N Stories Hero",
-    "inspiredBy": "Hero by Scents N Stories",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic Aquatic",
-    "top": [
-      "Lemon",
-      "Grapefruit"
-    ],
-    "heart": [
-      "Marine Notes",
-      "Mint"
-    ],
-    "base": [
-      "Cedar",
-      "Vetiver",
-      "Amber"
-    ],
-    "mood": "energetic • fresh • aquatic",
-    "image": "/images/scents-n-stories-hero.png",
-    "story": "A high-performance fresh fragrance designed to beat the heat with citrus and mint.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 381
-  },
-  {
-    "id": "wb-by-hemani-prestige",
-    "name": "WB by Hemani Prestige",
-    "inspiredBy": "Prestige by WB by Hemani",
-    "gender": "Men",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Spicy",
-    "top": [
-      "Bergamot",
-      "Cardamom"
-    ],
-    "heart": [
-      "Pepper",
-      "Lavender"
-    ],
-    "base": [
-      "Leather",
-      "Sandalwood",
-      "Vetiver"
-    ],
-    "mood": "charismatic • refined • classic",
-    "image": "/images/wb-by-hemani-prestige.png",
-    "story": "A classic charismatic scent with premium woody notes, fresh spices, and a touch of leather.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 468
-  },
-  {
-    "id": "gucci-flora",
-    "name": "Gucci Flora",
-    "inspiredBy": "Flora by Gucci",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Peony",
-      "Citrus",
-      "Mandarin Orange"
-    ],
-    "heart": [
-      "Osmanthus",
-      "Rose"
-    ],
-    "base": [
-      "Sandalwood",
-      "Patchouli",
-      "Pink Pepper"
-    ],
-    "mood": "elegant • sensual • floral",
-    "image": "/images/gucci-flora.png",
-    "story": "An elegant and sensual floral bouquet that celebrates the youthful spirit of femininity.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 120
-  },
-  {
-    "id": "gucci-bloom",
-    "name": "Gucci Bloom",
-    "inspiredBy": "Gucci Bloom by Gucci",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "White Floral",
-    "top": [
-      "Rangoon Creeper"
-    ],
-    "heart": [
-      "Tuberose"
-    ],
-    "base": [
-      "Jasmine",
-      "Honeysuckle"
-    ],
-    "mood": "floral • rich • enchanting",
-    "image": "",
-    "story": "A rich white floral scent that transports you to a beautiful, blooming garden.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 207
-  },
-  {
-    "id": "gucci-rush",
-    "name": "Gucci Rush",
-    "inspiredBy": "Gucci Rush by Gucci",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Fruity",
-    "top": [
-      "Peach",
-      "California Gardenia"
-    ],
-    "heart": [
-      "Coriander",
-      "Damask Rose",
-      "Jasmine"
-    ],
-    "base": [
-      "Patchouli",
-      "Vanilla",
-      "Vetiver"
-    ],
-    "mood": "bold • modern • intoxicating",
-    "image": "",
-    "story": "An intoxicating and bold modern fragrance that leaves an unforgettable trail.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 294
-  },
-  {
-    "id": "miss-dior",
-    "name": "Miss Dior",
-    "inspiredBy": "Miss Dior by Dior",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Chypre",
-    "top": [
-      "Blood Orange",
-      "Mandarin"
-    ],
-    "heart": [
-      "Rose",
-      "Peony",
-      "Iris"
-    ],
-    "base": [
-      "Patchouli",
-      "Musk",
-      "Rosewood"
-    ],
-    "mood": "feminine • fresh • romantic",
-    "image": "/images/miss-dior.png",
-    "story": "A modern feminine icon. Captures the romantic freshness of peony and rose, balanced with a warm patchouli base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 381
-  },
-  {
-    "id": "j-adore-dior",
-    "name": "J'adore Dior",
-    "inspiredBy": "J'adore by Dior",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Pear",
-      "Melon",
-      "Peach",
-      "Mandarin"
-    ],
-    "heart": [
-      "Jasmine",
-      "Lily of the Valley",
-      "Tuberose",
-      "Rose",
-      "Orchid"
-    ],
-    "base": [
-      "Musk",
-      "Vanilla",
-      "Blackberry",
-      "Cedar"
-    ],
-    "mood": "glamorous • golden • opulent",
-    "image": "/images/j-adore-dior.png",
-    "bestseller": true,
-    "story": "An opulent, golden floral fragrance that shimmers on the skin. A tribute to modern luxury.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 468
-  },
-  {
-    "id": "dior-poison-girl",
-    "name": "Dior Poison Girl",
-    "inspiredBy": "Poison Girl by Dior",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Bitter Orange",
-      "Lemon"
-    ],
-    "heart": [
-      "Damask Rose",
-      "Grasse Rose",
-      "Orange Blossom"
-    ],
-    "base": [
-      "Vanilla",
-      "Almond",
-      "Tonka Bean",
-      "Sandalwood",
-      "Heliotrope"
-    ],
-    "mood": "delicious • toxic • sensual",
-    "image": "/images/dior-poison-girl.png",
-    "story": "A delicious, bitter-sweet floral fragrance with mouthwatering notes of vanilla and almond.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 555
-  },
-  {
-    "id": "chanel-coco-mademoiselle",
-    "name": "Chanel Coco Mademoiselle",
-    "inspiredBy": "Coco Mademoiselle by Chanel",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Orange",
-      "Bergamot"
-    ],
-    "heart": [
-      "Rose",
-      "Jasmine"
-    ],
-    "base": [
-      "Patchouli",
-      "White Musk",
-      "Vanilla",
-      "Vetiver"
-    ],
-    "mood": "elegant • chic • captivating",
-    "image": "/images/chanel-coco-mademoiselle.png",
-    "bestseller": true,
-    "story": "A spirited and voluptuous fragrance. Sparkly orange notes meet a clear heart of rose and jasmine.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 642
-  },
-  {
-    "id": "chanel-chance",
-    "name": "Chanel Chance",
-    "inspiredBy": "Chance by Chanel",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Floral",
-    "top": [
-      "Patchouli",
-      "Pink Pepper",
-      "Pineapple"
-    ],
-    "heart": [
-      "Jasmine",
-      "Lemon",
-      "Iris"
-    ],
-    "base": [
-      "Musk",
-      "Patchouli",
-      "Vanilla",
-      "Vetiver"
-    ],
-    "mood": "unexpected • sparkling • energetic",
-    "image": "/images/chanel-chance.png",
-    "story": "A spin of fortune. A sparkling floral fragrance where pink pepper and jasmine intertwine.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 729
-  },
-  {
-    "id": "chanel-gabrielle",
-    "name": "Chanel Gabrielle",
-    "inspiredBy": "Gabrielle by Chanel",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Grapefruit",
-      "Mandarin Orange",
-      "Blackcurrant"
-    ],
-    "heart": [
-      "Orange Blossom",
-      "Jasmine",
-      "Ylang-Ylang",
-      "Tuberose"
-    ],
-    "base": [
-      "Musk",
-      "Sandalwood",
-      "Cashmeran"
-    ],
-    "mood": "luminous • solar • pure",
-    "image": "/images/chanel-gabrielle.png",
-    "story": "A solar fragrance created around four white flowers — a pure floral heart.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 816
-  },
-  {
-    "id": "versace-bright-crystal",
-    "name": "Versace Bright Crystal",
-    "inspiredBy": "Bright Crystal by Versace",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Yuzu",
-      "Pomegranate",
-      "Ice Notes"
-    ],
-    "heart": [
-      "Peony",
-      "Lotus",
-      "Magnolia"
-    ],
-    "base": [
-      "Musk",
-      "Mahogany",
-      "Amber"
-    ],
-    "mood": "bright • fresh • glamorous",
-    "image": "/images/versace-bright-crystal.png",
-    "story": "A fresh, vibrant floral fragrance featuring pomegranate and peony with a warm musk finish.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 903
-  },
-  {
-    "id": "versace-crystal-noir",
-    "name": "Versace Crystal Noir",
-    "inspiredBy": "Crystal Noir by Versace",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Pepper",
-      "Ginger",
-      "Cardamom"
-    ],
-    "heart": [
-      "Coconut",
-      "Gardenia",
-      "Orange Blossom",
-      "Peony"
-    ],
-    "base": [
-      "Sandalwood",
-      "Musk",
-      "Amber"
-    ],
-    "mood": "dark • sensual • mysterious",
-    "image": "/images/versace-crystal-noir.png",
-    "bestseller": true,
-    "story": "A dark, mysterious fragrance featuring creamy coconut blended with rich gardenia and spices.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.85,
-    "reviews": 990
-  },
-  {
-    "id": "versace-yellow-diamond",
-    "name": "Versace Yellow Diamond",
-    "inspiredBy": "Yellow Diamond by Versace",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Amalfi Lemon",
-      "Pear",
-      "Bergamot",
-      "Neroli"
-    ],
-    "heart": [
-      "Mimosa",
-      "Freesia",
-      "Orange Blossom",
-      "Water Lily"
-    ],
-    "base": [
-      "Musk",
-      "Guaiac Wood",
-      "Amber"
-    ],
-    "mood": "airy • bright • solar",
-    "image": "/images/versace-yellow-diamond.png",
-    "story": "A bright, solar floral fragrance that sparkles like a diamond under the sun.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.86,
-    "reviews": 1077
-  },
-  {
-    "id": "ysl-libre",
-    "name": "YSL Libre",
-    "inspiredBy": "Libre by YSL",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Fougère",
-    "top": [
-      "Lavender",
-      "Mandarin Orange",
-      "Blackcurrant"
-    ],
-    "heart": [
-      "Lavender",
-      "Orange Blossom",
-      "Jasmine"
-    ],
-    "base": [
-      "Madagascar Vanilla",
-      "Musk",
-      "Ambergris",
-      "Cedar"
-    ],
-    "mood": "free • bold • charismatic",
-    "image": "/images/ysl-libre.png",
-    "bestseller": true,
-    "story": "A grand floral fragrance of freedom. Tension between French lavender and Moroccan orange blossom.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.87,
-    "reviews": 1164
-  },
-  {
-    "id": "mon-paris",
-    "name": "Mon Paris",
-    "inspiredBy": "Mon Paris by YSL",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Fruity",
-    "top": [
-      "Strawberry",
-      "Raspberry",
-      "Pear",
-      "Orange"
-    ],
-    "heart": [
-      "Datura",
-      "Peony",
-      "Jasmine"
-    ],
-    "base": [
-      "Patchouli",
-      "White Musk",
-      "Ambroxan",
-      "Cedar"
-    ],
-    "mood": "passionate • sweet • romantic",
-    "image": "/images/mon-paris.png",
-    "story": "A passionate love fragrance capturing the spirit of Paris. Sweet berries meet patchouli.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.88,
-    "reviews": 1251
-  },
-  {
-    "id": "black-opium",
-    "name": "Black Opium",
-    "inspiredBy": "Black Opium by YSL",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Pear",
-      "Pink Pepper",
-      "Orange Blossom"
-    ],
-    "heart": [
-      "Coffee",
-      "Jasmine",
-      "Bitter Almond",
-      "Licorice"
-    ],
-    "base": [
-      "Vanilla",
-      "Patchouli",
-      "Cashmere Wood",
-      "Cedar"
-    ],
-    "mood": "addictive • nocturnal • warm",
-    "image": "/images/black-opium.png",
-    "bestseller": true,
-    "story": "A highly addictive feminine fragrance. Black coffee combined with sweet vanilla and white florals.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.89,
-    "reviews": 1338
-  },
-  {
-    "id": "burberry-her",
-    "name": "Burberry Her",
-    "inspiredBy": "Burberry Her by Burberry",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity Gourmand",
-    "top": [
-      "Strawberry",
-      "Raspberry",
-      "Blackberry",
-      "Sour Cherry"
-    ],
-    "heart": [
-      "Violet",
-      "Jasmine"
-    ],
-    "base": [
-      "Musk",
-      "Vanilla",
-      "Cashmeran",
-      "Amber",
-      "Oakmoss"
-    ],
-    "mood": "sweet • energetic • youthful",
-    "image": "/images/burberry-her.png",
-    "story": "A burst of sweet berries blended with jasmine and a warm, woody-musky base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.9,
-    "reviews": 120
-  },
-  {
-    "id": "burberry-body",
-    "name": "Burberry Body",
-    "inspiredBy": "Burberry Body by Burberry",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Fruity",
-    "top": [
-      "Peach",
-      "Absinthe",
-      "Freesia"
-    ],
-    "heart": [
-      "Rose",
-      "Sandalwood",
-      "Iris"
-    ],
-    "base": [
-      "Musk",
-      "Cashmere Wood",
-      "Vanilla",
-      "Amber"
-    ],
-    "mood": "intimate • warm • sensual",
-    "image": "/images/burberry-body.png",
-    "story": "An intimate and sensual fragrance that wraps the skin like a warm cashmere blanket.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.91,
-    "reviews": 207
-  },
-  {
-    "id": "victoria-s-secret-bombshell",
-    "name": "Victoria's Secret Bombshell",
-    "inspiredBy": "Bombshell by Victoria's Secret",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Passionfruit",
-      "Grapefruit",
-      "Pineapple",
-      "Tangerine",
-      "Strawberry"
-    ],
-    "heart": [
-      "Peony",
-      "Vanilla Orchid",
-      "Red Berries",
-      "Jasmine"
-    ],
-    "base": [
-      "Musk",
-      "Woody Notes",
-      "Oakmoss"
-    ],
-    "mood": "glamorous • confident • playful",
-    "image": "/images/victoria-s-secret-bombshell.png",
-    "bestseller": true,
-    "story": "A glamorous and confident blend of purple passionfruit, Shangri-la peony and vanilla orchid.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.92,
-    "reviews": 294
-  },
-  {
-    "id": "bombshell-intense",
-    "name": "Bombshell Intense",
-    "inspiredBy": "Bombshell Intense by Victoria's Secret",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Fruity",
-    "top": [
-      "Cherry"
-    ],
-    "heart": [
-      "Red Peony"
-    ],
-    "base": [
-      "Vanilla"
-    ],
-    "mood": "passionate • bold • sultry",
-    "image": "/images/bombshell-intense.png",
-    "story": "A sultry, rich blend of decadent cherry, red peony and warm vanilla. Pure passion.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.93,
-    "reviews": 381
-  },
-  {
-    "id": "bombshell-seduction",
-    "name": "Bombshell Seduction",
-    "inspiredBy": "Bombshell Seduction by Victoria's Secret",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Oriental",
-    "top": [
-      "White Peony"
-    ],
-    "heart": [
-      "Sage"
-    ],
-    "base": [
-      "Velvet Musk"
-    ],
-    "mood": "intimate • airy • warm",
-    "image": "/images/bombshell-seduction.png",
-    "story": "An intimate, airy floral fragrance with a warm, skin-like velvet musk base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.94,
-    "reviews": 468
-  },
-  {
-    "id": "carolina-herrera-good-girl",
-    "name": "Carolina Herrera Good Girl",
-    "inspiredBy": "Good Girl by Carolina Herrera",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Almond",
-      "Coffee",
-      "Bergamot",
-      "Lemon"
-    ],
-    "heart": [
-      "Tuberose",
-      "Jasmine Sambac",
-      "Orris",
-      "Orange Blossom"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Cocoa",
-      "Vanilla",
-      "Sandalwood",
-      "Praline"
-    ],
-    "mood": "bold • glamorous • dual-natured",
-    "image": "/images/carolina-herrera-good-girl.png",
-    "bestseller": true,
-    "story": "Sweet jasmine and cocoa meet bold coffee and tonka bean. A glamorous, confident scent.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 555
-  },
-  {
-    "id": "good-girl-blush",
-    "name": "Good Girl Blush",
-    "inspiredBy": "Good Girl Blush by Carolina Herrera",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Bergamot",
-      "Bitter Almond"
-    ],
-    "heart": [
-      "Peony",
-      "Ylang-Ylang"
-    ],
-    "base": [
-      "Vanilla",
-      "Coumarin"
-    ],
-    "mood": "powdery • romantic • sweet",
-    "image": "/images/good-girl-blush.png",
-    "story": "A powdery, romantic floral fragrance featuring sweet vanilla and fresh peonies.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 642
-  },
-  {
-    "id": "212-vip-rose",
-    "name": "212 VIP Rose",
-    "inspiredBy": "212 VIP Rosé by Carolina Herrera",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Champagne",
-      "Fruity Notes"
-    ],
-    "heart": [
-      "Peach Blossom"
-    ],
-    "base": [
-      "White Musk",
-      "Woody Notes",
-      "Amber"
-    ],
-    "mood": "festive • sparkling • glamorous",
-    "image": "/images/212-vip-rose.png",
-    "story": "A sparkling champagne fragrance with sweet peach blossom and a warm, woody-musk base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 729
-  },
-  {
-    "id": "lancome-la-vie-est-belle",
-    "name": "Lancôme La Vie Est Belle",
-    "inspiredBy": "La Vie Est Belle by Lancôme",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity Gourmand",
-    "top": [
-      "Blackcurrant",
-      "Pear"
-    ],
-    "heart": [
-      "Iris",
-      "Jasmine",
-      "Orange Blossom"
-    ],
-    "base": [
-      "Praline",
-      "Vanilla",
-      "Patchouli",
-      "Tonka Bean"
-    ],
-    "mood": "sweet • joyful • iconic",
-    "image": "/images/lancome-la-vie-est-belle.png",
-    "bestseller": true,
-    "story": "Life is beautiful. A rich gourmand blend of sweet praline, warm vanilla, and iris.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 816
-  },
-  {
-    "id": "idole",
-    "name": "Idôle",
-    "inspiredBy": "Idôle by Lancôme",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Floral",
-    "top": [
-      "Pear",
-      "Bergamot"
-    ],
-    "heart": [
-      "Turkish Rose",
-      "Rose de Mai",
-      "Indian Jasmine"
-    ],
-    "base": [
-      "White Musk",
-      "Vanilla"
-    ],
-    "mood": "clean • modern • inspiring",
-    "image": "/images/idole.png",
-    "story": "For the future leaders. A clean, modern rose fragrance with a delicate white musk base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 903
-  },
-  {
-    "id": "dolce-gabbana-light-blue",
-    "name": "Dolce & Gabbana Light Blue",
-    "inspiredBy": "Light Blue by Dolce & Gabbana",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Sicilian Lemon",
-      "Apple",
-      "Cedar",
-      "Bellflower"
-    ],
-    "heart": [
-      "Bamboo",
-      "Jasmine",
-      "White Rose"
-    ],
-    "base": [
-      "Cedar",
-      "Musk",
-      "Amber"
-    ],
-    "mood": "fresh • sunny • Mediterranean",
-    "image": "/images/dolce-gabbana-light-blue.png",
-    "story": "A fresh and sunny Mediterranean scent combining crisp apple and lemon with bamboo.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 990
-  },
-  {
-    "id": "dolce-garden",
-    "name": "Dolce Garden",
-    "inspiredBy": "Dolce Garden by Dolce & Gabbana",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity Gourmand",
-    "top": [
-      "Magnolia",
-      "Neroli",
-      "Mandarin"
-    ],
-    "heart": [
-      "Coconut",
-      "Frangipani",
-      "Ylang-Ylang"
-    ],
-    "base": [
-      "Vanilla",
-      "Almond Milk",
-      "Sandalwood"
-    ],
-    "mood": "creamy • sweet • tropical",
-    "image": "/images/dolce-garden.png",
-    "story": "A delicious tropical garden scent featuring creamy coconut and sweet frangipani blossoms.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 1077
-  },
-  {
-    "id": "issey-miyake-l-eau-d-issey",
-    "name": "Issey Miyake L'Eau d'Issey",
-    "inspiredBy": "L'Eau d'Issey by Issey Miyake",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Aquatic",
-    "top": [
-      "Lotus",
-      "Melon",
-      "Freesia",
-      "Rose water"
-    ],
-    "heart": [
-      "Lily",
-      "Lily-of-the-Valley",
-      "Peony"
-    ],
-    "base": [
-      "Musk",
-      "Tuberose",
-      "Exotic Woods",
-      "Amber"
-    ],
-    "mood": "pure • fresh • peaceful",
-    "image": "/images/issey-miyake-l-eau-d-issey.png",
-    "story": "A pure and fresh aquatic floral fragrance, clean as spring water.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 1164
-  },
-  {
-    "id": "blue-lady",
-    "name": "Blue Lady",
-    "inspiredBy": "Blue Lady by Rasasi",
-    "gender": "Women",
-    "concentration": "Extrait de Parfum",
-    "family": "White Floral",
-    "top": [
-      "Rangoon Creeper"
-    ],
-    "heart": [
-      "Tuberose",
-      "Jasmine Sambac"
-    ],
-    "base": [
-      "Orris Root",
-      "Musk"
-    ],
-    "mood": "garden • rich • white floral",
-    "image": "/images/blue-lady-original.png",
-    "story": "A rich white floral garden in a bottle. Lush, creamy tuberose and jasmine experience.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 1251
-  },
-  {
-    "id": "chastity",
-    "name": "Chastity",
-    "inspiredBy": "Chastity Women by Rasasi",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Green",
-    "top": [
-      "Green Notes",
-      "Water Notes",
-      "Lemon"
-    ],
-    "heart": [
-      "Jasmine",
-      "African Orange Flower",
-      "Rose"
-    ],
-    "base": [
-      "Musk"
-    ],
-    "mood": "clean • green • pure",
-    "image": "/images/chastity.png",
-    "story": "A clean, pure green-floral fragrance that brings a burst of freshness in warm weather.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 1338
-  },
-  {
-    "id": "tea-rose",
-    "name": "Tea Rose",
-    "inspiredBy": "Tea Rose by Perfumer's Workshop",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Green Leaves"
-    ],
-    "heart": [
-      "Tea Rose",
-      "Chamomile"
-    ],
-    "base": [
-      "Violet"
-    ],
-    "mood": "fresh • classic • rose",
-    "image": "/images/tea-rose.png",
-    "story": "The ultimate fresh rose. Captures the true aroma of a rose garden in full bloom.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.85,
-    "reviews": 120
-  },
-  {
-    "id": "white-musk",
-    "name": "White Musk",
-    "inspiredBy": "White Musk by The Body Shop",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Musk",
-    "top": [
-      "Lily",
-      "Musk",
-      "Galbanum",
-      "Ylang-Ylang"
-    ],
-    "heart": [
-      "Musk",
-      "Jasmine",
-      "Lily",
-      "Rose"
-    ],
-    "base": [
-      "Musk",
-      "Iris",
-      "Jasmine",
-      "Amber"
-    ],
-    "mood": "velvety • clean • comforting",
-    "image": "/images/white-musk.png",
-    "story": "A velvety, clean, and comforting musk fragrance. A classic signature scent.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.86,
-    "reviews": 207
-  },
-  {
-    "id": "red-door",
-    "name": "Red Door",
-    "inspiredBy": "Red Door by Elizabeth Arden",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Rose",
-      "Orange Blossom",
-      "Peach",
-      "Plum"
-    ],
-    "heart": [
-      "Carnation",
-      "Tuberose",
-      "Jasmine",
-      "Ylang-Ylang"
-    ],
-    "base": [
-      "Honey",
-      "Sandalwood",
-      "Amber",
-      "Musk"
-    ],
-    "mood": "glamorous • classic • opulent",
-    "image": "/images/red-door.png",
-    "story": "An opulent, classic floral fragrance. A rich bouquet of rose, jasmine, and sweet honey.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.87,
-    "reviews": 294
-  },
-  {
-    "id": "guess-seductive",
-    "name": "Guess Seductive",
-    "inspiredBy": "Guess Seductive by Guess",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Pear",
-      "Bergamot",
-      "Blackcurrant"
-    ],
-    "heart": [
-      "Jasmine",
-      "African Orange Flower",
-      "Orris Root"
-    ],
-    "base": [
-      "Vanilla",
-      "Cashmere Wood",
-      "Olibanum"
-    ],
-    "mood": "charming • sweet • seductive",
-    "image": "/images/guess-seductive.png",
-    "story": "A charming, sweet floral fragrance with a warm, seductive vanilla base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.88,
-    "reviews": 381
-  },
-  {
-    "id": "guess-girl",
-    "name": "Guess Girl",
-    "inspiredBy": "Guess Girl by Guess",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Raspberry",
-      "Melon",
-      "Bergamot"
-    ],
-    "heart": [
-      "Orchid",
-      "Lily",
-      "Acacia"
-    ],
-    "base": [
-      "Vanilla",
-      "Sandalwood"
-    ],
-    "mood": "youthful • playful • fresh",
-    "image": "/images/guess-girl.png",
-    "story": "A playful, youthful floral-fruity scent with sweet raspberry and soft sandalwood.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.89,
-    "reviews": 468
-  },
-  {
-    "id": "escada-cherry-in-japan",
-    "name": "Escada Cherry In Japan",
-    "inspiredBy": "Cherry In Japan by Escada",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Cherry Blossom"
-    ],
-    "heart": [
-      "Jasmine"
-    ],
-    "base": [
-      "Tonka Bean"
-    ],
-    "mood": "sweet • fresh • cheerful",
-    "image": "/images/escada-cherry-in-japan.png",
-    "story": "A cheerful, sweet fragrance that captures the beauty of cherry blossoms in Tokyo.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.9,
-    "reviews": 555
-  },
-  {
-    "id": "escada-magnetism",
-    "name": "Escada Magnetism",
-    "inspiredBy": "Magnetism by Escada",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Red Berries",
-      "Blackcurrant",
-      "Pineapple"
-    ],
-    "heart": [
-      "Caramel",
-      "Iris",
-      "Jasmine",
-      "Basil"
-    ],
-    "base": [
-      "Vanilla",
-      "Patchouli",
-      "Amber",
-      "Benzoin"
-    ],
-    "mood": "sweet • magnetic • addictive",
-    "image": "/images/escada-magnetism.png",
-    "story": "A sweet, magnetic fragrance featuring delicious caramel, vanilla, and red berries.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.91,
-    "reviews": 642
-  },
-  {
-    "id": "armaf-club-de-nuit-women",
-    "name": "Armaf Club De Nuit Women",
-    "inspiredBy": "Club de Nuit Women by Armaf",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Orange",
-      "Bergamot",
-      "Grapefruit",
-      "Peach"
-    ],
-    "heart": [
-      "Rose",
-      "Jasmine",
-      "Geranium",
-      "Litchi"
-    ],
-    "base": [
-      "Patchouli",
-      "Vanilla",
-      "Musk",
-      "Vetiver"
-    ],
-    "mood": "elegant • bold • glamorous",
-    "image": "/images/armaf-club-de-nuit-women.png",
-    "story": "An elegant and bold fragrance that is sweet, fresh, and projects beautifully.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.92,
-    "reviews": 729
-  },
-  {
-    "id": "ajmal-raindrops",
-    "name": "Ajmal Raindrops",
-    "inspiredBy": "Raindrops by Ajmal",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Woody Musk",
-    "top": [
-      "Fruity Notes",
-      "Floral Notes"
-    ],
-    "heart": [
-      "Floral Notes"
-    ],
-    "base": [
-      "Woody Notes",
-      "Ambergris"
-    ],
-    "mood": "clean • fresh • dewy",
-    "image": "/images/ajmal-raindrops.png",
-    "story": "A clean, fresh, and dewy fragrance that feels like fresh raindrops on dry earth.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.93,
-    "reviews": 816
-  },
-  {
-    "id": "ajmal-sacrifice-for-her",
-    "name": "Ajmal Sacrifice For Her",
-    "inspiredBy": "Sacrifice for Her by Ajmal",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Jasmine",
-      "Water Notes"
-    ],
-    "heart": [
-      "Orange Blossom",
-      "Vanilla"
-    ],
-    "base": [
-      "Amber",
-      "Musk"
-    ],
-    "mood": "warm • sweet • magnetic",
-    "image": "/images/ajmal-sacrifice-for-her.png",
-    "story": "A warm and sweet floral amber fragrance featuring Jasmine and rich musk.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.94,
-    "reviews": 903
-  },
-  {
-    "id": "lattafa-yara",
-    "name": "Lattafa Yara",
-    "inspiredBy": "Yara by Lattafa",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Orchid",
-      "Heliotrope",
-      "Tangerine"
-    ],
-    "heart": [
-      "Gourmand Accord",
-      "Tropical Fruits"
-    ],
-    "base": [
-      "Vanilla",
-      "Musk",
-      "Sandalwood"
-    ],
-    "mood": "creamy • sweet • viral",
-    "image": "/images/lattafa-yara.png",
-    "bestseller": true,
-    "story": "The viral sensation. Creamy strawberry-vanilla milkshake vibe with rich white florals.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 990
-  },
-  {
-    "id": "lattafa-fakhar-women",
-    "name": "Lattafa Fakhar Women",
-    "inspiredBy": "Fakhar Women by Lattafa",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Lily",
-      "Pomegranate",
-      "Aldehydes"
-    ],
-    "heart": [
-      "Tuberose",
-      "Jasmine",
-      "Gardenia",
-      "Rose",
-      "Ylang-Ylang"
-    ],
-    "base": [
-      "Vanilla",
-      "White Musk",
-      "Sandalwood"
-    ],
-    "mood": "creamy • white-floral • elegant",
-    "image": "/images/lattafa-fakhar-women.png",
-    "story": "A creamy, opulent white floral bouquet with pomegranate and a sweet vanilla base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 1077
-  },
-  {
-    "id": "lattafa-ana-abiyedh-rouge",
-    "name": "Lattafa Ana Abiyedh Rouge",
-    "inspiredBy": "Ana Abiyedh Rouge by Lattafa",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Pear",
-      "Bergamot"
-    ],
-    "heart": [
-      "Saffron",
-      "Cardamom"
-    ],
-    "base": [
-      "Ambergris",
-      "Cedar",
-      "Patchouli"
-    ],
-    "mood": "rich • sweet • woody",
-    "image": "/images/lattafa-ana-abiyedh-rouge.png",
-    "story": "A sweet and woody amber fragrance with warm saffron. Similar to high-end luxury scents.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 1164
-  },
-  {
-    "id": "lattafa-haya",
-    "name": "Lattafa Haya",
-    "inspiredBy": "Haya by Lattafa",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Champagne",
-      "Strawberry",
-      "Rose",
-      "Tangerine"
-    ],
-    "heart": [
-      "Gardenia",
-      "Jasmine",
-      "Orchid"
-    ],
-    "base": [
-      "Chestnut",
-      "Amber",
-      "Sandalwood"
-    ],
-    "mood": "festive • sweet • sparkling",
-    "image": "/images/lattafa-haya.png",
-    "story": "A sweet, sparkling floral fragrance with notes of strawberry, rose, and gardenia.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 1251
-  },
-  {
-    "id": "j-janan",
-    "name": "J. Janan",
-    "inspiredBy": "Janan by J.",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Pink Pepper",
-      "Lemon",
-      "Pineapple"
-    ],
-    "heart": [
-      "Jasmine",
-      "Iris",
-      "Hyacinth"
-    ],
-    "base": [
-      "Patchouli",
-      "Musk",
-      "Vetiver",
-      "Vanilla"
-    ],
-    "mood": "bold • smoky • alluring",
-    "image": "/images/j-janan.png",
-    "story": "A legendary Pakistani scent reimagined. Rich floral notes blend with a warm amber base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 1338
-  },
-  {
-    "id": "bonanza-satrangi-femme",
-    "name": "Bonanza Satrangi Femme",
-    "inspiredBy": "Femme by Bonanza Satrangi",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Bergamot",
-      "Peach"
-    ],
-    "heart": [
-      "Rose",
-      "Lily"
-    ],
-    "base": [
-      "Musk",
-      "Sandalwood"
-    ],
-    "mood": "soft • powdery • feminine",
-    "image": "/images/bonanza-satrangi-femme.png",
-    "story": "A soft, powdery floral fragrance that stays fresh and elegant throughout the day.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 120
-  },
-  {
-    "id": "sapphire-femme",
-    "name": "Sapphire Femme",
-    "inspiredBy": "Femme by Sapphire",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Fruity Floral",
-    "top": [
-      "Citrus",
-      "Apple"
-    ],
-    "heart": [
-      "Jasmine",
-      "Rose"
-    ],
-    "base": [
-      "Amber",
-      "Musk"
-    ],
-    "mood": "cheerful • fresh • clean",
-    "image": "/images/sapphire-femme.png",
-    "story": "A cheerful and fresh daily-wear scent featuring crisp apple, jasmine, and white musk.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 207
-  },
-  {
-    "id": "khaadi-bloom",
-    "name": "Khaadi Bloom",
-    "inspiredBy": "Bloom by Khaadi",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral",
-    "top": [
-      "Freesia",
-      "Green Notes"
-    ],
-    "heart": [
-      "Lily",
-      "Jasmine"
-    ],
-    "base": [
-      "White Musk"
-    ],
-    "mood": "clean • light • floral",
-    "image": "/images/khaadi-bloom.png",
-    "story": "A light, clean floral scent that evokes the freshness of spring gardens.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 294
-  },
-  {
-    "id": "wb-by-hemani-grace",
-    "name": "WB by Hemani Grace",
-    "inspiredBy": "Grace by WB by Hemani",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Woody",
-    "top": [
-      "Citrus",
-      "Pear"
-    ],
-    "heart": [
-      "Jasmine",
-      "Orchid"
-    ],
-    "base": [
-      "Sandalwood",
-      "Musk"
-    ],
-    "mood": "graceful • fresh • elegant",
-    "image": "/images/wb-by-hemani-grace.png",
-    "story": "A graceful daily fragrance with fresh citruses, white jasmine, and soft sandalwood.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 381
-  },
-  {
-    "id": "scents-n-stories-belle",
-    "name": "Scents N Stories Belle",
-    "inspiredBy": "Belle by Scents N Stories",
-    "gender": "Women",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Fruity",
-    "top": [
-      "Litchi",
-      "Bergamot"
-    ],
-    "heart": [
-      "Turkish Rose",
-      "Peony"
-    ],
-    "base": [
-      "Vanilla",
-      "Musk",
-      "Cashmeran"
-    ],
-    "mood": "sweet • romantic • fresh",
-    "image": "/images/scents-n-stories-belle.png",
-    "story": "A sweet and romantic rose fragrance that projects beautifully in hot weather.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 468
-  },
-  {
-    "id": "baccarat-rouge-540",
-    "name": "Baccarat Rouge 540",
-    "inspiredBy": "Baccarat Rouge 540 by Maison Francis Kurkdjian",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Saffron",
-      "Jasmine"
-    ],
-    "heart": [
-      "Amberwood",
-      "Ambergris"
-    ],
-    "base": [
-      "Fir Resin",
-      "Cedar"
-    ],
-    "mood": "radiant • complex • luxurious",
-    "image": "/images/baccarat-rouge-540.png",
-    "bestseller": true,
-    "story": "A luminous and sophisticated fragrance that lays on the skin like an amber floral and woody breeze.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 120
-  },
-  {
-    "id": "ck-one-unisex",
-    "name": "CK One (Unisex)",
-    "inspiredBy": "CK One by Calvin Klein",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Citrus Aromatic",
-    "top": [
-      "Lemon",
-      "Green Notes",
-      "Bergamot",
-      "Pineapple"
-    ],
-    "heart": [
-      "Lily of the Valley",
-      "Jasmine",
-      "Violet"
-    ],
-    "base": [
-      "Musk",
-      "Cedar",
-      "Sandalwood"
-    ],
-    "mood": "clean • bright • casual",
-    "image": "/images/ck-one-unisex.png",
-    "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 207
-  },
-  {
-    "id": "tom-ford-oud-wood-unisex",
-    "name": "Tom Ford Oud Wood (Unisex)",
-    "inspiredBy": "Oud Wood by Tom Ford",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Sichuan Pepper",
-      "Cardamom"
-    ],
-    "heart": [
-      "Oud",
-      "Sandalwood",
-      "Vetiver"
-    ],
-    "base": [
-      "Tonka Bean",
-      "Vanilla",
-      "Amber"
-    ],
-    "mood": "smoky • royal • warming",
-    "image": "/images/tom-ford-oud-wood-unisex.png",
-    "bestseller": true,
-    "story": "One of the most rare and expensive ingredients in a perfumer's arsenal, oud wood is blended here with warm spices.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 294
-  },
-  {
-    "id": "tom-ford-neroli-portofino",
-    "name": "Tom Ford Neroli Portofino",
-    "inspiredBy": "Neroli Portofino by Tom Ford",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Citrus Aromatic",
-    "top": [
-      "Bergamot",
-      "Mandarin Orange",
-      "Lemon",
-      "Lavender"
-    ],
-    "heart": [
-      "African Orange Flower",
-      "Neroli",
-      "Jasmine"
-    ],
-    "base": [
-      "Amber",
-      "Ambrette"
-    ],
-    "mood": "fresh • citrusy • summer",
-    "image": "/images/tom-ford-neroli-portofino.png",
-    "story": "A vibrant, sparkling citrus scent that captures the cool breezes and clear water of Italy.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 381
-  },
-  {
-    "id": "tobacco-vanille",
-    "name": "Tobacco Vanille",
-    "inspiredBy": "Tobacco Vanille by Tom Ford",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Tobacco Leaf",
-      "Spicy Notes"
-    ],
-    "heart": [
-      "Vanilla",
-      "Cocoa",
-      "Tonka Bean"
-    ],
-    "base": [
-      "Dried Fruits",
-      "Woody Notes"
-    ],
-    "mood": "opulent • sweet • warm",
-    "image": "/images/tobacco-vanille.png",
-    "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 468
-  },
-  {
-    "id": "white-oud",
-    "name": "White Oud",
-    "inspiredBy": "White Oud by Huda Essence",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Oriental Woody",
-    "top": [
-      "White Oud",
-      "Saffron"
-    ],
-    "heart": [
-      "Rose",
-      "Jasmine",
-      "Patchouli"
-    ],
-    "base": [
-      "Amber",
-      "Vanilla",
-      "Sandalwood"
-    ],
-    "mood": "soft • woody • spiritual",
-    "image": "/images/white-oud.png",
-    "story": "A soft, creamy woody fragrance featuring sweet white oud blended with amber and saffron.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 555
-  },
-  {
-    "id": "ameer-al-oud-unisex",
-    "name": "Ameer Al Oud (Unisex)",
-    "inspiredBy": "Ameer Al Oudh by Lattafa",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Oud",
-      "Woody Notes"
-    ],
-    "heart": [
-      "Vanilla",
-      "Sugar"
-    ],
-    "base": [
-      "Sandalwood",
-      "Herbal Notes"
-    ],
-    "mood": "warm • sweet • oriental",
-    "image": "/images/ameer-al-oud-unisex.png",
-    "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 642
-  },
-  {
-    "id": "ombre-nomade",
-    "name": "Ombre Nomade",
-    "inspiredBy": "Ombre Nomade by Louis Vuitton",
-    "gender": "Unisex",
-    "concentration": "Extrait de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Oud",
-      "Raspberry"
-    ],
-    "heart": [
-      "Incense",
-      "Rose",
-      "Saffron"
-    ],
-    "base": [
-      "Birch",
-      "Amberwood",
-      "Benzoin"
-    ],
-    "mood": "dark • majestic • opulent",
-    "image": "/images/ombre-nomade.png",
-    "bestseller": true,
-    "story": "An opulent, dark fragrance designed for lovers of rare essences. Rich oud meets smoky incense.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 729
-  },
-  {
-    "id": "oud-mood-unisex",
-    "name": "Oud Mood (Unisex)",
-    "inspiredBy": "Oud Mood by Lattafa",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Rose",
-      "Saffron"
-    ],
-    "heart": [
-      "Oud",
-      "Caramel"
-    ],
-    "base": [
-      "Resin",
-      "Amber",
-      "Woody Notes"
-    ],
-    "mood": "sweet • warm • royal",
-    "image": "/images/oud-mood-unisex.png",
-    "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 816
-  },
-  {
-    "id": "amber-oud",
-    "name": "Amber Oud",
-    "inspiredBy": "Amber Oud by Al Haramain",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Bergamot",
-      "Green Notes"
-    ],
-    "heart": [
-      "Melon",
-      "Pineapple",
-      "Sweet Notes",
-      "Amber"
-    ],
-    "base": [
-      "Woody Notes",
-      "Vanilla",
-      "Musk"
-    ],
-    "mood": "sweet • fruity • woody",
-    "image": "/images/amber-oud.png",
-    "story": "A rich, sweet woody fragrance featuring delicious tropical fruits and sweet amber notes.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 903
-  },
-  {
-    "id": "musk-rijali",
-    "name": "Musk Rijali",
-    "inspiredBy": "Musk Rijali by Huda Essence",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Musk",
-    "top": [
-      "White Musk"
-    ],
-    "heart": [
-      "Rose",
-      "Lily"
-    ],
-    "base": [
-      "Sandalwood",
-      "Amber"
-    ],
-    "mood": "clean • powdery • pure",
-    "image": "/images/musk-rijali.png",
-    "story": "A clean, powdery, and pure white musk fragrance that is a timeless classic.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.85,
-    "reviews": 990
-  },
-  {
-    "id": "musk-al-tahara",
-    "name": "Musk Al Tahara",
-    "inspiredBy": "Musk Al Tahara by Huda Essence",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Floral Musk",
-    "top": [
-      "White Musk",
-      "Cotton"
-    ],
-    "heart": [
-      "Jasmine",
-      "Lily"
-    ],
-    "base": [
-      "White Musk",
-      "Amber"
-    ],
-    "mood": "thick • clean • pure",
-    "image": "/images/musk-al-tahara.png",
-    "story": "The ultimate clean scent. A thick, velvety white musk that feels like fresh laundry.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.86,
-    "reviews": 1077
-  },
-  {
-    "id": "sheikh-al-shuyukh",
-    "name": "Sheikh Al Shuyukh",
-    "inspiredBy": "Sheikh Al Shuyukh by Lattafa",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Oud",
-      "Cedar"
-    ],
-    "heart": [
-      "Lavender",
-      "Sage",
-      "Rosemary"
-    ],
-    "base": [
-      "Vetiver",
-      "Patchouli"
-    ],
-    "mood": "spicy • clean • woody",
-    "image": "/images/sheikh-al-shuyukh.png",
-    "story": "A clean and spicy woody fragrance with aromatic lavender and a deep cedar-oud base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.87,
-    "reviews": 1164
-  },
-  {
-    "id": "lattafa-khamrah-unisex",
-    "name": "Lattafa Khamrah (Unisex)",
-    "inspiredBy": "Khamrah by Lattafa",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Spicy",
-    "top": [
-      "Cinnamon",
-      "Nutmeg",
-      "Bergamot"
-    ],
-    "heart": [
-      "Dates",
-      "Praline",
-      "Tuberose"
-    ],
-    "base": [
-      "Vanilla",
-      "Tonka Bean",
-      "Myrrh"
-    ],
-    "mood": "sweet • boozy • warm",
-    "image": "/images/lattafa-khamrah-unisex.png",
-    "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.88,
-    "reviews": 1251
-  },
-  {
-    "id": "nishane-hacivat",
-    "name": "Nishane Hacivat",
-    "inspiredBy": "Hacivat by Nishane",
-    "gender": "Unisex",
-    "concentration": "Extrait de Parfum",
-    "family": "Chypre Woody",
-    "top": [
-      "Pineapple",
-      "Grapefruit",
-      "Bergamot"
-    ],
-    "heart": [
-      "Cedar",
-      "Patchouli",
-      "Jasmine"
-    ],
-    "base": [
-      "Oakmoss",
-      "Woody Notes"
-    ],
-    "mood": "fruity • earthy • beast-mode",
-    "image": "/images/nishane-hacivat.png",
-    "bestseller": true,
-    "story": "A tribute to elegance, competence, and love of art. Smoky pineapple and heavy oakmoss.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.89,
-    "reviews": 1338
-  },
-  {
-    "id": "mancera-cedrat-boise",
-    "name": "Mancera Cedrat Boise",
-    "inspiredBy": "Cedrat Boise by Mancera",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Citrus Woody",
-    "top": [
-      "Sicilian Lemon",
-      "Blackcurrant",
-      "Bergamot"
-    ],
-    "heart": [
-      "Fruity Notes",
-      "Patchouli",
-      "Jasmine"
-    ],
-    "base": [
-      "Cedar",
-      "Leather",
-      "Sandalwood",
-      "Musk",
-      "Moss"
-    ],
-    "mood": "fresh • woody • versatile",
-    "image": "/images/mancera-cedrat-boise.png",
-    "story": "A fresh citrus and blackcurrant blend with a rich woody leather base. Impossibly versatile.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.9,
-    "reviews": 120
-  },
-  {
-    "id": "mancera-red-tobacco",
-    "name": "Mancera Red Tobacco",
-    "inspiredBy": "Red Tobacco by Mancera",
-    "gender": "Unisex",
-    "concentration": "Extrait de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Cinnamon",
-      "Oud",
-      "Saffron",
-      "Incense"
-    ],
-    "heart": [
-      "Patchouli",
-      "Jasmine"
-    ],
-    "base": [
-      "Tobacco",
-      "Madagascar Vanilla",
-      "Amber",
-      "Sandalwood"
-    ],
-    "mood": "intense • warm • beast-mode",
-    "image": "/images/mancera-red-tobacco.png",
-    "bestseller": true,
-    "story": "An incredibly intense warm fragrance. Heavy tobacco and sweet cinnamon. Beast-mode projection.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.91,
-    "reviews": 207
-  },
-  {
-    "id": "montale-black-aoud",
-    "name": "Montale Black Aoud",
-    "inspiredBy": "Black Aoud by Montale",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Floral Musk",
-    "top": [
-      "Mandarin Orange"
-    ],
-    "heart": [
-      "Rose"
-    ],
-    "base": [
-      "Oud",
-      "Patchouli",
-      "Musk",
-      "Labdanum"
-    ],
-    "mood": "dark • gothic • powerful",
-    "image": "/images/montale-black-aoud.png",
-    "story": "A dark, gothic masterpiece. Deep Cambodian oud blended with rich, velvety red roses.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.92,
-    "reviews": 294
-  },
-  {
-    "id": "montale-intense-cafe",
-    "name": "Montale Intense Cafe",
-    "inspiredBy": "Intense Cafe by Montale",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Floral Notes"
-    ],
-    "heart": [
-      "Rose",
-      "Coffee"
-    ],
-    "base": [
-      "Vanilla",
-      "White Musk",
-      "Amber"
-    ],
-    "mood": "cozy • sweet • addictive",
-    "image": "/images/montale-intense-cafe.png",
-    "story": "A cozy and addictive scent featuring fresh coffee blended with sweet vanilla and roses.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.93,
-    "reviews": 381
-  },
-  {
-    "id": "initio-oud-for-greatness",
-    "name": "Initio Oud For Greatness",
-    "inspiredBy": "Oud for Greatness by Initio",
-    "gender": "Unisex",
-    "concentration": "Extrait de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Saffron",
-      "Nutmeg",
-      "Lavender"
-    ],
-    "heart": [
-      "Oud"
-    ],
-    "base": [
-      "Patchouli",
-      "Musk"
-    ],
-    "mood": "mystical • royal • powerful",
-    "image": "/images/initio-oud-for-greatness.png",
-    "story": "A mystical and powerful fragrance featuring raw oud wood, warm saffron, and lavender.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.94,
-    "reviews": 468
-  },
-  {
-    "id": "xerjoff-erba-pura",
-    "name": "Xerjoff Erba Pura",
-    "inspiredBy": "Erba Pura by Xerjoff",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Fruity",
-    "top": [
-      "Sicilian Orange",
-      "Calabrian Bergamot",
-      "Lemon"
-    ],
-    "heart": [
-      "Fruits"
-    ],
-    "base": [
-      "White Musk",
-      "Amber",
-      "Madagascar Vanilla"
-    ],
-    "mood": "sweet • tropical • loud",
-    "image": "",
-    "bestseller": true,
-    "story": "A basket of delicious Mediterranean citrus fruits over a loud vanilla-musk base.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.75,
-    "reviews": 555
-  },
-  {
-    "id": "le-labo-santal-33",
-    "name": "Le Labo Santal 33",
-    "inspiredBy": "Santal 33 by Le Labo",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Aromatic",
-    "top": [
-      "Cardamom",
-      "Iris",
-      "Violet"
-    ],
-    "heart": [
-      "Sandalwood",
-      "Papyrus"
-    ],
-    "base": [
-      "Cedar",
-      "Leather",
-      "Amber"
-    ],
-    "mood": "minimalist • leather • woody",
-    "image": "/images/le-labo-santal-33.png",
-    "bestseller": true,
-    "story": "The iconic scent of the American West. Smoky sandalwood, dry papyrus, and leather.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.76,
-    "reviews": 642
-  },
-  {
-    "id": "byredo-mojave-ghost",
-    "name": "Byredo Mojave Ghost",
-    "inspiredBy": "Mojave Ghost by Byredo",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Floral",
-    "top": [
-      "Sapodilla",
-      "Ambrette"
-    ],
-    "heart": [
-      "Magnolia",
-      "Violet",
-      "Sandalwood"
-    ],
-    "base": [
-      "Ambergris",
-      "Cedar"
-    ],
-    "mood": "airy • powdery • delicate",
-    "image": "/images/byredo-mojave-ghost.png",
-    "story": "A woody composition inspired by the soulful beauty of the Mojave Desert. Delicate and powdery.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.77,
-    "reviews": 729
-  },
-  {
-    "id": "byredo-gypsy-water",
-    "name": "Byredo Gypsy Water",
-    "inspiredBy": "Gypsy Water by Byredo",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Woody Aromatic",
-    "top": [
-      "Juniper",
-      "Lemon",
-      "Bergamot",
-      "Pepper"
-    ],
-    "heart": [
-      "Pine Needles",
-      "Incense",
-      "Orris Root"
-    ],
-    "base": [
-      "Sandalwood",
-      "Vanilla",
-      "Amber"
-    ],
-    "mood": "earthy • free-spirited • fresh",
-    "image": "/images/byredo-gypsy-water.png",
-    "story": "A glamorization of the Romany lifestyle. Earthy pine needles, incense, and warm vanilla.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.78,
-    "reviews": 816
-  },
-  {
-    "id": "maison-francis-gentle-fluidity",
-    "name": "Maison Francis Gentle Fluidity",
-    "inspiredBy": "Gentle Fluidity Gold by MFK",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Amber Vanilla",
-    "top": [
-      "Juniper Berries",
-      "Coriander"
-    ],
-    "heart": [
-      "Nutmeg"
-    ],
-    "base": [
-      "Amber",
-      "Vanilla",
-      "Musk",
-      "Woody Notes"
-    ],
-    "mood": "creamy • smooth • elegant",
-    "image": "",
-    "story": "A creamy, smooth fragrance featuring sweet vanilla and warm amber. Impossibly elegant.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.79,
-    "reviews": 903
-  },
-  {
-    "id": "jo-malone-wood-sage-sea-salt",
-    "name": "Jo Malone Wood Sage & Sea Salt",
-    "inspiredBy": "Wood Sage & Sea Salt by Jo Malone",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic",
-    "top": [
-      "Ambrette Seeds"
-    ],
-    "heart": [
-      "Sea Salt"
-    ],
-    "base": [
-      "Sage"
-    ],
-    "mood": "salty • windy • fresh",
-    "image": "/images/jo-malone-wood-sage-sea-salt.png",
-    "story": "Escape the everyday along the windswept shore. Waves breaking white, the air fresh with sea salt.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.8,
-    "reviews": 990
-  },
-  {
-    "id": "jo-malone-english-pear-freesia",
-    "name": "Jo Malone English Pear & Freesia",
-    "inspiredBy": "English Pear & Freesia by Jo Malone",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Chypre Fruity",
-    "top": [
-      "King William Pear"
-    ],
-    "heart": [
-      "Freesia"
-    ],
-    "base": [
-      "Patchouli"
-    ],
-    "mood": "fresh • juicy • autumnal",
-    "image": "/images/jo-malone-english-pear-freesia.png",
-    "story": "The essence of autumn. The sensuous freshness of just-ripe pears wrapped in a bouquet of white freesias.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.81,
-    "reviews": 1077
-  },
-  {
-    "id": "memo-irish-leather",
-    "name": "Memo Irish Leather",
-    "inspiredBy": "Irish Leather by Memo Paris",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Leather",
-    "top": [
-      "Juniper Berries"
-    ],
-    "heart": [
-      "Green Maté",
-      "Iris"
-    ],
-    "base": [
-      "Leather",
-      "Amber"
-    ],
-    "mood": "green • frosty • leather",
-    "image": "/images/memo-irish-leather.png",
-    "story": "Frosty gallop on a horse. A green leather fragrance that is crisp and deep.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.82,
-    "reviews": 1164
-  },
-  {
-    "id": "amouage-interlude",
-    "name": "Amouage Interlude",
-    "inspiredBy": "Interlude Man by Amouage",
-    "gender": "Unisex",
-    "concentration": "Extrait de Parfum",
-    "family": "Amber Woody",
-    "top": [
-      "Oregano",
-      "Pepper",
-      "Bergamot"
-    ],
-    "heart": [
-      "Incense",
-      "Opopanax",
-      "Amber"
-    ],
-    "base": [
-      "Leather",
-      "Oud",
-      "Patchouli",
-      "Sandalwood"
-    ],
-    "mood": "smoky • chaotic • royal",
-    "image": "/images/amouage-interlude.png",
-    "story": "Known as the 'Blue Beast'. An incredibly smoky, chaotic blend of incense, leather, and oud.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.83,
-    "reviews": 1251
-  },
-  {
-    "id": "creed-silver-mountain-water-unisex",
-    "name": "Creed Silver Mountain Water (Unisex)",
-    "inspiredBy": "Silver Mountain Water by Creed",
-    "gender": "Unisex",
-    "concentration": "Eau de Parfum",
-    "family": "Aromatic",
-    "top": [
-      "Bergamot",
-      "Mandarin Orange"
-    ],
-    "heart": [
-      "Green Tea",
-      "Black Currant"
-    ],
-    "base": [
-      "Musk",
-      "Petitgrain",
-      "Sandalwood",
-      "Galbanum"
-    ],
-    "mood": "crisp • fresh • mountain-air",
-    "image": "/images/creed-silver-mountain-water-unisex.png",
-    "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
-    "sizes": [
-      {
-        "ml": 10,
-        "price": 299
-      },
-      {
-        "ml": 50,
-        "price": 1299
-      },
-      {
-        "ml": 100,
-        "price": 2499
-      }
-    ],
-    "rating": 4.84,
-    "reviews": 1338
-  }
+const DEFAULT_PRODUCTS: Product[] = [    {
+        "id": "afnan-9-pm",
+        "name": "Afnan 9 PM",
+        "inspiredBy": "9 PM by Afnan",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Apple",
+            "Cinnamon",
+            "Wild Lavender",
+            "Bergamot"
+        ],
+        "heart": [
+            "Orange Blossom",
+            "Lily-of-the-Valley"
+        ],
+        "base": [
+            "Vanilla",
+            "Tonka Bean",
+            "Amber",
+            "Patchouli"
+        ],
+        "mood": "seductive \u2022 night out \u2022 magnetic",
+        "image": "/images/huda-essence-afnan-9-pm.webp",
+        "bestseller": true,
+        "story": "An irresistible blast of juicy apple, warm cinnamon, and rich vanilla. 9 PM by Afnan is legendary for date nights and evening allure.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.9,
+        "reviews": 142
+    }  },    {
+        "id": "dior-sauvage",
+        "name": "Dior Sauvage",
+        "inspiredBy": "Sauvage by Dior",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Calabrian Bergamot",
+            "Pepper"
+        ],
+        "heart": [
+            "Sichuan Pepper",
+            "Lavender",
+            "Vetiver",
+            "Patchouli"
+        ],
+        "base": [
+            "Ambroxan",
+            "Cedar",
+            "Labdanum"
+        ],
+        "mood": "raw \u2022 wild \u2022 magnetic",
+        "image": "/images/huda-essence-dior-sauvage.webp",
+        "bestseller": true,
+        "story": "An explosive blast of fresh bergamot and raw ambroxan. A fragrance that projects confidence and turns heads.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 120
+    }  },    {
+        "id": "bleu-de-chanel",
+        "name": "Bleu de Chanel",
+        "inspiredBy": "Bleu de Chanel by Chanel",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Woody",
+        "top": [
+            "Grapefruit",
+            "Lemon",
+            "Mint",
+            "Pink Pepper"
+        ],
+        "heart": [
+            "Ginger",
+            "Nutmeg",
+            "Jasmine"
+        ],
+        "base": [
+            "Incense",
+            "Vetiver",
+            "Cedar",
+            "Sandalwood",
+            "Patchouli"
+        ],
+        "mood": "fresh \u2022 clean \u2022 commanding",
+        "image": "/images/huda-essence-bleu-de-chanel.webp",
+        "bestseller": true,
+        "story": "A tribute to masculine freedom. Our Bleu impression is crisp, powerful, and impossibly versatile.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 207
+    }  },    {
+        "id": "chanel-allure-homme-sport",
+        "name": "Chanel Allure Homme Sport",
+        "inspiredBy": "Allure Homme Sport by Chanel",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Spicy",
+        "top": [
+            "Orange",
+            "Mandarin Orange",
+            "Sea Notes"
+        ],
+        "heart": [
+            "Black Pepper",
+            "Neroli",
+            "Cedar"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Vanilla",
+            "Amber",
+            "White Musk"
+        ],
+        "mood": "fresh \u2022 athletic \u2022 dynamic",
+        "image": "/images/huda-essence-chanel-allure-homme-sport.webp",
+        "story": "A fresh and sensual scent that evokes the simplicity of allure. Clean citrus meets warm tonka bean.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 294
+    }  },    {
+        "id": "creed-aventus",
+        "name": "Creed Aventus",
+        "inspiredBy": "Aventus by Creed",
+        "gender": "Men",
+        "concentration": "Extrait de Parfum",
+        "family": "Chypre Fruity",
+        "top": [
+            "Pineapple",
+            "Bergamot",
+            "Blackcurrant",
+            "Apple"
+        ],
+        "heart": [
+            "Birch",
+            "Patchouli",
+            "Moroccan Jasmine",
+            "Rose"
+        ],
+        "base": [
+            "Musk",
+            "Oakmoss",
+            "Ambergris",
+            "Vanilla"
+        ],
+        "mood": "bold \u2022 legendary \u2022 powerful",
+        "image": "/images/huda-essence-creed-aventus.webp",
+        "bestseller": true,
+        "story": "Inspired by the dramatic life of an emperor, celebrating strength, power, and success.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 381
+    }  },    {
+        "id": "creed-green-irish-tweed",
+        "name": "Creed Green Irish Tweed",
+        "inspiredBy": "Green Irish Tweed by Creed",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Floral Musk",
+        "top": [
+            "Lemon Verbena",
+            "Iris"
+        ],
+        "heart": [
+            "Violet Leaf"
+        ],
+        "base": [
+            "Ambergris",
+            "Sandalwood"
+        ],
+        "mood": "fresh \u2022 country-side \u2022 sophisticated",
+        "image": "/images/huda-essence-creed-green-irish-tweed.webp",
+        "story": "Like a walk through the Irish countryside, Green Irish Tweed is fresh, green, and classically elegant.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 468
+    }  },    {
+        "id": "creed-silver-mountain",
+        "name": "Creed Silver Mountain Water",
+        "inspiredBy": "Silver Mountain Water by Creed",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic",
+        "top": [
+            "Bergamot",
+            "Mandarin Orange"
+        ],
+        "heart": [
+            "Green Tea",
+            "Black Currant"
+        ],
+        "base": [
+            "Musk",
+            "Petitgrain",
+            "Sandalwood",
+            "Galbanum"
+        ],
+        "mood": "crisp \u2022 fresh \u2022 mountain-air",
+        "image": "/images/huda-essence-creed-silver-mountain.webp",
+        "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 555
+    }  },    {
+        "id": "armani-code",
+        "name": "Armani Code",
+        "inspiredBy": "Armani Code by Giorgio Armani",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Lemon",
+            "Bergamot"
+        ],
+        "heart": [
+            "Star Anise",
+            "Olive Blossom"
+        ],
+        "base": [
+            "Leather",
+            "Tobacco",
+            "Tonka Bean"
+        ],
+        "mood": "mysterious \u2022 seductive \u2022 sophisticated",
+        "image": "/images/huda-essence-armani-code.webp",
+        "story": "A mysterious, sophisticated, and utterly seductive fragrance.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 642
+    }  },    {
+        "id": "acqua-di-gio",
+        "name": "Acqua di Gio",
+        "inspiredBy": "Acqua di Gio by Giorgio Armani",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Aquatic",
+        "top": [
+            "Lime",
+            "Lemon",
+            "Bergamot",
+            "Jasmine"
+        ],
+        "heart": [
+            "Sea Notes",
+            "Peach",
+            "Freesia",
+            "Calone"
+        ],
+        "base": [
+            "White Musk",
+            "Cedar",
+            "Oakmoss",
+            "Patchouli"
+        ],
+        "mood": "aquatic \u2022 fresh \u2022 sunny",
+        "image": "/images/huda-essence-acqua-di-gio.webp",
+        "story": "A clean fragrance inspired by the Mediterranean sea, combining salty marine notes with sweet citrus.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 729
+    }  },    {
+        "id": "stronger-with-you",
+        "name": "Stronger With You",
+        "inspiredBy": "Stronger With You by Emporio Armani",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Cardamom",
+            "Pink Pepper",
+            "Violet Leaf"
+        ],
+        "heart": [
+            "Sage",
+            "Cinnamon",
+            "Meringue"
+        ],
+        "base": [
+            "Vanilla",
+            "Chestnut",
+            "Amber",
+            "Suede"
+        ],
+        "mood": "warm \u2022 sweet \u2022 irresistible",
+        "image": "/images/huda-essence-stronger-with-you.webp",
+        "bestseller": true,
+        "story": "A warm, addictive embrace in a bottle. Sweet chestnut and vanilla merge with spicy cardamom.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 816
+    }  },    {
+        "id": "ysl-y",
+        "name": "YSL Y",
+        "inspiredBy": "Y Eau de Parfum by Yves Saint Laurent",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Apple",
+            "Ginger",
+            "Bergamot"
+        ],
+        "heart": [
+            "Sage",
+            "Juniper Berries",
+            "Geranium"
+        ],
+        "base": [
+            "Amberwood",
+            "Tonka Bean",
+            "Cedar",
+            "Olibanum"
+        ],
+        "mood": "fresh \u2022 masculine \u2022 intense",
+        "image": "/images/huda-essence-ysl-y.webp",
+        "bestseller": true,
+        "story": "A deep, fresh and masculine scent representing the creative spirit of self-accomplishment.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 903
+    }  },    {
+        "id": "la-nuit-de-l-homme",
+        "name": "La Nuit De L'Homme",
+        "inspiredBy": "La Nuit de L'Homme by Yves Saint Laurent",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Cardamom"
+        ],
+        "heart": [
+            "Lavender",
+            "Virginia Cedar",
+            "Bergamot"
+        ],
+        "base": [
+            "Vetiver",
+            "Caraway"
+        ],
+        "mood": "suave \u2022 nocturnal \u2022 magnetic",
+        "image": "/images/huda-essence-la-nuit-de-l-homme.webp",
+        "story": "The ultimate weapon of seduction. Fresh cardamom and sweet lavender blended on deep, dark vetiver.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.85,
+        "reviews": 990
+    }  },    {
+        "id": "versace-eros",
+        "name": "Versace Eros",
+        "inspiredBy": "Eros by Versace",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Mint",
+            "Green Apple",
+            "Lemon"
+        ],
+        "heart": [
+            "Tonka Bean",
+            "Ambroxan",
+            "Geranium"
+        ],
+        "base": [
+            "Madagascar Vanilla",
+            "Cedar",
+            "Vetiver",
+            "Oakmoss"
+        ],
+        "mood": "passionate \u2022 bold \u2022 addictive",
+        "image": "/images/huda-essence-versace-eros.webp",
+        "bestseller": true,
+        "story": "Inspired by Greek mythology, Eros is the fragrance that depicts passion, desire and love.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.86,
+        "reviews": 1077
+    }  },    {
+        "id": "versace-dylan-blue",
+        "name": "Versace Dylan Blue",
+        "inspiredBy": "Dylan Blue by Versace",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Calabrian Bergamot",
+            "Water Notes",
+            "Grapefruit"
+        ],
+        "heart": [
+            "Ambroxan",
+            "Black Pepper",
+            "Patchouli"
+        ],
+        "base": [
+            "Incense",
+            "Musk",
+            "Tonka Bean",
+            "Saffron"
+        ],
+        "mood": "sensual \u2022 modern \u2022 charismatic",
+        "image": "/images/huda-essence-versace-dylan-blue.webp",
+        "story": "A highly sensual fragrance with woody aroma and fresh aquatic accents.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.87,
+        "reviews": 1164
+    }  },    {
+        "id": "versace-pour-homme",
+        "name": "Versace Pour Homme",
+        "inspiredBy": "Versace Pour Homme by Versace",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Lemon",
+            "Neroli",
+            "Bergamot"
+        ],
+        "heart": [
+            "Hyacinth",
+            "Clary Sage",
+            "Cedar",
+            "Geranium"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Musk",
+            "Amber"
+        ],
+        "mood": "clean \u2022 Mediterranean \u2022 classic",
+        "image": "/images/huda-essence-versace-pour-homme.webp",
+        "story": "An elegant, classic fragrance inspired by the fresh air of the Mediterranean coast.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.88,
+        "reviews": 1251
+    }  },    {
+        "id": "paco-rabanne-1-million",
+        "name": "Paco Rabanne 1 Million",
+        "inspiredBy": "1 Million by Paco Rabanne",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Blood Mandarin",
+            "Grapefruit",
+            "Mint"
+        ],
+        "heart": [
+            "Cinnamon",
+            "Spicy Notes",
+            "Rose"
+        ],
+        "base": [
+            "Amber",
+            "Leather",
+            "Woody Notes",
+            "Patchouli"
+        ],
+        "mood": "bold \u2022 luxurious \u2022 nocturnal",
+        "image": "/images/huda-essence-paco-rabanne-1-million.webp",
+        "bestseller": true,
+        "story": "The scent of success and luxury. A rich, spicy-sweet blend of cinnamon, leather, and blood mandarin.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.89,
+        "reviews": 1338
+    }  },    {
+        "id": "invictus",
+        "name": "Invictus",
+        "inspiredBy": "Invictus by Paco Rabanne",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Aquatic",
+        "top": [
+            "Sea Notes",
+            "Grapefruit",
+            "Mandarin Orange"
+        ],
+        "heart": [
+            "Bay Leaf",
+            "Jasmine"
+        ],
+        "base": [
+            "Ambergris",
+            "Guaiac Wood",
+            "Oakmoss",
+            "Patchouli"
+        ],
+        "mood": "fresh \u2022 victorious \u2022 dynamic",
+        "image": "/images/huda-essence-invictus.webp",
+        "story": "A fresh and dynamic fragrance that embodies victory and physical energy.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.9,
+        "reviews": 120
+    }  },    {
+        "id": "phantom",
+        "name": "Phantom",
+        "inspiredBy": "Phantom by Paco Rabanne",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Lavender",
+            "Lemon Zest",
+            "Amalfi Lemon"
+        ],
+        "heart": [
+            "Lavender",
+            "Apple",
+            "Smoke",
+            "Patchouli"
+        ],
+        "base": [
+            "Vanilla",
+            "Lavender",
+            "Vetiver"
+        ],
+        "mood": "futuristic \u2022 sweet \u2022 energetic",
+        "image": "/images/huda-essence-phantom.webp",
+        "story": "A futuristic fragrance born from the clash between luxury craftsmanship and new-tech.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.91,
+        "reviews": 207
+    }  },    {
+        "id": "dunhill-desire-red",
+        "name": "Dunhill Desire Red",
+        "inspiredBy": "Desire Red by Alfred Dunhill",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Apple",
+            "Lemon",
+            "Neroli",
+            "Bergamot"
+        ],
+        "heart": [
+            "Patchouli",
+            "Teak Wood",
+            "Rose"
+        ],
+        "base": [
+            "Vanilla",
+            "Musk"
+        ],
+        "mood": "sensual \u2022 hot \u2022 confident",
+        "image": "/images/huda-essence-dunhill-desire-red.webp",
+        "story": "A masculine scent designed for the self-confident man who wants to be at the center of attention.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.92,
+        "reviews": 294
+    }  },    {
+        "id": "dunhill-icon",
+        "name": "Dunhill Icon",
+        "inspiredBy": "Icon by Alfred Dunhill",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Aromatic",
+        "top": [
+            "Neroli",
+            "Bergamot",
+            "Black Pepper"
+        ],
+        "heart": [
+            "Lavender",
+            "Cardamom",
+            "Sage"
+        ],
+        "base": [
+            "Vetiver",
+            "Leather",
+            "Oud",
+            "Oakmoss"
+        ],
+        "mood": "sophisticated \u2022 classic \u2022 executive",
+        "image": "/images/huda-essence-dunhill-icon.webp",
+        "story": "The perfect blend of classic elegance and modern sophistication. Woody base meets fresh spices.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.93,
+        "reviews": 381
+    }  },    {
+        "id": "dunhill-century",
+        "name": "Dunhill Century",
+        "inspiredBy": "Century by Alfred Dunhill",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Citrus Aromatic",
+        "top": [
+            "Mandarin Orange",
+            "Grapefruit",
+            "Bergamot"
+        ],
+        "heart": [
+            "Neroli",
+            "Cardamom",
+            "Olibanum"
+        ],
+        "base": [
+            "Cypriol Oil",
+            "Sandalwood",
+            "Musk"
+        ],
+        "mood": "clean \u2022 bright \u2022 futuristic",
+        "image": "/images/huda-essence-dunhill-century.webp",
+        "story": "An uplifting and bright fragrance that combines fresh citruses with cardamoms and warm sandalwood.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.94,
+        "reviews": 468
+    }  },    {
+        "id": "hugo-boss-bottled",
+        "name": "Hugo Boss Bottled",
+        "inspiredBy": "Boss Bottled by Hugo Boss",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Spicy",
+        "top": [
+            "Apple",
+            "Plum",
+            "Bergamot",
+            "Lemon"
+        ],
+        "heart": [
+            "Cinnamon",
+            "Mahogany",
+            "Carnation"
+        ],
+        "base": [
+            "Vanilla",
+            "Sandalwood",
+            "Cedar",
+            "Vetiver"
+        ],
+        "mood": "elegant \u2022 versatile \u2022 professional",
+        "image": "/images/huda-essence-hugo-boss-bottled.webp",
+        "story": "An elegant, modern scent that balances fresh fruity notes with warm spicy elements.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 555
+    }  },    {
+        "id": "boss-the-scent",
+        "name": "Boss The Scent",
+        "inspiredBy": "Boss The Scent by Hugo Boss",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Spicy",
+        "top": [
+            "Ginger",
+            "Mandarin Orange",
+            "Bergamot"
+        ],
+        "heart": [
+            "Maninka Fruit",
+            "Lavender"
+        ],
+        "base": [
+            "Leather",
+            "Woody Notes"
+        ],
+        "mood": "seductive \u2022 warm \u2022 magnetic",
+        "image": "/images/huda-essence-boss-the-scent.webp",
+        "story": "A seductive fragrance that captures the mind with a unique note of African Maninka fruit.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 642
+    }  },    {
+        "id": "hugo-man",
+        "name": "Hugo Man",
+        "inspiredBy": "Hugo Man by Hugo Boss",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Green",
+        "top": [
+            "Green Apple",
+            "Lavender",
+            "Mint",
+            "Grapefruit"
+        ],
+        "heart": [
+            "Sage",
+            "Geranium",
+            "Carnation",
+            "Jasmine"
+        ],
+        "base": [
+            "Fir",
+            "Pine Tree",
+            "Cedar",
+            "Patchouli"
+        ],
+        "mood": "adventurous \u2022 fresh \u2022 clean",
+        "image": "/images/huda-essence-hugo-man.webp",
+        "story": "An aromatic green scent designed for the man who lives life on his own terms.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 729
+    }  },    {
+        "id": "tom-ford-ombre-leather",
+        "name": "Tom Ford Ombre Leather",
+        "inspiredBy": "Ombre Leather by Tom Ford",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Leather",
+        "top": [
+            "Cardamom"
+        ],
+        "heart": [
+            "Leather",
+            "Jasmine Sambac"
+        ],
+        "base": [
+            "Amber",
+            "Moss",
+            "Patchouli"
+        ],
+        "mood": "raw \u2022 wild \u2022 luxurious",
+        "image": "/images/huda-essence-tom-ford-ombre-leather.webp",
+        "bestseller": true,
+        "story": "A rich, smoky leather fragrance that captures the wide-open spaces of the American West.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 816
+    }  },    {
+        "id": "tom-ford-tuscan-leather",
+        "name": "Tom Ford Tuscan Leather",
+        "inspiredBy": "Tuscan Leather by Tom Ford",
+        "gender": "Men",
+        "concentration": "Extrait de Parfum",
+        "family": "Leather",
+        "top": [
+            "Raspberry",
+            "Saffron",
+            "Thyme"
+        ],
+        "heart": [
+            "Olibanum",
+            "Jasmine"
+        ],
+        "base": [
+            "Leather",
+            "Suede",
+            "Woody Notes",
+            "Amber"
+        ],
+        "mood": "opulent \u2022 smoky \u2022 sophisticated",
+        "image": "/images/huda-essence-tom-ford-tuscan-leather.webp",
+        "story": "A dark, rich leather scent sweetened with raspberry and spiced with saffron. Impossibly opulent.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 903
+    }  },    {
+        "id": "tom-ford-oud-wood",
+        "name": "Tom Ford Oud Wood",
+        "inspiredBy": "Oud Wood by Tom Ford",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Sichuan Pepper",
+            "Cardamom"
+        ],
+        "heart": [
+            "Oud",
+            "Sandalwood",
+            "Vetiver"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Vanilla",
+            "Amber"
+        ],
+        "mood": "smoky \u2022 royal \u2022 warming",
+        "image": "/images/huda-essence-tom-ford-oud-wood.webp",
+        "story": "Rare and expensive oud wood blended with warm spices, amber, and vanilla.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 990
+    }  },    {
+        "id": "tom-ford-tobacco-vanille",
+        "name": "Tom Ford Tobacco Vanille",
+        "inspiredBy": "Tobacco Vanille by Tom Ford",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Tobacco Leaf",
+            "Spicy Notes"
+        ],
+        "heart": [
+            "Vanilla",
+            "Cocoa",
+            "Tonka Bean"
+        ],
+        "base": [
+            "Dried Fruits",
+            "Woody Notes"
+        ],
+        "mood": "opulent \u2022 sweet \u2022 warm",
+        "image": "/images/huda-essence-tom-ford-tobacco-vanille.webp",
+        "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 1077
+    }  },    {
+        "id": "ferrari-black",
+        "name": "Ferrari Black",
+        "inspiredBy": "Ferrari Black by Ferrari",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Red Apple",
+            "Plum",
+            "Lime",
+            "Bergamot"
+        ],
+        "heart": [
+            "Cinnamon",
+            "Jasmine",
+            "Rose"
+        ],
+        "base": [
+            "Vanilla",
+            "Amber",
+            "Musk",
+            "Cedar"
+        ],
+        "mood": "sporty \u2022 sweet \u2022 energetic",
+        "image": "/images/huda-essence-ferrari-black.webp",
+        "story": "A sporty and fresh fragrance that settles into a sweet apple and warm vanilla note.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 1164
+    }  },    {
+        "id": "jaguar-classic-black",
+        "name": "Jaguar Classic Black",
+        "inspiredBy": "Classic Black by Jaguar",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Oriental Foug\u00e8re",
+        "top": [
+            "Granny Smith Apple",
+            "Mandarin",
+            "Bitter Orange"
+        ],
+        "heart": [
+            "Tea",
+            "Sea Water",
+            "Geranium",
+            "Cardamom"
+        ],
+        "base": [
+            "Musk",
+            "Virginia Cedar",
+            "Tonka Bean",
+            "Sandalwood"
+        ],
+        "mood": "expressive \u2022 charismatic \u2022 fresh",
+        "image": "/images/huda-essence-jaguar-classic-black.webp",
+        "story": "An expressive and elegant fragrance that is fresh, spicy and deeply masculine.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 1251
+    }  },    {
+        "id": "jaguar-classic-gold",
+        "name": "Jaguar Classic Gold",
+        "inspiredBy": "Classic Gold by Jaguar",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Aromatic",
+        "top": [
+            "Apple",
+            "Lime",
+            "Bergamot"
+        ],
+        "heart": [
+            "Orange Blossom",
+            "Teak Wood"
+        ],
+        "base": [
+            "Vanilla",
+            "Patchouli",
+            "Musk"
+        ],
+        "mood": "warm \u2022 sweet \u2022 captivating",
+        "image": "/images/huda-essence-jaguar-classic-gold.webp",
+        "story": "A warm and sweet woody aromatic fragrance that turns heads with its vanilla and teak wood notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 1338
+    }  },    {
+        "id": "bentley-intense",
+        "name": "Bentley Intense",
+        "inspiredBy": "Bentley for Men Intense by Bentley",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Black Pepper",
+            "Bay Leaf",
+            "Bergamot"
+        ],
+        "heart": [
+            "Rum",
+            "Woody Notes",
+            "Cinnamon",
+            "Clary Sage"
+        ],
+        "base": [
+            "Incense",
+            "Leather",
+            "Benzoin",
+            "Patchouli"
+        ],
+        "mood": "boozy \u2022 dark \u2022 rich",
+        "image": "/images/huda-essence-bentley-intense.webp",
+        "story": "A rich and boozy fragrance featuring black pepper, rum and incense. Truly premium projection.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.85,
+        "reviews": 120
+    }  },    {
+        "id": "bentley-absolute",
+        "name": "Bentley Absolute",
+        "inspiredBy": "Bentley for Men Absolute by Bentley",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Ginger",
+            "Pink Pepper"
+        ],
+        "heart": [
+            "Olibanum",
+            "Sandalwood",
+            "Papyrus"
+        ],
+        "base": [
+            "Cedar",
+            "Amber",
+            "Oud",
+            "Moss"
+        ],
+        "mood": "smoky \u2022 dark \u2022 woody",
+        "image": "/images/huda-essence-bentley-absolute.webp",
+        "story": "An intensely woody and smoky fragrance with heavy notes of cedar, sandalwood, and oud.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.86,
+        "reviews": 207
+    }  },    {
+        "id": "davidoff-cool-water",
+        "name": "Davidoff Cool Water",
+        "inspiredBy": "Cool Water by Davidoff",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Aquatic",
+        "top": [
+            "Sea Water",
+            "Mint",
+            "Lavender",
+            "Coriander"
+        ],
+        "heart": [
+            "Sandalwood",
+            "Jasmine",
+            "Neroli",
+            "Geranium"
+        ],
+        "base": [
+            "Musk",
+            "Oakmoss",
+            "Tobacco",
+            "Cedar"
+        ],
+        "mood": "fresh \u2022 aquatic \u2022 classic",
+        "image": "/images/huda-essence-davidoff-cool-water.webp",
+        "story": "The classic aquatic fragrance. Fresh, clean sea notes blended with mint and rosemary.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.87,
+        "reviews": 294
+    }  },    {
+        "id": "ck-one",
+        "name": "CK One",
+        "inspiredBy": "CK One by Calvin Klein",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Citrus Aromatic",
+        "top": [
+            "Lemon",
+            "Green Notes",
+            "Bergamot",
+            "Pineapple"
+        ],
+        "heart": [
+            "Lily of the Valley",
+            "Jasmine",
+            "Violet"
+        ],
+        "base": [
+            "Musk",
+            "Cedar",
+            "Sandalwood"
+        ],
+        "mood": "clean \u2022 bright \u2022 casual",
+        "image": "/images/huda-essence-ck-one.webp",
+        "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.88,
+        "reviews": 381
+    }  },    {
+        "id": "ck-be",
+        "name": "CK Be",
+        "inspiredBy": "CK Be by Calvin Klein",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Woody Musk",
+        "top": [
+            "Lavender",
+            "Green Notes",
+            "Mint",
+            "Bergamot"
+        ],
+        "heart": [
+            "Green Grass",
+            "Peach",
+            "Jasmine"
+        ],
+        "base": [
+            "Musk",
+            "Sandalwood",
+            "Cedar",
+            "Vanilla"
+        ],
+        "mood": "intimate \u2022 warm \u2022 clean",
+        "image": "/images/huda-essence-ck-be.webp",
+        "story": "A warm, fresh woody fragrance with a highly intimate musk base that sits close to the skin.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.89,
+        "reviews": 468
+    }  },    {
+        "id": "mont-blanc-legend",
+        "name": "Mont Blanc Legend",
+        "inspiredBy": "Legend by Mont Blanc",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Foug\u00e8re",
+        "top": [
+            "Lavender",
+            "Pineapple",
+            "Bergamot",
+            "Lemon Verbena"
+        ],
+        "heart": [
+            "Red Apple",
+            "Dried Fruits",
+            "Oakmoss"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Sandalwood"
+        ],
+        "mood": "confident \u2022 charismatic \u2022 smooth",
+        "image": "/images/huda-essence-mont-blanc-legend.webp",
+        "story": "Designed for the confident and charismatic man. A fresh, fruity aromatic foug\u00e8re.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.9,
+        "reviews": 555
+    }  },    {
+        "id": "mont-blanc-explorer",
+        "name": "Mont Blanc Explorer",
+        "inspiredBy": "Explorer by Mont Blanc",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Aromatic",
+        "top": [
+            "Bergamot",
+            "Pink Pepper",
+            "Clary Sage"
+        ],
+        "heart": [
+            "Haitian Vetiver",
+            "Leather"
+        ],
+        "base": [
+            "Ambroxan",
+            "Akigalawood",
+            "Patchouli"
+        ],
+        "mood": "adventurous \u2022 woody \u2022 fresh",
+        "image": "/images/huda-essence-mont-blanc-explorer.webp",
+        "story": "An unconventional woody aromatic scent that takes you on a journey of discovery.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.91,
+        "reviews": 642
+    }  },    {
+        "id": "azzaro-wanted",
+        "name": "Azzaro Wanted",
+        "inspiredBy": "Wanted by Azzaro",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Spicy",
+        "top": [
+            "Lemon",
+            "Ginger",
+            "Lavender",
+            "Mint"
+        ],
+        "heart": [
+            "Apple",
+            "Juniper",
+            "Guatemalan Cardamom",
+            "Geranium"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Amberwood",
+            "Haitian Vetiver"
+        ],
+        "mood": "bold \u2022 magnetic \u2022 irresistible",
+        "image": "/images/huda-essence-azzaro-wanted.webp",
+        "story": "A bold, magnetic, and irresistible fragrance for the confident man.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.92,
+        "reviews": 729
+    }  },    {
+        "id": "azzaro-chrome",
+        "name": "Azzaro Chrome",
+        "inspiredBy": "Chrome by Azzaro",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Citrus Aromatic",
+        "top": [
+            "Lemon",
+            "Rosemary",
+            "Bergamot",
+            "Neroli"
+        ],
+        "heart": [
+            "Jasmine",
+            "Cyclamen",
+            "Coriander"
+        ],
+        "base": [
+            "Musk",
+            "Oakmoss",
+            "Cedar",
+            "Sandalwood"
+        ],
+        "mood": "fresh \u2022 clean \u2022 metallic",
+        "image": "/images/huda-essence-azzaro-chrome.webp",
+        "story": "A fresh and clean citrus fragrance with crisp metallic accents and woody notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.93,
+        "reviews": 816
+    }  },    {
+        "id": "rasasi-hawas",
+        "name": "Rasasi Hawas",
+        "inspiredBy": "Hawas by Rasasi",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Aquatic",
+        "top": [
+            "Bergamot",
+            "Cinnamon",
+            "Green Apple"
+        ],
+        "heart": [
+            "Marine Notes",
+            "Ambroxan",
+            "Silver Sage"
+        ],
+        "base": [
+            "Musk",
+            "Amber",
+            "Patchouli",
+            "Woodsy Notes"
+        ],
+        "mood": "fresh \u2022 aquatic \u2022 powerful",
+        "image": "/images/huda-essence-rasasi-hawas.webp",
+        "bestseller": true,
+        "story": "A fresh aquatic powerhouse combining crisp marine notes with warm amber. Beast-mode projection.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.94,
+        "reviews": 903
+    }  },    {
+        "id": "armaf-club-de-nuit-intense",
+        "name": "Armaf Club De Nuit Intense Man",
+        "inspiredBy": "Club de Nuit Intense Man by Armaf",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Spicy",
+        "top": [
+            "Lemon",
+            "Pineapple",
+            "Blackcurrant",
+            "Bergamot"
+        ],
+        "heart": [
+            "Birch",
+            "Jasmine",
+            "Rose"
+        ],
+        "base": [
+            "Musk",
+            "Ambergris",
+            "Patchouli",
+            "Vanilla"
+        ],
+        "mood": "smoky \u2022 citrusy \u2022 beast-mode",
+        "image": "/images/huda-essence-armaf-club-de-nuit-intense.webp",
+        "bestseller": true,
+        "story": "A legendary smoky pineapple beast-mode fragrance that commands attention.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 990
+    }  },    {
+        "id": "lattafa-asad",
+        "name": "Lattafa Asad",
+        "inspiredBy": "Asad by Lattafa",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Black Pepper",
+            "Pineapple",
+            "Tobacco"
+        ],
+        "heart": [
+            "Coffee",
+            "Patchouli",
+            "Iris"
+        ],
+        "base": [
+            "Vanilla",
+            "Amber",
+            "Dry Wood",
+            "Benzoin"
+        ],
+        "mood": "spicy \u2022 warm \u2022 beast-mode",
+        "image": "/images/huda-essence-lattafa-asad.webp",
+        "bestseller": true,
+        "story": "A rich, spicy amber fragrance with a bold performance. Deep black pepper meets sweet vanilla.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 1077
+    }  },    {
+        "id": "lattafa-khamrah",
+        "name": "Lattafa Khamrah",
+        "inspiredBy": "Khamrah by Lattafa",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Cinnamon",
+            "Nutmeg",
+            "Bergamot"
+        ],
+        "heart": [
+            "Dates",
+            "Praline",
+            "Tuberose"
+        ],
+        "base": [
+            "Vanilla",
+            "Tonka Bean",
+            "Myrrh"
+        ],
+        "mood": "sweet \u2022 boozy \u2022 warm",
+        "image": "/images/huda-essence-lattafa-khamrah.webp",
+        "bestseller": true,
+        "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 1164
+    }  },    {
+        "id": "ameer-al-oud",
+        "name": "Ameer Al Oud",
+        "inspiredBy": "Ameer Al Oudh Intense Oud by Lattafa",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Agarwood (Oud)",
+            "Woody Notes"
+        ],
+        "heart": [
+            "Vanilla",
+            "Sugar"
+        ],
+        "base": [
+            "Agarwood (Oud)",
+            "Sandalwood",
+            "Herbal Notes"
+        ],
+        "mood": "warm \u2022 sweet \u2022 oriental",
+        "image": "/images/huda-essence-ameer-al-oud.webp",
+        "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 1251
+    }  },    {
+        "id": "oud-mood",
+        "name": "Oud Mood",
+        "inspiredBy": "Oud Mood by Lattafa",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Rose",
+            "Saffron",
+            "Pimento"
+        ],
+        "heart": [
+            "Oud",
+            "Caramel",
+            "Patchouli"
+        ],
+        "base": [
+            "Resin",
+            "Amber",
+            "Woody Notes",
+            "Incense"
+        ],
+        "mood": "sweet \u2022 warm \u2022 royal",
+        "image": "/images/huda-essence-oud-mood.webp",
+        "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud and saffron.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 1338
+    }  },    {
+        "id": "j-janan-gold",
+        "name": "J. Janan Gold",
+        "inspiredBy": "Janan Gold by J.",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Bergamot",
+            "Pink Pepper"
+        ],
+        "heart": [
+            "Jasmine",
+            "Rose",
+            "Patchouli"
+        ],
+        "base": [
+            "Oud",
+            "Amber",
+            "Sandalwood"
+        ],
+        "mood": "royal \u2022 spicy \u2022 oriental",
+        "image": "/images/huda-essence-j-janan-gold.webp",
+        "story": "A majestic Pakistani blend featuring fresh citruses, rich rose, and a base of sweet amber and oud.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 120
+    }  },    {
+        "id": "j-janan-platinum",
+        "name": "J. Janan Platinum",
+        "inspiredBy": "Janan Platinum by J.",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Woody",
+        "top": [
+            "Grapefruit",
+            "Mint"
+        ],
+        "heart": [
+            "Cedar",
+            "Jasmine"
+        ],
+        "base": [
+            "Vetiver",
+            "Musk",
+            "Sandalwood"
+        ],
+        "mood": "fresh \u2022 modern \u2022 executive",
+        "image": "/images/huda-essence-j-janan-platinum.webp",
+        "story": "A modern executive fragrance that combines fresh grapefruit with dry cedarwood and white musk.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 207
+    }  },    {
+        "id": "bonanza-satrangi-pour-homme",
+        "name": "Bonanza Satrangi Pour Homme",
+        "inspiredBy": "Pour Homme by Bonanza Satrangi",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Woody",
+        "top": [
+            "Bergamot",
+            "Pineapple"
+        ],
+        "heart": [
+            "Jasmine",
+            "Cedarwood"
+        ],
+        "base": [
+            "Oakmoss",
+            "Musk",
+            "Amber"
+        ],
+        "mood": "sporty \u2022 fresh \u2022 clean",
+        "image": "/images/huda-essence-bonanza-satrangi-pour-homme.webp",
+        "story": "A fresh and sporty aromatic fragrance that keeps you clean and active all day.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 294
+    }  },    {
+        "id": "scents-n-stories-hero",
+        "name": "Scents N Stories Hero",
+        "inspiredBy": "Hero by Scents N Stories",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic Aquatic",
+        "top": [
+            "Lemon",
+            "Grapefruit"
+        ],
+        "heart": [
+            "Marine Notes",
+            "Mint"
+        ],
+        "base": [
+            "Cedar",
+            "Vetiver",
+            "Amber"
+        ],
+        "mood": "energetic \u2022 fresh \u2022 aquatic",
+        "image": "/images/huda-essence-scents-n-stories-hero.webp",
+        "story": "A high-performance fresh fragrance designed to beat the heat with citrus and mint.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 381
+    }  },    {
+        "id": "wb-by-hemani-prestige",
+        "name": "WB by Hemani Prestige",
+        "inspiredBy": "Prestige by WB by Hemani",
+        "gender": "Men",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Spicy",
+        "top": [
+            "Bergamot",
+            "Cardamom"
+        ],
+        "heart": [
+            "Pepper",
+            "Lavender"
+        ],
+        "base": [
+            "Leather",
+            "Sandalwood",
+            "Vetiver"
+        ],
+        "mood": "charismatic \u2022 refined \u2022 classic",
+        "image": "/images/huda-essence-wb-by-hemani-prestige.webp",
+        "story": "A classic charismatic scent with premium woody notes, fresh spices, and a touch of leather.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 468
+    }  },    {
+        "id": "gucci-flora",
+        "name": "Gucci Flora",
+        "inspiredBy": "Flora by Gucci",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Peony",
+            "Citrus",
+            "Mandarin Orange"
+        ],
+        "heart": [
+            "Osmanthus",
+            "Rose"
+        ],
+        "base": [
+            "Sandalwood",
+            "Patchouli",
+            "Pink Pepper"
+        ],
+        "mood": "elegant \u2022 sensual \u2022 floral",
+        "image": "/images/huda-essence-gucci-flora.webp",
+        "story": "An elegant and sensual floral bouquet that celebrates the youthful spirit of femininity.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 120
+    }  },    {
+        "id": "gucci-bloom",
+        "name": "Gucci Bloom",
+        "inspiredBy": "Gucci Bloom by Gucci",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "White Floral",
+        "top": [
+            "Rangoon Creeper"
+        ],
+        "heart": [
+            "Tuberose"
+        ],
+        "base": [
+            "Jasmine",
+            "Honeysuckle"
+        ],
+        "mood": "floral \u2022 rich \u2022 enchanting",
+        "image": "/images/huda-essence-gucci-bloom.webp",
+        "story": "A rich white floral scent that transports you to a beautiful, blooming garden.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 207
+    }  },    {
+        "id": "gucci-rush",
+        "name": "Gucci Rush",
+        "inspiredBy": "Gucci Rush by Gucci",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Fruity",
+        "top": [
+            "Peach",
+            "California Gardenia"
+        ],
+        "heart": [
+            "Coriander",
+            "Damask Rose",
+            "Jasmine"
+        ],
+        "base": [
+            "Patchouli",
+            "Vanilla",
+            "Vetiver"
+        ],
+        "mood": "bold \u2022 modern \u2022 intoxicating",
+        "image": "/images/huda-essence-gucci-rush.webp",
+        "story": "An intoxicating and bold modern fragrance that leaves an unforgettable trail.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 294
+    }  },    {
+        "id": "miss-dior",
+        "name": "Miss Dior",
+        "inspiredBy": "Miss Dior by Dior",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Chypre",
+        "top": [
+            "Blood Orange",
+            "Mandarin"
+        ],
+        "heart": [
+            "Rose",
+            "Peony",
+            "Iris"
+        ],
+        "base": [
+            "Patchouli",
+            "Musk",
+            "Rosewood"
+        ],
+        "mood": "feminine \u2022 fresh \u2022 romantic",
+        "image": "/images/huda-essence-miss-dior.webp",
+        "story": "A modern feminine icon. Captures the romantic freshness of peony and rose, balanced with a warm patchouli base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 381
+    }  },    {
+        "id": "j-adore-dior",
+        "name": "J'adore Dior",
+        "inspiredBy": "J'adore by Dior",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Pear",
+            "Melon",
+            "Peach",
+            "Mandarin"
+        ],
+        "heart": [
+            "Jasmine",
+            "Lily of the Valley",
+            "Tuberose",
+            "Rose",
+            "Orchid"
+        ],
+        "base": [
+            "Musk",
+            "Vanilla",
+            "Blackberry",
+            "Cedar"
+        ],
+        "mood": "glamorous \u2022 golden \u2022 opulent",
+        "image": "/images/huda-essence-j-adore-dior.webp",
+        "bestseller": true,
+        "story": "An opulent, golden floral fragrance that shimmers on the skin. A tribute to modern luxury.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 468
+    }  },    {
+        "id": "dior-poison-girl",
+        "name": "Dior Poison Girl",
+        "inspiredBy": "Poison Girl by Dior",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Bitter Orange",
+            "Lemon"
+        ],
+        "heart": [
+            "Damask Rose",
+            "Grasse Rose",
+            "Orange Blossom"
+        ],
+        "base": [
+            "Vanilla",
+            "Almond",
+            "Tonka Bean",
+            "Sandalwood",
+            "Heliotrope"
+        ],
+        "mood": "delicious \u2022 toxic \u2022 sensual",
+        "image": "/images/huda-essence-dior-poison-girl.webp",
+        "story": "A delicious, bitter-sweet floral fragrance with mouthwatering notes of vanilla and almond.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 555
+    }  },    {
+        "id": "chanel-coco-mademoiselle",
+        "name": "Chanel Coco Mademoiselle",
+        "inspiredBy": "Coco Mademoiselle by Chanel",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Orange",
+            "Bergamot"
+        ],
+        "heart": [
+            "Rose",
+            "Jasmine"
+        ],
+        "base": [
+            "Patchouli",
+            "White Musk",
+            "Vanilla",
+            "Vetiver"
+        ],
+        "mood": "elegant \u2022 chic \u2022 captivating",
+        "image": "/images/huda-essence-chanel-coco-mademoiselle.webp",
+        "bestseller": true,
+        "story": "A spirited and voluptuous fragrance. Sparkly orange notes meet a clear heart of rose and jasmine.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 642
+    }  },    {
+        "id": "chanel-chance",
+        "name": "Chanel Chance",
+        "inspiredBy": "Chance by Chanel",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Floral",
+        "top": [
+            "Patchouli",
+            "Pink Pepper",
+            "Pineapple"
+        ],
+        "heart": [
+            "Jasmine",
+            "Lemon",
+            "Iris"
+        ],
+        "base": [
+            "Musk",
+            "Patchouli",
+            "Vanilla",
+            "Vetiver"
+        ],
+        "mood": "unexpected \u2022 sparkling \u2022 energetic",
+        "image": "/images/huda-essence-chanel-chance.webp",
+        "story": "A spin of fortune. A sparkling floral fragrance where pink pepper and jasmine intertwine.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 729
+    }  },    {
+        "id": "chanel-gabrielle",
+        "name": "Chanel Gabrielle",
+        "inspiredBy": "Gabrielle by Chanel",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Grapefruit",
+            "Mandarin Orange",
+            "Blackcurrant"
+        ],
+        "heart": [
+            "Orange Blossom",
+            "Jasmine",
+            "Ylang-Ylang",
+            "Tuberose"
+        ],
+        "base": [
+            "Musk",
+            "Sandalwood",
+            "Cashmeran"
+        ],
+        "mood": "luminous \u2022 solar \u2022 pure",
+        "image": "/images/huda-essence-chanel-gabrielle.webp",
+        "story": "A solar fragrance created around four white flowers \u2014 a pure floral heart.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 816
+    }  },    {
+        "id": "versace-bright-crystal",
+        "name": "Versace Bright Crystal",
+        "inspiredBy": "Bright Crystal by Versace",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Yuzu",
+            "Pomegranate",
+            "Ice Notes"
+        ],
+        "heart": [
+            "Peony",
+            "Lotus",
+            "Magnolia"
+        ],
+        "base": [
+            "Musk",
+            "Mahogany",
+            "Amber"
+        ],
+        "mood": "bright \u2022 fresh \u2022 glamorous",
+        "image": "/images/huda-essence-versace-bright-crystal.webp",
+        "story": "A fresh, vibrant floral fragrance featuring pomegranate and peony with a warm musk finish.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 903
+    }  },    {
+        "id": "versace-crystal-noir",
+        "name": "Versace Crystal Noir",
+        "inspiredBy": "Crystal Noir by Versace",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Pepper",
+            "Ginger",
+            "Cardamom"
+        ],
+        "heart": [
+            "Coconut",
+            "Gardenia",
+            "Orange Blossom",
+            "Peony"
+        ],
+        "base": [
+            "Sandalwood",
+            "Musk",
+            "Amber"
+        ],
+        "mood": "dark \u2022 sensual \u2022 mysterious",
+        "image": "/images/huda-essence-versace-crystal-noir.webp",
+        "bestseller": true,
+        "story": "A dark, mysterious fragrance featuring creamy coconut blended with rich gardenia and spices.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.85,
+        "reviews": 990
+    }  },    {
+        "id": "versace-yellow-diamond",
+        "name": "Versace Yellow Diamond",
+        "inspiredBy": "Yellow Diamond by Versace",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Amalfi Lemon",
+            "Pear",
+            "Bergamot",
+            "Neroli"
+        ],
+        "heart": [
+            "Mimosa",
+            "Freesia",
+            "Orange Blossom",
+            "Water Lily"
+        ],
+        "base": [
+            "Musk",
+            "Guaiac Wood",
+            "Amber"
+        ],
+        "mood": "airy \u2022 bright \u2022 solar",
+        "image": "/images/huda-essence-versace-yellow-diamond.webp",
+        "story": "A bright, solar floral fragrance that sparkles like a diamond under the sun.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.86,
+        "reviews": 1077
+    }  },    {
+        "id": "ysl-libre",
+        "name": "YSL Libre",
+        "inspiredBy": "Libre by YSL",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Foug\u00e8re",
+        "top": [
+            "Lavender",
+            "Mandarin Orange",
+            "Blackcurrant"
+        ],
+        "heart": [
+            "Lavender",
+            "Orange Blossom",
+            "Jasmine"
+        ],
+        "base": [
+            "Madagascar Vanilla",
+            "Musk",
+            "Ambergris",
+            "Cedar"
+        ],
+        "mood": "free \u2022 bold \u2022 charismatic",
+        "image": "/images/huda-essence-ysl-libre.webp",
+        "bestseller": true,
+        "story": "A grand floral fragrance of freedom. Tension between French lavender and Moroccan orange blossom.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.87,
+        "reviews": 1164
+    }  },    {
+        "id": "mon-paris",
+        "name": "Mon Paris",
+        "inspiredBy": "Mon Paris by YSL",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Fruity",
+        "top": [
+            "Strawberry",
+            "Raspberry",
+            "Pear",
+            "Orange"
+        ],
+        "heart": [
+            "Datura",
+            "Peony",
+            "Jasmine"
+        ],
+        "base": [
+            "Patchouli",
+            "White Musk",
+            "Ambroxan",
+            "Cedar"
+        ],
+        "mood": "passionate \u2022 sweet \u2022 romantic",
+        "image": "/images/huda-essence-mon-paris.webp",
+        "story": "A passionate love fragrance capturing the spirit of Paris. Sweet berries meet patchouli.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.88,
+        "reviews": 1251
+    }  },    {
+        "id": "black-opium",
+        "name": "Black Opium",
+        "inspiredBy": "Black Opium by YSL",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Pear",
+            "Pink Pepper",
+            "Orange Blossom"
+        ],
+        "heart": [
+            "Coffee",
+            "Jasmine",
+            "Bitter Almond",
+            "Licorice"
+        ],
+        "base": [
+            "Vanilla",
+            "Patchouli",
+            "Cashmere Wood",
+            "Cedar"
+        ],
+        "mood": "addictive \u2022 nocturnal \u2022 warm",
+        "image": "/images/huda-essence-black-opium.webp",
+        "bestseller": true,
+        "story": "A highly addictive feminine fragrance. Black coffee combined with sweet vanilla and white florals.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.89,
+        "reviews": 1338
+    }  },    {
+        "id": "burberry-her",
+        "name": "Burberry Her",
+        "inspiredBy": "Burberry Her by Burberry",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity Gourmand",
+        "top": [
+            "Strawberry",
+            "Raspberry",
+            "Blackberry",
+            "Sour Cherry"
+        ],
+        "heart": [
+            "Violet",
+            "Jasmine"
+        ],
+        "base": [
+            "Musk",
+            "Vanilla",
+            "Cashmeran",
+            "Amber",
+            "Oakmoss"
+        ],
+        "mood": "sweet \u2022 energetic \u2022 youthful",
+        "image": "/images/huda-essence-burberry-her.webp",
+        "story": "A burst of sweet berries blended with jasmine and a warm, woody-musky base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.9,
+        "reviews": 120
+    }  },    {
+        "id": "burberry-body",
+        "name": "Burberry Body",
+        "inspiredBy": "Burberry Body by Burberry",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Fruity",
+        "top": [
+            "Peach",
+            "Absinthe",
+            "Freesia"
+        ],
+        "heart": [
+            "Rose",
+            "Sandalwood",
+            "Iris"
+        ],
+        "base": [
+            "Musk",
+            "Cashmere Wood",
+            "Vanilla",
+            "Amber"
+        ],
+        "mood": "intimate \u2022 warm \u2022 sensual",
+        "image": "/images/huda-essence-burberry-body.webp",
+        "story": "An intimate and sensual fragrance that wraps the skin like a warm cashmere blanket.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.91,
+        "reviews": 207
+    }  },    {
+        "id": "victoria-s-secret-bombshell",
+        "name": "Victoria's Secret Bombshell",
+        "inspiredBy": "Bombshell by Victoria's Secret",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Passionfruit",
+            "Grapefruit",
+            "Pineapple",
+            "Tangerine",
+            "Strawberry"
+        ],
+        "heart": [
+            "Peony",
+            "Vanilla Orchid",
+            "Red Berries",
+            "Jasmine"
+        ],
+        "base": [
+            "Musk",
+            "Woody Notes",
+            "Oakmoss"
+        ],
+        "mood": "glamorous \u2022 confident \u2022 playful",
+        "image": "/images/huda-essence-victoria-s-secret-bombshell.webp",
+        "bestseller": true,
+        "story": "A glamorous and confident blend of purple passionfruit, Shangri-la peony and vanilla orchid.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.92,
+        "reviews": 294
+    }  },    {
+        "id": "bombshell-intense",
+        "name": "Bombshell Intense",
+        "inspiredBy": "Bombshell Intense by Victoria's Secret",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Fruity",
+        "top": [
+            "Cherry"
+        ],
+        "heart": [
+            "Red Peony"
+        ],
+        "base": [
+            "Vanilla"
+        ],
+        "mood": "passionate \u2022 bold \u2022 sultry",
+        "image": "/images/huda-essence-bombshell-intense.webp",
+        "story": "A sultry, rich blend of decadent cherry, red peony and warm vanilla. Pure passion.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.93,
+        "reviews": 381
+    }  },    {
+        "id": "bombshell-seduction",
+        "name": "Bombshell Seduction",
+        "inspiredBy": "Bombshell Seduction by Victoria's Secret",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Oriental",
+        "top": [
+            "White Peony"
+        ],
+        "heart": [
+            "Sage"
+        ],
+        "base": [
+            "Velvet Musk"
+        ],
+        "mood": "intimate \u2022 airy \u2022 warm",
+        "image": "/images/huda-essence-bombshell-seduction.webp",
+        "story": "An intimate, airy floral fragrance with a warm, skin-like velvet musk base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.94,
+        "reviews": 468
+    }  },    {
+        "id": "carolina-herrera-good-girl",
+        "name": "Carolina Herrera Good Girl",
+        "inspiredBy": "Good Girl by Carolina Herrera",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Almond",
+            "Coffee",
+            "Bergamot",
+            "Lemon"
+        ],
+        "heart": [
+            "Tuberose",
+            "Jasmine Sambac",
+            "Orris",
+            "Orange Blossom"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Cocoa",
+            "Vanilla",
+            "Sandalwood",
+            "Praline"
+        ],
+        "mood": "bold \u2022 glamorous \u2022 dual-natured",
+        "image": "/images/huda-essence-carolina-herrera-good-girl.webp",
+        "bestseller": true,
+        "story": "Sweet jasmine and cocoa meet bold coffee and tonka bean. A glamorous, confident scent.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 555
+    }  },    {
+        "id": "good-girl-blush",
+        "name": "Good Girl Blush",
+        "inspiredBy": "Good Girl Blush by Carolina Herrera",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Bergamot",
+            "Bitter Almond"
+        ],
+        "heart": [
+            "Peony",
+            "Ylang-Ylang"
+        ],
+        "base": [
+            "Vanilla",
+            "Coumarin"
+        ],
+        "mood": "powdery \u2022 romantic \u2022 sweet",
+        "image": "/images/huda-essence-good-girl-blush.webp",
+        "story": "A powdery, romantic floral fragrance featuring sweet vanilla and fresh peonies.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 642
+    }  },    {
+        "id": "212-vip-rose",
+        "name": "212 VIP Rose",
+        "inspiredBy": "212 VIP Ros\u00e9 by Carolina Herrera",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Champagne",
+            "Fruity Notes"
+        ],
+        "heart": [
+            "Peach Blossom"
+        ],
+        "base": [
+            "White Musk",
+            "Woody Notes",
+            "Amber"
+        ],
+        "mood": "festive \u2022 sparkling \u2022 glamorous",
+        "image": "/images/huda-essence-212-vip-rose.webp",
+        "story": "A sparkling champagne fragrance with sweet peach blossom and a warm, woody-musk base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 729
+    }  },    {
+        "id": "lancome-la-vie-est-belle",
+        "name": "Lanc\u00f4me La Vie Est Belle",
+        "inspiredBy": "La Vie Est Belle by Lanc\u00f4me",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity Gourmand",
+        "top": [
+            "Blackcurrant",
+            "Pear"
+        ],
+        "heart": [
+            "Iris",
+            "Jasmine",
+            "Orange Blossom"
+        ],
+        "base": [
+            "Praline",
+            "Vanilla",
+            "Patchouli",
+            "Tonka Bean"
+        ],
+        "mood": "sweet \u2022 joyful \u2022 iconic",
+        "image": "/images/huda-essence-lancome-la-vie-est-belle.webp",
+        "bestseller": true,
+        "story": "Life is beautiful. A rich gourmand blend of sweet praline, warm vanilla, and iris.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 816
+    }  },    {
+        "id": "idole",
+        "name": "Id\u00f4le",
+        "inspiredBy": "Id\u00f4le by Lanc\u00f4me",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Floral",
+        "top": [
+            "Pear",
+            "Bergamot"
+        ],
+        "heart": [
+            "Turkish Rose",
+            "Rose de Mai",
+            "Indian Jasmine"
+        ],
+        "base": [
+            "White Musk",
+            "Vanilla"
+        ],
+        "mood": "clean \u2022 modern \u2022 inspiring",
+        "image": "/images/huda-essence-idole.webp",
+        "story": "For the future leaders. A clean, modern rose fragrance with a delicate white musk base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 903
+    }  },    {
+        "id": "dolce-gabbana-light-blue",
+        "name": "Dolce & Gabbana Light Blue",
+        "inspiredBy": "Light Blue by Dolce & Gabbana",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Sicilian Lemon",
+            "Apple",
+            "Cedar",
+            "Bellflower"
+        ],
+        "heart": [
+            "Bamboo",
+            "Jasmine",
+            "White Rose"
+        ],
+        "base": [
+            "Cedar",
+            "Musk",
+            "Amber"
+        ],
+        "mood": "fresh \u2022 sunny \u2022 Mediterranean",
+        "image": "/images/huda-essence-dolce-gabbana-light-blue.webp",
+        "story": "A fresh and sunny Mediterranean scent combining crisp apple and lemon with bamboo.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 990
+    }  },    {
+        "id": "dolce-garden",
+        "name": "Dolce Garden",
+        "inspiredBy": "Dolce Garden by Dolce & Gabbana",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity Gourmand",
+        "top": [
+            "Magnolia",
+            "Neroli",
+            "Mandarin"
+        ],
+        "heart": [
+            "Coconut",
+            "Frangipani",
+            "Ylang-Ylang"
+        ],
+        "base": [
+            "Vanilla",
+            "Almond Milk",
+            "Sandalwood"
+        ],
+        "mood": "creamy \u2022 sweet \u2022 tropical",
+        "image": "/images/huda-essence-dolce-garden.webp",
+        "story": "A delicious tropical garden scent featuring creamy coconut and sweet frangipani blossoms.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 1077
+    }  },    {
+        "id": "issey-miyake-l-eau-d-issey",
+        "name": "Issey Miyake L'Eau d'Issey",
+        "inspiredBy": "L'Eau d'Issey by Issey Miyake",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Aquatic",
+        "top": [
+            "Lotus",
+            "Melon",
+            "Freesia",
+            "Rose water"
+        ],
+        "heart": [
+            "Lily",
+            "Lily-of-the-Valley",
+            "Peony"
+        ],
+        "base": [
+            "Musk",
+            "Tuberose",
+            "Exotic Woods",
+            "Amber"
+        ],
+        "mood": "pure \u2022 fresh \u2022 peaceful",
+        "image": "/images/huda-essence-issey-miyake-l-eau-d-issey.webp",
+        "story": "A pure and fresh aquatic floral fragrance, clean as spring water.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 1164
+    }  },    {
+        "id": "blue-lady",
+        "name": "Blue Lady",
+        "inspiredBy": "Blue Lady by Rasasi",
+        "gender": "Women",
+        "concentration": "Extrait de Parfum",
+        "family": "White Floral",
+        "top": [
+            "Rangoon Creeper"
+        ],
+        "heart": [
+            "Tuberose",
+            "Jasmine Sambac"
+        ],
+        "base": [
+            "Orris Root",
+            "Musk"
+        ],
+        "mood": "garden \u2022 rich \u2022 white floral",
+        "image": "/images/huda-essence-blue-lady.webp",
+        "story": "A rich white floral garden in a bottle. Lush, creamy tuberose and jasmine experience.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 1251
+    }  },    {
+        "id": "chastity",
+        "name": "Chastity",
+        "inspiredBy": "Chastity Women by Rasasi",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Green",
+        "top": [
+            "Green Notes",
+            "Water Notes",
+            "Lemon"
+        ],
+        "heart": [
+            "Jasmine",
+            "African Orange Flower",
+            "Rose"
+        ],
+        "base": [
+            "Musk"
+        ],
+        "mood": "clean \u2022 green \u2022 pure",
+        "image": "/images/huda-essence-chastity.webp",
+        "story": "A clean, pure green-floral fragrance that brings a burst of freshness in warm weather.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 1338
+    }  },    {
+        "id": "tea-rose",
+        "name": "Tea Rose",
+        "inspiredBy": "Tea Rose by Perfumer's Workshop",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Green Leaves"
+        ],
+        "heart": [
+            "Tea Rose",
+            "Chamomile"
+        ],
+        "base": [
+            "Violet"
+        ],
+        "mood": "fresh \u2022 classic \u2022 rose",
+        "image": "/images/huda-essence-tea-rose.webp",
+        "story": "The ultimate fresh rose. Captures the true aroma of a rose garden in full bloom.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.85,
+        "reviews": 120
+    }  },    {
+        "id": "white-musk",
+        "name": "White Musk",
+        "inspiredBy": "White Musk by The Body Shop",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Musk",
+        "top": [
+            "Lily",
+            "Musk",
+            "Galbanum",
+            "Ylang-Ylang"
+        ],
+        "heart": [
+            "Musk",
+            "Jasmine",
+            "Lily",
+            "Rose"
+        ],
+        "base": [
+            "Musk",
+            "Iris",
+            "Jasmine",
+            "Amber"
+        ],
+        "mood": "velvety \u2022 clean \u2022 comforting",
+        "image": "/images/huda-essence-white-musk.webp",
+        "story": "A velvety, clean, and comforting musk fragrance. A classic signature scent.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.86,
+        "reviews": 207
+    }  },    {
+        "id": "red-door",
+        "name": "Red Door",
+        "inspiredBy": "Red Door by Elizabeth Arden",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Rose",
+            "Orange Blossom",
+            "Peach",
+            "Plum"
+        ],
+        "heart": [
+            "Carnation",
+            "Tuberose",
+            "Jasmine",
+            "Ylang-Ylang"
+        ],
+        "base": [
+            "Honey",
+            "Sandalwood",
+            "Amber",
+            "Musk"
+        ],
+        "mood": "glamorous \u2022 classic \u2022 opulent",
+        "image": "/images/huda-essence-red-door.webp",
+        "story": "An opulent, classic floral fragrance. A rich bouquet of rose, jasmine, and sweet honey.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.87,
+        "reviews": 294
+    }  },    {
+        "id": "guess-seductive",
+        "name": "Guess Seductive",
+        "inspiredBy": "Guess Seductive by Guess",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Pear",
+            "Bergamot",
+            "Blackcurrant"
+        ],
+        "heart": [
+            "Jasmine",
+            "African Orange Flower",
+            "Orris Root"
+        ],
+        "base": [
+            "Vanilla",
+            "Cashmere Wood",
+            "Olibanum"
+        ],
+        "mood": "charming \u2022 sweet \u2022 seductive",
+        "image": "/images/huda-essence-guess-seductive.webp",
+        "story": "A charming, sweet floral fragrance with a warm, seductive vanilla base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.88,
+        "reviews": 381
+    }  },    {
+        "id": "guess-girl",
+        "name": "Guess Girl",
+        "inspiredBy": "Guess Girl by Guess",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Raspberry",
+            "Melon",
+            "Bergamot"
+        ],
+        "heart": [
+            "Orchid",
+            "Lily",
+            "Acacia"
+        ],
+        "base": [
+            "Vanilla",
+            "Sandalwood"
+        ],
+        "mood": "youthful \u2022 playful \u2022 fresh",
+        "image": "/images/huda-essence-guess-girl.webp",
+        "story": "A playful, youthful floral-fruity scent with sweet raspberry and soft sandalwood.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.89,
+        "reviews": 468
+    }  },    {
+        "id": "escada-cherry-in-japan",
+        "name": "Escada Cherry In Japan",
+        "inspiredBy": "Cherry In Japan by Escada",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Cherry Blossom"
+        ],
+        "heart": [
+            "Jasmine"
+        ],
+        "base": [
+            "Tonka Bean"
+        ],
+        "mood": "sweet \u2022 fresh \u2022 cheerful",
+        "image": "/images/huda-essence-escada-cherry-in-japan.webp",
+        "story": "A cheerful, sweet fragrance that captures the beauty of cherry blossoms in Tokyo.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.9,
+        "reviews": 555
+    }  },    {
+        "id": "escada-magnetism",
+        "name": "Escada Magnetism",
+        "inspiredBy": "Magnetism by Escada",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Red Berries",
+            "Blackcurrant",
+            "Pineapple"
+        ],
+        "heart": [
+            "Caramel",
+            "Iris",
+            "Jasmine",
+            "Basil"
+        ],
+        "base": [
+            "Vanilla",
+            "Patchouli",
+            "Amber",
+            "Benzoin"
+        ],
+        "mood": "sweet \u2022 magnetic \u2022 addictive",
+        "image": "/images/huda-essence-escada-magnetism.webp",
+        "story": "A sweet, magnetic fragrance featuring delicious caramel, vanilla, and red berries.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.91,
+        "reviews": 642
+    }  },    {
+        "id": "armaf-club-de-nuit-women",
+        "name": "Armaf Club De Nuit Women",
+        "inspiredBy": "Club de Nuit Women by Armaf",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Orange",
+            "Bergamot",
+            "Grapefruit",
+            "Peach"
+        ],
+        "heart": [
+            "Rose",
+            "Jasmine",
+            "Geranium",
+            "Litchi"
+        ],
+        "base": [
+            "Patchouli",
+            "Vanilla",
+            "Musk",
+            "Vetiver"
+        ],
+        "mood": "elegant \u2022 bold \u2022 glamorous",
+        "image": "/images/huda-essence-armaf-club-de-nuit-women.webp",
+        "story": "An elegant and bold fragrance that is sweet, fresh, and projects beautifully.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.92,
+        "reviews": 729
+    }  },    {
+        "id": "ajmal-raindrops",
+        "name": "Ajmal Raindrops",
+        "inspiredBy": "Raindrops by Ajmal",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Woody Musk",
+        "top": [
+            "Fruity Notes",
+            "Floral Notes"
+        ],
+        "heart": [
+            "Floral Notes"
+        ],
+        "base": [
+            "Woody Notes",
+            "Ambergris"
+        ],
+        "mood": "clean \u2022 fresh \u2022 dewy",
+        "image": "/images/huda-essence-ajmal-raindrops.webp",
+        "story": "A clean, fresh, and dewy fragrance that feels like fresh raindrops on dry earth.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.93,
+        "reviews": 816
+    }  },    {
+        "id": "ajmal-sacrifice-for-her",
+        "name": "Ajmal Sacrifice For Her",
+        "inspiredBy": "Sacrifice for Her by Ajmal",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Jasmine",
+            "Water Notes"
+        ],
+        "heart": [
+            "Orange Blossom",
+            "Vanilla"
+        ],
+        "base": [
+            "Amber",
+            "Musk"
+        ],
+        "mood": "warm \u2022 sweet \u2022 magnetic",
+        "image": "/images/huda-essence-ajmal-sacrifice-for-her.webp",
+        "story": "A warm and sweet floral amber fragrance featuring Jasmine and rich musk.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.94,
+        "reviews": 903
+    }  },    {
+        "id": "lattafa-yara",
+        "name": "Lattafa Yara",
+        "inspiredBy": "Yara by Lattafa",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Orchid",
+            "Heliotrope",
+            "Tangerine"
+        ],
+        "heart": [
+            "Gourmand Accord",
+            "Tropical Fruits"
+        ],
+        "base": [
+            "Vanilla",
+            "Musk",
+            "Sandalwood"
+        ],
+        "mood": "creamy \u2022 sweet \u2022 viral",
+        "image": "/images/huda-essence-lattafa-yara.webp",
+        "bestseller": true,
+        "story": "The viral sensation. Creamy strawberry-vanilla milkshake vibe with rich white florals.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 990
+    }  },    {
+        "id": "lattafa-fakhar-women",
+        "name": "Lattafa Fakhar Women",
+        "inspiredBy": "Fakhar Women by Lattafa",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Lily",
+            "Pomegranate",
+            "Aldehydes"
+        ],
+        "heart": [
+            "Tuberose",
+            "Jasmine",
+            "Gardenia",
+            "Rose",
+            "Ylang-Ylang"
+        ],
+        "base": [
+            "Vanilla",
+            "White Musk",
+            "Sandalwood"
+        ],
+        "mood": "creamy \u2022 white-floral \u2022 elegant",
+        "image": "/images/huda-essence-lattafa-fakhar-women.webp",
+        "story": "A creamy, opulent white floral bouquet with pomegranate and a sweet vanilla base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 1077
+    }  },    {
+        "id": "lattafa-ana-abiyedh-rouge",
+        "name": "Lattafa Ana Abiyedh Rouge",
+        "inspiredBy": "Ana Abiyedh Rouge by Lattafa",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Pear",
+            "Bergamot"
+        ],
+        "heart": [
+            "Saffron",
+            "Cardamom"
+        ],
+        "base": [
+            "Ambergris",
+            "Cedar",
+            "Patchouli"
+        ],
+        "mood": "rich \u2022 sweet \u2022 woody",
+        "image": "/images/huda-essence-lattafa-ana-abiyedh-rouge.webp",
+        "story": "A sweet and woody amber fragrance with warm saffron. Similar to high-end luxury scents.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 1164
+    }  },    {
+        "id": "lattafa-haya",
+        "name": "Lattafa Haya",
+        "inspiredBy": "Haya by Lattafa",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Champagne",
+            "Strawberry",
+            "Rose",
+            "Tangerine"
+        ],
+        "heart": [
+            "Gardenia",
+            "Jasmine",
+            "Orchid"
+        ],
+        "base": [
+            "Chestnut",
+            "Amber",
+            "Sandalwood"
+        ],
+        "mood": "festive \u2022 sweet \u2022 sparkling",
+        "image": "/images/huda-essence-lattafa-haya.webp",
+        "story": "A sweet, sparkling floral fragrance with notes of strawberry, rose, and gardenia.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 1251
+    }  },    {
+        "id": "j-janan",
+        "name": "J. Janan",
+        "inspiredBy": "Janan by J.",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Pink Pepper",
+            "Lemon",
+            "Pineapple"
+        ],
+        "heart": [
+            "Jasmine",
+            "Iris",
+            "Hyacinth"
+        ],
+        "base": [
+            "Patchouli",
+            "Musk",
+            "Vetiver",
+            "Vanilla"
+        ],
+        "mood": "bold \u2022 smoky \u2022 alluring",
+        "image": "/images/huda-essence-j-janan.webp",
+        "story": "A legendary Pakistani scent reimagined. Rich floral notes blend with a warm amber base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 1338
+    }  },    {
+        "id": "bonanza-satrangi-femme",
+        "name": "Bonanza Satrangi Femme",
+        "inspiredBy": "Femme by Bonanza Satrangi",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Bergamot",
+            "Peach"
+        ],
+        "heart": [
+            "Rose",
+            "Lily"
+        ],
+        "base": [
+            "Musk",
+            "Sandalwood"
+        ],
+        "mood": "soft \u2022 powdery \u2022 feminine",
+        "image": "/images/huda-essence-bonanza-satrangi-femme.webp",
+        "story": "A soft, powdery floral fragrance that stays fresh and elegant throughout the day.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 120
+    }  },    {
+        "id": "sapphire-femme",
+        "name": "Sapphire Femme",
+        "inspiredBy": "Femme by Sapphire",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Fruity Floral",
+        "top": [
+            "Citrus",
+            "Apple"
+        ],
+        "heart": [
+            "Jasmine",
+            "Rose"
+        ],
+        "base": [
+            "Amber",
+            "Musk"
+        ],
+        "mood": "cheerful \u2022 fresh \u2022 clean",
+        "image": "/images/huda-essence-sapphire-femme.webp",
+        "story": "A cheerful and fresh daily-wear scent featuring crisp apple, jasmine, and white musk.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 207
+    }  },    {
+        "id": "khaadi-bloom",
+        "name": "Khaadi Bloom",
+        "inspiredBy": "Bloom by Khaadi",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral",
+        "top": [
+            "Freesia",
+            "Green Notes"
+        ],
+        "heart": [
+            "Lily",
+            "Jasmine"
+        ],
+        "base": [
+            "White Musk"
+        ],
+        "mood": "clean \u2022 light \u2022 floral",
+        "image": "/images/huda-essence-khaadi-bloom.webp",
+        "story": "A light, clean floral scent that evokes the freshness of spring gardens.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 294
+    }  },    {
+        "id": "wb-by-hemani-grace",
+        "name": "WB by Hemani Grace",
+        "inspiredBy": "Grace by WB by Hemani",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Woody",
+        "top": [
+            "Citrus",
+            "Pear"
+        ],
+        "heart": [
+            "Jasmine",
+            "Orchid"
+        ],
+        "base": [
+            "Sandalwood",
+            "Musk"
+        ],
+        "mood": "graceful \u2022 fresh \u2022 elegant",
+        "image": "/images/huda-essence-wb-by-hemani-grace.webp",
+        "story": "A graceful daily fragrance with fresh citruses, white jasmine, and soft sandalwood.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 381
+    }  },    {
+        "id": "scents-n-stories-belle",
+        "name": "Scents N Stories Belle",
+        "inspiredBy": "Belle by Scents N Stories",
+        "gender": "Women",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Fruity",
+        "top": [
+            "Litchi",
+            "Bergamot"
+        ],
+        "heart": [
+            "Turkish Rose",
+            "Peony"
+        ],
+        "base": [
+            "Vanilla",
+            "Musk",
+            "Cashmeran"
+        ],
+        "mood": "sweet \u2022 romantic \u2022 fresh",
+        "image": "/images/huda-essence-scents-n-stories-belle.webp",
+        "story": "A sweet and romantic rose fragrance that projects beautifully in hot weather.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 468
+    }  },    {
+        "id": "baccarat-rouge-540",
+        "name": "Baccarat Rouge 540",
+        "inspiredBy": "Baccarat Rouge 540 by Maison Francis Kurkdjian",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Saffron",
+            "Jasmine"
+        ],
+        "heart": [
+            "Amberwood",
+            "Ambergris"
+        ],
+        "base": [
+            "Fir Resin",
+            "Cedar"
+        ],
+        "mood": "radiant \u2022 complex \u2022 luxurious",
+        "image": "/images/huda-essence-baccarat-rouge-540.webp",
+        "bestseller": true,
+        "story": "A luminous and sophisticated fragrance that lays on the skin like an amber floral and woody breeze.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 120
+    }  },    {
+        "id": "ck-one-unisex",
+        "name": "CK One (Unisex)",
+        "inspiredBy": "CK One by Calvin Klein",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Citrus Aromatic",
+        "top": [
+            "Lemon",
+            "Green Notes",
+            "Bergamot",
+            "Pineapple"
+        ],
+        "heart": [
+            "Lily of the Valley",
+            "Jasmine",
+            "Violet"
+        ],
+        "base": [
+            "Musk",
+            "Cedar",
+            "Sandalwood"
+        ],
+        "mood": "clean \u2022 bright \u2022 casual",
+        "image": "/images/huda-essence-ck-one-unisex.webp",
+        "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 207
+    }  },    {
+        "id": "tom-ford-oud-wood-unisex",
+        "name": "Tom Ford Oud Wood (Unisex)",
+        "inspiredBy": "Oud Wood by Tom Ford",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Sichuan Pepper",
+            "Cardamom"
+        ],
+        "heart": [
+            "Oud",
+            "Sandalwood",
+            "Vetiver"
+        ],
+        "base": [
+            "Tonka Bean",
+            "Vanilla",
+            "Amber"
+        ],
+        "mood": "smoky \u2022 royal \u2022 warming",
+        "image": "/images/huda-essence-tom-ford-oud-wood-unisex.webp",
+        "bestseller": true,
+        "story": "One of the most rare and expensive ingredients in a perfumer's arsenal, oud wood is blended here with warm spices.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 294
+    }  },    {
+        "id": "tom-ford-neroli-portofino",
+        "name": "Tom Ford Neroli Portofino",
+        "inspiredBy": "Neroli Portofino by Tom Ford",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Citrus Aromatic",
+        "top": [
+            "Bergamot",
+            "Mandarin Orange",
+            "Lemon",
+            "Lavender"
+        ],
+        "heart": [
+            "African Orange Flower",
+            "Neroli",
+            "Jasmine"
+        ],
+        "base": [
+            "Amber",
+            "Ambrette"
+        ],
+        "mood": "fresh \u2022 citrusy \u2022 summer",
+        "image": "/images/huda-essence-tom-ford-neroli-portofino.webp",
+        "story": "A vibrant, sparkling citrus scent that captures the cool breezes and clear water of Italy.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 381
+    }  },    {
+        "id": "tobacco-vanille",
+        "name": "Tobacco Vanille",
+        "inspiredBy": "Tobacco Vanille by Tom Ford",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Tobacco Leaf",
+            "Spicy Notes"
+        ],
+        "heart": [
+            "Vanilla",
+            "Cocoa",
+            "Tonka Bean"
+        ],
+        "base": [
+            "Dried Fruits",
+            "Woody Notes"
+        ],
+        "mood": "opulent \u2022 sweet \u2022 warm",
+        "image": "/images/huda-essence-tobacco-vanille.webp",
+        "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 468
+    }  },    {
+        "id": "white-oud",
+        "name": "White Oud",
+        "inspiredBy": "White Oud by Huda Essence",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Oriental Woody",
+        "top": [
+            "White Oud",
+            "Saffron"
+        ],
+        "heart": [
+            "Rose",
+            "Jasmine",
+            "Patchouli"
+        ],
+        "base": [
+            "Amber",
+            "Vanilla",
+            "Sandalwood"
+        ],
+        "mood": "soft \u2022 woody \u2022 spiritual",
+        "image": "/images/huda-essence-white-oud.webp",
+        "story": "A soft, creamy woody fragrance featuring sweet white oud blended with amber and saffron.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 555
+    }  },    {
+        "id": "ameer-al-oud-unisex",
+        "name": "Ameer Al Oud (Unisex)",
+        "inspiredBy": "Ameer Al Oudh by Lattafa",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Oud",
+            "Woody Notes"
+        ],
+        "heart": [
+            "Vanilla",
+            "Sugar"
+        ],
+        "base": [
+            "Sandalwood",
+            "Herbal Notes"
+        ],
+        "mood": "warm \u2022 sweet \u2022 oriental",
+        "image": "/images/huda-essence-ameer-al-oud-unisex.webp",
+        "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 642
+    }  },    {
+        "id": "ombre-nomade",
+        "name": "Ombre Nomade",
+        "inspiredBy": "Ombre Nomade by Louis Vuitton",
+        "gender": "Unisex",
+        "concentration": "Extrait de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Oud",
+            "Raspberry"
+        ],
+        "heart": [
+            "Incense",
+            "Rose",
+            "Saffron"
+        ],
+        "base": [
+            "Birch",
+            "Amberwood",
+            "Benzoin"
+        ],
+        "mood": "dark \u2022 majestic \u2022 opulent",
+        "image": "/images/huda-essence-ombre-nomade.webp",
+        "bestseller": true,
+        "story": "An opulent, dark fragrance designed for lovers of rare essences. Rich oud meets smoky incense.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 729
+    }  },    {
+        "id": "oud-mood-unisex",
+        "name": "Oud Mood (Unisex)",
+        "inspiredBy": "Oud Mood by Lattafa",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Rose",
+            "Saffron"
+        ],
+        "heart": [
+            "Oud",
+            "Caramel"
+        ],
+        "base": [
+            "Resin",
+            "Amber",
+            "Woody Notes"
+        ],
+        "mood": "sweet \u2022 warm \u2022 royal",
+        "image": "/images/huda-essence-oud-mood-unisex.webp",
+        "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 816
+    }  },    {
+        "id": "amber-oud",
+        "name": "Amber Oud",
+        "inspiredBy": "Amber Oud by Al Haramain",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Bergamot",
+            "Green Notes"
+        ],
+        "heart": [
+            "Melon",
+            "Pineapple",
+            "Sweet Notes",
+            "Amber"
+        ],
+        "base": [
+            "Woody Notes",
+            "Vanilla",
+            "Musk"
+        ],
+        "mood": "sweet \u2022 fruity \u2022 woody",
+        "image": "/images/huda-essence-amber-oud.webp",
+        "story": "A rich, sweet woody fragrance featuring delicious tropical fruits and sweet amber notes.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 903
+    }  },    {
+        "id": "musk-rijali",
+        "name": "Musk Rijali",
+        "inspiredBy": "Musk Rijali by Huda Essence",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Musk",
+        "top": [
+            "White Musk"
+        ],
+        "heart": [
+            "Rose",
+            "Lily"
+        ],
+        "base": [
+            "Sandalwood",
+            "Amber"
+        ],
+        "mood": "clean \u2022 powdery \u2022 pure",
+        "image": "/images/huda-essence-musk-rijali.webp",
+        "story": "A clean, powdery, and pure white musk fragrance that is a timeless classic.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.85,
+        "reviews": 990
+    }  },    {
+        "id": "musk-al-tahara",
+        "name": "Musk Al Tahara",
+        "inspiredBy": "Musk Al Tahara by Huda Essence",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Floral Musk",
+        "top": [
+            "White Musk",
+            "Cotton"
+        ],
+        "heart": [
+            "Jasmine",
+            "Lily"
+        ],
+        "base": [
+            "White Musk",
+            "Amber"
+        ],
+        "mood": "thick \u2022 clean \u2022 pure",
+        "image": "/images/huda-essence-musk-al-tahara.webp",
+        "story": "The ultimate clean scent. A thick, velvety white musk that feels like fresh laundry.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.86,
+        "reviews": 1077
+    }  },    {
+        "id": "sheikh-al-shuyukh",
+        "name": "Sheikh Al Shuyukh",
+        "inspiredBy": "Sheikh Al Shuyukh by Lattafa",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Oud",
+            "Cedar"
+        ],
+        "heart": [
+            "Lavender",
+            "Sage",
+            "Rosemary"
+        ],
+        "base": [
+            "Vetiver",
+            "Patchouli"
+        ],
+        "mood": "spicy \u2022 clean \u2022 woody",
+        "image": "/images/huda-essence-sheikh-al-shuyukh.webp",
+        "story": "A clean and spicy woody fragrance with aromatic lavender and a deep cedar-oud base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.87,
+        "reviews": 1164
+    }  },    {
+        "id": "lattafa-khamrah-unisex",
+        "name": "Lattafa Khamrah (Unisex)",
+        "inspiredBy": "Khamrah by Lattafa",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Spicy",
+        "top": [
+            "Cinnamon",
+            "Nutmeg",
+            "Bergamot"
+        ],
+        "heart": [
+            "Dates",
+            "Praline",
+            "Tuberose"
+        ],
+        "base": [
+            "Vanilla",
+            "Tonka Bean",
+            "Myrrh"
+        ],
+        "mood": "sweet \u2022 boozy \u2022 warm",
+        "image": "/images/huda-essence-lattafa-khamrah-unisex.webp",
+        "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.88,
+        "reviews": 1251
+    }  },    {
+        "id": "nishane-hacivat",
+        "name": "Nishane Hacivat",
+        "inspiredBy": "Hacivat by Nishane",
+        "gender": "Unisex",
+        "concentration": "Extrait de Parfum",
+        "family": "Chypre Woody",
+        "top": [
+            "Pineapple",
+            "Grapefruit",
+            "Bergamot"
+        ],
+        "heart": [
+            "Cedar",
+            "Patchouli",
+            "Jasmine"
+        ],
+        "base": [
+            "Oakmoss",
+            "Woody Notes"
+        ],
+        "mood": "fruity \u2022 earthy \u2022 beast-mode",
+        "image": "/images/huda-essence-nishane-hacivat.webp",
+        "bestseller": true,
+        "story": "A tribute to elegance, competence, and love of art. Smoky pineapple and heavy oakmoss.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.89,
+        "reviews": 1338
+    }  },    {
+        "id": "mancera-cedrat-boise",
+        "name": "Mancera Cedrat Boise",
+        "inspiredBy": "Cedrat Boise by Mancera",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Citrus Woody",
+        "top": [
+            "Sicilian Lemon",
+            "Blackcurrant",
+            "Bergamot"
+        ],
+        "heart": [
+            "Fruity Notes",
+            "Patchouli",
+            "Jasmine"
+        ],
+        "base": [
+            "Cedar",
+            "Leather",
+            "Sandalwood",
+            "Musk",
+            "Moss"
+        ],
+        "mood": "fresh \u2022 woody \u2022 versatile",
+        "image": "/images/huda-essence-mancera-cedrat-boise.webp",
+        "story": "A fresh citrus and blackcurrant blend with a rich woody leather base. Impossibly versatile.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.9,
+        "reviews": 120
+    }  },    {
+        "id": "mancera-red-tobacco",
+        "name": "Mancera Red Tobacco",
+        "inspiredBy": "Red Tobacco by Mancera",
+        "gender": "Unisex",
+        "concentration": "Extrait de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Cinnamon",
+            "Oud",
+            "Saffron",
+            "Incense"
+        ],
+        "heart": [
+            "Patchouli",
+            "Jasmine"
+        ],
+        "base": [
+            "Tobacco",
+            "Madagascar Vanilla",
+            "Amber",
+            "Sandalwood"
+        ],
+        "mood": "intense \u2022 warm \u2022 beast-mode",
+        "image": "/images/huda-essence-mancera-red-tobacco.webp",
+        "bestseller": true,
+        "story": "An incredibly intense warm fragrance. Heavy tobacco and sweet cinnamon. Beast-mode projection.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.91,
+        "reviews": 207
+    }  },    {
+        "id": "montale-black-aoud",
+        "name": "Montale Black Aoud",
+        "inspiredBy": "Black Aoud by Montale",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Floral Musk",
+        "top": [
+            "Mandarin Orange"
+        ],
+        "heart": [
+            "Rose"
+        ],
+        "base": [
+            "Oud",
+            "Patchouli",
+            "Musk",
+            "Labdanum"
+        ],
+        "mood": "dark \u2022 gothic \u2022 powerful",
+        "image": "/images/huda-essence-montale-black-aoud.webp",
+        "story": "A dark, gothic masterpiece. Deep Cambodian oud blended with rich, velvety red roses.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.92,
+        "reviews": 294
+    }  },    {
+        "id": "montale-intense-cafe",
+        "name": "Montale Intense Cafe",
+        "inspiredBy": "Intense Cafe by Montale",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Floral Notes"
+        ],
+        "heart": [
+            "Rose",
+            "Coffee"
+        ],
+        "base": [
+            "Vanilla",
+            "White Musk",
+            "Amber"
+        ],
+        "mood": "cozy \u2022 sweet \u2022 addictive",
+        "image": "/images/huda-essence-montale-intense-cafe.webp",
+        "story": "A cozy and addictive scent featuring fresh coffee blended with sweet vanilla and roses.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.93,
+        "reviews": 381
+    }  },    {
+        "id": "initio-oud-for-greatness",
+        "name": "Initio Oud For Greatness",
+        "inspiredBy": "Oud for Greatness by Initio",
+        "gender": "Unisex",
+        "concentration": "Extrait de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Saffron",
+            "Nutmeg",
+            "Lavender"
+        ],
+        "heart": [
+            "Oud"
+        ],
+        "base": [
+            "Patchouli",
+            "Musk"
+        ],
+        "mood": "mystical \u2022 royal \u2022 powerful",
+        "image": "/images/huda-essence-initio-oud-for-greatness.webp",
+        "story": "A mystical and powerful fragrance featuring raw oud wood, warm saffron, and lavender.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.94,
+        "reviews": 468
+    }  },    {
+        "id": "xerjoff-erba-pura",
+        "name": "Xerjoff Erba Pura",
+        "inspiredBy": "Erba Pura by Xerjoff",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Fruity",
+        "top": [
+            "Sicilian Orange",
+            "Calabrian Bergamot",
+            "Lemon"
+        ],
+        "heart": [
+            "Fruits"
+        ],
+        "base": [
+            "White Musk",
+            "Amber",
+            "Madagascar Vanilla"
+        ],
+        "mood": "sweet \u2022 tropical \u2022 loud",
+        "image": "/images/huda-essence-xerjoff-erba-pura.webp",
+        "bestseller": true,
+        "story": "A basket of delicious Mediterranean citrus fruits over a loud vanilla-musk base.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.75,
+        "reviews": 555
+    }  },    {
+        "id": "le-labo-santal-33",
+        "name": "Le Labo Santal 33",
+        "inspiredBy": "Santal 33 by Le Labo",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Aromatic",
+        "top": [
+            "Cardamom",
+            "Iris",
+            "Violet"
+        ],
+        "heart": [
+            "Sandalwood",
+            "Papyrus"
+        ],
+        "base": [
+            "Cedar",
+            "Leather",
+            "Amber"
+        ],
+        "mood": "minimalist \u2022 leather \u2022 woody",
+        "image": "/images/huda-essence-le-labo-santal-33.webp",
+        "bestseller": true,
+        "story": "The iconic scent of the American West. Smoky sandalwood, dry papyrus, and leather.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.76,
+        "reviews": 642
+    }  },    {
+        "id": "byredo-mojave-ghost",
+        "name": "Byredo Mojave Ghost",
+        "inspiredBy": "Mojave Ghost by Byredo",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Floral",
+        "top": [
+            "Sapodilla",
+            "Ambrette"
+        ],
+        "heart": [
+            "Magnolia",
+            "Violet",
+            "Sandalwood"
+        ],
+        "base": [
+            "Ambergris",
+            "Cedar"
+        ],
+        "mood": "airy \u2022 powdery \u2022 delicate",
+        "image": "/images/huda-essence-byredo-mojave-ghost.webp",
+        "story": "A woody composition inspired by the soulful beauty of the Mojave Desert. Delicate and powdery.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.77,
+        "reviews": 729
+    }  },    {
+        "id": "byredo-gypsy-water",
+        "name": "Byredo Gypsy Water",
+        "inspiredBy": "Gypsy Water by Byredo",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Woody Aromatic",
+        "top": [
+            "Juniper",
+            "Lemon",
+            "Bergamot",
+            "Pepper"
+        ],
+        "heart": [
+            "Pine Needles",
+            "Incense",
+            "Orris Root"
+        ],
+        "base": [
+            "Sandalwood",
+            "Vanilla",
+            "Amber"
+        ],
+        "mood": "earthy \u2022 free-spirited \u2022 fresh",
+        "image": "/images/huda-essence-byredo-gypsy-water.webp",
+        "story": "A glamorization of the Romany lifestyle. Earthy pine needles, incense, and warm vanilla.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.78,
+        "reviews": 816
+    }  },    {
+        "id": "maison-francis-gentle-fluidity",
+        "name": "Maison Francis Gentle Fluidity",
+        "inspiredBy": "Gentle Fluidity Gold by MFK",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Amber Vanilla",
+        "top": [
+            "Juniper Berries",
+            "Coriander"
+        ],
+        "heart": [
+            "Nutmeg"
+        ],
+        "base": [
+            "Amber",
+            "Vanilla",
+            "Musk",
+            "Woody Notes"
+        ],
+        "mood": "creamy \u2022 smooth \u2022 elegant",
+        "image": "/images/huda-essence-maison-francis-gentle-fluidity.webp",
+        "story": "A creamy, smooth fragrance featuring sweet vanilla and warm amber. Impossibly elegant.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.79,
+        "reviews": 903
+    }  },    {
+        "id": "jo-malone-wood-sage-sea-salt",
+        "name": "Jo Malone Wood Sage & Sea Salt",
+        "inspiredBy": "Wood Sage & Sea Salt by Jo Malone",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic",
+        "top": [
+            "Ambrette Seeds"
+        ],
+        "heart": [
+            "Sea Salt"
+        ],
+        "base": [
+            "Sage"
+        ],
+        "mood": "salty \u2022 windy \u2022 fresh",
+        "image": "/images/huda-essence-jo-malone-wood-sage-sea-salt.webp",
+        "story": "Escape the everyday along the windswept shore. Waves breaking white, the air fresh with sea salt.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.8,
+        "reviews": 990
+    }  },    {
+        "id": "jo-malone-english-pear-freesia",
+        "name": "Jo Malone English Pear & Freesia",
+        "inspiredBy": "English Pear & Freesia by Jo Malone",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Chypre Fruity",
+        "top": [
+            "King William Pear"
+        ],
+        "heart": [
+            "Freesia"
+        ],
+        "base": [
+            "Patchouli"
+        ],
+        "mood": "fresh \u2022 juicy \u2022 autumnal",
+        "image": "/images/huda-essence-jo-malone-english-pear-freesia.webp",
+        "story": "The essence of autumn. The sensuous freshness of just-ripe pears wrapped in a bouquet of white freesias.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.81,
+        "reviews": 1077
+    }  },    {
+        "id": "memo-irish-leather",
+        "name": "Memo Irish Leather",
+        "inspiredBy": "Irish Leather by Memo Paris",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Leather",
+        "top": [
+            "Juniper Berries"
+        ],
+        "heart": [
+            "Green Mat\u00e9",
+            "Iris"
+        ],
+        "base": [
+            "Leather",
+            "Amber"
+        ],
+        "mood": "green \u2022 frosty \u2022 leather",
+        "image": "/images/huda-essence-memo-irish-leather.webp",
+        "story": "Frosty gallop on a horse. A green leather fragrance that is crisp and deep.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.82,
+        "reviews": 1164
+    }  },    {
+        "id": "amouage-interlude",
+        "name": "Amouage Interlude",
+        "inspiredBy": "Interlude Man by Amouage",
+        "gender": "Unisex",
+        "concentration": "Extrait de Parfum",
+        "family": "Amber Woody",
+        "top": [
+            "Oregano",
+            "Pepper",
+            "Bergamot"
+        ],
+        "heart": [
+            "Incense",
+            "Opopanax",
+            "Amber"
+        ],
+        "base": [
+            "Leather",
+            "Oud",
+            "Patchouli",
+            "Sandalwood"
+        ],
+        "mood": "smoky \u2022 chaotic \u2022 royal",
+        "image": "/images/huda-essence-amouage-interlude.webp",
+        "story": "Known as the 'Blue Beast'. An incredibly smoky, chaotic blend of incense, leather, and oud.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.83,
+        "reviews": 1251
+    }  },    {
+        "id": "creed-silver-mountain-water-unisex",
+        "name": "Creed Silver Mountain Water (Unisex)",
+        "inspiredBy": "Silver Mountain Water by Creed",
+        "gender": "Unisex",
+        "concentration": "Eau de Parfum",
+        "family": "Aromatic",
+        "top": [
+            "Bergamot",
+            "Mandarin Orange"
+        ],
+        "heart": [
+            "Green Tea",
+            "Black Currant"
+        ],
+        "base": [
+            "Musk",
+            "Petitgrain",
+            "Sandalwood",
+            "Galbanum"
+        ],
+        "mood": "crisp \u2022 fresh \u2022 mountain-air",
+        "image": "/images/huda-essence-creed-silver-mountain-water-unisex.webp",
+        "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
+        "sizes": [
+            {
+                "ml": 10,
+                "price": 299
+            },
+            {
+                "ml": 50,
+                "price": 1299
+            },
+            {
+                "ml": 100,
+                "price": 2499
+            }
+        ],
+        "rating": 4.84,
+        "reviews": 1338
+    }  }
 
 ];
 

@@ -179,8 +179,13 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         : (product.image || baseImgPath);
 
       const img = new Image();
+      img.crossOrigin = 'anonymous';
 
       img.onload = () => {
+        let avgR = 24;
+        let avgG = 20;
+        let avgB = 18;
+
         const canvas = document.createElement('canvas');
         canvas.width = img.width;
         canvas.height = img.height;
@@ -190,14 +195,93 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
           return;
         }
 
-        // Draw the background image at its native dimensions
-        ctx.drawImage(img, 0, 0, img.width, img.height);
+        // 1. Draw a soft, premium warm-cream studio vignette background gradient first
+        const centerX = img.width / 2;
+        const scale = img.height / 1024;
+        
+        const bgGrad = ctx.createRadialGradient(
+          centerX, img.height / 2, 50 * scale,
+          centerX, img.height / 2, img.height * 0.7
+        );
+        bgGrad.addColorStop(0, '#ffffff'); // bright studio center lighting
+        bgGrad.addColorStop(1, '#f3eee4'); // soft elegant warm-cream vignette
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, img.width, img.height);
+
+        // 2. Remove the solid white background from the original product bottle photo dynamically
+        const offscreenImg = document.createElement('canvas');
+        offscreenImg.width = img.width;
+        offscreenImg.height = img.height;
+        const imgCtx = offscreenImg.getContext('2d');
+        if (imgCtx) {
+          imgCtx.drawImage(img, 0, 0);
+          const imgData = imgCtx.getImageData(0, 0, img.width, img.height);
+          const pixels = imgData.data;
+
+          for (let i = 0; i < pixels.length; i += 4) {
+            const pixelIndex = i / 4;
+            const y = Math.floor(pixelIndex / img.width);
+            const x = pixelIndex % img.width;
+
+            const r = pixels[i];
+            const g = pixels[i + 1];
+            const b = pixels[i + 2];
+
+            // 1. General background removal (around the bottle): very bright white
+            const isBrightWhite = r > 235 && g > 235 && b > 235;
+            const maxDiff = Math.max(Math.abs(r - g), Math.abs(g - b), Math.abs(r - b));
+            const isNeutral = maxDiff < 20;
+
+            // 2. Original sticker label removal: aggressive threshold (r > 165) in the center zone
+            const isInLabelZone = x > img.width * 0.22 && x < img.width * 0.78 && y > img.height * 0.38 && y < img.height * 0.80;
+            // Let the neutral check be relaxed (up to 40 diff) in the label zone to catch yellowish/colored labels or JPEG compression noise
+            const isLabelWhite = isInLabelZone && r > 165 && g > 165 && b > 165 && maxDiff < 40;
+
+            if ((isBrightWhite && isNeutral) || isLabelWhite) {
+              const brightness = (r + g + b) / 3;
+              // Pure white or light gray becomes transparent
+              const alpha = Math.max(0, Math.min(255, Math.round((255 - brightness) * 4.5)));
+              pixels[i + 3] = alpha;
+            }
+          }
+          imgCtx.putImageData(imgData, 0, 0);
+          ctx.drawImage(offscreenImg, 0, 0);
+
+          // Sample the bottle glass color dynamically just left of the sticker area
+          try {
+            const sampleX = Math.max(0, Math.round((img.width / 2 - 185 * scale) - 15 * scale));
+            const sampleY = Math.round(455 * scale + 150 * scale);
+            const sampleData = imgCtx.getImageData(sampleX, sampleY, 6, 20);
+            let totalR = 0, totalG = 0, totalB = 0, count = 0;
+            for (let j = 0; j < sampleData.data.length; j += 4) {
+              const rVal = sampleData.data[j];
+              const gVal = sampleData.data[j + 1];
+              const bVal = sampleData.data[j + 2];
+              const aVal = sampleData.data[j + 3];
+              if (aVal > 50) {
+                totalR += rVal;
+                totalG += gVal;
+                totalB += bVal;
+                count++;
+              }
+            }
+            if (count > 0) {
+              avgR = Math.round(totalR / count);
+              avgG = Math.round(totalG / count);
+              avgB = Math.round(totalB / count);
+            }
+          } catch (e) {
+            console.error('Failed to sample bottle color dynamically', e);
+          }
+        } else {
+          // Fallback: draw original image directly if context fails
+          ctx.drawImage(img, 0, 0);
+        }
 
         // Ensure full opacity for drawing the sticker
         ctx.globalAlpha = 1.0;
 
-        // Uniform scale factor based on vertical height to preserve aspect ratio of the label on unstretched bottles
-        const scale = img.height / 1024;
+
 
         // Setup offscreen canvas for flat label drawing (to be warped later)
         const offscreen = document.createElement('canvas');
@@ -209,7 +293,6 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
           return;
         }
 
-        const centerX = img.width / 2;
         const rectW = 370 * scale;
         const rectH = 340 * scale;
         const rectX = centerX - rectW / 2;
@@ -250,28 +333,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         goldGradLight.addColorStop(0.5, '#d4a95a');
         goldGradLight.addColorStop(1, '#b08d46');
 
-        // ─── Black label background ───
-        const labelBgGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
-        labelBgGrad.addColorStop(0, '#080808');
-        labelBgGrad.addColorStop(0.1, '#0f0f0f');
-        labelBgGrad.addColorStop(0.5, '#181818');
-        labelBgGrad.addColorStop(0.9, '#0f0f0f');
-        labelBgGrad.addColorStop(1, '#080808');
-
-        oCtx.fillStyle = labelBgGrad;
-        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
-        oCtx.fill();
-
-        // Outer gold border
-        oCtx.strokeStyle = goldGrad;
-        oCtx.lineWidth = 1.8 * scale;
-        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
-        oCtx.stroke();
-
-        // Inner gold border
-        oCtx.lineWidth = 0.5 * scale;
-        drawRoundedRect(oCtx, rectX + 7 * scale, rectY + 7 * scale, rectW - 14 * scale, rectH - 14 * scale, 9 * scale);
-        oCtx.stroke();
+        // ─── Direct-to-glass branding: fully transparent background with no borders ───
 
         // ─── Setup text rendering ───
         oCtx.textAlign = 'center';
@@ -512,23 +574,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         const thetaMax = 0.38;
         const sinThetaMax = Math.sin(thetaMax);
 
-        ctx.fillStyle = '#0e0e0e';
-        ctx.beginPath();
-        for (let x = 0; x <= rectW; x++) {
-          const normX = (x - rectW / 2) / (rectW / 2);
-          const yShift = bendAmount * (1 - normX * normX);
-          if (x === 0) ctx.moveTo(rectX + x, rectY + yShift);
-          else ctx.lineTo(rectX + x, rectY + yShift);
-        }
-        ctx.lineTo(rectX + rectW, rectY + rectH);
-        for (let x = rectW; x >= 0; x--) {
-          const normX = (x - rectW / 2) / (rectW / 2);
-          const yShift = bendAmount * (1 - normX * normX);
-          ctx.lineTo(rectX + x, rectY + rectH + yShift);
-        }
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
+
 
         for (let x = 0; x < rectW; x++) {
           const targetDX = x - rectW / 2;
@@ -549,7 +595,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         }
 
         try {
-          const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+          const dataUrl = canvas.toDataURL('image/png');
           imageCache[product.id] = dataUrl;
           setSrc(dataUrl);
         } catch (err) {
