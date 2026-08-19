@@ -182,9 +182,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
       img.crossOrigin = 'anonymous';
 
       img.onload = () => {
-        let avgR = 24;
-        let avgG = 20;
-        let avgB = 18;
+
 
         const canvas = document.createElement('canvas');
         canvas.width = img.width;
@@ -247,32 +245,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
           imgCtx.putImageData(imgData, 0, 0);
           ctx.drawImage(offscreenImg, 0, 0);
 
-          // Sample the bottle glass color dynamically just left of the sticker area
-          try {
-            const sampleX = Math.max(0, Math.round((img.width / 2 - 185 * scale) - 15 * scale));
-            const sampleY = Math.round(455 * scale + 150 * scale);
-            const sampleData = imgCtx.getImageData(sampleX, sampleY, 6, 20);
-            let totalR = 0, totalG = 0, totalB = 0, count = 0;
-            for (let j = 0; j < sampleData.data.length; j += 4) {
-              const rVal = sampleData.data[j];
-              const gVal = sampleData.data[j + 1];
-              const bVal = sampleData.data[j + 2];
-              const aVal = sampleData.data[j + 3];
-              if (aVal > 50) {
-                totalR += rVal;
-                totalG += gVal;
-                totalB += bVal;
-                count++;
-              }
-            }
-            if (count > 0) {
-              avgR = Math.round(totalR / count);
-              avgG = Math.round(totalG / count);
-              avgB = Math.round(totalB / count);
-            }
-          } catch (e) {
-            console.error('Failed to sample bottle color dynamically', e);
-          }
+
         } else {
           // Fallback: draw original image directly if context fails
           ctx.drawImage(img, 0, 0);
