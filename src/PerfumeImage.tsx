@@ -230,14 +230,9 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
             const maxDiff = Math.max(Math.abs(r - g), Math.abs(g - b), Math.abs(r - b));
             const isNeutral = maxDiff < 20;
 
-            // 2. Original sticker label removal: aggressive threshold (r > 165) in the center zone
-            const isInLabelZone = x > img.width * 0.22 && x < img.width * 0.78 && y > img.height * 0.38 && y < img.height * 0.80;
-            // Let the neutral check be relaxed (up to 40 diff) in the label zone to catch yellowish/colored labels or JPEG compression noise
-            const isLabelWhite = isInLabelZone && r > 165 && g > 165 && b > 165 && maxDiff < 40;
-
-            if ((isBrightWhite && isNeutral) || isLabelWhite) {
+            if (isBrightWhite && isNeutral) {
               const brightness = (r + g + b) / 3;
-              // Pure white or light gray becomes transparent
+              // Pure white or light gray background becomes transparent
               const alpha = Math.max(0, Math.min(255, Math.round((255 - brightness) * 4.5)));
               pixels[i + 3] = alpha;
             }
