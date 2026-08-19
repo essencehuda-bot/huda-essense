@@ -512,7 +512,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         const thetaMax = 0.38;
         const sinThetaMax = Math.sin(thetaMax);
 
-        ctx.fillStyle = 'rgba(14, 14, 14, 0.55)';
+        ctx.fillStyle = '#0e0e0e';
         ctx.beginPath();
         for (let x = 0; x <= rectW; x++) {
           const normX = (x - rectW / 2) / (rectW / 2);
