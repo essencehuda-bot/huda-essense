@@ -24,30 +24,63 @@ const UNIQUE_GENERATED_PRODUCTS = new Set([
   'la-nuit-de-l-homme'
 ]);
 
-// Map colors to the correct clean template base image
+// Map product details to the correct clean template base image
 function getCleanTemplate(product: Product): string {
-  const color = (product.color || '').toLowerCase();
-  
-  if (color.includes('blue') || color.includes('aquatic') || color.includes('marine')) {
+  const family = (product.family || '').toLowerCase();
+  const name = (product.name || '').toLowerCase();
+  const gender = (product.gender || '').toLowerCase();
+
+  // Blue theme
+  if (
+    name.includes('sauvage') || name.includes('bleu') || name.includes('blue') || 
+    name.includes('dylan') || name.includes('chrome') || name.includes('cool water') || 
+    name.includes('acqua') || name.includes('light blue') || name.includes('hawas') ||
+    family.includes('aquatic') || family.includes('marine')
+  ) {
     return '/images/clean_base_blue.jpg';
   }
-  if (color.includes('green') || color.includes('emerald') || color.includes('aromatic') || color.includes('fougere')) {
+  
+  // Green theme
+  if (
+    name.includes('green') || name.includes('tweed') || name.includes('vetiver') ||
+    family.includes('green') || family.includes('aromatic') || family.includes('fougere') || family.includes('fougère')
+  ) {
     return '/images/clean_base_green.jpg';
   }
-  if (color.includes('teal')) {
+  
+  // Teal theme
+  if (family.includes('citrus') || family.includes('fresh')) {
     return '/images/clean_base_teal.jpg';
   }
-  if (color.includes('black') || color.includes('noir') || color.includes('dark')) {
+  
+  // Black theme
+  if (
+    name.includes('black') || name.includes('noir') || name.includes('intense') || 
+    name.includes('opium') || name.includes('poison') || name.includes('nuit') ||
+    name.includes('afghano')
+  ) {
     return '/images/clean_base_black.jpg';
   }
-  if (color.includes('silver') || color.includes('grey') || color.includes('gray') || color.includes('pink') || color.includes('rose') || color.includes('clear')) {
+  
+  // Silver theme (used for silver, clear, and pink/female floral scents)
+  if (
+    name.includes('silver') || name.includes('platinum') || name.includes('mountain') ||
+    name.includes('creed') || name.includes('white') || name.includes('musk') || name.includes('clean') ||
+    gender === 'Women' || family.includes('floral') || family.includes('rose')
+  ) {
     return '/images/clean_base_silver.jpg';
   }
-  if (color.includes('brown') || color.includes('cognac')) {
+  
+  // Brown theme (warm woody/leather scents)
+  if (
+    name.includes('tobacco') || name.includes('leather') || name.includes('cognac') ||
+    name.includes('tuscan') || name.includes('ombre') || name.includes('ombré') ||
+    family.includes('woody') || family.includes('leather')
+  ) {
     return '/images/clean_base_brown.jpg';
   }
-  
-  // Default fallback (Amber)
+
+  // Default Amber Gold
   return '/images/clean_base_amber.jpg';
 }
 
