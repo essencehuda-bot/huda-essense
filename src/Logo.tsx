@@ -2,19 +2,19 @@ export default function Logo({ size = "default", className = "" }: { size?: "def
   const isLarge = size === "large";
   const isFooter = size === "footer";
 
-  // Height and max-width tailored for header, drawer, and footer layouts
+  // Prominent sizing tailored for luxury brand identity
   const heightClass = isLarge 
-    ? "h-[64px] sm:h-[76px]" 
+    ? "h-[90px] sm:h-[115px]" 
     : isFooter 
-      ? "h-[54px] sm:h-[62px]" 
-      : "h-[42px] sm:h-[48px]";
+      ? "h-[75px] sm:h-[92px]" 
+      : "h-[58px] sm:h-[68px] md:h-[74px]";
 
   return (
-    <div className={`inline-flex items-center justify-center select-none ${className}`}>
+    <div className={`inline-flex items-center justify-center select-none py-1 ${className}`}>
       <img
         src="/images/huda_essence_logo.png"
         alt="HUDA ESSENCE"
-        className={`${heightClass} w-auto object-contain transition-transform duration-300 hover:scale-[1.03] drop-shadow-[0_2px_10px_rgba(212,169,90,0.25)]`}
+        className={`${heightClass} w-auto max-w-[280px] object-contain transition-transform duration-300 hover:scale-[1.04] drop-shadow-[0_2px_12px_rgba(212,169,90,0.3)]`}
         loading="eager"
       />
     </div>
