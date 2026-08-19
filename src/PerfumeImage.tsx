@@ -6,13 +6,157 @@ type Product = ProductData;
 // Global in-memory cache to prevent redrawing the same product multiple times
 const imageCache: Record<string, string> = {};
 
-// Pristine clean crystal bottle base (teal-to-amber ombre gradient, faceted edges, black cylindrical cap, zero sticker)
-const MASTER_BOTTLE_BASE = '/images/huda_bottle_base.jpg';
-
 interface Props {
   product: Product;
   className?: string;
   onClick?: () => void;
+}
+
+// Automatically select the template based on the fragrance's family, name, and notes
+function getScentThemeTemplate(product: Product): string {
+  const family = (product.family || '').toLowerCase();
+  const name = (product.name || '').toLowerCase();
+  const mood = (product.mood || '').toLowerCase();
+  const story = (product.story || '').toLowerCase();
+  const topNotes = (product.top || []).map(n => n.toLowerCase());
+  const heartNotes = (product.heart || []).map(n => n.toLowerCase());
+  const baseNotes = (product.base || []).map(n => n.toLowerCase());
+
+  // Aggregate all perfume text descriptive details
+  const allText = [
+    family,
+    name,
+    mood,
+    story,
+    ...topNotes,
+    ...heartNotes,
+    ...baseNotes
+  ].join(' ');
+
+  const scores = {
+    woody: 0,
+    leather: 0,
+    aquatic: 0,
+    spicy: 0,
+    green: 0,
+    white_floral: 0,
+    fruity: 0,
+    floral: 0
+  };
+
+  // 1. Woody keywords
+  const woodyKeywords = ['wood', 'oud', 'cedar', 'sandalwood', 'patchouli', 'vetiver', 'birch', 'incense', 'tobacco', 'amberwood', 'smoky', 'guaiac', 'cypress', 'commanding'];
+  woodyKeywords.forEach(k => {
+    if (allText.includes(k)) scores.woody += 2.5;
+  });
+
+  // 2. Leather keywords
+  const leatherKeywords = ['leather', 'suede', 'animalic', 'caban'];
+  leatherKeywords.forEach(k => {
+    if (allText.includes(k)) scores.leather += 5;
+  });
+
+  // 3. Aquatic keywords
+  const aquaticKeywords = ['aquatic', 'marine', 'sea', 'calone', 'ocean', 'water', 'salt', 'ozone', 'ozonic'];
+  aquaticKeywords.forEach(k => {
+    if (allText.includes(k)) scores.aquatic += 4;
+  });
+
+  // 4. Spicy / Amber / Vanilla keywords
+  const spicyKeywords = ['vanilla', 'vanille', 'spicy', 'spice', 'amber', 'cinnamon', 'cardamom', 'clove', 'nutmeg', 'ginger', 'tonka', 'meringue', 'chestnut', 'caramel', 'khamrah', 'warm', 'cocoa', 'coffee'];
+  spicyKeywords.forEach(k => {
+    if (allText.includes(k)) scores.spicy += 2.5;
+  });
+
+  // 5. Green / Herbal / Aromatic keywords
+  const greenKeywords = ['green', 'herbal', 'basil', 'sage', 'violet leaf', 'galbanum', 'grass', 'ivy', 'mint', 'oakmoss', 'aromatic', 'tweed'];
+  greenKeywords.forEach(k => {
+    if (allText.includes(k)) scores.green += 2.5;
+  });
+
+  // 6. White Floral keywords
+  const whiteFloralKeywords = ['jasmine', 'neroli', 'orange blossom', 'tuberose', 'gardenia', 'lily', 'freesia', 'magnolia', 'white floral', 'orange flower', 'bloom'];
+  whiteFloralKeywords.forEach(k => {
+    if (allText.includes(k)) scores.white_floral += 3;
+  });
+
+  // 7. Fruity / Sweet keywords
+  const fruityKeywords = ['fruity', 'sweet', 'cherry', 'peach', 'apple', 'pineapple', 'pear', 'strawberry', 'raspberry', 'blackcurrant', 'berry', 'berries', 'melon', 'coconut', 'gourmand', 'plum', 'mandarin', 'citrus', 'orange', 'grapefruit', 'lemon', 'lime', 'bergamot'];
+  fruityKeywords.forEach(k => {
+    if (allText.includes(k)) scores.fruity += 1.5;
+  });
+
+  // 8. Floral keywords
+  const floralKeywords = ['floral', 'rose', 'peony', 'iris', 'orchid', 'violet', 'geranium', 'lavender', 'blossom', 'flower', 'petal', 'petals', 'flora'];
+  floralKeywords.forEach(k => {
+    if (allText.includes(k)) scores.floral += 2.2;
+  });
+
+  // Boost based on family name
+  if (family.includes('wood') || family.includes('oud')) scores.woody += 5;
+  if (family.includes('leather')) scores.leather += 8;
+  if (family.includes('aquatic') || family.includes('marine')) scores.aquatic += 5;
+  if (family.includes('spicy') || family.includes('amber') || family.includes('oriental')) scores.spicy += 5;
+  if (family.includes('green') || family.includes('herbal')) scores.green += 5;
+  if (family.includes('white floral') || family.includes('jasmine')) scores.white_floral += 5;
+  else if (family.includes('floral') || family.includes('rose')) scores.floral += 4;
+  if (family.includes('fruity') || family.includes('sweet') || family.includes('gourmand')) scores.fruity += 5;
+
+  // Exact Name-Based Boosts to guarantee accuracy for specific iconic fragrances
+  if (name.includes('sauvage') || name.includes('bleu') || name.includes('cool water') || name.includes('hawas') || name.includes('chrome') || name.includes('explorer') || name.includes('acqua')) {
+    scores.aquatic += 12;
+  }
+  if (name.includes('rose') || name.includes('flora') || name.includes('chance') || name.includes('bright crystal')) {
+    scores.floral += 12;
+  }
+  if (name.includes('wood') || name.includes('oud') || name.includes('janan') || name.includes('prestige')) {
+    scores.woody += 12;
+  }
+  if (name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger') || name.includes('9 pm') || name.includes('afnan')) {
+    scores.spicy += 12;
+  }
+  if (name.includes('black opium') || name.includes('la nuit') || name.includes('desire') || name.includes('eros') || name.includes('1 million')) {
+    scores.leather += 12;
+  }
+  if (name.includes('bloom') || name.includes('j\'adore') || name.includes('blue lady') || name.includes('jasmine') || name.includes('grace')) {
+    scores.white_floral += 12;
+  }
+  if (name.includes('yara') || name.includes('bombshell') || name.includes('cherry') || name.includes('rouge 540') || name.includes('baccarat') || name.includes('pear')) {
+    scores.fruity += 12;
+  }
+  if (name.includes('tweed') || name.includes('sage') || name.includes('legend') || name.includes('century')) {
+    scores.green += 12;
+  }
+
+  // Find highest scoring theme
+  let maxScore = -1;
+  let selectedTheme = 'floral';
+  
+  (Object.keys(scores) as Array<keyof typeof scores>).forEach(theme => {
+    if (scores[theme] > maxScore) {
+      maxScore = scores[theme];
+      selectedTheme = theme;
+    }
+  });
+
+  if (maxScore <= 0) {
+    if (product.gender === 'Men') return '/images/base_aquatic.png';
+    if (product.gender === 'Women') return '/images/base_floral.png';
+    return '/images/base_spicy.png';
+  }
+
+  const themeMap: Record<string, string> = {
+    woody: '/images/base_woody.png',
+    leather: '/images/base_leather.png',
+    aquatic: '/images/base_aquatic.png',
+    spicy: '/images/base_spicy.png',
+    green: '/images/base_green.png',
+    white_floral: '/images/base_white_floral.png',
+    fruity: '/images/base_fruity.png',
+    floral: '/images/base_floral.png',
+  };
+
+  return themeMap[selectedTheme] || '/images/base_spicy.png';
 }
 
 export default function PerfumeImage({ product, className, onClick }: Props) {
@@ -25,7 +169,15 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
       return;
     }
 
-    const drawDirectToGlass = () => {
+    const baseImgPath = getScentThemeTemplate(product);
+
+    const drawCanvasTemplate = () => {
+      // Load the original unique photographed bottle image (.jpeg) as the background template
+      // This preserves each perfume's individual bottle shape, cap, shadows, liquid color, and studio background.
+      const bgSrc = (product.image && !product.image.startsWith('data:image/'))
+        ? product.image.replace(/\.png$/, '.jpeg')
+        : (product.image || baseImgPath);
+
       const img = new Image();
 
       img.onload = () => {
@@ -34,288 +186,374 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         canvas.height = img.height;
         const ctx = canvas.getContext('2d');
         if (!ctx) {
-          setSrc(MASTER_BOTTLE_BASE);
+          setSrc(baseImgPath);
           return;
         }
 
-        // 1. Draw the clean master bottle image at native dimensions
+        // 1. Draw the individual original bottle background image at native dimensions
         ctx.drawImage(img, 0, 0, img.width, img.height);
 
-        // Uniform scale factor based on image vertical height
+        // Ensure full opacity for drawing
+        ctx.globalAlpha = 1.0;
+
+        // Uniform scale factor based on vertical height
         const scale = img.height / 1024;
-        const centerX = img.width / 2;
 
-        // ══════════════════════════════════════════════════════════════════
-        // DIRECT-TO-GLASS METALLIC GOLD BRANDING (Matching Reference Photo)
-        // ══════════════════════════════════════════════════════════════════
-
-        // Rich metallic gold gradient for foil / direct glass ink print
-        const goldGrad = ctx.createLinearGradient(
-          centerX - 130 * scale, 390 * scale,
-          centerX + 130 * scale, 760 * scale
-        );
-        goldGrad.addColorStop(0, '#8c6b2b');    // deep warm antique gold shadow
-        goldGrad.addColorStop(0.18, '#c9993f'); // rich metallic gold
-        goldGrad.addColorStop(0.38, '#f3d27a'); // bright gold highlight
-        goldGrad.addColorStop(0.50, '#ffe89e'); // peak specular shine
-        goldGrad.addColorStop(0.62, '#f3d27a'); // bright gold highlight
-        goldGrad.addColorStop(0.82, '#c9993f'); // rich metallic gold
-        goldGrad.addColorStop(1, '#8c6b2b');    // deep warm antique gold shadow
-
-        // Secondary lighter gold for secondary text
-        const goldGradLight = ctx.createLinearGradient(
-          centerX - 100 * scale, 420 * scale,
-          centerX + 100 * scale, 740 * scale
-        );
-        goldGradLight.addColorStop(0, '#b88d3e');
-        goldGradLight.addColorStop(0.5, '#f5d688');
-        goldGradLight.addColorStop(1, '#b88d3e');
-
-        // Setup canvas text rendering
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        
-        // 94% opacity lets glass refractions & liquid depth subtly interact with the gold print
-        ctx.globalAlpha = 0.94;
-
-        // Specular glow to simulate metallic foil catching studio lighting
-        ctx.shadowColor = 'rgba(232, 192, 106, 0.40)';
-        ctx.shadowBlur = 2.5 * scale;
-        ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 0.6 * scale;
-
-        // ─── 1. HE MONOGRAM WITH PERFUME ATOMIZER & SPRAY MIST ───
-        const monoY = 432 * scale;
-        const monoSize = 64 * scale;
-
-        // Monogram H (Left)
-        ctx.font = `600 ${Math.round(monoSize)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        ctx.fillStyle = goldGrad;
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = '0px';
-        ctx.fillText('H', centerX - 18 * scale, monoY);
-
-        // Monogram E (Right, overlapping with connected curved swash)
-        ctx.fillStyle = goldGradLight;
-        ctx.fillText('E', centerX + 20 * scale, monoY);
-
-        // Perfume bottle atomizer icon sitting atop the H
-        ctx.save();
-        ctx.fillStyle = goldGrad;
-        ctx.strokeStyle = goldGrad;
-        const bx = centerX - 2 * scale;
-        const by = monoY - monoSize * 0.60;
-        const bw = monoSize * 0.18;
-        const bh = monoSize * 0.28;
-
-        // Atomizer body
-        ctx.lineWidth = 1.2 * scale;
-        ctx.beginPath();
-        ctx.moveTo(bx - bw * 0.75, by);
-        ctx.lineTo(bx - bw * 0.45, by - bh * 0.32);
-        ctx.lineTo(bx + bw * 0.45, by - bh * 0.32);
-        ctx.lineTo(bx + bw * 0.75, by);
-        ctx.lineTo(bx + bw * 0.75, by + bh * 0.6);
-        ctx.lineTo(bx - bw * 0.75, by + bh * 0.6);
-        ctx.closePath();
-        ctx.stroke();
-
-        // Atomizer collar & nozzle
-        ctx.fillRect(bx - bw * 0.32, by - bh * 0.58, bw * 0.64, bh * 0.26);
-
-        // Diamond gem topper
-        ctx.beginPath();
-        ctx.moveTo(bx, by - bh * 0.58);
-        ctx.lineTo(bx + bw * 0.24, by - bh * 0.68);
-        ctx.lineTo(bx, by - bh * 0.82);
-        ctx.lineTo(bx - bw * 0.24, by - bh * 0.68);
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
-
-        // Radiating spray mist to upper right
-        ctx.save();
-        ctx.fillStyle = goldGrad;
-        const sprayOriginX = bx + bw * 0.75;
-        const sprayOriginY = by - bh * 0.52;
-
-        for (let i = 0; i < 36; i++) {
-          const angle = -Math.PI * 0.34 + Math.random() * (Math.PI * 0.42);
-          const dist = (8 + Math.random() * 32) * scale;
-          const dotRadius = (0.4 + Math.random() * 1.1) * scale;
-          ctx.globalAlpha = 0.25 + Math.random() * 0.55;
-          ctx.beginPath();
-          ctx.arc(sprayOriginX + Math.cos(angle) * dist, sprayOriginY + Math.sin(angle) * dist, dotRadius, 0, Math.PI * 2);
-          ctx.fill();
+        // Setup offscreen canvas for flat luxury label drawing (to be warped onto bottle curvature)
+        const offscreen = document.createElement('canvas');
+        offscreen.width = img.width;
+        offscreen.height = img.height;
+        const oCtx = offscreen.getContext('2d');
+        if (!oCtx) {
+          setSrc(baseImgPath);
+          return;
         }
-        ctx.globalAlpha = 0.94;
-        ctx.restore();
 
-        // ─── 2. "HUDA ESSENCE" BRAND TITLE ───
-        const brandY = monoY + 54 * scale;
-        ctx.font = `700 ${Math.round(25 * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        ctx.fillStyle = goldGrad;
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = (4 * scale) + 'px';
-        ctx.fillText('HUDA ESSENCE', centerX, brandY);
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = '0px';
+        const centerX = img.width / 2;
+        const rectW = 370 * scale;
+        const rectH = 340 * scale;
+        const rectX = centerX - rectW / 2;
+        const rectY = 455 * scale;
 
-        // ─── 3. HEART ORNAMENT WITH FLANKING GOLD BARS ───
-        const heartY = brandY + 24 * scale;
-        const heartSize = 5.5 * scale;
-        const barLength = 65 * scale;
+        const drawRoundedRect = (
+          c: CanvasRenderingContext2D,
+          x: number,
+          y: number,
+          width: number,
+          height: number,
+          radius: number
+        ) => {
+          c.beginPath();
+          c.moveTo(x + radius, y);
+          c.arcTo(x + width, y, x + width, y + height, radius);
+          c.arcTo(x + width, y + height, x, y + height, radius);
+          c.arcTo(x, y + height, x, y, radius);
+          c.arcTo(x, y, x + width, y, radius);
+          c.closePath();
+        };
 
-        // Left gold bar
-        ctx.strokeStyle = goldGrad;
-        ctx.lineWidth = 0.9 * scale;
-        ctx.beginPath();
-        ctx.moveTo(centerX - 14 * scale, heartY);
-        ctx.lineTo(centerX - 14 * scale - barLength, heartY);
-        ctx.stroke();
+        // ══════════ LUXURY BLACK & GOLD HUDA ESSENCE LABEL ══════════
 
-        // Right gold bar
-        ctx.beginPath();
-        ctx.moveTo(centerX + 14 * scale, heartY);
-        ctx.lineTo(centerX + 14 * scale + barLength, heartY);
-        ctx.stroke();
+        // Metallic gold gradient for text, borders, and logo elements
+        const goldGrad = oCtx.createLinearGradient(rectX, rectY, rectX + rectW, rectY + rectH);
+        goldGrad.addColorStop(0, '#8a6d2f');     // deep antique gold
+        goldGrad.addColorStop(0.2, '#c9993f');   // rich gold
+        goldGrad.addColorStop(0.4, '#d4a95a');   // bright gold highlight
+        goldGrad.addColorStop(0.5, '#e8c06a');   // peak metallic shine
+        goldGrad.addColorStop(0.6, '#d4a95a');   // bright gold highlight
+        goldGrad.addColorStop(0.8, '#c9993f');   // rich gold
+        goldGrad.addColorStop(1, '#8a6d2f');     // deep antique gold
 
-        // Center solid gold heart
-        ctx.save();
-        ctx.fillStyle = goldGrad;
-        ctx.beginPath();
-        ctx.moveTo(centerX, heartY + heartSize * 0.75);
-        ctx.bezierCurveTo(centerX - heartSize * 1.3, heartY - heartSize * 0.25, centerX - heartSize * 0.7, heartY - heartSize * 1.05, centerX, heartY - heartSize * 0.1);
-        ctx.bezierCurveTo(centerX + heartSize * 0.7, heartY - heartSize * 1.05, centerX + heartSize * 1.3, heartY - heartSize * 0.25, centerX, heartY + heartSize * 0.75);
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
+        // Secondary lighter gold for smaller text
+        const goldGradLight = oCtx.createLinearGradient(rectX, rectY + rectH * 0.3, rectX + rectW, rectY + rectH * 0.7);
+        goldGradLight.addColorStop(0, '#b08d46');
+        goldGradLight.addColorStop(0.5, '#d4a95a');
+        goldGradLight.addColorStop(1, '#b08d46');
 
-        // ─── 4. "INSPIRED BY" LABEL ───
-        const inspLabelY = heartY + 22 * scale;
-        ctx.font = `600 ${Math.round(10.5 * scale)}px 'Instrument Sans', 'Arial', sans-serif`;
-        ctx.fillStyle = goldGradLight;
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = (2.6 * scale) + 'px';
-        ctx.fillText('INSPIRED BY', centerX, inspLabelY);
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = '0px';
+        // Black label background with subtle cylindrical lighting
+        const labelBgGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
+        labelBgGrad.addColorStop(0, '#080808');
+        labelBgGrad.addColorStop(0.1, '#0f0f0f');
+        labelBgGrad.addColorStop(0.5, '#181818');
+        labelBgGrad.addColorStop(0.9, '#0f0f0f');
+        labelBgGrad.addColorStop(1, '#080808');
 
-        // ─── 5. DYNAMIC PERFUME NAME (From Website Product Data) ───
-        // Displays each individual perfume's dynamic name in elegant gold italic script (e.g. Exclusive J., Dior Sauvage, Afnan 9 PM)
-        const nameText = product.name;
-        const maxTextWidth = 270 * scale;
-        const nameAreaTop = inspLabelY + 16 * scale;
+        oCtx.fillStyle = labelBgGrad;
+        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
+        oCtx.fill();
 
-        let nameFontSize = 26 * scale;
-        let nameLineHeight = 30 * scale;
-        let nameLines: string[] = [];
+        // Outer gold border
+        oCtx.strokeStyle = goldGrad;
+        oCtx.lineWidth = 1.8 * scale;
+        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
+        oCtx.stroke();
 
-        for (let size = 26; size >= 13; size -= 1) {
-          ctx.font = `italic 600 ${Math.round(size * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-          nameLines = [];
+        // Inner gold border (inset)
+        oCtx.lineWidth = 0.5 * scale;
+        drawRoundedRect(oCtx, rectX + 7 * scale, rectY + 7 * scale, rectW - 14 * scale, rectH - 14 * scale, 9 * scale);
+        oCtx.stroke();
+
+        // Setup text rendering
+        oCtx.textAlign = 'center';
+        oCtx.textBaseline = 'middle';
+        oCtx.shadowColor = 'rgba(212, 169, 90, 0.18)';
+        oCtx.shadowBlur = 2 * scale;
+        oCtx.shadowOffsetX = 0;
+        oCtx.shadowOffsetY = 0.5 * scale;
+
+        // ─── 1. HE Monogram with perfume bottle atomizer & mist ───
+        const monoY = rectY + rectH * 0.20;
+        const monoFontSize = Math.round(rectH * 0.16);
+
+        oCtx.font = `600 ${monoFontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        oCtx.fillStyle = goldGrad;
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = '0px';
+        oCtx.fillText('H', centerX - monoFontSize * 0.28, monoY);
+
+        oCtx.fillStyle = goldGradLight;
+        oCtx.fillText('E', centerX + monoFontSize * 0.30, monoY);
+
+        // Perfume bottle icon on top of the H
+        oCtx.save();
+        oCtx.fillStyle = goldGrad;
+        oCtx.strokeStyle = goldGrad;
+        const bx = centerX - monoFontSize * 0.04;
+        const by = monoY - monoFontSize * 0.62;
+        const bw = monoFontSize * 0.17;
+        const bh = monoFontSize * 0.28;
+
+        // Bottle body
+        oCtx.lineWidth = 1.0 * scale;
+        oCtx.beginPath();
+        oCtx.moveTo(bx - bw * 0.7, by);
+        oCtx.lineTo(bx - bw * 0.45, by - bh * 0.3);
+        oCtx.lineTo(bx + bw * 0.45, by - bh * 0.3);
+        oCtx.lineTo(bx + bw * 0.7, by);
+        oCtx.lineTo(bx + bw * 0.7, by + bh * 0.55);
+        oCtx.lineTo(bx - bw * 0.7, by + bh * 0.55);
+        oCtx.closePath();
+        oCtx.stroke();
+
+        // Bottle cap
+        oCtx.fillRect(bx - bw * 0.3, by - bh * 0.55, bw * 0.6, bh * 0.25);
+
+        // Cap diamond
+        oCtx.beginPath();
+        oCtx.moveTo(bx, by - bh * 0.55);
+        oCtx.lineTo(bx + bw * 0.22, by - bh * 0.65);
+        oCtx.lineTo(bx, by - bh * 0.78);
+        oCtx.lineTo(bx - bw * 0.22, by - bh * 0.65);
+        oCtx.closePath();
+        oCtx.fill();
+        oCtx.restore();
+
+        // Spray mist
+        oCtx.save();
+        oCtx.fillStyle = goldGrad;
+        const sprayOX = bx + bw * 0.7;
+        const sprayOY = by - bh * 0.5;
+
+        for (let i = 0; i < 30; i++) {
+          const angle = -Math.PI * 0.35 + Math.random() * (Math.PI * 0.4);
+          const dist = (6 + Math.random() * 25) * scale;
+          const dotR = (0.4 + Math.random() * 1.0) * scale;
+          oCtx.globalAlpha = 0.25 + Math.random() * 0.5;
+          oCtx.beginPath();
+          oCtx.arc(sprayOX + Math.cos(angle) * dist, sprayOY + Math.sin(angle) * dist, dotR, 0, Math.PI * 2);
+          oCtx.fill();
+        }
+        oCtx.globalAlpha = 1.0;
+        oCtx.restore();
+
+        // ─── 2. "HUDA ESSENCE" brand text ───
+        const brandY = rectY + rectH * 0.42;
+        const brandFontSize = Math.round(rectH * 0.065);
+        oCtx.fillStyle = goldGrad;
+        oCtx.font = `600 ${brandFontSize}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = (3.5 * scale) + 'px';
+        oCtx.fillText('HUDA ESSENCE', centerX, brandY);
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = '0px';
+
+        // ─── 3. Decorative lines with center heart ───
+        const heartY = rectY + rectH * 0.50;
+        const lineLen = rectW * 0.17;
+        const hs = rectH * 0.018;
+
+        // Left line
+        oCtx.strokeStyle = goldGrad;
+        oCtx.lineWidth = 0.8 * scale;
+        oCtx.beginPath();
+        oCtx.moveTo(centerX - 12 * scale, heartY);
+        oCtx.lineTo(centerX - 12 * scale - lineLen, heartY);
+        oCtx.stroke();
+        // Right line
+        oCtx.beginPath();
+        oCtx.moveTo(centerX + 12 * scale, heartY);
+        oCtx.lineTo(centerX + 12 * scale + lineLen, heartY);
+        oCtx.stroke();
+
+        // Heart
+        oCtx.save();
+        oCtx.fillStyle = goldGrad;
+        oCtx.beginPath();
+        oCtx.moveTo(centerX, heartY + hs * 0.8);
+        oCtx.bezierCurveTo(centerX - hs * 1.3, heartY - hs * 0.2, centerX - hs * 0.7, heartY - hs * 1.0, centerX, heartY - hs * 0.05);
+        oCtx.bezierCurveTo(centerX + hs * 0.7, heartY - hs * 1.0, centerX + hs * 1.3, heartY - hs * 0.2, centerX, heartY + hs * 0.8);
+        oCtx.closePath();
+        oCtx.fill();
+        oCtx.restore();
+
+        // ─── 4. "INSPIRED BY" ───
+        const inspLabelY = rectY + rectH * 0.59;
+        const inspFontSize = Math.round(rectH * 0.032);
+        oCtx.font = `500 ${inspFontSize}px 'Instrument Sans', 'Arial', sans-serif`;
+        oCtx.fillStyle = goldGradLight;
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = (2.2 * scale) + 'px';
+        oCtx.fillText('INSPIRED BY', centerX, inspLabelY);
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = '0px';
+
+        // ─── 5. Dynamic Perfume Name (From Website Product Data) ───
+        const nameText = product.name.toUpperCase();
+        const maxWidth = rectW - 40 * scale;
+        const nameTargetY = rectY + rectH * 0.70;
+
+        let fontSize = 24 * scale;
+        let lineHeight = 28 * scale;
+        let lines: string[] = [];
+
+        for (let size = 24; size >= 12; size -= 1) {
+          oCtx.font = `italic 600 ${Math.round(size * scale)}px 'Cormorant Garamond', 'Times New Roman', serif`;
+          lines = [];
           const words = nameText.split(/\s+/);
           let currentLine = words[0] || '';
-          let fits = true;
+          let ok = true;
 
           for (let i = 1; i < words.length; i++) {
             const testLine = currentLine + " " + words[i];
-            if (ctx.measureText(testLine).width <= maxTextWidth) {
+            if (oCtx.measureText(testLine).width <= maxWidth) {
               currentLine = testLine;
             } else {
-              nameLines.push(currentLine);
+              lines.push(currentLine);
               currentLine = words[i];
-              if (ctx.measureText(words[i]).width > maxTextWidth) fits = false;
+              if (oCtx.measureText(words[i]).width > maxWidth) ok = false;
             }
           }
-          if (currentLine) nameLines.push(currentLine);
+          if (currentLine) lines.push(currentLine);
 
-          if (fits && nameLines.length <= (nameText.length > 25 ? 3 : 2)) {
-            nameFontSize = size * scale;
-            nameLineHeight = (size + 4) * scale;
+          if (ok && lines.length <= (nameText.length > 25 ? 3 : 2)) {
+            fontSize = size * scale;
+            lineHeight = (size + 4) * scale;
             break;
           }
         }
 
-        ctx.save();
-        ctx.font = `italic 600 ${Math.round(nameFontSize)}px 'Cormorant Garamond', 'Times New Roman', serif`;
-        ctx.fillStyle = goldGrad;
-        ctx.shadowColor = 'rgba(232, 192, 106, 0.45)';
-        ctx.shadowBlur = 3.0 * scale;
+        oCtx.save();
+        oCtx.font = `italic 600 ${Math.round(fontSize)}px 'Cormorant Garamond', 'Times New Roman', serif`;
+        oCtx.fillStyle = goldGrad;
+        oCtx.shadowColor = 'rgba(212, 169, 90, 0.25)';
+        oCtx.shadowBlur = 2.5 * scale;
 
-        const totalNameHeight = nameLines.length * nameLineHeight;
-        const nameStartY = nameAreaTop + (nameLineHeight / 2);
-        nameLines.forEach((line, index) => {
-          ctx.fillText(line, centerX, nameStartY + (index * nameLineHeight));
+        const totalHeight = lines.length * lineHeight;
+        const nameStartY = nameTargetY - totalHeight / 2 + lineHeight / 2;
+        lines.forEach((line, index) => {
+          oCtx.fillText(line, centerX, nameStartY + (index * lineHeight));
         });
-        ctx.restore();
+        oCtx.restore();
 
         // ─── 6. "EXTRAIT DE PARFUM" ───
-        const edpY = nameStartY + totalNameHeight + 16 * scale;
-        ctx.font = `500 ${Math.round(8.5 * scale)}px 'Instrument Sans', 'Arial', sans-serif`;
-        ctx.fillStyle = goldGradLight;
-        ctx.globalAlpha = 0.82;
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = (2.0 * scale) + 'px';
-        ctx.fillText('EXTRAIT DE PARFUM', centerX, edpY);
+        const edpY = rectY + rectH * 0.84;
+        oCtx.font = `400 ${Math.round(rectH * 0.024)}px 'Instrument Sans', 'Arial', sans-serif`;
+        oCtx.fillStyle = goldGradLight;
+        oCtx.globalAlpha = 0.8;
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = (1.5 * scale) + 'px';
+        oCtx.fillText('EXTRAIT DE PARFUM', centerX, edpY);
 
         // ─── 7. "50ML | 1.7 FL.OZ" ───
-        const sizeY = edpY + 16 * scale;
-        ctx.font = `400 ${Math.round(7.8 * scale)}px 'Instrument Sans', 'Arial', sans-serif`;
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = (1.4 * scale) + 'px';
-        ctx.fillText('50ML | 1.7 FL.OZ', centerX, sizeY);
+        const sizeTextY = rectY + rectH * 0.91;
+        oCtx.font = `400 ${Math.round(rectH * 0.020)}px 'Instrument Sans', 'Arial', sans-serif`;
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = (1.2 * scale) + 'px';
+        oCtx.fillText('50ML | 1.7 FL.OZ', centerX, sizeTextY);
 
         // Reset state
-        ctx.globalAlpha = 1.0;
-        if ('letterSpacing' in ctx) (ctx as any).letterSpacing = '0px';
-        ctx.shadowColor = 'transparent';
-        ctx.shadowBlur = 0;
+        oCtx.globalAlpha = 1.0;
+        if ('letterSpacing' in oCtx) (oCtx as any).letterSpacing = '0px';
+        oCtx.shadowColor = 'transparent';
+        oCtx.shadowBlur = 0;
 
-        // ─── 8. NATURAL GLASS SPECULAR HIGHLIGHT REFLECTION ───
+        // ─── Subtle diagonal gloss reflection ───
+        oCtx.save();
+        drawRoundedRect(oCtx, rectX, rectY, rectW, rectH, 14 * scale);
+        oCtx.clip();
+
+        const reflectGrad = oCtx.createLinearGradient(rectX, rectY, rectX + rectW, rectY + rectH);
+        reflectGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+        reflectGrad.addColorStop(0.38, 'rgba(255, 255, 255, 0)');
+        reflectGrad.addColorStop(0.50, 'rgba(255, 255, 255, 0.05)');
+        reflectGrad.addColorStop(0.62, 'rgba(255, 255, 255, 0)');
+        reflectGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+        oCtx.fillStyle = reflectGrad;
+        oCtx.beginPath();
+        oCtx.moveTo(rectX, rectY);
+        oCtx.lineTo(rectX + rectW * 0.6, rectY);
+        oCtx.lineTo(rectX + rectW, rectY + rectH);
+        oCtx.lineTo(rectX + rectW * 0.4, rectY + rectH);
+        oCtx.closePath();
+        oCtx.fill();
+        oCtx.restore();
+
+        // ────────── WARP AND BEND ONTO MAIN CANVAS ──────────
         ctx.save();
-        ctx.globalAlpha = 0.055;
-        const glassShine = ctx.createLinearGradient(
-          centerX - 140 * scale, 390 * scale,
-          centerX + 140 * scale, 760 * scale
-        );
-        glassShine.addColorStop(0, 'rgba(255, 255, 255, 0)');
-        glassShine.addColorStop(0.35, 'rgba(255, 255, 255, 0)');
-        glassShine.addColorStop(0.48, 'rgba(255, 255, 255, 0.7)');
-        glassShine.addColorStop(0.52, 'rgba(255, 255, 255, 1.0)');
-        glassShine.addColorStop(0.56, 'rgba(255, 255, 255, 0.7)');
-        glassShine.addColorStop(0.70, 'rgba(255, 255, 255, 0)');
-        glassShine.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        ctx.shadowColor = 'rgba(15, 10, 5, 0.22)';
+        ctx.shadowBlur = 10 * scale;
+        ctx.shadowOffsetX = 1 * scale;
+        ctx.shadowOffsetY = 3 * scale;
 
-        ctx.fillStyle = glassShine;
+        const bendAmount = 4.5 * scale;
+        const thetaMax = 0.38;
+        const sinThetaMax = Math.sin(thetaMax);
+
+        ctx.fillStyle = '#0e0e0e';
         ctx.beginPath();
-        ctx.moveTo(centerX - 80 * scale, 380 * scale);
-        ctx.lineTo(centerX + 60 * scale, 380 * scale);
-        ctx.lineTo(centerX + 110 * scale, 760 * scale);
-        ctx.lineTo(centerX - 30 * scale, 760 * scale);
+        for (let x = 0; x <= rectW; x++) {
+          const normX = (x - rectW / 2) / (rectW / 2);
+          const yShift = bendAmount * (1 - normX * normX);
+          if (x === 0) ctx.moveTo(rectX + x, rectY + yShift);
+          else ctx.lineTo(rectX + x, rectY + yShift);
+        }
+        ctx.lineTo(rectX + rectW, rectY + rectH);
+        for (let x = rectW; x >= 0; x--) {
+          const normX = (x - rectW / 2) / (rectW / 2);
+          const yShift = bendAmount * (1 - normX * normX);
+          ctx.lineTo(rectX + x, rectY + rectH + yShift);
+        }
         ctx.closePath();
         ctx.fill();
         ctx.restore();
 
-        // ─── 9. EXPORT & CACHE RESULT ───
+        for (let x = 0; x < rectW; x++) {
+          const targetDX = x - rectW / 2;
+          const normX = targetDX / (rectW / 2);
+          
+          const sinTheta = normX * sinThetaMax;
+          const theta = Math.asin(sinTheta);
+          const srcNormX = theta / thetaMax;
+          const srcX = rectX + (rectW / 2) + srcNormX * (rectW / 2);
+          
+          const yShift = bendAmount * (1 - normX * normX);
+          
+          ctx.drawImage(
+            offscreen,
+            srcX, rectY, 1, rectH,
+            rectX + x, rectY + yShift, 1, rectH
+          );
+        }
+
         try {
-          const dataUrl = canvas.toDataURL('image/jpeg', 0.94);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
           imageCache[product.id] = dataUrl;
           setSrc(dataUrl);
         } catch (err) {
           console.error('Failed to export canvas image:', err);
-          setSrc(MASTER_BOTTLE_BASE);
+          setSrc(baseImgPath);
         }
       };
 
       img.onerror = () => {
-        console.error('Failed to load master bottle base image');
-        setSrc(MASTER_BOTTLE_BASE);
+        console.error('Failed to load background image:', bgSrc);
+        setSrc(baseImgPath);
       };
 
-      img.src = MASTER_BOTTLE_BASE;
+      img.src = bgSrc;
     };
 
-    drawDirectToGlass();
+    drawCanvasTemplate();
   }, [product]);
 
   return src ? (
     <img src={src} alt={product.name} className={className} onClick={onClick} loading="lazy" />
   ) : (
-    // Fallback luxury shimmer placeholder while canvas renders
-    <div className={`bg-[#12100e] animate-pulse ${className}`} onClick={onClick} />
+    // Fallback while canvas is drawing
+    <div className={`bg-[#181512] animate-pulse ${className}`} onClick={onClick} />
   );
 }
