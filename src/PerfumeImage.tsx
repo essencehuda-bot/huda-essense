@@ -172,9 +172,10 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
     const baseImgPath = getScentThemeTemplate(product);
 
     const drawCanvasTemplate = () => {
-      // Load the transparent .png bottle image for clear/transparent background
+      // Load the original unique photographed bottle image (.jpeg) as the background template!
+      // This preserves the unique bottle shape, cap, shadows, and background photographed in the studio.
       const bgSrc = (product.image && !product.image.startsWith('data:image/'))
-        ? product.image.replace(/\.jpeg$/, '.png')
+        ? product.image.replace(/\.png$/, '.jpeg')
         : (product.image || baseImgPath);
 
       const img = new Image();
@@ -249,7 +250,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         goldGradLight.addColorStop(0.5, '#d4a95a');
         goldGradLight.addColorStop(1, '#b08d46');
 
-        // ─── Black label background (fully opaque — covers old sticker completely) ───
+        // ─── Black label background ───
         const labelBgGrad = oCtx.createLinearGradient(rectX, 0, rectX + rectW, 0);
         labelBgGrad.addColorStop(0, '#080808');
         labelBgGrad.addColorStop(0.1, '#0f0f0f');
@@ -548,7 +549,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         }
 
         try {
-          const dataUrl = canvas.toDataURL('image/png');
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
           imageCache[product.id] = dataUrl;
           setSrc(dataUrl);
         } catch (err) {
