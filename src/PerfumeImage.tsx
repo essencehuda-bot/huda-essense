@@ -565,8 +565,8 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
       img.src = bgSrc;
     };
 
-    // Always draw dynamically on the client-side to apply the premium label design directly
-    const isPreRendered = false;
+    // Images are pre-rendered with AI - load them directly without canvas processing
+    const isPreRendered = true;
 
     if (isPreRendered) {
       const img = new Image();
