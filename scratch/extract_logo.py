@@ -1,64 +1,61 @@
-import cv2
-import numpy as np
 from PIL import Image
+import numpy as np
 
-# Path to the uploaded reference image
 img_path = r"C:\Users\Asif\.gemini\antigravity-ide\brain\3bd53ed1-30b4-49b0-aca9-8005b7a436c1\.user_uploaded\media_1787110102456.jpg"
 
-# Load image
-img = cv2.imread(img_path)
-h, w, _ = img.shape
+img = Image.open(img_path).convert("RGBA")
+arr = np.array(img, dtype=np.float32)
 
-# Convert to HSV and LAB
-hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+r = arr[:, :, 0]
+g = arr[:, :, 1]
+b = arr[:, :, 2]
 
-# The checkerboard consists of neutral grey/white pixels (low saturation in HSV and a/b channels in LAB near 128)
-# Gold pixels have high yellow/orange hue and significant saturation/chroma
-# Specifically, in HSV: Hue ~ 10-45 (yellow/gold/amber), Saturation > 25
-# Or in LAB: b* (yellow-blue channel) > 135
+# Measure saturation / warm color distance from grey
+# Grey pixels have r ≈ g ≈ b
+# Gold pixels have r > g > b, strong warmth (r - b is high, r - g is moderate)
+rg_diff = r - g
+rb_diff = r - b
+gb_diff = g - b
 
-# Let's inspect saturation and yellow-blue channel
-sat = hsv[:, :, 1]
-b_chan = lab[:, :, 2]
-a_chan = lab[:, :, 1]
+# Color distance from neutral
+max_c = np.maximum(np.maximum(r, g), b)
+min_c = np.minimum(np.minimum(r, g), b)
+saturation = np.where(max_c > 0, (max_c - min_c) / max_c, 0) * 255.0
 
-# Chroma distance from neutral (128, 128 in LAB)
-chroma = np.sqrt((a_chan.astype(np.float32) - 128)**2 + (b_chan.astype(np.float32) - 128)**2)
+# Gold color criteria:
+# 1. Warmth: rb_diff > 20 and r > 100
+# 2. Saturation: saturation > 25
+# 3. Non-grey: (max_c - min_c) > 15
+warmth = (rb_diff > 18) & (r > 80)
+is_gold = warmth & (saturation > 20) & ((max_c - min_c) > 12)
 
-# Gold has high chroma and positive b_chan (yellow)
-# Also spray particles might have slight warmth
-gold_mask = (b_chan > 132) | (sat > 30) | (chroma > 8)
+# Compute smooth alpha
+alpha = np.zeros_like(r)
+# Ramp from 12 to 35 difference
+alpha_diff = np.clip((rb_diff - 12) / 20.0, 0, 1)
+alpha_sat = np.clip((saturation - 15) / 25.0, 0, 1)
+alpha = alpha_diff * alpha_sat * 255.0
 
-# Smooth alpha transition
-alpha = np.clip((chroma - 5) / 12.0 * 255.0, 0, 255).astype(np.uint8)
+# Strong gold is fully opaque
+alpha[(rb_diff > 28) & (saturation > 30)] = 255.0
+alpha[~warmth] = 0.0
 
-# Keep strong gold fully opaque
-alpha[chroma > 18] = 255
-alpha[b_chan > 140] = 255
-alpha[chroma < 4] = 0
+# Clean up edges and set alpha
+arr[:, :, 3] = np.clip(alpha, 0, 255)
 
-# Convert BGR to RGBA
-b, g, r = cv2.split(img)
-rgba = cv2.merge([r, g, b, alpha])
-
-# Save as PNG
-out_img = Image.fromarray(rgba)
-
-# Crop transparent borders if needed
+out_img = Image.fromarray(arr.astype(np.uint8))
 bbox = out_img.getbbox()
 if bbox:
-    # Add a slight padding
-    pad = 10
+    pad = 12
     crop_box = (
         max(0, bbox[0] - pad),
         max(0, bbox[1] - pad),
-        min(w, bbox[2] + pad),
-        min(h, bbox[3] + pad)
+        min(out_img.width, bbox[2] + pad),
+        min(out_img.height, bbox[3] + pad)
     )
     cropped = out_img.crop(crop_box)
 else:
     cropped = out_img
 
 cropped.save(r"c:\Users\Asif\Downloads\huda-essense\public\images\huda_essence_logo.png")
-print("Saved public/images/huda_essence_logo.png with size:", cropped.size)
+print("Successfully saved public/images/huda_essence_logo.png with size:", cropped.size)
