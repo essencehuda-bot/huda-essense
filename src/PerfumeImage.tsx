@@ -333,56 +333,43 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         oCtx.fillStyle = goldGradLight;
         oCtx.fillText('E', centerX + monoFontSize * 0.30, monoY);
 
-        // ─── Perfume bottle icon on top of the H ───
+        // ─── Elegant Gold Crown on top of the HE Monogram ───
         oCtx.save();
         oCtx.fillStyle = goldGrad;
         oCtx.strokeStyle = goldGrad;
-        const bx = centerX - monoFontSize * 0.04;
-        const by = monoY - monoFontSize * 0.62;
-        const bw = monoFontSize * 0.17;
-        const bh = monoFontSize * 0.28;
+        
+        const crownX = centerX + monoFontSize * 0.015;
+        const crownY = monoY - monoFontSize * 0.52;
+        const crownW = monoFontSize * 0.40;
+        const crownH = monoFontSize * 0.28;
 
-        // Bottle body
-        oCtx.lineWidth = 1.0 * scale;
         oCtx.beginPath();
-        oCtx.moveTo(bx - bw * 0.7, by);
-        oCtx.lineTo(bx - bw * 0.45, by - bh * 0.3);
-        oCtx.lineTo(bx + bw * 0.45, by - bh * 0.3);
-        oCtx.lineTo(bx + bw * 0.7, by);
-        oCtx.lineTo(bx + bw * 0.7, by + bh * 0.55);
-        oCtx.lineTo(bx - bw * 0.7, by + bh * 0.55);
-        oCtx.closePath();
-        oCtx.stroke();
-
-        // Bottle cap
-        oCtx.fillRect(bx - bw * 0.3, by - bh * 0.55, bw * 0.6, bh * 0.25);
-
-        // Cap diamond
-        oCtx.beginPath();
-        oCtx.moveTo(bx, by - bh * 0.55);
-        oCtx.lineTo(bx + bw * 0.22, by - bh * 0.65);
-        oCtx.lineTo(bx, by - bh * 0.78);
-        oCtx.lineTo(bx - bw * 0.22, by - bh * 0.65);
+        // Crown Base
+        oCtx.moveTo(crownX - crownW / 2, crownY + crownH / 2);
+        oCtx.lineTo(crownX + crownW / 2, crownY + crownH / 2);
+        // Right side up
+        oCtx.lineTo(crownX + crownW / 2, crownY + crownH / 5);
+        // Outer right peak
+        oCtx.lineTo(crownX + crownW * 0.35, crownY - crownH / 3);
+        // Inner right dip
+        oCtx.lineTo(crownX + crownW * 0.18, crownY + crownH / 6);
+        // Center main peak
+        oCtx.lineTo(crownX, crownY - crownH / 2);
+        // Inner left dip
+        oCtx.lineTo(crownX - crownW * 0.18, crownY + crownH / 6);
+        // Outer left peak
+        oCtx.lineTo(crownX - crownW * 0.35, crownY - crownH / 3);
+        // Left side down
+        oCtx.lineTo(crownX - crownW / 2, crownY + crownH / 5);
         oCtx.closePath();
         oCtx.fill();
-        oCtx.restore();
 
-        // ─── Spray dots ───
-        oCtx.save();
-        oCtx.fillStyle = goldGrad;
-        const sprayOX = bx + bw * 0.7;
-        const sprayOY = by - bh * 0.5;
-
-        for (let i = 0; i < 30; i++) {
-          const angle = -Math.PI * 0.35 + Math.random() * (Math.PI * 0.4);
-          const dist = (6 + Math.random() * 25) * scale;
-          const dotR = (0.4 + Math.random() * 1.0) * scale;
-          oCtx.globalAlpha = 0.25 + Math.random() * 0.5;
-          oCtx.beginPath();
-          oCtx.arc(sprayOX + Math.cos(angle) * dist, sprayOY + Math.sin(angle) * dist, dotR, 0, Math.PI * 2);
-          oCtx.fill();
-        }
-        oCtx.globalAlpha = 1.0;
+        // Jewels/dots on peaks
+        oCtx.beginPath();
+        oCtx.arc(crownX, crownY - crownH / 2, crownW * 0.07, 0, Math.PI * 2);
+        oCtx.arc(crownX - crownW * 0.35, crownY - crownH / 3, crownW * 0.06, 0, Math.PI * 2);
+        oCtx.arc(crownX + crownW * 0.35, crownY - crownH / 3, crownW * 0.06, 0, Math.PI * 2);
+        oCtx.fill();
         oCtx.restore();
 
         // ─── 2. "HUDA ESSENCE" brand text (at ~42% of sticker) ───
@@ -398,31 +385,33 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
           (oCtx as any).letterSpacing = '0px';
         }
 
-        // ─── 3. Decorative lines with heart (at ~50%) ───
+        // ─── 3. Decorative lines with Diamond Divider (at ~50%) ───
         const heartY = rectY + rectH * 0.50;
-        const lineLen = rectW * 0.17;
-        const hs = rectH * 0.018;
+        const lineLen = rectW * 0.18;
+        const hs = rectH * 0.012; // Diamond half-size
 
         // Left line
         oCtx.strokeStyle = goldGrad;
         oCtx.lineWidth = 0.8 * scale;
         oCtx.beginPath();
-        oCtx.moveTo(centerX - 12 * scale, heartY);
-        oCtx.lineTo(centerX - 12 * scale - lineLen, heartY);
+        oCtx.moveTo(centerX - 14 * scale, heartY);
+        oCtx.lineTo(centerX - 14 * scale - lineLen, heartY);
         oCtx.stroke();
+        
         // Right line
         oCtx.beginPath();
-        oCtx.moveTo(centerX + 12 * scale, heartY);
-        oCtx.lineTo(centerX + 12 * scale + lineLen, heartY);
+        oCtx.moveTo(centerX + 14 * scale, heartY);
+        oCtx.lineTo(centerX + 14 * scale + lineLen, heartY);
         oCtx.stroke();
 
-        // Heart
+        // Center Diamond (◆)
         oCtx.save();
         oCtx.fillStyle = goldGrad;
         oCtx.beginPath();
-        oCtx.moveTo(centerX, heartY + hs * 0.8);
-        oCtx.bezierCurveTo(centerX - hs * 1.3, heartY - hs * 0.2, centerX - hs * 0.7, heartY - hs * 1.0, centerX, heartY - hs * 0.05);
-        oCtx.bezierCurveTo(centerX + hs * 0.7, heartY - hs * 1.0, centerX + hs * 1.3, heartY - hs * 0.2, centerX, heartY + hs * 0.8);
+        oCtx.moveTo(centerX, heartY - hs);
+        oCtx.lineTo(centerX + hs, heartY);
+        oCtx.lineTo(centerX, heartY + hs);
+        oCtx.lineTo(centerX - hs, heartY);
         oCtx.closePath();
         oCtx.fill();
         oCtx.restore();
