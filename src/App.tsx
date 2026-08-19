@@ -204,7 +204,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Birch",
             "Patchouli",
             "Moroccan Jasmine",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Musk",
@@ -669,7 +669,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Cinnamon",
             "Spicy Notes",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Amber",
@@ -799,7 +799,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Patchouli",
             "Teak Wood",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Vanilla",
@@ -1040,7 +1040,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "reviews": 729
     },
     {
-        "id": "tom-ford-ombre-leather",
+        "id": "tom-ford-ombrée-leather",
         "name": "Tom Ford Ombre Leather",
         "inspiredBy": "Ombre Leather by Tom Ford",
         "gender": "Men",
@@ -1059,7 +1059,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Patchouli"
         ],
         "mood": "raw \u2022 wild \u2022 luxurious",
-        "image": "/images/huda-essence-tom-ford-ombre-leather.jpg",
+        "image": "/images/huda-essence-tom-ford-ombrée-leather.jpg",
         "bestseller": true,
         "story": "A rich, smoky leather fragrance that captures the wide-open spaces of the American West.",
         "sizes": [
@@ -1218,7 +1218,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Cinnamon",
             "Jasmine",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Vanilla",
@@ -1685,7 +1685,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "family": "Citrus Aromatic",
         "top": [
             "Lemon",
-            "Rosemary",
+            "Roséemary",
             "Bergamot",
             "Neroli"
         ],
@@ -1780,7 +1780,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Birch",
             "Jasmine",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Musk",
@@ -1944,7 +1944,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "concentration": "Eau de Parfum",
         "family": "Amber Woody",
         "top": [
-            "Rose",
+            "Rosée",
             "Saffron",
             "Pimento"
         ],
@@ -1992,7 +1992,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "heart": [
             "Jasmine",
-            "Rose",
+            "Rosée",
             "Patchouli"
         ],
         "base": [
@@ -2194,7 +2194,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "heart": [
             "Osmanthus",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Sandalwood",
@@ -2271,7 +2271,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "heart": [
             "Coriander",
-            "Damask Rose",
+            "Damask Rosée",
             "Jasmine"
         ],
         "base": [
@@ -2311,14 +2311,14 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Mandarin"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Peony",
             "Iris"
         ],
         "base": [
             "Patchouli",
             "Musk",
-            "Rosewood"
+            "Roséewood"
         ],
         "mood": "feminine \u2022 fresh \u2022 romantic",
         "image": "/images/huda-essence-miss-dior.jpg",
@@ -2357,7 +2357,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Jasmine",
             "Lily of the Valley",
             "Tuberose",
-            "Rose",
+            "Rosée",
             "Orchid"
         ],
         "base": [
@@ -2399,8 +2399,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Lemon"
         ],
         "heart": [
-            "Damask Rose",
-            "Grasse Rose",
+            "Damask Rosée",
+            "Grasse Rosée",
             "Orange Blossom"
         ],
         "base": [
@@ -2442,7 +2442,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Bergamot"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Jasmine"
         ],
         "base": [
@@ -2878,7 +2878,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Freesia"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Sandalwood",
             "Iris"
         ],
@@ -3114,8 +3114,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
     },
     {
         "id": "212-vip-rose",
-        "name": "212 VIP Rose",
-        "inspiredBy": "212 VIP Ros\u00e9 by Carolina Herrera",
+        "name": "212 VIP Rosée",
+        "inspiredBy": "212 VIP Rosé\u00e9 by Carolina Herrera",
         "gender": "Women",
         "concentration": "Eau de Parfum",
         "family": "Floral Fruity",
@@ -3206,8 +3206,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Bergamot"
         ],
         "heart": [
-            "Turkish Rose",
-            "Rose de Mai",
+            "Turkish Rosée",
+            "Rosée de Mai",
             "Indian Jasmine"
         ],
         "base": [
@@ -3250,7 +3250,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Bamboo",
             "Jasmine",
-            "White Rose"
+            "White Rosée"
         ],
         "base": [
             "Cedar",
@@ -3330,7 +3330,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Lotus",
             "Melon",
             "Freesia",
-            "Rose water"
+            "Rosée water"
         ],
         "heart": [
             "Lily",
@@ -3416,7 +3416,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Jasmine",
             "African Orange Flower",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Musk"
@@ -3443,8 +3443,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
     },
     {
         "id": "tea-rose",
-        "name": "Tea Rose",
-        "inspiredBy": "Tea Rose by Perfumer's Workshop",
+        "name": "Tea Rosée",
+        "inspiredBy": "Tea Rosée by Perfumer's Workshop",
         "gender": "Women",
         "concentration": "Eau de Parfum",
         "family": "Floral",
@@ -3452,7 +3452,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Green Leaves"
         ],
         "heart": [
-            "Tea Rose",
+            "Tea Rosée",
             "Chamomile"
         ],
         "base": [
@@ -3495,7 +3495,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Musk",
             "Jasmine",
             "Lily",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Musk",
@@ -3531,7 +3531,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "concentration": "Eau de Parfum",
         "family": "Amber Floral",
         "top": [
-            "Rose",
+            "Rosée",
             "Orange Blossom",
             "Peach",
             "Plum"
@@ -3745,7 +3745,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Peach"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Jasmine",
             "Geranium",
             "Litchi"
@@ -3911,7 +3911,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Tuberose",
             "Jasmine",
             "Gardenia",
-            "Rose",
+            "Rosée",
             "Ylang-Ylang"
         ],
         "base": [
@@ -3989,7 +3989,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "top": [
             "Champagne",
             "Strawberry",
-            "Rose",
+            "Rosée",
             "Tangerine"
         ],
         "heart": [
@@ -4077,7 +4077,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Peach"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Lily"
         ],
         "base": [
@@ -4117,7 +4117,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "heart": [
             "Jasmine",
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Amber",
@@ -4232,7 +4232,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Bergamot"
         ],
         "heart": [
-            "Turkish Rose",
+            "Turkish Rosée",
             "Peony"
         ],
         "base": [
@@ -4479,7 +4479,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Saffron"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Jasmine",
             "Patchouli"
         ],
@@ -4548,7 +4548,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "reviews": 642
     },
     {
-        "id": "ombre-nomade",
+        "id": "ombrée-nomade",
         "name": "Ombre Nomade",
         "inspiredBy": "Ombre Nomade by Louis Vuitton",
         "gender": "Unisex",
@@ -4560,7 +4560,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "heart": [
             "Incense",
-            "Rose",
+            "Rosée",
             "Saffron"
         ],
         "base": [
@@ -4569,7 +4569,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Benzoin"
         ],
         "mood": "dark \u2022 majestic \u2022 opulent",
-        "image": "/images/huda-essence-ombre-nomade.jpg",
+        "image": "/images/huda-essence-ombrée-nomade.jpg",
         "bestseller": true,
         "story": "An opulent, dark fragrance designed for lovers of rare essences. Rich oud meets smoky incense.",
         "sizes": [
@@ -4597,7 +4597,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "concentration": "Eau de Parfum",
         "family": "Amber Woody",
         "top": [
-            "Rose",
+            "Rosée",
             "Saffron"
         ],
         "heart": [
@@ -4682,7 +4682,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "White Musk"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Lily"
         ],
         "base": [
@@ -4762,7 +4762,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "heart": [
             "Lavender",
             "Sage",
-            "Rosemary"
+            "Roséemary"
         ],
         "base": [
             "Vetiver",
@@ -4971,7 +4971,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Mandarin Orange"
         ],
         "heart": [
-            "Rose"
+            "Rosée"
         ],
         "base": [
             "Oud",
@@ -5010,7 +5010,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             "Floral Notes"
         ],
         "heart": [
-            "Rose",
+            "Rosée",
             "Coffee"
         ],
         "base": [
@@ -6210,7 +6210,7 @@ export default function App() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { name: "Fatima A.", city: "Karachi", text: "Tea Rose is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rose • 50ml", stars: 5 },
+            { name: "Fatima A.", city: "Karachi", text: "Tea Rosée is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rosée • 50ml", stars: 5 },
             { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 100ml", stars: 5 },
             { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 6 to 8 hours.", scent: "Armani Code + Miss Dior", stars: 5 },
           ].map((r, i) => (
