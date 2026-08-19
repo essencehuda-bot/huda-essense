@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ProductData } from './AdminPanel';
 
 type Product = ProductData;
@@ -9,7 +8,23 @@ interface Props {
   onClick?: () => void;
 }
 
-// Map product details to the correct clean template base image (fallback only)
+// Check if this product has a uniquely generated image with correct pre-printed name
+const UNIQUE_GENERATED_PRODUCTS = new Set([
+  'afnan-9-pm',
+  'dior-sauvage',
+  'bleu-de-chanel',
+  'chanel-allure-homme-sport',
+  'creed-aventus',
+  'creed-green-irish-tweed',
+  'creed-silver-mountain',
+  'armani-code',
+  'acqua-di-gio',
+  'stronger-with-you',
+  'ysl-y',
+  'la-nuit-de-l-homme'
+]);
+
+// Map product details to the correct clean template base image
 function getCleanTemplate(product: Product): string {
   const family = (product.family || '').toLowerCase();
   const name = (product.name || '').toLowerCase();
@@ -70,11 +85,13 @@ function getCleanTemplate(product: Product): string {
 }
 
 export default function PerfumeImage({ product, className, onClick }: Props) {
-  const [imgError, setImgError] = useState(false);
-
-  // Use product's pre-printed image if available, else construct path or fallback
-  const primaryImgSrc = product.image || `/images/huda-essence-${product.id}.jpg`;
-  const imgSrc = imgError ? getCleanTemplate(product) : primaryImgSrc;
+  const isUnique = UNIQUE_GENERATED_PRODUCTS.has(product.id);
+  
+  // For the 12 unique products with dedicated pre-printed bottle graphics, load their full image.
+  // For all others, load the clean base color template matching the fragrance theme.
+  const imgSrc = isUnique 
+    ? `/images/huda-essence-${product.id}.jpg`
+    : getCleanTemplate(product);
 
   return (
     <div 
@@ -88,11 +105,10 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         alt={product.name} 
         className="w-full h-full object-cover block"
         loading="lazy"
-        onError={() => setImgError(true)}
       />
       
-      {/* If fallback clean template is loaded, overlay perfume name dynamically */}
-      {imgError && (
+      {/* For all template-based bottles, overlay the EXACT matching perfume name dynamically */}
+      {!isUnique && (
         <div 
           className="absolute left-0 right-0 flex items-center justify-center pointer-events-none"
           style={{
