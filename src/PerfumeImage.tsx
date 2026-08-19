@@ -213,14 +213,8 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         const imgCtx = offscreenImg.getContext('2d');
         if (imgCtx) {
           imgCtx.drawImage(img, 0, 0);
-          const imgData = imgCtx.getImageData(0, 0, img.width, img.height);
           const pixels = imgData.data;
-
           for (let i = 0; i < pixels.length; i += 4) {
-            const pixelIndex = i / 4;
-            const y = Math.floor(pixelIndex / img.width);
-            const x = pixelIndex % img.width;
-
             const r = pixels[i];
             const g = pixels[i + 1];
             const b = pixels[i + 2];
