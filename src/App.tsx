@@ -5476,7 +5476,7 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 1338
-    }  }
+    }
 
 ];
 
