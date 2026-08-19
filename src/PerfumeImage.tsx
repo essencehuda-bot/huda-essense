@@ -74,11 +74,6 @@ function getColorTemplate(product: Product): string {
 
 export default function PerfumeImage({ product, className, onClick }: Props) {
   const imgSrc = getColorTemplate(product);
-  
-  // Extract "inspired by" name from product
-  const inspiredName = product.inspiredBy 
-    ? product.inspiredBy.replace(/^inspired by\s*/i, '').replace(/\s*by\s+\w+.*$/i, '').trim()
-    : product.name;
 
   return (
     <div 
