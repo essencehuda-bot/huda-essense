@@ -54,7 +54,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.9,
         "reviews": 142
-    }  },    {
+    },
+    {
         "id": "dior-sauvage",
         "name": "Dior Sauvage",
         "inspiredBy": "Sauvage by Dior",
@@ -96,7 +97,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "bleu-de-chanel",
         "name": "Bleu de Chanel",
         "inspiredBy": "Bleu de Chanel by Chanel",
@@ -141,7 +143,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "chanel-allure-homme-sport",
         "name": "Chanel Allure Homme Sport",
         "inspiredBy": "Allure Homme Sport by Chanel",
@@ -183,7 +186,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "creed-aventus",
         "name": "Creed Aventus",
         "inspiredBy": "Aventus by Creed",
@@ -228,7 +232,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "creed-green-irish-tweed",
         "name": "Creed Green Irish Tweed",
         "inspiredBy": "Green Irish Tweed by Creed",
@@ -265,7 +270,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "creed-silver-mountain",
         "name": "Creed Silver Mountain Water",
         "inspiredBy": "Silver Mountain Water by Creed",
@@ -305,7 +311,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "armani-code",
         "name": "Armani Code",
         "inspiredBy": "Armani Code by Giorgio Armani",
@@ -344,7 +351,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "acqua-di-gio",
         "name": "Acqua di Gio",
         "inspiredBy": "Acqua di Gio by Giorgio Armani",
@@ -388,7 +396,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "stronger-with-you",
         "name": "Stronger With You",
         "inspiredBy": "Stronger With You by Emporio Armani",
@@ -431,7 +440,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "ysl-y",
         "name": "YSL Y",
         "inspiredBy": "Y Eau de Parfum by Yves Saint Laurent",
@@ -474,7 +484,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "la-nuit-de-l-homme",
         "name": "La Nuit De L'Homme",
         "inspiredBy": "La Nuit de L'Homme by Yves Saint Laurent",
@@ -512,7 +523,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.85,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "versace-eros",
         "name": "Versace Eros",
         "inspiredBy": "Eros by Versace",
@@ -555,7 +567,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.86,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "versace-dylan-blue",
         "name": "Versace Dylan Blue",
         "inspiredBy": "Dylan Blue by Versace",
@@ -597,7 +610,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.87,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "versace-pour-homme",
         "name": "Versace Pour Homme",
         "inspiredBy": "Versace Pour Homme by Versace",
@@ -639,7 +653,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.88,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "paco-rabanne-1-million",
         "name": "Paco Rabanne 1 Million",
         "inspiredBy": "1 Million by Paco Rabanne",
@@ -682,7 +697,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.89,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "invictus",
         "name": "Invictus",
         "inspiredBy": "Invictus by Paco Rabanne",
@@ -723,7 +739,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.9,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "phantom",
         "name": "Phantom",
         "inspiredBy": "Phantom by Paco Rabanne",
@@ -765,7 +782,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.91,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "dunhill-desire-red",
         "name": "Dunhill Desire Red",
         "inspiredBy": "Desire Red by Alfred Dunhill",
@@ -806,7 +824,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.92,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "dunhill-icon",
         "name": "Dunhill Icon",
         "inspiredBy": "Icon by Alfred Dunhill",
@@ -848,7 +867,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.93,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "dunhill-century",
         "name": "Dunhill Century",
         "inspiredBy": "Century by Alfred Dunhill",
@@ -889,7 +909,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.94,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "hugo-boss-bottled",
         "name": "Hugo Boss Bottled",
         "inspiredBy": "Boss Bottled by Hugo Boss",
@@ -932,7 +953,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "boss-the-scent",
         "name": "Boss The Scent",
         "inspiredBy": "Boss The Scent by Hugo Boss",
@@ -971,7 +993,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "hugo-man",
         "name": "Hugo Man",
         "inspiredBy": "Hugo Man by Hugo Boss",
@@ -1015,7 +1038,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "tom-ford-ombre-leather",
         "name": "Tom Ford Ombre Leather",
         "inspiredBy": "Ombre Leather by Tom Ford",
@@ -1054,7 +1078,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "tom-ford-tuscan-leather",
         "name": "Tom Ford Tuscan Leather",
         "inspiredBy": "Tuscan Leather by Tom Ford",
@@ -1095,7 +1120,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "tom-ford-oud-wood",
         "name": "Tom Ford Oud Wood",
         "inspiredBy": "Oud Wood by Tom Ford",
@@ -1135,7 +1161,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "tom-ford-tobacco-vanille",
         "name": "Tom Ford Tobacco Vanille",
         "inspiredBy": "Tobacco Vanille by Tom Ford",
@@ -1174,7 +1201,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "ferrari-black",
         "name": "Ferrari Black",
         "inspiredBy": "Ferrari Black by Ferrari",
@@ -1217,7 +1245,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "jaguar-classic-black",
         "name": "Jaguar Classic Black",
         "inspiredBy": "Classic Black by Jaguar",
@@ -1260,7 +1289,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "jaguar-classic-gold",
         "name": "Jaguar Classic Gold",
         "inspiredBy": "Classic Gold by Jaguar",
@@ -1300,7 +1330,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "bentley-intense",
         "name": "Bentley Intense",
         "inspiredBy": "Bentley for Men Intense by Bentley",
@@ -1343,7 +1374,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.85,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "bentley-absolute",
         "name": "Bentley Absolute",
         "inspiredBy": "Bentley for Men Absolute by Bentley",
@@ -1384,7 +1416,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.86,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "davidoff-cool-water",
         "name": "Davidoff Cool Water",
         "inspiredBy": "Cool Water by Davidoff",
@@ -1428,7 +1461,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.87,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "ck-one",
         "name": "CK One",
         "inspiredBy": "CK One by Calvin Klein",
@@ -1470,7 +1504,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.88,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "ck-be",
         "name": "CK Be",
         "inspiredBy": "CK Be by Calvin Klein",
@@ -1513,7 +1548,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.89,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "mont-blanc-legend",
         "name": "Mont Blanc Legend",
         "inspiredBy": "Legend by Mont Blanc",
@@ -1554,7 +1590,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.9,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "mont-blanc-explorer",
         "name": "Mont Blanc Explorer",
         "inspiredBy": "Explorer by Mont Blanc",
@@ -1594,7 +1631,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.91,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "azzaro-wanted",
         "name": "Azzaro Wanted",
         "inspiredBy": "Wanted by Azzaro",
@@ -1637,7 +1675,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.92,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "azzaro-chrome",
         "name": "Azzaro Chrome",
         "inspiredBy": "Chrome by Azzaro",
@@ -1680,7 +1719,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.93,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "rasasi-hawas",
         "name": "Rasasi Hawas",
         "inspiredBy": "Hawas by Rasasi",
@@ -1723,7 +1763,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.94,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "armaf-club-de-nuit-intense",
         "name": "Armaf Club De Nuit Intense Man",
         "inspiredBy": "Club de Nuit Intense Man by Armaf",
@@ -1767,7 +1808,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "lattafa-asad",
         "name": "Lattafa Asad",
         "inspiredBy": "Asad by Lattafa",
@@ -1810,7 +1852,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "lattafa-khamrah",
         "name": "Lattafa Khamrah",
         "inspiredBy": "Khamrah by Lattafa",
@@ -1852,7 +1895,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "ameer-al-oud",
         "name": "Ameer Al Oud",
         "inspiredBy": "Ameer Al Oudh Intense Oud by Lattafa",
@@ -1891,7 +1935,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "oud-mood",
         "name": "Oud Mood",
         "inspiredBy": "Oud Mood by Lattafa",
@@ -1933,7 +1978,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "j-janan-gold",
         "name": "J. Janan Gold",
         "inspiredBy": "Janan Gold by J.",
@@ -1973,7 +2019,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "j-janan-platinum",
         "name": "J. Janan Platinum",
         "inspiredBy": "Janan Platinum by J.",
@@ -2012,7 +2059,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "bonanza-satrangi-pour-homme",
         "name": "Bonanza Satrangi Pour Homme",
         "inspiredBy": "Pour Homme by Bonanza Satrangi",
@@ -2051,7 +2099,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "scents-n-stories-hero",
         "name": "Scents N Stories Hero",
         "inspiredBy": "Hero by Scents N Stories",
@@ -2090,7 +2139,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "wb-by-hemani-prestige",
         "name": "WB by Hemani Prestige",
         "inspiredBy": "Prestige by WB by Hemani",
@@ -2129,7 +2179,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "gucci-flora",
         "name": "Gucci Flora",
         "inspiredBy": "Flora by Gucci",
@@ -2169,7 +2220,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "gucci-bloom",
         "name": "Gucci Bloom",
         "inspiredBy": "Gucci Bloom by Gucci",
@@ -2205,7 +2257,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "gucci-rush",
         "name": "Gucci Rush",
         "inspiredBy": "Gucci Rush by Gucci",
@@ -2245,7 +2298,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "miss-dior",
         "name": "Miss Dior",
         "inspiredBy": "Miss Dior by Dior",
@@ -2285,7 +2339,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "j-adore-dior",
         "name": "J'adore Dior",
         "inspiredBy": "J'adore by Dior",
@@ -2331,7 +2386,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "dior-poison-girl",
         "name": "Dior Poison Girl",
         "inspiredBy": "Poison Girl by Dior",
@@ -2373,7 +2429,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "chanel-coco-mademoiselle",
         "name": "Chanel Coco Mademoiselle",
         "inspiredBy": "Coco Mademoiselle by Chanel",
@@ -2414,7 +2471,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "chanel-chance",
         "name": "Chanel Chance",
         "inspiredBy": "Chance by Chanel",
@@ -2456,7 +2514,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "chanel-gabrielle",
         "name": "Chanel Gabrielle",
         "inspiredBy": "Gabrielle by Chanel",
@@ -2498,7 +2557,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "versace-bright-crystal",
         "name": "Versace Bright Crystal",
         "inspiredBy": "Bright Crystal by Versace",
@@ -2539,7 +2599,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "versace-crystal-noir",
         "name": "Versace Crystal Noir",
         "inspiredBy": "Crystal Noir by Versace",
@@ -2582,7 +2643,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.85,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "versace-yellow-diamond",
         "name": "Versace Yellow Diamond",
         "inspiredBy": "Yellow Diamond by Versace",
@@ -2625,7 +2687,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.86,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "ysl-libre",
         "name": "YSL Libre",
         "inspiredBy": "Libre by YSL",
@@ -2668,7 +2731,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.87,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "mon-paris",
         "name": "Mon Paris",
         "inspiredBy": "Mon Paris by YSL",
@@ -2711,7 +2775,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.88,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "black-opium",
         "name": "Black Opium",
         "inspiredBy": "Black Opium by YSL",
@@ -2755,7 +2820,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.89,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "burberry-her",
         "name": "Burberry Her",
         "inspiredBy": "Burberry Her by Burberry",
@@ -2798,7 +2864,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.9,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "burberry-body",
         "name": "Burberry Body",
         "inspiredBy": "Burberry Body by Burberry",
@@ -2840,7 +2907,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.91,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "victoria-s-secret-bombshell",
         "name": "Victoria's Secret Bombshell",
         "inspiredBy": "Bombshell by Victoria's Secret",
@@ -2885,7 +2953,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.92,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "bombshell-intense",
         "name": "Bombshell Intense",
         "inspiredBy": "Bombshell Intense by Victoria's Secret",
@@ -2920,7 +2989,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.93,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "bombshell-seduction",
         "name": "Bombshell Seduction",
         "inspiredBy": "Bombshell Seduction by Victoria's Secret",
@@ -2955,7 +3025,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.94,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "carolina-herrera-good-girl",
         "name": "Carolina Herrera Good Girl",
         "inspiredBy": "Good Girl by Carolina Herrera",
@@ -3001,7 +3072,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "good-girl-blush",
         "name": "Good Girl Blush",
         "inspiredBy": "Good Girl Blush by Carolina Herrera",
@@ -3039,7 +3111,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "212-vip-rose",
         "name": "212 VIP Rose",
         "inspiredBy": "212 VIP Ros\u00e9 by Carolina Herrera",
@@ -3077,7 +3150,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "lancome-la-vie-est-belle",
         "name": "Lanc\u00f4me La Vie Est Belle",
         "inspiredBy": "La Vie Est Belle by Lanc\u00f4me",
@@ -3119,7 +3193,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "idole",
         "name": "Id\u00f4le",
         "inspiredBy": "Id\u00f4le by Lanc\u00f4me",
@@ -3158,7 +3233,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "dolce-gabbana-light-blue",
         "name": "Dolce & Gabbana Light Blue",
         "inspiredBy": "Light Blue by Dolce & Gabbana",
@@ -3200,7 +3276,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "dolce-garden",
         "name": "Dolce Garden",
         "inspiredBy": "Dolce Garden by Dolce & Gabbana",
@@ -3241,7 +3318,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "issey-miyake-l-eau-d-issey",
         "name": "Issey Miyake L'Eau d'Issey",
         "inspiredBy": "L'Eau d'Issey by Issey Miyake",
@@ -3284,7 +3362,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "blue-lady",
         "name": "Blue Lady",
         "inspiredBy": "Blue Lady by Rasasi",
@@ -3321,7 +3400,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "chastity",
         "name": "Chastity",
         "inspiredBy": "Chastity Women by Rasasi",
@@ -3360,7 +3440,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "tea-rose",
         "name": "Tea Rose",
         "inspiredBy": "Tea Rose by Perfumer's Workshop",
@@ -3396,7 +3477,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.85,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "white-musk",
         "name": "White Musk",
         "inspiredBy": "White Musk by The Body Shop",
@@ -3440,7 +3522,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.86,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "red-door",
         "name": "Red Door",
         "inspiredBy": "Red Door by Elizabeth Arden",
@@ -3484,7 +3567,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.87,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "guess-seductive",
         "name": "Guess Seductive",
         "inspiredBy": "Guess Seductive by Guess",
@@ -3525,7 +3609,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.88,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "guess-girl",
         "name": "Guess Girl",
         "inspiredBy": "Guess Girl by Guess",
@@ -3565,7 +3650,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.89,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "escada-cherry-in-japan",
         "name": "Escada Cherry In Japan",
         "inspiredBy": "Cherry In Japan by Escada",
@@ -3600,7 +3686,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.9,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "escada-magnetism",
         "name": "Escada Magnetism",
         "inspiredBy": "Magnetism by Escada",
@@ -3643,7 +3730,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.91,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "armaf-club-de-nuit-women",
         "name": "Armaf Club De Nuit Women",
         "inspiredBy": "Club de Nuit Women by Armaf",
@@ -3687,7 +3775,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.92,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "ajmal-raindrops",
         "name": "Ajmal Raindrops",
         "inspiredBy": "Raindrops by Ajmal",
@@ -3724,7 +3813,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.93,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "ajmal-sacrifice-for-her",
         "name": "Ajmal Sacrifice For Her",
         "inspiredBy": "Sacrifice for Her by Ajmal",
@@ -3762,7 +3852,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.94,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "lattafa-yara",
         "name": "Lattafa Yara",
         "inspiredBy": "Yara by Lattafa",
@@ -3803,7 +3894,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "lattafa-fakhar-women",
         "name": "Lattafa Fakhar Women",
         "inspiredBy": "Fakhar Women by Lattafa",
@@ -3846,7 +3938,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "lattafa-ana-abiyedh-rouge",
         "name": "Lattafa Ana Abiyedh Rouge",
         "inspiredBy": "Ana Abiyedh Rouge by Lattafa",
@@ -3885,7 +3978,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "lattafa-haya",
         "name": "Lattafa Haya",
         "inspiredBy": "Haya by Lattafa",
@@ -3927,7 +4021,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "j-janan",
         "name": "J. Janan",
         "inspiredBy": "Janan by J.",
@@ -3969,7 +4064,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "bonanza-satrangi-femme",
         "name": "Bonanza Satrangi Femme",
         "inspiredBy": "Femme by Bonanza Satrangi",
@@ -4007,7 +4103,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "sapphire-femme",
         "name": "Sapphire Femme",
         "inspiredBy": "Femme by Sapphire",
@@ -4045,7 +4142,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "khaadi-bloom",
         "name": "Khaadi Bloom",
         "inspiredBy": "Bloom by Khaadi",
@@ -4082,7 +4180,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "wb-by-hemani-grace",
         "name": "WB by Hemani Grace",
         "inspiredBy": "Grace by WB by Hemani",
@@ -4120,7 +4219,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "scents-n-stories-belle",
         "name": "Scents N Stories Belle",
         "inspiredBy": "Belle by Scents N Stories",
@@ -4159,7 +4259,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "baccarat-rouge-540",
         "name": "Baccarat Rouge 540",
         "inspiredBy": "Baccarat Rouge 540 by Maison Francis Kurkdjian",
@@ -4198,7 +4299,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "ck-one-unisex",
         "name": "CK One (Unisex)",
         "inspiredBy": "CK One by Calvin Klein",
@@ -4240,7 +4342,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "tom-ford-oud-wood-unisex",
         "name": "Tom Ford Oud Wood (Unisex)",
         "inspiredBy": "Oud Wood by Tom Ford",
@@ -4281,7 +4384,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "tom-ford-neroli-portofino",
         "name": "Tom Ford Neroli Portofino",
         "inspiredBy": "Neroli Portofino by Tom Ford",
@@ -4322,7 +4426,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "tobacco-vanille",
         "name": "Tobacco Vanille",
         "inspiredBy": "Tobacco Vanille by Tom Ford",
@@ -4361,7 +4466,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "white-oud",
         "name": "White Oud",
         "inspiredBy": "White Oud by Huda Essence",
@@ -4401,7 +4507,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "ameer-al-oud-unisex",
         "name": "Ameer Al Oud (Unisex)",
         "inspiredBy": "Ameer Al Oudh by Lattafa",
@@ -4439,7 +4546,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "ombre-nomade",
         "name": "Ombre Nomade",
         "inspiredBy": "Ombre Nomade by Louis Vuitton",
@@ -4480,7 +4588,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "oud-mood-unisex",
         "name": "Oud Mood (Unisex)",
         "inspiredBy": "Oud Mood by Lattafa",
@@ -4519,7 +4628,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "amber-oud",
         "name": "Amber Oud",
         "inspiredBy": "Amber Oud by Al Haramain",
@@ -4560,7 +4670,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.84,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "musk-rijali",
         "name": "Musk Rijali",
         "inspiredBy": "Musk Rijali by Huda Essence",
@@ -4597,7 +4708,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.85,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "musk-al-tahara",
         "name": "Musk Al Tahara",
         "inspiredBy": "Musk Al Tahara by Huda Essence",
@@ -4635,7 +4747,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.86,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "sheikh-al-shuyukh",
         "name": "Sheikh Al Shuyukh",
         "inspiredBy": "Sheikh Al Shuyukh by Lattafa",
@@ -4674,7 +4787,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.87,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "lattafa-khamrah-unisex",
         "name": "Lattafa Khamrah (Unisex)",
         "inspiredBy": "Khamrah by Lattafa",
@@ -4715,7 +4829,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.88,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "nishane-hacivat",
         "name": "Nishane Hacivat",
         "inspiredBy": "Hacivat by Nishane",
@@ -4756,7 +4871,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.89,
         "reviews": 1338
-    }  },    {
+    },
+    {
         "id": "mancera-cedrat-boise",
         "name": "Mancera Cedrat Boise",
         "inspiredBy": "Cedrat Boise by Mancera",
@@ -4799,7 +4915,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.9,
         "reviews": 120
-    }  },    {
+    },
+    {
         "id": "mancera-red-tobacco",
         "name": "Mancera Red Tobacco",
         "inspiredBy": "Red Tobacco by Mancera",
@@ -4842,7 +4959,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.91,
         "reviews": 207
-    }  },    {
+    },
+    {
         "id": "montale-black-aoud",
         "name": "Montale Black Aoud",
         "inspiredBy": "Black Aoud by Montale",
@@ -4880,7 +4998,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.92,
         "reviews": 294
-    }  },    {
+    },
+    {
         "id": "montale-intense-cafe",
         "name": "Montale Intense Cafe",
         "inspiredBy": "Intense Cafe by Montale",
@@ -4918,7 +5037,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.93,
         "reviews": 381
-    }  },    {
+    },
+    {
         "id": "initio-oud-for-greatness",
         "name": "Initio Oud For Greatness",
         "inspiredBy": "Oud for Greatness by Initio",
@@ -4956,7 +5076,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.94,
         "reviews": 468
-    }  },    {
+    },
+    {
         "id": "xerjoff-erba-pura",
         "name": "Xerjoff Erba Pura",
         "inspiredBy": "Erba Pura by Xerjoff",
@@ -4996,7 +5117,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.75,
         "reviews": 555
-    }  },    {
+    },
+    {
         "id": "le-labo-santal-33",
         "name": "Le Labo Santal 33",
         "inspiredBy": "Santal 33 by Le Labo",
@@ -5037,7 +5159,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.76,
         "reviews": 642
-    }  },    {
+    },
+    {
         "id": "byredo-mojave-ghost",
         "name": "Byredo Mojave Ghost",
         "inspiredBy": "Mojave Ghost by Byredo",
@@ -5076,7 +5199,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.77,
         "reviews": 729
-    }  },    {
+    },
+    {
         "id": "byredo-gypsy-water",
         "name": "Byredo Gypsy Water",
         "inspiredBy": "Gypsy Water by Byredo",
@@ -5118,7 +5242,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.78,
         "reviews": 816
-    }  },    {
+    },
+    {
         "id": "maison-francis-gentle-fluidity",
         "name": "Maison Francis Gentle Fluidity",
         "inspiredBy": "Gentle Fluidity Gold by MFK",
@@ -5157,7 +5282,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.79,
         "reviews": 903
-    }  },    {
+    },
+    {
         "id": "jo-malone-wood-sage-sea-salt",
         "name": "Jo Malone Wood Sage & Sea Salt",
         "inspiredBy": "Wood Sage & Sea Salt by Jo Malone",
@@ -5192,7 +5318,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.8,
         "reviews": 990
-    }  },    {
+    },
+    {
         "id": "jo-malone-english-pear-freesia",
         "name": "Jo Malone English Pear & Freesia",
         "inspiredBy": "English Pear & Freesia by Jo Malone",
@@ -5227,7 +5354,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.81,
         "reviews": 1077
-    }  },    {
+    },
+    {
         "id": "memo-irish-leather",
         "name": "Memo Irish Leather",
         "inspiredBy": "Irish Leather by Memo Paris",
@@ -5264,7 +5392,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.82,
         "reviews": 1164
-    }  },    {
+    },
+    {
         "id": "amouage-interlude",
         "name": "Amouage Interlude",
         "inspiredBy": "Interlude Man by Amouage",
@@ -5306,7 +5435,8 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         ],
         "rating": 4.83,
         "reviews": 1251
-    }  },    {
+    },
+    {
         "id": "creed-silver-mountain-water-unisex",
         "name": "Creed Silver Mountain Water (Unisex)",
         "inspiredBy": "Silver Mountain Water by Creed",
