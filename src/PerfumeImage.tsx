@@ -502,23 +502,7 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         const thetaMax = 0.38;
         const sinThetaMax = Math.sin(thetaMax);
 
-        ctx.fillStyle = '#0e0e0e';
-        ctx.beginPath();
-        for (let x = 0; x <= rectW; x++) {
-          const normX = (x - rectW / 2) / (rectW / 2);
-          const yShift = bendAmount * (1 - normX * normX);
-          if (x === 0) ctx.moveTo(rectX + x, rectY + yShift);
-          else ctx.lineTo(rectX + x, rectY + yShift);
-        }
-        ctx.lineTo(rectX + rectW, rectY + rectH);
-        for (let x = rectW; x >= 0; x--) {
-          const normX = (x - rectW / 2) / (rectW / 2);
-          const yShift = bendAmount * (1 - normX * normX);
-          ctx.lineTo(rectX + x, rectY + rectH + yShift);
-        }
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
+
 
         for (let x = 0; x < rectW; x++) {
           const targetDX = x - rectW / 2;
