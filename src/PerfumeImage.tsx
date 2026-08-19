@@ -8,114 +8,140 @@ interface Props {
   onClick?: () => void;
 }
 
-// Map product to the correct color-matched template
-// We have 7 unique AI-generated base templates by color
-function getColorTemplate(product: Product): string {
+// Select the correct clean base template (without any pre-printed text)
+function getCleanTemplate(product: Product): string {
   const family = (product.family || '').toLowerCase();
   const name = (product.name || '').toLowerCase();
-  const gender = (product.gender || '').toLowerCase();
+  const mood = (product.mood || '').toLowerCase();
+  const story = (product.story || '').toLowerCase();
+  const allText = `${name} ${family} ${mood} ${story}`.toLowerCase();
 
-  // Blue bottles
-  if (name.includes('sauvage') || name.includes('bleu') || name.includes('blue') || 
-      name.includes('dylan') || name.includes('chrome') || name.includes('cool water') || 
-      name.includes('acqua') || name.includes('light blue') || name.includes('hawas') ||
-      family.includes('aquatic') || family.includes('marine')) {
-    return '/images/huda-essence-dior-sauvage.jpg';
-  }
-  
-  // Green bottles
-  if (name.includes('green') || name.includes('tweed') || name.includes('vetiver') ||
-      family.includes('green') || family.includes('aromatic') || family.includes('fougere') || family.includes('fougère')) {
-    return '/images/huda-essence-creed-green-irish-tweed.jpg';
-  }
-  
-  // Black/dark bottles
-  if (name.includes('black') || name.includes('noir') || name.includes('intense') || 
-      name.includes('opium') || name.includes('poison') || name.includes('nuit') ||
-      name.includes('afghano') || name.includes('dark')) {
-    return '/images/huda-essence-la-nuit-de-l-homme.jpg';
-  }
-  
-  // Silver/grey bottles
-  if (name.includes('silver') || name.includes('platinum') || name.includes('mountain') ||
-      name.includes('creed') || name.includes('ghost') || name.includes('water')) {
-    return '/images/huda-essence-creed-aventus.jpg';
-  }
-  
-  // Amber/warm bottles
-  if (name.includes('oud') || name.includes('amber') || name.includes('tobacco') || 
-      name.includes('tuscan') || name.includes('leather') || name.includes('khamrah') ||
-      name.includes('sheikh') || name.includes('asad') ||
-      family.includes('woody') || family.includes('leather') || family.includes('oud')) {
-    return '/images/huda-essence-chanel-allure-homme-sport.jpg';
+  // Aquatic / Fresh / Water
+  if (
+    allText.includes('aquatic') || 
+    allText.includes('marine') || 
+    allText.includes('sea') || 
+    allText.includes('water') ||
+    allText.includes('blue') ||
+    allText.includes('sauvage') ||
+    allText.includes('dylan') ||
+    allText.includes('cool water')
+  ) {
+    return '/images/base_aquatic.png';
   }
 
-  // Gold/amber bottles (default for men)
-  if (name.includes('gold') || name.includes('million') || name.includes('wanted') || 
-      name.includes('boss') || name.includes('icon') || name.includes('code') ||
-      family.includes('amber') || family.includes('vanilla') || family.includes('oriental') ||
-      family.includes('spicy')) {
-    return '/images/huda-essence-afnan-9-pm.jpg';
+  // Leather / Intense
+  if (
+    allText.includes('leather') || 
+    allText.includes('suede') || 
+    allText.includes('ombré') ||
+    allText.includes('ombre') ||
+    allText.includes('tuscan')
+  ) {
+    return '/images/base_leather.png';
   }
 
-  // Teal green (aromatic/fresh men)
-  if (family.includes('citrus') || family.includes('fresh')) {
-    return '/images/huda-essence-ysl-y.jpg';
+  // Green / Aromatic
+  if (
+    allText.includes('green') || 
+    allText.includes('irish') || 
+    allText.includes('tweed') || 
+    allText.includes('vetiver') || 
+    allText.includes('green') ||
+    allText.includes('fresh')
+  ) {
+    return '/images/base_green.png';
   }
-  
-  // Gender-based fallback
-  if (gender === 'women') {
-    return '/images/huda-essence-creed-aventus.jpg'; // silver/light
+
+  // Spicy / Warm Spicy
+  if (
+    allText.includes('spicy') || 
+    allText.includes('cinnamon') || 
+    allText.includes('pepper') || 
+    allText.includes('cardamom') ||
+    allText.includes('stronger') ||
+    allText.includes('desire')
+  ) {
+    return '/images/base_spicy.png';
   }
-  
-  // Default: amber gold
-  return '/images/huda-essence-afnan-9-pm.jpg';
+
+  // Fruity / Sweet
+  if (
+    allText.includes('fruity') || 
+    allText.includes('peach') || 
+    allText.includes('cherry') || 
+    allText.includes('apple') ||
+    allText.includes('sweet') ||
+    allText.includes('yara')
+  ) {
+    return '/images/base_fruity.png';
+  }
+
+  // White Floral
+  if (
+    allText.includes('white floral') || 
+    allText.includes('jasmine') || 
+    allText.includes('tuberose') || 
+    allText.includes('orange blossom') ||
+    allText.includes('bloom') ||
+    allText.includes('flora')
+  ) {
+    return '/images/base_white_floral.png';
+  }
+
+  // Floral / Rose
+  if (
+    allText.includes('floral') || 
+    allText.includes('rose') || 
+    allText.includes('peony') || 
+    allText.includes('petal') ||
+    allText.includes('pink')
+  ) {
+    return '/images/base_floral.png';
+  }
+
+  // Woody / Oud / Amber (Default fallback for rich colors)
+  return '/images/base_woody.png';
 }
 
 export default function PerfumeImage({ product, className, onClick }: Props) {
-  const imgSrc = getColorTemplate(product);
+  // Use clean template image with no text printed
+  const imgSrc = getCleanTemplate(product);
 
   return (
     <div 
       className={`relative overflow-hidden ${className}`} 
       onClick={onClick}
-      style={{ background: '#0a0a0a' }}
+      style={{ 
+        background: 'radial-gradient(circle, #252525 0%, #0a0a0a 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
     >
-      {/* Bottle image - cropped to show mainly the bottle shape */}
+      {/* Bottle image - Clean transparent bottle, no text */}
       <img 
         src={imgSrc} 
         alt={product.name} 
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
         loading="lazy"
-        style={{ opacity: 0.92 }}
-      />
-      
-      {/* Dark gradient overlay to cover the template's wrong text */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(
-            to bottom,
-            transparent 0%,
-            transparent 25%,
-            rgba(0,0,0,0.3) 40%,
-            rgba(0,0,0,0.85) 60%,
-            rgba(0,0,0,0.95) 75%,
-            rgba(0,0,0,1) 100%
-          )`
+        style={{ 
+          filter: 'drop-shadow(0 15px 25px rgba(0,0,0,0.6))',
+          transform: 'scale(0.92)'
         }}
       />
       
-      {/* Correct branding overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end"
-        style={{ paddingBottom: '8%' }}
+      {/* Dynamic Branding Overlay (Gold Printed on Glass Effect) */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+        style={{ paddingTop: '15%' }}
       >
-        {/* HE Monogram */}
+        {/* Crown Logo/HE Monogram */}
         <div style={{
-          fontFamily: "'Playfair Display', 'Georgia', serif",
-          fontSize: 'clamp(18px, 4vw, 32px)',
+          fontFamily: "'Cinzel', 'Playfair Display', serif",
+          fontSize: 'clamp(14px, 3.5vw, 24px)',
           fontWeight: 700,
-          color: '#c9a84c',
+          color: '#dfba5f',
+          textShadow: '0 1px 2px rgba(0,0,0,0.5)',
           letterSpacing: '3px',
           lineHeight: 1,
           marginBottom: '2px'
@@ -125,43 +151,46 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         
         {/* HUDA ESSENCE */}
         <div style={{
-          fontFamily: "'Playfair Display', 'Georgia', serif",
-          fontSize: 'clamp(8px, 2vw, 14px)',
-          fontWeight: 400,
-          color: '#c9a84c',
-          letterSpacing: '4px',
+          fontFamily: "'Cinzel', 'Playfair Display', serif",
+          fontSize: 'clamp(6px, 1.5vw, 11px)',
+          fontWeight: 600,
+          color: '#dfba5f',
+          textShadow: '0 1px 2px rgba(0,0,0,0.5)',
+          letterSpacing: '3px',
           textTransform: 'uppercase',
-          marginBottom: '4px'
+          marginBottom: '3px'
         }}>
           HUDA ESSENCE
         </div>
         
-        {/* Diamond divider */}
+        {/* Diamond divider line */}
         <div style={{
-          width: 'clamp(30px, 8vw, 60px)',
+          width: 'clamp(25px, 6vw, 45px)',
           height: '1px',
-          background: '#c9a84c',
+          background: 'linear-gradient(to right, transparent, #dfba5f, transparent)',
           position: 'relative',
-          marginBottom: '6px'
+          marginBottom: '4px'
         }}>
           <div style={{
             position: 'absolute',
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%) rotate(45deg)',
-            width: '5px',
-            height: '5px',
-            background: '#c9a84c'
+            width: '4px',
+            height: '4px',
+            background: '#dfba5f'
           }} />
         </div>
         
         {/* INSPIRED BY */}
         <div style={{
-          fontFamily: "'Playfair Display', 'Georgia', serif",
-          fontSize: 'clamp(6px, 1.5vw, 10px)',
-          fontWeight: 400,
-          color: '#c9a84c',
-          letterSpacing: '3px',
+          fontFamily: "'Montserrat', sans-serif",
+          fontSize: 'clamp(5px, 1vw, 8px)',
+          fontWeight: 500,
+          color: '#dfba5f',
+          opacity: 0.9,
+          textShadow: '0 1px 1px rgba(0,0,0,0.5)',
+          letterSpacing: '2px',
           textTransform: 'uppercase',
           marginBottom: '2px'
         }}>
@@ -170,15 +199,17 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
         
         {/* Product Name */}
         <div style={{
-          fontFamily: "'Playfair Display', 'Georgia', serif",
-          fontSize: 'clamp(10px, 2.5vw, 20px)',
+          fontFamily: "'Cinzel', 'Playfair Display', serif",
+          fontSize: 'clamp(9px, 2vw, 16px)',
           fontWeight: 400,
           fontStyle: 'italic',
-          color: '#c9a84c',
-          letterSpacing: '1px',
+          color: '#dfba5f',
+          textShadow: '0 1px 2px rgba(0,0,0,0.6)',
+          letterSpacing: '0.5px',
           textAlign: 'center',
-          padding: '0 10%',
-          lineHeight: 1.2
+          padding: '0 15%',
+          lineHeight: 1.2,
+          maxWidth: '85%'
         }}>
           {product.name}
         </div>
