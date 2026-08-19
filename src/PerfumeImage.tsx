@@ -24,6 +24,39 @@ const UNIQUE_GENERATED_PRODUCTS = new Set([
   'la-nuit-de-l-homme'
 ]);
 
+// Clean product name specifically for bottle label printing so names fit 100% perfectly
+function getBottleDisplayName(fullName: string): string {
+  if (!fullName) return '';
+  let clean = fullName;
+
+  // Remove parenthetical notes like (Unisex), (Men), etc.
+  clean = clean.replace(/\s*\([^)]*\)/g, '');
+
+  // Brand prefixes to trim off the bottle label (where INSPIRED BY is already printed above)
+  const brandPrefixes = [
+    "Jo Malone ", "Maison Francis ", "Carolina Herrera ", 
+    "Victoria's Secret ", "Dolce & Gabbana ", "Issey Miyake ", 
+    "Tom Ford ", "Scents N Stories ", "WB by Hemani ", 
+    "Bonanza Satrangi ", "Armaf ", "Lattafa ", "Ajmal ",
+    "Mont Blanc ", "Paco Rabanne ", "Byredo ", "Mancera ",
+    "Montale ", "Initio ", "Xerjoff ", "Le Labo ", "Memo ",
+    "Amouage ", "Nishane "
+  ];
+
+  for (const prefix of brandPrefixes) {
+    if (clean.startsWith(prefix) && clean.length - prefix.length >= 3) {
+      clean = clean.slice(prefix.length);
+      break;
+    }
+  }
+
+  // Handle specific long name cleanups for flawless bottle label fitting
+  if (clean.includes("Club De Nuit Intense Man")) clean = "Club De Nuit Intense";
+  if (clean.includes("Club De Nuit Women")) clean = "Club De Nuit";
+
+  return clean.trim();
+}
+
 // Map product details to the correct clean template base image
 function getCleanTemplate(product: Product): string {
   const family = (product.family || '').toLowerCase();
@@ -93,6 +126,18 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
     ? `/images/huda-essence-${product.id}.jpg`
     : getCleanTemplate(product);
 
+  const displayName = getBottleDisplayName(product.name || '');
+  const len = displayName.length;
+
+  // Responsive font size & line height tuned specifically to character length
+  const fontSize = len <= 10 
+    ? 'clamp(9.5px, 1.8vw, 15px)' 
+    : len <= 18 
+      ? 'clamp(8.5px, 1.4vw, 13px)' 
+      : 'clamp(7.5px, 1.1vw, 11px)';
+
+  const fontWeight = len <= 12 ? 600 : 500;
+
   return (
     <div 
       className={`relative select-none ${className}`} 
@@ -110,31 +155,34 @@ export default function PerfumeImage({ product, className, onClick }: Props) {
       {/* For all template-based bottles, overlay the EXACT matching perfume name dynamically */}
       {!isUnique && (
         <div 
-          className="absolute left-0 right-0 flex items-center justify-center pointer-events-none"
+          className="absolute left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden"
           style={{
-            top: '66.5%',
-            height: '13.5%',
+            top: '66.2%',
+            height: '13.8%',
             textAlign: 'center',
-            padding: '0 8%'
+            padding: '0 5%'
           }}
         >
           <span 
             style={{
               fontFamily: "'Playfair Display', 'Cormorant Garamond', 'Georgia', serif",
-              fontSize: 'clamp(10px, 2.2vw, 18px)',
-              fontWeight: 500,
+              fontSize,
+              fontWeight,
               fontStyle: 'italic',
-              // Rich gold metallic color with subtle glow
               color: '#d4a95a',
-              textShadow: '0 1px 2px rgba(0,0,0,0.9), 0 0 6px rgba(212,169,90,0.4)',
-              letterSpacing: '0.5px',
-              lineHeight: 1.15,
+              textShadow: '0 1px 2px rgba(0,0,0,0.95), 0 0 6px rgba(212,169,90,0.4)',
+              letterSpacing: '0.4px',
+              lineHeight: 1.12,
               display: 'inline-block',
               maxWidth: '100%',
-              wordBreak: 'break-word'
+              maxHeight: '100%',
+              overflow: 'hidden',
+              whiteSpace: 'normal',
+              wordBreak: 'normal',
+              overflowWrap: 'break-word'
             }}
           >
-            {product.name}
+            {displayName}
           </span>
         </div>
       )}
