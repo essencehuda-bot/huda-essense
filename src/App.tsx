@@ -6377,18 +6377,24 @@ export default function App() {
                 <div className="mt-1 text-[13px] text-[#9a7f5f]"><Stars rating={modal.rating} /> {modal.rating} • {modal.reviews} reviews</div>
                 <p className="mt-4 text-[15px] leading-relaxed text-[#4b3828]">{modal.story}</p>
                 {/* notes */}
-                <div className="mt-6 grid grid-cols-3 gap-4 text-[13px]">
-                  <div>
-                    <div className="text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[600] mb-2">Top</div>
-                    {modal.top.map(n => <div key={n} className="text-[#4b3728] mb-1">• {n}</div>)}
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[13px]">
+                  <div className="bg-[#f5efe3] p-3.5 rounded-2xl border border-[#e8ded0] shadow-sm">
+                    <div className="text-[10.5px] tracking-[0.18em] text-[#a08040] uppercase font-[700] mb-2 flex items-center gap-1.5">
+                      <span className="text-[12px]">✨</span> Top Notes
+                    </div>
+                    {modal.top.map(n => <div key={n} className="text-[#4b3728] mb-1 font-[500] flex items-center gap-1.5"><span className="text-[#c2a265] text-[10px]">♦</span> {n}</div>)}
                   </div>
-                  <div>
-                    <div className="text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[600] mb-2">Heart</div>
-                    {modal.heart.map(n => <div key={n} className="text-[#4b3728] mb-1">• {n}</div>)}
+                  <div className="bg-[#f5efe3] p-3.5 rounded-2xl border border-[#e8ded0] shadow-sm">
+                    <div className="text-[10.5px] tracking-[0.18em] text-[#a08040] uppercase font-[700] mb-2 flex items-center gap-1.5">
+                      <span className="text-[12px]">🌿</span> Heart Notes
+                    </div>
+                    {modal.heart.map(n => <div key={n} className="text-[#4b3728] mb-1 font-[500] flex items-center gap-1.5"><span className="text-[#c2a265] text-[10px]">♦</span> {n}</div>)}
                   </div>
-                  <div>
-                    <div className="text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[600] mb-2">Base</div>
-                    {modal.base.map(n => <div key={n} className="text-[#4b3728] mb-1">• {n}</div>)}
+                  <div className="bg-[#f5efe3] p-3.5 rounded-2xl border border-[#e8ded0] shadow-sm">
+                    <div className="text-[10.5px] tracking-[0.18em] text-[#a08040] uppercase font-[700] mb-2 flex items-center gap-1.5">
+                      <span className="text-[12px]">🪵</span> Base Notes
+                    </div>
+                    {modal.base.map(n => <div key={n} className="text-[#4b3728] mb-1 font-[500] flex items-center gap-1.5"><span className="text-[#c2a265] text-[10px]">♦</span> {n}</div>)}
                   </div>
                 </div>
                 <div className="mt-5 text-[13.6px] text-[#5a452f] italic">{modal.mood}</div>
