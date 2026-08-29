@@ -5485,21 +5485,11 @@ type CartLine = { productId: string; sizeMl: number; qty: number };
 
 /* ── star component ──────────────────────────────── */
 const Stars = ({ rating }: { rating: number }) => (
-  <span className="text-[#d4a04a]">
+  <span className="text-[#c9a24b]">
     {"★".repeat(Math.floor(rating))}
     {rating % 1 >= 0.5 && "½"}
   </span>
 );
-
-/* ── Seamless Video Component ───────────────────── */
-const SeamlessHeroVideo = () => {
-  return (
-    <>
-      <video src="/hero-mobile-video.mp4" autoPlay muted loop playsInline className="md:hidden absolute inset-0 w-full h-full object-cover" />
-      <video src="/huda-essence-hero-video.mp4" autoPlay muted loop playsInline className="hidden md:block absolute inset-0 w-full h-full object-cover" />
-    </>
-  );
-};
 
 /* ── app ──────────────────────────────────────────── */
 export default function App() {
@@ -5742,7 +5732,7 @@ export default function App() {
   const [custPhone, setCustPhone] = useState("");
   const [custAddress, setCustAddress] = useState("");
   const [custCity, setCustCity] = useState("Karachi");
-  const [payMethod, setPayMethod] = useState<"easypaisa" | "jazzcash" | "bank">("easypaisa");
+  const [payMethod, setPayMethod] = useState<"cod" | "easypaisa" | "jazzcash" | "bank">("easypaisa");
   const [payScreenshot, setPayScreenshot] = useState<string | null>(null);
   const [payScreenshotName, setPayScreenshotName] = useState<string>("");
   const [checkoutStep, setCheckoutStep] = useState<1 | 2>(1);
@@ -5783,10 +5773,6 @@ export default function App() {
     const t = setTimeout(() => setToast(null), 2400);
     return () => clearTimeout(t);
   }, [toast]);
-
-  const heroP1 = PRODUCTS.find(p => p.id === "dior-sauvage") ?? PRODUCTS[0];
-  const heroP2 = PRODUCTS.find(p => p.id === "victoria-s-secret-bombshell") ?? PRODUCTS[1] ?? PRODUCTS[0];
-  const heroP3 = PRODUCTS.find(p => p.id === "baccarat-rouge-540") ?? PRODUCTS[2] ?? PRODUCTS[0];
 
   const filtered = useMemo(() => {
     let r = PRODUCTS.slice();
@@ -5839,108 +5825,90 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf7f2] text-[#1b1714]">
+    <div className="min-h-screen bg-[#f7f4ed] text-[#191510]">
 
-      {/* ═══════════ SALE BANNER ═══════════ */}
-      {/* ═══════════ FIRE SALE BANNER ═══════════ */}
-      <div className="relative bg-gradient-to-r from-[#600a18] via-[#b31e30] via-[#e65c00] via-[#b31e30] to-[#600a18] animate-flame-bg text-white py-3 text-center overflow-hidden border-b border-[#ff8800]/40 shadow-[0_4px_25px_rgba(230,92,0,0.35)] z-50">
-        {/* Animated rising sparks */}
-        <div className="absolute inset-0 pointer-events-none opacity-80 overflow-hidden">
-          <span className="spark-particle w-1.5 h-1.5 left-[8%]" style={{ animationDelay: '0s', animationDuration: '2.1s' }} />
-          <span className="spark-particle w-2 h-2 left-[22%]" style={{ animationDelay: '0.4s', animationDuration: '2.6s' }} />
-          <span className="spark-particle w-1 h-1 left-[40%]" style={{ animationDelay: '0.9s', animationDuration: '1.8s' }} />
-          <span className="spark-particle w-2.5 h-2.5 left-[58%]" style={{ animationDelay: '0.2s', animationDuration: '2.4s' }} />
-          <span className="spark-particle w-1.5 h-1.5 left-[76%]" style={{ animationDelay: '1.2s', animationDuration: '2.0s' }} />
-          <span className="spark-particle w-2 h-2 left-[92%]" style={{ animationDelay: '0.7s', animationDuration: '2.5s' }} />
+      {/* ═══════════ ANNOUNCEMENT BAR ═══════════ */}
+      <div className="relative z-50 overflow-hidden bg-[#14110c] text-[#e9dcb8] border-b border-[#2b2416]">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-70">
+          <div className="animate-sheen absolute -top-1/2 h-[200%] w-24 bg-gradient-to-r from-transparent via-[#e8c876]/25 to-transparent" />
         </div>
-
-        <div className="relative flex items-center justify-center gap-2 sm:gap-4 text-[13px] sm:text-[14.5px] font-[700] tracking-[0.04em]">
-          <span className="text-[20px] sm:text-[24px] animate-fire-icon">🔥</span>
-          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-            <span className="bg-[#ff2200]/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11.5px] font-[800] uppercase tracking-wider text-[#ffe600] border border-[#ffaa00]/60 animate-fire-glow shadow-inner">
-              🔥 MEGA FIRE SALE
-            </span>
-            <span className="text-white">
-              10ml: <span className="line-through opacity-70 font-normal">Rs 500</span> <span className="text-[#ffe600] font-[800] animate-fire-glow">Rs 299</span>
-            </span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span className="text-white">
-              50ml: <span className="line-through opacity-70 font-normal">Rs 1,600</span> <span className="text-[#ffe600] font-[800] animate-fire-glow">Rs 1,299</span>
-            </span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span className="text-white">
-              100ml: <span className="line-through opacity-70 font-normal">Rs 3,000</span> <span className="text-[#ffe600] font-[900] text-[15px] sm:text-[16.5px] animate-fire-glow">Rs 2,399</span>
-            </span>
-          </div>
-          <span className="hidden lg:inline-block bg-[#000000]/30 px-3 py-1 rounded-full text-[11px] font-[700] text-[#ffcc00] border border-[#ffaa00]/40 uppercase tracking-widest animate-pulse">
-            ⚡ Limited Stock
+        <div className="relative mx-auto flex max-w-[1320px] flex-wrap items-center justify-center gap-x-4 gap-y-1 px-5 py-2.5 text-center text-[12px] sm:text-[13px] tracking-[0.05em] lg:px-10">
+          <span className="rounded-full border border-[#caa24f]/50 bg-[#caa24f]/10 px-2.5 py-0.5 text-[10px] font-[700] uppercase tracking-[0.2em] text-[#e8c876]">
+            Fire Sale
           </span>
-          <span className="text-[20px] sm:text-[24px] animate-fire-icon" style={{ animationDelay: '0.6s' }}>🔥</span>
+          <span>10ml <s className="opacity-45">Rs 500</s> <b className="font-[700] text-[#e8c876]">Rs 299</b></span>
+          <span className="hidden text-[#4a3f28] sm:inline">•</span>
+          <span>50ml <s className="opacity-45">Rs 1,600</s> <b className="font-[700] text-[#e8c876]">Rs 1,299</b></span>
+          <span className="hidden text-[#4a3f28] sm:inline">•</span>
+          <span>100ml <s className="opacity-45">Rs 3,000</s> <b className="font-[700] text-[#e8c876]">Rs 2,399</b></span>
+          <span className="hidden rounded-full bg-[#e8c876]/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.16em] text-[#cfae66] lg:inline">
+            Limited stock
+          </span>
         </div>
       </div>
 
       {/* ═══════════ HEADER ═══════════ */}
-      <header className="sticky top-0 z-40 bg-[#faf7f2ee] backdrop-blur-xl border-b border-[#e7dcc9]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 h-[78px] flex items-center justify-between gap-6">
-          <button onClick={() => setMobileMenu(!mobileMenu)} className="lg:hidden w-9 h-9 grid place-items-center">
+      <header className="sticky top-0 z-40 border-b border-[#e7dfcd] bg-[#f7f4ed]/90 backdrop-blur-xl">
+        <div className="mx-auto flex h-[70px] max-w-[1320px] items-center justify-between gap-6 px-5 lg:px-10">
+          <button onClick={() => setMobileMenu(!mobileMenu)} aria-label="menu" className="lg:hidden w-9 h-9 grid place-items-center">
             <div className="w-5">
-              <div className={`h-[1.8px] bg-[#221e19] transition-all ${mobileMenu ? "rotate-45 translate-y-[5.4px]" : "mb-1.5"}`}></div>
-              <div className={`h-[1.8px] bg-[#221e19] transition-opacity ${mobileMenu ? "opacity-0" : "mb-1.5"}`}></div>
-              <div className={`h-[1.8px] bg-[#221e19] transition-all ${mobileMenu ? "-rotate-45 -translate-y-[5.4px]" : ""}`}></div>
+              <div className={`h-[1.6px] bg-[#191510] transition-all ${mobileMenu ? "rotate-45 translate-y-[5.2px]" : "mb-1.5"}`}></div>
+              <div className={`h-[1.6px] bg-[#191510] transition-opacity ${mobileMenu ? "opacity-0" : "mb-1.5"}`}></div>
+              <div className={`h-[1.6px] bg-[#191510] transition-all ${mobileMenu ? "-rotate-45 -translate-y-[5.2px]" : ""}`}></div>
             </div>
           </button>
 
-          <div className="flex items-center gap-12">
+          <div className="flex items-center gap-10">
             <a href="#">
               <Logo />
             </a>
-            <nav className="hidden lg:flex items-center gap-[28px] text-[13.6px] tracking-[0.04em] text-[#38312a]">
-              <a href="#shop" className="hover:text-[#b07a28] transition font-[500]">Shop All</a>
-              <button onClick={() => { setGender("Men"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-[#b07a28] transition">For Him</button>
-              <button onClick={() => { setGender("Women"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-[#b07a28] transition">For Her</button>
-              <button onClick={() => { setGender("Unisex"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-[#b07a28] transition">Unisex</button>
-              <a href="#about" className="hover:text-[#b07a28] transition">About Us</a>
-              <a href="#contact" className="hover:text-[#b07a28] transition">Contact</a>
+            <nav className="hidden lg:flex items-center gap-[30px] text-[11.5px] font-[600] uppercase tracking-[0.16em] text-[#5c5344]">
+              <a href="#shop" className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">Shop All</a>
+              <button onClick={() => { setGender("Men"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">For Him</button>
+              <button onClick={() => { setGender("Women"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">For Her</button>
+              <button onClick={() => { setGender("Unisex"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">Unisex</button>
+              <a href="#about" className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">About</a>
+              <a href="#contact" className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">Contact</a>
             </nav>
           </div>
 
-          <div className="flex items-center gap-5">
-            <div className="hidden md:flex items-center border border-[#d9c9b2] rounded-full pl-4 pr-2 py-[9px] bg-white/60 min-w-[220px]">
+          <div className="flex items-center gap-3.5">
+            <div className="hidden md:flex items-center gap-2 border border-[#dcd2bc] rounded-full pl-4 pr-3.5 py-[8px] bg-white/70 min-w-[210px] focus-within:border-[#b3924f] transition-colors">
+              <svg className="text-[#a08b62] shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
               <input
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 placeholder="Search perfumes…"
-                className="bg-transparent outline-none text-[13.5px] w-full placeholder-[#a08e77]"
+                className="bg-transparent outline-none text-[13px] w-full placeholder-[#a89b82]"
               />
-              <svg className="text-[#a78a63] mr-1 shrink-0" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
             </div>
 
-            <button onClick={() => { }} aria-label="wishlist" className="relative">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
-              {wishlist.length > 0 && <span className="absolute -top-2 -right-2 w-[16px] h-[16px] text-[10px] grid place-items-center rounded-full bg-[#7b1d2a] text-white">{wishlist.length}</span>}
+            <button onClick={() => { }} aria-label="wishlist" className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/60 transition hover:border-[#b3924f] hover:text-[#8a6a33]">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
+              {wishlist.length > 0 && <span className="absolute -top-1 -right-1 w-[16px] h-[16px] text-[10px] grid place-items-center rounded-full bg-[#6e1e2a] text-white">{wishlist.length}</span>}
             </button>
 
-            <button onClick={() => setCartOpen(true)} aria-label="cart" className="relative">
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>
-              {cartCount > 0 && <span className="absolute -top-2 -right-2 min-w-[18px] px-[5px] h-[18px] text-[10px] grid place-items-center rounded-full bg-[#b07a28] text-white font-[600]">{cartCount}</span>}
+            <button onClick={() => setCartOpen(true)} aria-label="cart" className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/60 transition hover:border-[#b3924f] hover:text-[#8a6a33]">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>
+              {cartCount > 0 && <span className="absolute -top-1 -right-1 min-w-[17px] px-[4px] h-[17px] text-[10px] grid place-items-center rounded-full bg-[#191510] text-[#e9dcb8] font-[600]">{cartCount}</span>}
             </button>
           </div>
         </div>
 
         {mobileMenu && (
-          <div className="lg:hidden bg-[#faf7f2] border-t border-[#e7dcc9] px-5 py-5 space-y-4 text-[15px] text-[#3a3028]">
+          <div className="lg:hidden border-t border-[#e7dfcd] bg-[#f7f4ed] px-5 py-5 space-y-3.5 text-[13px] font-[600] uppercase tracking-[0.14em] text-[#443c30]">
             <a href="#shop" onClick={() => setMobileMenu(false)} className="block">Shop All Perfumes</a>
             <button onClick={() => { setGender("Men"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="block w-full text-left">For Him</button>
             <button onClick={() => { setGender("Women"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="block w-full text-left">For Her</button>
             <button onClick={() => { setGender("Unisex"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="block w-full text-left">Unisex</button>
             <a href="#about" onClick={() => setMobileMenu(false)} className="block">About Us</a>
             <a href="#contact" onClick={() => setMobileMenu(false)} className="block">Contact</a>
-            <div className="pt-3 border-t border-[#e1d0b8]">
+            <div className="pt-3">
               <input
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 placeholder="Search perfumes…"
-                className="w-full border border-[#e0cbaa] rounded-full px-4 py-3 text-[14px] outline-none bg-white"
+                className="w-full border border-[#dcd2bc] rounded-full px-4 py-3 text-[13px] tracking-normal normal-case outline-none bg-white focus:border-[#b3924f] transition"
               />
             </div>
           </div>
@@ -5948,101 +5916,114 @@ export default function App() {
       </header>
 
       {/* ═══════════ HERO ═══════════ */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#faf7f2] via-[#f5ebd9] to-[#faf7f2] border-b border-[#ebdcb9]">
-        {/* Ambient luxury glow blobs */}
-        <div className="absolute top-[-150px] left-[-150px] w-[350px] h-[350px] rounded-full bg-[#ebd9c1]/60 blur-[100px] pointer-events-none animate-blob-1"></div>
-        <div className="absolute right-[-100px] bottom-[-100px] w-[300px] h-[300px] rounded-full bg-[#ebd3b6]/50 blur-[80px] pointer-events-none animate-blob-2"></div>
-        <div className="absolute top-[20%] right-[10%] w-[250px] h-[250px] rounded-full bg-[#7b1d2a]/5 blur-[100px] pointer-events-none animate-blob-3"></div>
+      <section className="relative overflow-hidden bg-[#f7f4ed]">
+        {/* ambient light field */}
+        <div className="pointer-events-none absolute -top-48 left-1/2 h-[520px] w-[880px] -translate-x-1/2 rounded-full bg-[#ecdfc2]/60 blur-[130px]"></div>
+        <div className="pointer-events-none absolute -bottom-32 -right-24 h-[320px] w-[320px] rounded-full bg-[#6e1e2a]/5 blur-[110px] animate-blob-2"></div>
 
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-10 lg:py-[68px] grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center relative z-10">
-          <div>
-            <div className="inline-flex items-center gap-2 text-[11px] tracking-[0.20em] text-[#a36f24] uppercase font-[500]">
-              <span className="w-[38px] h-px bg-[#d2b280]"></span>
-              PERFUME HOUSE HUDA ESSENCE
+        <div className="relative mx-auto grid max-w-[1320px] items-center gap-12 px-5 pb-16 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-10 lg:pb-24 lg:pt-20">
+          <div className="animate-fade-up">
+            <div className="inline-flex items-center gap-3 text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">
+              <span className="h-px w-10 bg-[#c9ad74]"></span>
+              Perfume House — Huda Essence
             </div>
-            <h1 className="text-[44px] sm:text-[56px] lg:text-[70px] leading-[1.0] tracking-[-0.015em] mt-6 text-[#7b1d2a]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
-              Branded Fragrances Ki Wohi Khushboo,<br />
-              Ab Har Kisi Ki Pohanch Mein.
+            <h1 className="mt-6 text-[42px] leading-[1.02] tracking-[-0.01em] text-[#191510] sm:text-[54px] lg:text-[64px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+              Branded fragrances ki wohi khushboo,
+              <span className="italic text-[#a08040]"> ab har kisi ki pohanch</span> mein.
             </h1>
+            <p className="mt-6 max-w-[480px] text-[15.5px] leading-relaxed text-[#6b6153]">
+              Premium impression perfumes crafted from high-quality oils — available in 10ml, 50ml aur 100ml. Ek simple, imaandaar price. Sirf Karachi mein delivery.
+            </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <button
                 onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="relative overflow-hidden px-[28px] py-[15px] rounded-full bg-[#1b1411] text-[#f8efe0] text-[14px] tracking-[0.07em] uppercase font-[600] hover:bg-[#2a1f18] transition hover:shadow-[0_10px_30px_rgba(27,20,17,0.3)] hover:-translate-y-0.5"
+                className="rounded-full bg-[#191510] px-[30px] py-[15px] text-[12px] font-[600] uppercase tracking-[0.14em] text-[#f0e6d2] transition hover:bg-[#2b241a] hover:shadow-[0_16px_36px_-12px_rgba(25,21,16,0.5)]"
               >
-                Shop Collection →
+                Shop Collection
               </button>
-              <a href={`https://wa.me/${whatsappNum}`} target="_blank" rel="noopener" className="px-[28px] py-[15px] rounded-full border border-[#d2be9d] text-[14px] tracking-[0.04em] bg-white/70 hover:bg-white transition flex items-center gap-2">
+              <a href={`https://wa.me/${whatsappNum}`} target="_blank" rel="noopener" className="flex items-center gap-2.5 rounded-full border border-[#d8cdb4] bg-white/70 px-[28px] py-[15px] text-[12px] font-[600] uppercase tracking-[0.12em] text-[#3c3428] transition hover:border-[#b3924f] hover:bg-white">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
                 WhatsApp Order
               </a>
             </div>
 
-
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-[#e4dbc6] pt-6 text-[11.5px] font-[600] uppercase tracking-[0.14em] text-[#7a6e58]">
+              <span>From Rs 299</span>
+              <span className="hidden h-1 w-1 rounded-full bg-[#c9ad74] sm:block"></span>
+              <span>6–8h Lasting</span>
+              <span className="hidden h-1 w-1 rounded-full bg-[#c9ad74] sm:block"></span>
+              <span>COD — Karachi</span>
+            </div>
           </div>
 
           <div className="relative">
-            <div className="rounded-[28px] overflow-hidden bg-[#ede4d6] shadow-[0_40px_90px_rgba(100,72,40,0.18)] relative h-[480px] lg:h-[580px]">
-              <img 
-                src="/images/huda_essence_hero_all_sizes.png" 
-                alt="Huda Essence Bottles 10ml, 50ml, 100ml" 
-                className="absolute inset-0 w-full h-full object-cover" 
-                fetchPriority="high"
-              />
-              <div className="absolute inset-0 rounded-[28px] bg-gradient-to-t from-[#19130d33] via-transparent to-transparent pointer-events-none z-10"></div>
+            <div className="relative mx-auto w-[88%] max-w-[440px]">
+              <div className="absolute -inset-3 rounded-t-[999px] rounded-b-[36px] border border-[#cbb47f]/50 pointer-events-none"></div>
+              <div className="relative h-[460px] overflow-hidden rounded-t-[999px] rounded-b-[28px] shadow-[0_60px_110px_-40px_rgba(90,70,40,0.45)] lg:h-[580px]">
+                <img
+                  src="/images/huda_essence_hero_all_sizes.png"
+                  alt="Huda Essence Bottles 10ml, 50ml, 100ml"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  fetchPriority="high"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#19130d2b] via-transparent to-transparent"></div>
+              </div>
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#e4dbc6] bg-white/95 px-5 py-2.5 text-[10px] font-[600] uppercase tracking-[0.2em] text-[#6b6153] shadow-[0_18px_40px_-18px_rgba(90,70,40,0.4)] backdrop-blur">
+                Eau de Parfum • Premium Oils
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════ TRUST BAR ═══════════ */}
-      <div className="border-y border-[#e5d8c3] bg-[#f5eee2]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-5 grid grid-cols-3 gap-4 text-center">
+      <div className="border-y border-[#e7dfcd] bg-[#fbf9f4]">
+        <div className="mx-auto grid max-w-[1320px] grid-cols-1 divide-y divide-[#e7dfcd] px-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
           {[
-            { icon: "✨", title: "Premium Quality", sub: "Long-lasting fragrances" },
-            { icon: "🚚", title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
-            { icon: "💵", title: "Cash on Delivery", sub: "Delivery charges advance" },
+            { title: "Premium Quality", sub: "Long-lasting fragrances" },
+            { title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
+            { title: "Cash on Delivery", sub: "Delivery charges advance" },
           ].map(t => (
-            <div key={t.title} className="flex flex-col items-center gap-1">
-              <span className="text-[22px]">{t.icon}</span>
-              <div className="text-[13px] font-[600] text-[#2e2418]">{t.title}</div>
-              <div className="text-[11.5px] text-[#7a6549]">{t.sub}</div>
+            <div key={t.title} className="flex flex-col items-center gap-1 px-4 py-5 text-center">
+              <div className="text-[11px] font-[700] uppercase tracking-[0.2em] text-[#191510]">{t.title}</div>
+              <div className="text-[12px] text-[#8a7d66]">{t.sub}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* ═══════════ SHOP ALL PRODUCTS ═══════════ */}
-      <section id="shop" ref={shopRef} className="mx-auto max-w-[1320px] px-5 lg:px-10 py-14 lg:py-[80px]">
+      <section id="shop" ref={shopRef} className="mx-auto max-w-[1320px] px-5 py-14 lg:px-10 lg:py-[90px]">
         <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
           <div>
-            <div className="text-[11px] tracking-[0.22em] text-[#b07a28] uppercase font-[600]">Our Collection</div>
-            <h2 className="text-[42px] lg:text-[56px] leading-[0.95] mt-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+            <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">Our Collection</div>
+            <h2 className="mt-3 text-[40px] leading-[0.98] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
               Shop Huda Essence
             </h2>
-            <p className="text-[15.5px] text-[#5a4a38] mt-2 max-w-[520px]">
+            <p className="mt-3 max-w-[520px] text-[14.5px] text-[#6b6153]">
               {PRODUCTS.length} premium impression perfumes. All sizes, one simple price in PKR.
             </p>
           </div>
         </div>
 
         {/* filters */}
-        <div className="flex flex-wrap items-center gap-3 mb-8 mt-4">
-          <div className="flex items-center gap-1 bg-white rounded-full border border-[#e2cfb4] p-1">
+        <div className="mb-10 mt-6 flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-1 rounded-full border border-[#e2d8c2] bg-white p-1">
             {(["All", "Men", "Women", "Unisex"] as const).map(g => (
               <button
                 key={g}
                 onClick={() => setGender(g)}
-                className={`px-4 py-[9px] rounded-full text-[13.5px] transition font-[500] ${gender === g ? "bg-[#1b1310] text-[#f7e8cf]" : "text-[#5b4733] hover:bg-[#f6ead6]"}`}
+                className={`rounded-full px-4 py-[8px] text-[11.5px] font-[600] uppercase tracking-[0.1em] transition ${gender === g ? "bg-[#191510] text-[#f0e6d2]" : "text-[#6b6153] hover:bg-[#f3efe4]"}`}
               >{g === "All" ? "All" : g === "Men" ? "For Him" : g === "Women" ? "For Her" : "Unisex"}</button>
             ))}
           </div>
           <div className="ml-auto flex items-center gap-2">
-            <span className="text-[12.5px] text-[#7a6247]">Sort</span>
+            <span className="text-[11px] font-[600] uppercase tracking-[0.14em] text-[#8a7d66]">Sort</span>
             <select
               value={sort}
               onChange={e => setSort(e.target.value as typeof sort)}
-              className="border border-[#e0ccab] rounded-full bg-white px-3 py-[9px] text-[13px] outline-none"
+              className="rounded-full border border-[#e2d8c2] bg-white px-4 py-[9px] text-[13px] outline-none transition focus:border-[#b3924f]"
             >
               <option value="featured">Featured</option>
               <option value="bestsellers">Bestsellers</option>
@@ -6063,63 +6044,64 @@ export default function App() {
             { title: null, items: filtered }
           ]).filter(g => g.items.length > 0).map((group, idx) => (
             <div key={idx}>
-              {group.title && <h3 className="text-[34px] mb-6 text-[#2a221b] border-b border-[#ebdcb9] pb-3" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{group.title}</h3>}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-7">
+              {group.title && <h3 className="mb-6 border-b border-[#e7dfcd] pb-3 text-[30px] text-[#191510] lg:text-[34px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{group.title}</h3>}
+              <div className="grid grid-cols-2 gap-3 sm:gap-7 md:grid-cols-3 lg:grid-cols-4">
                 {group.items.map(p => (
-                  <div key={p.id} className="group bg-white rounded-[16px] sm:rounded-[26px] border border-[#ead9bf] overflow-hidden hover:shadow-[0_30px_80px_rgba(120,90,40,0.18)] hover:-translate-y-1.5 transition-all duration-500">
+                  <div key={p.id} className="group flex flex-col overflow-hidden rounded-2xl border border-[#e8e0cd] bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_36px_70px_-30px_rgba(90,70,40,0.35)]">
                     <div className="relative overflow-hidden">
-                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] w-full object-cover group-hover:scale-[1.04] transition-transform duration-700 cursor-pointer" />
-                      <div className="absolute top-2 sm:top-4 left-2 sm:left-4 flex gap-1 sm:gap-2">
-                        {p.bestseller && <span className="bg-[#19120d] text-[#f4e2c2] px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[8.5px] sm:text-[10.5px] tracking-[0.05em] sm:tracking-[0.1em] font-[600] uppercase">Bestseller</span>}
-                        {p.nouveau && <span className="bg-[#7b1d2a] text-white px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[8.5px] sm:text-[10.5px] tracking-[0.05em] sm:tracking-[0.1em] font-[600] uppercase">New</span>}
+                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[190px] w-full cursor-pointer object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-[260px] md:h-[320px] lg:h-[380px]" />
+                      <div className="absolute left-3 top-3 flex gap-1.5">
+                        {p.bestseller && <span className="rounded-full bg-[#191510]/85 px-2.5 py-1 text-[8.5px] font-[600] uppercase tracking-[0.16em] text-[#e9dcb8] backdrop-blur">Bestseller</span>}
+                        {p.nouveau && <span className="rounded-full bg-[#6e1e2a] px-2.5 py-1 text-[8.5px] font-[600] uppercase tracking-[0.16em] text-white">New</span>}
                       </div>
                       <button
                         onClick={(e) => { e.stopPropagation(); toggleWish(p.id); }}
-                        className="absolute top-2 sm:top-4 right-2 sm:right-4 w-7 sm:w-10 h-7 sm:h-10 rounded-full bg-white/95 grid place-items-center border border-[#efdcc1] hover:scale-110 transition-transform"
+                        className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full border border-[#e8e0cd] bg-white/95 transition-transform hover:scale-110 sm:h-10 sm:w-10"
                       >
-                        <svg width="13" sm:width="17" height="13" sm:height="17" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#b32d3a" : "none"} stroke={wishlist.includes(p.id) ? "#b32d3a" : "#5b4b3a"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#6e1e2a" : "none"} stroke={wishlist.includes(p.id) ? "#6e1e2a" : "#6b6153"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
                       </button>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-2 sm:p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
+                      <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-[#191510]/75 via-[#191510]/40 to-transparent p-2.5 transition-transform duration-300 group-hover:translate-y-0 sm:p-4">
+                        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
                           {p.sizes.map(s => {
                             const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
                             return (
-                              <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="px-1.5 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl text-[9.5px] sm:text-[12.5px] font-[600] transition bg-[#fff0f0] text-[#c0392b] hover:bg-[#ffe0e0] ring-1 ring-[#e8474c]/40">
-                                {s.ml}ml — {orig ? <span className="line-through text-[#999] text-[8px] sm:text-[10px]">Rs {orig.toLocaleString()}</span> : null} {PKR(s.price)}
+                              <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="rounded-full bg-white/95 px-2 py-1.5 text-[9.5px] font-[600] text-[#191510] transition hover:bg-[#e8c876] sm:px-3 sm:text-[11.5px]">
+                                {s.ml}ml {orig ? <s className="mr-0.5 text-[8.5px] font-normal text-[#9a8c72] sm:text-[9.5px]">Rs {orig.toLocaleString()}</s> : null} {PKR(s.price)}
                               </button>
                             );
                           })}
                         </div>
                       </div>
                     </div>
-                    <div className="p-3 sm:p-5 pb-4 sm:pb-6">
-                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-3">
+                    <div className="flex flex-1 flex-col p-4 pb-5 sm:p-5">
+                      <div className="flex items-start justify-between gap-3">
                         <div>
-                          <h3 className="text-[18px] sm:text-[26px] leading-tight" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
-                          <div className="text-[11px] sm:text-[12.5px] text-[#7a6652] mt-0.5">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
+                          <h3 className="text-[20px] leading-tight text-[#191510] sm:text-[23px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
+                          <div className="mt-1 text-[10px] font-[600] uppercase tracking-[0.14em] text-[#a08040]">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
                         </div>
-                        <div className="text-left sm:text-right text-[10px] sm:text-[12px] text-[#6e5c47] shrink-0 flex items-center sm:block gap-1">
-                          <div className="flex items-center gap-0.5"><Stars rating={p.rating} /> <span className="sm:hidden">{p.rating}</span></div>
-                          <span className="hidden sm:inline">{p.rating}<br /></span>
-                          <span className="text-[9px] sm:text-[11px] text-[#9a8363]">({p.reviews} reviews)</span>
+                        <div className="shrink-0 text-right text-[10px] text-[#8a7d66]">
+                          <div className="flex items-center justify-end gap-1"><Stars rating={p.rating} /><span>{p.rating}</span></div>
+                          <div className="mt-0.5 text-[9px] text-[#a4977e]">({p.reviews} reviews)</div>
                         </div>
                       </div>
-                      <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-[12.8px] text-[#6f5d48] italic line-clamp-1 sm:line-clamp-none">{p.mood}</div>
-                      <div className="mt-3 sm:mt-4 grid grid-cols-3 gap-1 sm:gap-2 text-center">
-                        {p.sizes.map(s => {
-                          const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
-                          return (
-                            <div key={s.ml} className="bg-[#faf5ed] rounded-lg sm:rounded-xl py-1 sm:py-2 border border-[#e8474c]/30 ring-1 ring-[#e8474c]/20">
-                              <div className="text-[8px] sm:text-[10.5px] text-[#a08060] uppercase tracking-wider">{s.ml}ml <span className="text-[#e8474c] font-[700]">SALE</span></div>
-                              {orig && <div className="text-[8px] sm:text-[11px] text-[#9a8060] line-through">Rs {orig.toLocaleString()}</div>}
-                              <div className="text-[10.5px] sm:text-[14px] font-[700] text-[#c0392b]">{PKR(s.price)}</div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                      <div className="mt-3 sm:mt-5 flex items-center gap-1.5 sm:gap-2.5">
-                        <button onClick={() => setModal(p)} className="flex-1 py-[8px] sm:py-[12px] rounded-full bg-[#1b1310] text-[#f6e7cc] text-[11px] sm:text-[13.5px] font-[600] hover:bg-[#2a1f16] transition">View Details</button>
-                        <button onClick={() => addToCart(p.id)} className="px-2.5 sm:px-5 py-[8px] sm:py-[12px] rounded-full border border-[#dfc8a2] text-[11px] sm:text-[13.5px] font-[600] text-[#5d4628] hover:bg-[#fff6e7] transition">+ Bag</button>
+                      <div className="mt-1.5 text-[12px] italic text-[#8a7d66] line-clamp-1">{p.mood}</div>
+                      <div className="mt-auto">
+                        <div className="mt-4 grid grid-cols-3 gap-1.5 text-center">
+                          {p.sizes.map(s => {
+                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
+                            return (
+                              <div key={s.ml} className="rounded-xl border border-[#ece3cf] bg-[#faf7ee] py-1.5 sm:py-2">
+                                <div className="text-[8.5px] font-[600] uppercase tracking-[0.12em] text-[#a4977e]">{s.ml}ml</div>
+                                {orig && <div className="text-[8.5px] text-[#b3a488] line-through sm:text-[10px]">Rs {orig.toLocaleString()}</div>}
+                                <div className="text-[10.5px] font-[700] text-[#191510] sm:text-[13px]">{PKR(s.price)}</div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <div className="mt-3.5 flex items-center gap-2">
+                          <button onClick={() => setModal(p)} className="flex-1 rounded-full bg-[#191510] py-[9px] text-[10px] font-[600] uppercase tracking-[0.12em] text-[#f0e6d2] transition hover:bg-[#2b241a] sm:py-[11px] sm:text-[11px]">View Details</button>
+                          <button onClick={() => addToCart(p.id)} className="rounded-full border border-[#ddd2b8] px-4 py-[9px] text-[10px] font-[600] uppercase tracking-[0.12em] text-[#5c5344] transition hover:border-[#b3924f] hover:text-[#8a6a33] sm:px-5 sm:py-[11px] sm:text-[11px]">+ Bag</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -6129,41 +6111,43 @@ export default function App() {
           ))}
         </div>
         {filtered.length === 0 && (
-          <div className="text-center py-20 text-[#9b8163] text-[16px]">No perfumes match your search. Try a different filter.</div>
+          <div className="py-20 text-center text-[15px] text-[#a4977e]">No perfumes match your search. Try a different filter.</div>
         )}
       </section>
 
       {/* ═══════════ PRICING BANNER ═══════════ */}
-      <section className="bg-[#15110e] text-[#f0e3cb]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-16 lg:py-24">
-          <div className="text-center max-w-[800px] mx-auto">
-            <div className="text-[11px] tracking-[0.24em] text-[#d2a75a] uppercase font-[600]">Simple & Honest Pricing</div>
-            <h3 className="text-[44px] lg:text-[58px] leading-[0.95] mt-3" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+      <section className="relative overflow-hidden bg-[#12100b] text-[#ece1c8]">
+        <div className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-[#c9a75c]/10 blur-[130px]"></div>
+        <div className="relative mx-auto max-w-[1320px] px-5 py-16 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-[800px] text-center">
+            <div className="text-[10.5px] font-[600] uppercase tracking-[0.26em] text-[#cfae66]">Simple & Honest Pricing</div>
+            <h3 className="mt-4 text-[40px] leading-[0.98] lg:text-[54px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
               One price for every fragrance.
             </h3>
-            <p className="mt-4 text-[16px] text-[#d8c8b2] max-w-[540px] mx-auto leading-relaxed">
+            <p className="mx-auto mt-4 max-w-[540px] text-[15px] leading-relaxed text-[#b3a486]">
               No hidden charges. No confusing tiers. Every Huda Essence perfume is the same price — pick your size.
             </p>
           </div>
-          <div className="mt-12 grid sm:grid-cols-3 gap-5 max-w-[820px] mx-auto">
+          <div className="mx-auto mt-12 grid max-w-[860px] gap-5 sm:grid-cols-3">
             {[
               { ml: 10, price: 299, originalPrice: 500, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
               { ml: 50, price: 1299, originalPrice: 1600, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear" },
-              { ml: 100, price: 2399, originalPrice: 3000, label: "Best Value Sale", desc: "Maximum value — 5+ months of your signature scent", popular: true },
+              { ml: 100, price: 2399, originalPrice: 3000, label: "Best Value", desc: "Maximum value — 5+ months of your signature scent", popular: true },
             ].map(s => (
-              <div key={s.ml} className={`rounded-[24px] p-6 text-center border ${s.popular ? "bg-[#2e2117] border-[#c99a4a] scale-[1.04]" : "bg-[#1e1812] border-[#3a2b21]"}`}>
-                <div className="text-[10px] tracking-[0.22em] text-[#ff6b6b] uppercase font-[700] mb-2">🔥 {s.label}</div>
-                <div className="text-[14px] text-[#9a8060] line-through font-[500]">Original price: Rs {s.originalPrice.toLocaleString()}</div>
-                <div className="text-[34px] sm:text-[40px] font-[700] text-[#f6e8cc] mt-1 leading-none" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
-                  Sale price: Rs {s.price.toLocaleString()}
+              <div key={s.ml} className={`relative overflow-hidden rounded-2xl border p-6 text-center ${s.popular ? "border-[#c3a05c] bg-[#1d1810]" : "border-[#2c2517] bg-[#181510]"}`}>
+                {s.popular && <div className="pointer-events-none absolute inset-0 overflow-hidden"><div className="animate-sheen absolute -top-1/2 h-[200%] w-16 bg-gradient-to-r from-transparent via-[#e8c876]/15 to-transparent" /></div>}
+                <div className="mb-3 text-[9.5px] font-[700] uppercase tracking-[0.24em] text-[#cfae66]">{s.label}</div>
+                <div className="text-[13px] font-[500] text-[#8a7a5c] line-through">Rs {s.originalPrice.toLocaleString()}</div>
+                <div className="mt-1 text-[38px] leading-none text-[#f2e6c8] sm:text-[44px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+                  Rs {s.price.toLocaleString()}
                 </div>
-                <div className="text-[16px] text-[#c5ad88] mt-2 font-[600]">{s.ml} ml Perfume</div>
-                <div className="text-[13px] text-[#a08a6c] mt-3 leading-relaxed">{s.desc}</div>
+                <div className="mt-2 text-[10.5px] font-[600] uppercase tracking-[0.18em] text-[#b3924f]">{s.ml} ml Eau de Parfum</div>
+                <div className="mt-3 text-[12.5px] leading-relaxed text-[#a49372]">{s.desc}</div>
                 <button
                   onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`mt-5 w-full py-[12px] rounded-full text-[13.5px] font-[600] ${s.popular ? "bg-[#e8c06f] text-[#1a1008]" : "bg-[#3a2b21] text-[#e8d3b6] border border-[#4d3828]"}`}
+                  className={`mt-5 w-full rounded-full py-3 text-[11px] font-[600] uppercase tracking-[0.14em] transition ${s.popular ? "bg-[#e0bd6f] text-[#1c1408] hover:bg-[#eccf85]" : "border border-[#3d3320] bg-transparent text-[#d8c49c] hover:bg-[#241e13]"}`}
                 >
-                  Shop {s.ml}ml →
+                  Shop {s.ml}ml
                 </button>
               </div>
             ))}
@@ -6174,17 +6158,17 @@ export default function App() {
 
 
       {/* ═══════════ ABOUT ═══════════ */}
-      <section id="about" className="bg-[#f1e6d4] border-y border-[#dfceb2]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-16 lg:py-24">
-          <div className="text-center max-w-[760px] mx-auto">
-            <div className="text-[11px] tracking-[0.22em] text-[#a06e26] uppercase font-[600]">About Huda Essence</div>
-            <h3 className="text-[44px] lg:text-[56px] leading-[0.95] mt-3" style={{ fontFamily: '"Cormorant Garamond", serif' }}>We don't just copy.<br />We craft impressions.</h3>
-            <p className="mt-5 text-[16.5px] leading-relaxed text-[#514233] max-w-[600px] mx-auto">
+      <section id="about" className="border-y border-[#e7dfcd] bg-[#f3efe4]">
+        <div className="mx-auto max-w-[1320px] px-5 py-16 lg:px-10 lg:py-24">
+          <div className="mx-auto max-w-[760px] text-center">
+            <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">About Huda Essence</div>
+            <h3 className="mt-4 text-[40px] leading-[1.0] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>We don't just copy.<br />We craft impressions.</h3>
+            <p className="mx-auto mt-5 max-w-[600px] text-[15.5px] leading-relaxed text-[#5c5344]">
               Huda Essence is a Pakistani impression perfume brand that believes everyone deserves to smell amazing.
               We study the world's most iconic designer fragrances and recreate their scent profiles using premium oils.
             </p>
           </div>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[960px] mx-auto">
+          <div className="mx-auto mt-12 grid max-w-[960px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               ["Premium Oils", "High-quality fragrance oils sourced for long-lasting performance."],
               ["Affordable Luxury", "Designer-inspired scents from just PKR 299 for 10ml."],
@@ -6192,9 +6176,9 @@ export default function App() {
               ["Flat Delivery", `Flat PKR ${deliveryCharge} delivery charge within Karachi only.`],
               ["Cash on Delivery", "Pay in cash on delivery! Only delivery charges (PKR " + deliveryCharge + ") paid in advance via JazzCash, EasyPaisa, or Bank."],
             ].map(([t, s]) => (
-              <div key={t} className="bg-white/70 rounded-2xl p-5 border border-[#e4d0b2]">
-                <div className="text-[20px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{t}</div>
-                <div className="text-[13.5px] text-[#5d4934] mt-1.5 leading-relaxed">{s}</div>
+              <div key={t} className="rounded-2xl border border-[#e5dcc6] bg-white/80 p-5 transition hover:border-[#cbb47f]">
+                <div className="text-[19px] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{t}</div>
+                <div className="mt-1.5 text-[13px] leading-relaxed text-[#6b6153]">{s}</div>
               </div>
             ))}
           </div>
@@ -6202,24 +6186,24 @@ export default function App() {
       </section>
 
       {/* ═══════════ REVIEWS ═══════════ */}
-      <section className="mx-auto max-w-[1320px] px-5 lg:px-10 py-16 lg:py-[80px]">
-        <div className="text-center mb-12">
-          <div className="text-[11px] tracking-[0.22em] text-[#b07a28] uppercase font-[600]">Customer Love</div>
-          <h3 className="text-[42px] lg:text-[52px] leading-[0.95] mt-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>What Our Customers Say</h3>
-          <p className="text-[15px] text-[#6d5840] mt-2">⭐ 4.9 average rating from 5,000+ happy customers</p>
+      <section className="mx-auto max-w-[1320px] px-5 py-16 lg:px-10 lg:py-[90px]">
+        <div className="mb-12 text-center">
+          <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">Customer Love</div>
+          <h3 className="mt-3 text-[38px] leading-[0.98] text-[#191510] lg:text-[48px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>What Our Customers Say</h3>
+          <p className="mt-3 text-[14px] text-[#6b6153]"><span className="text-[#c9a24b]">★ 4.9</span> average rating from 5,000+ happy customers</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-5 md:grid-cols-3">
           {[
             { name: "Fatima A.", city: "Karachi", text: "Tea Rosée is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rosée • 50ml", stars: 5 },
             { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 100ml", stars: 5 },
             { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 6 to 8 hours.", scent: "Armani Code + Miss Dior", stars: 5 },
           ].map((r, i) => (
-            <div key={i} className="bg-white rounded-[24px] border border-[#ead6b8] p-6">
-              <div className="text-[#c68f2a] text-[16px]">{"★".repeat(r.stars)}</div>
-              <p className="mt-3 text-[15.5px] leading-relaxed text-[#3a2c1f]">"{r.text}"</p>
-              <div className="mt-5 pt-4 border-t border-[#f0e0c8]">
-                <div className="text-[14px] font-[600] text-[#4c3725]">{r.name} — {r.city}</div>
-                <div className="text-[12.5px] text-[#85684b]">{r.scent}</div>
+            <div key={i} className="flex flex-col rounded-2xl border border-[#e8e0cd] bg-white p-6">
+              <div className="text-[15px] tracking-[0.2em] text-[#c9a24b]">{"★".repeat(r.stars)}</div>
+              <p className="mt-4 flex-1 text-[14.5px] leading-relaxed text-[#3c3428]">"{r.text}"</p>
+              <div className="mt-5 border-t border-[#efe8d6] pt-4">
+                <div className="text-[13.5px] font-[600] text-[#191510]">{r.name} — {r.city}</div>
+                <div className="mt-0.5 text-[11px] uppercase tracking-[0.12em] text-[#a4977e]">{r.scent}</div>
               </div>
             </div>
           ))}
@@ -6227,22 +6211,22 @@ export default function App() {
       </section>
 
       {/* ═══════════ WHY CHOOSE US ═══════════ */}
-      <section className="bg-[#f5ecdd] border-y border-[#e1ccaa]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-14 lg:py-20">
-          <div className="text-center mb-10">
-            <h3 className="text-[40px] lg:text-[48px] leading-[0.95]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Why Choose Huda Essence?</h3>
+      <section className="border-y border-[#e7dfcd] bg-[#fbf9f4]">
+        <div className="mx-auto max-w-[1320px] px-5 py-14 lg:px-10 lg:py-20">
+          <div className="mb-10 text-center">
+            <h3 className="text-[36px] leading-[0.98] text-[#191510] lg:text-[46px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Why Choose Huda Essence?</h3>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { emoji: "💎", title: "Designer Quality", desc: "Premium impression oils that rival originals costing 10x more" },
               { emoji: "🇵🇰", title: "Made in Pakistan", desc: "Proudly crafted for Pakistani customers and our climate" },
               { emoji: "⏰", title: "Long Lasting", desc: "6 to 8 hours of beautiful fragrance performance" },
               { emoji: "🎁", title: "Perfect Gift", desc: "Beautiful packaging makes every order gift-ready" },
             ].map(item => (
-              <div key={item.title} className="text-center bg-white rounded-2xl p-6 border border-[#e4d0b2]">
-                <div className="text-[36px] mb-3">{item.emoji}</div>
-                <div className="text-[18px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{item.title}</div>
-                <div className="text-[13.5px] text-[#6d5841] mt-2 leading-relaxed">{item.desc}</div>
+              <div key={item.title} className="rounded-2xl border border-[#e8e0cd] bg-white p-6 text-center transition hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgba(90,70,40,0.3)]">
+                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#f6efdd] text-[24px]">{item.emoji}</div>
+                <div className="mt-4 text-[17px] font-[600] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{item.title}</div>
+                <div className="mt-2 text-[13px] leading-relaxed text-[#6b6153]">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -6250,29 +6234,29 @@ export default function App() {
       </section>
 
       {/* ═══════════ CTA ═══════════ */}
-      <section className="bg-[#18120f] text-[#f6e7cb]">
-        <div className="mx-auto max-w-[900px] px-5 lg:px-10 py-16 lg:py-[80px] text-center">
-          <div className="text-[11px] tracking-[0.24em] text-[#d8a757] uppercase font-[600]">Ready to smell amazing?</div>
-          <h4 className="text-[42px] lg:text-[54px] mt-3 leading-[0.98]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Order your Huda Essence<br />perfume today.</h4>
-          <p className="mt-4 text-[#d6c1a3] text-[16px]">Delivery in Karachi only. Cash on Delivery available! Delivery charges advance.</p>
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <button onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-[15px] rounded-full bg-[#e3b96a] text-[#24160c] font-[700] text-[15px] hover:bg-[#f0cc80] transition">Shop All Perfumes →</button>
-            <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to place an order from Huda Essence`} target="_blank" rel="noopener" className="px-8 py-[15px] rounded-full border border-[#4b3728] text-[#f2dbc0] text-[15px] flex items-center gap-2 hover:bg-[#241a12] transition">
+      <section className="bg-[#12100b] text-[#ece1c8]">
+        <div className="mx-auto max-w-[900px] px-5 py-16 text-center lg:px-10 lg:py-[90px]">
+          <div className="text-[10.5px] font-[600] uppercase tracking-[0.26em] text-[#cfae66]">Ready to smell amazing?</div>
+          <h4 className="mt-4 text-[38px] leading-[1.0] lg:text-[50px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Order your Huda Essence<br />perfume today.</h4>
+          <p className="mt-4 text-[15px] text-[#b3a486]">Delivery in Karachi only. Cash on Delivery available! Delivery charges advance.</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <button onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })} className="rounded-full bg-[#e0bd6f] px-8 py-[15px] text-[11.5px] font-[700] uppercase tracking-[0.14em] text-[#1c1408] transition hover:bg-[#eccf85]">Shop All Perfumes</button>
+            <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to place an order from Huda Essence`} target="_blank" rel="noopener" className="flex items-center gap-2 rounded-full border border-[#3d3320] px-8 py-[15px] text-[11.5px] font-[600] uppercase tracking-[0.12em] text-[#e5d3ac] transition hover:bg-[#1d1810]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-6 text-[12.5px] text-[#b99c77]">10ml: <span className="line-through opacity-70">Rs 500</span> <span className="text-[#ff6b6b] font-[700]">Rs 299</span> • 50ml: <span className="line-through opacity-70">Rs 1,600</span> <span className="text-[#ff6b6b] font-[700]">Rs 1,299</span> • 100ml: <span className="line-through opacity-70">Rs 3,000</span> <span className="text-[#ff6b6b] font-[700]">Rs 2,399</span></div>
+          <div className="mt-7 text-[12px] tracking-[0.04em] text-[#8a7a5c]">10ml: <s className="opacity-70">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span> &nbsp;•&nbsp; 50ml: <s className="opacity-70">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span> &nbsp;•&nbsp; 100ml: <s className="opacity-70">Rs 3,000</s> <span className="font-[700] text-[#e0bd6f]">Rs 2,399</span></div>
         </div>
       </section>
 
       {/* ═══════════ CONTACT ═══════════ */}
-      <section id="contact" className="mx-auto max-w-[1320px] px-5 lg:px-10 py-14 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-10">
+      <section id="contact" className="mx-auto max-w-[1320px] px-5 py-14 lg:px-10 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <div className="text-[11px] tracking-[0.22em] text-[#b07a28] uppercase font-[600]">Get in Touch</div>
-            <h3 className="text-[40px] lg:text-[48px] leading-[0.95] mt-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Have a question?<br />We'd love to help.</h3>
-            <div className="mt-6 space-y-4 text-[15px] text-[#4b3828]">
+            <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">Get in Touch</div>
+            <h3 className="mt-3 text-[36px] leading-[1.0] text-[#191510] lg:text-[46px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Have a question?<br />We'd love to help.</h3>
+            <div className="mt-8 space-y-5 text-[14.5px] text-[#3c3428]">
               {[
                 { icon: "📱", label: "WhatsApp", val: `+${whatsappNum.replace(/(\d{2})(\d{3})(\d{7})/, "$1 $2 $3")}`, href: `https://wa.me/${whatsappNum}` },
                 { icon: "📸", label: "Instagram", val: "@hudaessence2026", href: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" },
@@ -6283,22 +6267,22 @@ export default function App() {
               ].map(({ icon, label, val, href }) => {
                 const Content = () => (
                   <>
-                    <span className="text-[20px]">{icon}</span>
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[#e5dcc6] bg-white text-[16px]">{icon}</span>
                     <div>
-                      <div className="font-[650] flex items-center gap-1 text-[#24160c]">
+                      <div className="flex items-center gap-1 text-[11px] font-[700] uppercase tracking-[0.14em] text-[#191510]">
                         {label}
-                        {href && <span className="text-[10px] text-[#b07a28] font-normal opacity-70 group-hover:translate-x-0.5 group-hover:opacity-100 transition-all">→</span>}
+                        {href && <span className="font-normal text-[#a08040] opacity-70 transition-all group-hover:translate-x-0.5 group-hover:opacity-100">→</span>}
                       </div>
-                      <div className="text-[#7a6548] group-hover:text-[#b07a28] transition-colors duration-200">{val}</div>
+                      <div className="mt-0.5 text-[#6b6153] transition-colors duration-200 group-hover:text-[#8a6a33]">{val}</div>
                     </div>
                   </>
                 );
                 return href ? (
-                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group cursor-pointer hover:translate-x-1 transition-all duration-200">
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3.5 group cursor-pointer transition-transform duration-200 hover:translate-x-1">
                     <Content />
                   </a>
                 ) : (
-                  <div key={label} className="flex items-start gap-3">
+                  <div key={label} className="flex items-start gap-3.5">
                     <Content />
                   </div>
                 );
@@ -6306,31 +6290,31 @@ export default function App() {
             </div>
           </div>
           <div>
-            <form onSubmit={e => { e.preventDefault(); setToast("Message sent! We'll reply within 2 hours InshaAllah."); }} className="bg-white rounded-[24px] border border-[#e6d4b8] p-6 lg:p-8 space-y-4">
-              <div className="text-[20px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Send us a message</div>
-              <input required type="text" placeholder="Your Name" className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-[#fdfaf5]" />
-              <input required type="tel" placeholder="Phone / WhatsApp Number" className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-[#fdfaf5]" />
-              <input type="email" placeholder="Email (optional)" className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-[#fdfaf5]" />
-              <textarea required rows={4} placeholder="Your message…" className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-[#fdfaf5] resize-none" />
-              <button className="w-full py-[13px] rounded-full bg-[#1b1310] text-[#f6e7cc] font-[600] text-[14px] hover:bg-[#2a1f16] transition">Send Message</button>
+            <form onSubmit={e => { e.preventDefault(); setToast("Message sent! We'll reply within 2 hours InshaAllah."); }} className="space-y-4 rounded-2xl border border-[#e8e0cd] bg-white p-6 lg:p-8">
+              <div className="text-[21px] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Send us a message</div>
+              <input required type="text" placeholder="Your Name" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <input required type="tel" placeholder="Phone / WhatsApp Number" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <input type="email" placeholder="Email (optional)" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <textarea required rows={4} placeholder="Your message…" className="w-full resize-none rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <button className="w-full rounded-full bg-[#191510] py-[13px] text-[11.5px] font-[600] uppercase tracking-[0.14em] text-[#f0e6d2] transition hover:bg-[#2b241a]">Send Message</button>
             </form>
           </div>
         </div>
       </section>
 
       {/* ═══════════ FOOTER ═══════════ */}
-      <footer className="bg-[#14100d] text-[#d8c5a8]">
-        <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-14 grid md:grid-cols-4 gap-10 text-[13.7px]">
+      <footer className="bg-[#12100b] text-[#b8a688]">
+        <div className="mx-auto grid max-w-[1320px] gap-10 px-5 py-14 text-[13.5px] md:grid-cols-4 lg:px-10">
           <div>
             <div onClick={() => setAdminClicks(c => c + 1)} className="cursor-default"><Logo size="footer" /></div>
-            <p className="mt-4 text-[#9a836a] leading-relaxed">Premium impression perfumes inspired by the world's finest designer fragrances. Made for Pakistan.</p>
+            <p className="mt-4 leading-relaxed text-[#8a7a5c]">Premium impression perfumes inspired by the world's finest designer fragrances. Made for Pakistan.</p>
             <div className="mt-6 flex gap-3">
-              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2a2018] flex items-center justify-center text-[#9a836a] hover:text-[#f0dcc0] hover:border-[#f0dcc0] hover:bg-[#1f1712] transition duration-200" title="Follow @hudaessence2026 on Instagram">
+              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2c2517] flex items-center justify-center text-[#8a7a5c] hover:text-[#e9dcb8] hover:border-[#e9dcb8] hover:bg-[#1d1810] transition duration-200" title="Follow @hudaessence2026 on Instagram">
                 <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                 </svg>
               </a>
-              <a href="https://www.facebook.com/share/18vFchSaVf/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2a2018] flex items-center justify-center text-[#9a836a] hover:text-[#f0dcc0] hover:border-[#f0dcc0] hover:bg-[#1f1712] transition duration-200" title="Follow us on Facebook">
+              <a href="https://www.facebook.com/share/18vFchSaVf/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2c2517] flex items-center justify-center text-[#8a7a5c] hover:text-[#e9dcb8] hover:border-[#e9dcb8] hover:bg-[#1d1810] transition duration-200" title="Follow us on Facebook">
                 <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                   <path d="M9 8H7v3h2v9h4v-9h3.625L17 8h-4V6.875C13 5.9 13.5 5.5 14.5 5.5h2.5V2h-3.625C9.75 2 9 3.5 9 5.625V8z" />
                 </svg>
@@ -6338,33 +6322,32 @@ export default function App() {
             </div>
           </div>
           <div>
-            <div className="font-[650] mb-3 text-[#f0dcc0]">Shop</div>
-            <ul className="space-y-2 text-[#a89070]">
-              <li><a href="#shop" className="hover:text-[#f0dcc0] transition">All Perfumes</a></li>
-              {PRODUCTS.map(p => <li key={p.id}><a href="#shop" className="hover:text-[#f0dcc0] transition">{p.name}</a></li>)}
+            <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Shop</div>
+            <ul className="space-y-2 text-[#9a8a6a]">
+              <li><a href="#shop" className="hover:text-[#e9dcb8] transition">All Perfumes</a></li>
+              {PRODUCTS.map(p => <li key={p.id}><a href="#shop" className="hover:text-[#e9dcb8] transition">{p.name}</a></li>)}
             </ul>
           </div>
           <div>
-            <div className="font-[650] mb-3 text-[#f0dcc0]">Help</div>
-            <ul className="space-y-2 text-[#a89070]">
+            <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Help</div>
+            <ul className="space-y-2 text-[#9a8a6a]">
               <li>Shipping Policy</li>
               <li>Track Your Order</li>
               <li>FAQs</li>
             </ul>
           </div>
           <div>
-            <div className="font-[650] mb-3 text-[#f0dcc0]">Pricing</div>
-            <ul className="space-y-2 text-[#a89070]">
-              <li>10ml — Original: <span className="line-through opacity-70">Rs 500</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 299</span></li>
-              <li>50ml — Original: <span className="line-through opacity-70">Rs 1,600</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 1,299</span></li>
-              <li>100ml — Original: <span className="line-through opacity-70">Rs 3,000</span> | Sale: <span className="text-[#e8474c] font-[700]">Rs 2,399</span></li>
-              <li>100ml — PKR 2,499</li>
-              <li className="pt-1 text-[#c9a86c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
+            <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Pricing</div>
+            <ul className="space-y-2 text-[#9a8a6a]">
+              <li>10ml — <s className="opacity-60">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span></li>
+              <li>50ml — <s className="opacity-60">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span></li>
+              <li>100ml — <s className="opacity-60">Rs 3,000</s> <span className="font-[700] text-[#e0bd6f]">Rs 2,399</span></li>
+              <li className="pt-1 text-[#c9ab6c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-[#2a2018]">
-          <div className="mx-auto max-w-[1320px] px-5 lg:px-10 py-5 flex flex-wrap justify-between gap-4 text-[12px] text-[#7a6548]">
+        <div className="border-t border-[#241e12]">
+          <div className="mx-auto flex max-w-[1320px] flex-wrap justify-between gap-4 px-5 py-5 text-[12px] text-[#7a6a4e] lg:px-10">
             <div>© {new Date().getFullYear()} Huda Essence — All rights reserved. Impression perfumes inspired by designers, not affiliated.</div>
             <div className="flex gap-5"><span>Privacy Policy</span><span>Terms</span></div>
           </div>
@@ -6375,18 +6358,18 @@ export default function App() {
       {modal && (
         <div className="fixed inset-0 z-[60] flex">
           <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" onClick={() => setModal(null)} />
-          <div className="relative m-auto w-[min(1020px,96vw)] max-h-[92vh] overflow-auto rounded-[28px] bg-[#faf6ef] shadow-2xl">
-            <button onClick={() => setModal(null)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e1ccab] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
+          <div className="relative m-auto w-[min(1020px,96vw)] max-h-[92vh] overflow-auto rounded-3xl bg-[#fbf9f4] shadow-2xl">
+            <button onClick={() => setModal(null)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e5dcc6] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
             <div className="grid md:grid-cols-[460px_1fr]">
-              <div className="relative bg-[#efe3d1]">
+              <div className="relative bg-[#f0e9d8]">
                 <PerfumeImage product={modal} className="w-full h-[450px] md:h-full object-cover" />
                 <div className="absolute left-5 top-5 flex gap-2">
-                  {modal.bestseller && <span className="bg-[#17120e] text-[#f7e5c6] px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">Bestseller</span>}
-                  {modal.nouveau && <span className="bg-[#7d1927] text-white px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">New</span>}
+                  {modal.bestseller && <span className="bg-[#191510]/90 text-[#e9dcb8] px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">Bestseller</span>}
+                  {modal.nouveau && <span className="bg-[#6e1e2a] text-white px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">New</span>}
                 </div>
               </div>
               <div className="p-7 md:p-9">
-                <div className="text-[11px] tracking-[0.22em] text-[#b38132] uppercase font-[600]">
+                <div className="text-[10.5px] tracking-[0.24em] text-[#a08040] uppercase font-[600]">
                   {modal.gender === "Men" ? "For Him" : modal.gender === "Women" ? "For Her" : "Unisex"} • {modal.family}
                 </div>
                 <h4 className="text-[38px] leading-[0.95] mt-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{modal.name}</h4>
@@ -6396,15 +6379,15 @@ export default function App() {
                 {/* notes */}
                 <div className="mt-6 grid grid-cols-3 gap-4 text-[13px]">
                   <div>
-                    <div className="text-[10.5px] tracking-[0.16em] text-[#a38153] uppercase font-[600] mb-2">Top</div>
+                    <div className="text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[600] mb-2">Top</div>
                     {modal.top.map(n => <div key={n} className="text-[#4b3728] mb-1">• {n}</div>)}
                   </div>
                   <div>
-                    <div className="text-[10.5px] tracking-[0.16em] text-[#a38153] uppercase font-[600] mb-2">Heart</div>
+                    <div className="text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[600] mb-2">Heart</div>
                     {modal.heart.map(n => <div key={n} className="text-[#4b3728] mb-1">• {n}</div>)}
                   </div>
                   <div>
-                    <div className="text-[10.5px] tracking-[0.16em] text-[#a38153] uppercase font-[600] mb-2">Base</div>
+                    <div className="text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[600] mb-2">Base</div>
                     {modal.base.map(n => <div key={n} className="text-[#4b3728] mb-1">• {n}</div>)}
                   </div>
                 </div>
@@ -6416,18 +6399,18 @@ export default function App() {
                     {modal.sizes.map(s => {
                       const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
                       return (
-                        <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[140px] transition relative ${sizePick === s.ml ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"} ring-1 ring-[#e8474c]/30`}>
-                          <div className="absolute -top-2.5 -right-2 bg-[#e8474c] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>
+                        <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[140px] transition relative ${sizePick === s.ml ? "border-[#b3924f] bg-[#faf3e3]" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}>
+                          <div className="absolute -top-2.5 -right-2 bg-[#6e1e2a] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>
                           <div className="text-[15px] font-[700]">{s.ml} ml Perfume</div>
-                          {orig && <div className="text-[12px] text-[#9a8060] line-through">Original: Rs {orig.toLocaleString()}</div>}
-                          <div className="text-[14px] font-[700] text-[#c0392b]">Sale: Rs {s.price.toLocaleString()}</div>
+                          {orig && <div className="text-[12px] text-[#9a8c72] line-through">Original: Rs {orig.toLocaleString()}</div>}
+                          <div className="text-[14px] font-[700] text-[#6e1e2a]">Sale: Rs {s.price.toLocaleString()}</div>
                         </button>
                       );
                     })}
                   </div>
                 </div>
                 <div className="mt-6 flex gap-3 flex-wrap">
-                  <button onClick={() => { addToCart(modal.id, sizePick); setModal(null); }} className="px-7 py-[14px] rounded-full bg-[#201711] text-[#f8e8c8] text-[14.5px] font-[600] hover:bg-[#2e221a] transition">
+                  <button onClick={() => { addToCart(modal.id, sizePick); setModal(null); }} className="px-7 py-[14px] rounded-full bg-[#191510] text-[#f0e6d2] text-[14.5px] font-[600] hover:bg-[#2b241a] transition">
                     Add to Bag — {PKR(modal.sizes.find(s => s.ml === sizePick)?.price ?? modal.sizes[0].price)}
                   </button>
                   <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to order ${modal.name} (${sizePick}ml) from Huda Essence`} target="_blank" rel="noopener" className="px-5 py-[14px] rounded-full bg-[#25D366] text-white text-[13.7px] font-[600] flex items-center gap-2">
@@ -6438,7 +6421,7 @@ export default function App() {
                     {wishlist.includes(modal.id) ? "♥ Saved" : "♡ Save"}
                   </button>
                 </div>
-                <div className="mt-6 text-[12.6px] text-[#7c6348] border-t border-[#e5d0b2] pt-4 grid grid-cols-2 gap-3">
+                <div className="mt-6 text-[12.6px] text-[#6b6153] border-t border-[#efe8d6] pt-4 grid grid-cols-2 gap-3">
                   <div>✓ PKR {deliveryCharge} delivery (Karachi Only)</div>
                   <div>✓ Cash on Delivery Available</div>
                   <div>✓ Delivery charges advance only</div>
@@ -6453,17 +6436,17 @@ export default function App() {
       {/* ═══════════ CART DRAWER ═══════════ */}
       <div className={`fixed inset-0 z-[70] ${cartOpen ? "" : "pointer-events-none"}`}>
         <div className={`absolute inset-0 bg-black/45 transition-opacity duration-300 ${cartOpen ? "opacity-100" : "opacity-0"}`} onClick={() => setCartOpen(false)} />
-        <aside className={`absolute right-0 top-0 h-full w-[430px] max-w-[96vw] bg-[#fcf8f1] shadow-2xl border-l border-[#e6d2b3] transition-transform duration-300 ${cartOpen ? "translate-x-0" : "translate-x-full"}`}>
-          <div className="h-16 px-6 border-b border-[#e6d2b3] flex items-center justify-between">
+        <aside className={`absolute right-0 top-0 h-full w-[430px] max-w-[96vw] bg-[#fbf9f4] shadow-2xl border-l border-[#e8e0cd] transition-transform duration-300 ${cartOpen ? "translate-x-0" : "translate-x-full"}`}>
+          <div className="h-16 px-6 border-b border-[#e8e0cd] flex items-center justify-between">
             <div className="text-[22px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Your Bag ({cartCount})</div>
-            <button onClick={() => setCartOpen(false)} className="w-8 h-8 rounded-full hover:bg-[#f0e0c6] grid place-items-center text-[#7a6147] transition text-[16px]">✕</button>
+            <button onClick={() => setCartOpen(false)} className="w-8 h-8 rounded-full hover:bg-[#f3efe4] grid place-items-center text-[#6b6153] transition text-[16px]">✕</button>
           </div>
           <div className="px-6 py-4 overflow-auto h-[calc(100%-270px)] space-y-4">
             {cart.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-[40px] mb-3">🧴</div>
                 <div className="text-[#9a8062] text-[15px]">Your bag is empty.</div>
-                <button onClick={() => { setCartOpen(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="mt-4 px-5 py-2.5 rounded-full bg-[#1b1310] text-[#f6e7cc] text-[13.5px]">Shop Perfumes</button>
+                <button onClick={() => { setCartOpen(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="mt-4 px-5 py-2.5 rounded-full bg-[#191510] text-[#f0e6d2] text-[13.5px]">Shop Perfumes</button>
               </div>
             )}
             {cart.map((line, idx) => {
@@ -6471,7 +6454,7 @@ export default function App() {
               if (!p) return null;
               const sz = p.sizes.find(s => s.ml === line.sizeMl) ?? p.sizes[0];
               return (
-                <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex gap-4 bg-white border border-[#edd8b8] rounded-2xl p-3">
+                <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex gap-4 bg-white border border-[#ece3cf] rounded-2xl p-3">
                   <PerfumeImage product={p} className="w-[76px] h-[76px] object-cover rounded-xl shrink-0" />
                   <div className="flex-1 min-w-0">
                     <div className="text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</div>
@@ -6485,19 +6468,19 @@ export default function App() {
                       <div className="text-[15px] font-[700]">{PKR(sz.price * line.qty)}</div>
                     </div>
                   </div>
-                  <button onClick={() => setCart(c => c.filter((_, i) => i !== idx))} className="text-[#b98b6a] text-[11px] self-start hover:text-[#7b1d2a] transition">✕</button>
+                  <button onClick={() => setCart(c => c.filter((_, i) => i !== idx))} className="text-[#a4977e] text-[11px] self-start hover:text-[#6e1e2a] transition">✕</button>
                 </div>
               );
             })}
           </div>
-          <div className="absolute bottom-0 left-0 right-0 border-t border-[#e6d2b3] bg-[#faf3e5] px-6 py-5">
+          <div className="absolute bottom-0 left-0 right-0 border-t border-[#e8e0cd] bg-[#f5f1e6] px-6 py-5">
             {cart.length > 0 && (<>
               <div className="flex justify-between text-[14px] text-[#6d5437]"><span>Subtotal</span><span className="font-[600]">{PKR(cartTotal)}</span></div>
               <div className="flex justify-between text-[14px] text-[#6d5437] mt-1"><span>Delivery</span><span className="font-[600]">PKR {deliveryCharge}</span></div>
               <div className="flex justify-between text-[20px] font-[700] mt-3"><span>Total</span><span>{PKR(cartTotal + deliveryCharge)}</span></div>
               <button
                 onClick={() => { setCheckoutOpen(true); setCheckoutStep(1); }}
-                className="w-full mt-4 py-[14px] rounded-full bg-[#1a120e] text-[#f6e5c7] font-[700] text-[14px] flex items-center justify-center gap-2 hover:bg-[#2a1f16] transition"
+                className="w-full mt-4 py-[14px] rounded-full bg-[#191510] text-[#f0e6d2] font-[700] text-[14px] flex items-center justify-center gap-2 hover:bg-[#2b241a] transition"
               >
                 💳 Proceed to Checkout
               </button>
@@ -6511,23 +6494,23 @@ export default function App() {
       {checkoutOpen && (
         <div className="fixed inset-0 z-[80] flex">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setCheckoutOpen(false)} />
-          <div className="relative m-auto w-[min(560px,96vw)] max-h-[94vh] overflow-auto rounded-[28px] bg-[#faf6ef] shadow-2xl">
-            <button onClick={() => setCheckoutOpen(false)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e1ccab] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
+          <div className="relative m-auto w-[min(560px,96vw)] max-h-[94vh] overflow-auto rounded-3xl bg-[#fbf9f4] shadow-2xl">
+            <button onClick={() => setCheckoutOpen(false)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e5dcc6] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
 
             {/* Header */}
-            <div className="bg-[#14100d] text-[#f6e7c9] px-7 py-5 rounded-t-[28px]">
+            <div className="bg-[#12100b] text-[#ece1c8] px-7 py-5 rounded-t-3xl">
               <div className="text-[10px] tracking-[0.22em] uppercase font-[600] text-[#d2a75a]">Checkout</div>
               <div className="text-[26px] mt-1" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
                 {checkoutStep === 1 ? "Your Details" : "Payment & Confirmation"}
               </div>
               <div className="flex items-center gap-3 mt-3">
-                <div className={`flex items-center gap-1.5 text-[11px] font-[600] ${checkoutStep >= 1 ? "text-[#e8c06f]" : "text-[#6b5a46]"}`}>
-                  <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] ${checkoutStep >= 1 ? "bg-[#e8c06f] text-[#1a1008]" : "bg-[#3a2b21] text-[#8a7054]"}`}>1</span>
+                <div className={`flex items-center gap-1.5 text-[11px] font-[600] ${checkoutStep >= 1 ? "text-[#e0bd6f]" : "text-[#6b5a46]"}`}>
+                  <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] ${checkoutStep >= 1 ? "bg-[#e0bd6f] text-[#1c1408]" : "bg-[#3a2b21] text-[#8a7054]"}`}>1</span>
                   Details
                 </div>
-                <div className={`w-8 h-px ${checkoutStep >= 2 ? "bg-[#e8c06f]" : "bg-[#3a2b21]"}`}></div>
-                <div className={`flex items-center gap-1.5 text-[11px] font-[600] ${checkoutStep >= 2 ? "text-[#e8c06f]" : "text-[#6b5a46]"}`}>
-                  <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] ${checkoutStep >= 2 ? "bg-[#e8c06f] text-[#1a1008]" : "bg-[#3a2b21] text-[#8a7054]"}`}>2</span>
+                <div className={`w-8 h-px ${checkoutStep >= 2 ? "bg-[#e0bd6f]" : "bg-[#3a2b21]"}`}></div>
+                <div className={`flex items-center gap-1.5 text-[11px] font-[600] ${checkoutStep >= 2 ? "text-[#e0bd6f]" : "text-[#6b5a46]"}`}>
+                  <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] ${checkoutStep >= 2 ? "bg-[#e0bd6f] text-[#1c1408]" : "bg-[#3a2b21] text-[#8a7054]"}`}>2</span>
                   Payment
                 </div>
               </div>
@@ -6535,7 +6518,7 @@ export default function App() {
 
             <div className="p-7">
               {/* ── Order Summary ── */}
-              <div className="bg-white rounded-2xl border border-[#ead6b8] p-4 mb-6">
+              <div className="bg-white rounded-2xl border border-[#ece3cf] p-4 mb-6">
                 <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Order Summary</div>
                 {cart.map((line, idx) => {
                   const p = PRODUCTS.find(pp => pp.id === line.productId);
@@ -6552,7 +6535,7 @@ export default function App() {
                     </div>
                   );
                 })}
-                <div className="mt-3 pt-3 border-t border-[#e6d2b3] space-y-1">
+                <div className="mt-3 pt-3 border-t border-[#e8e0cd] space-y-1">
                   <div className="flex justify-between text-[13px] text-[#6d5437]"><span>Subtotal</span><span>{PKR(cartTotal)}</span></div>
                   <div className="flex justify-between text-[13px] text-[#6d5437]"><span>Delivery</span><span>PKR {deliveryCharge}</span></div>
                   <div className="flex justify-between text-[17px] font-[700] pt-1"><span>Total</span><span>{PKR(cartTotal + deliveryCharge)}</span></div>
@@ -6568,7 +6551,7 @@ export default function App() {
                       value={custName}
                       onChange={e => setCustName(e.target.value)}
                       placeholder="e.g. Ahmed Khan"
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-white"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
                     />
                   </div>
                   <div>
@@ -6578,7 +6561,7 @@ export default function App() {
                       onChange={e => setCustPhone(e.target.value)}
                       placeholder="e.g. 0312-3456789"
                       type="tel"
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-white"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
                     />
                   </div>
                   <div>
@@ -6588,7 +6571,7 @@ export default function App() {
                       onChange={e => setCustAddress(e.target.value)}
                       placeholder="House #, Street, Block, Area..."
                       rows={3}
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-white resize-none"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white resize-none"
                     />
                   </div>
                   <div>
@@ -6596,14 +6579,14 @@ export default function App() {
                     <input
                       value={custCity}
                       onChange={e => setCustCity(e.target.value)}
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#c9a06a] transition bg-white"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
                     />
                   </div>
 
                   <button
                     onClick={() => setCheckoutStep(2)}
                     disabled={!canProceedStep1}
-                    className={`w-full py-[14px] rounded-full font-[700] text-[14px] mt-2 transition ${canProceedStep1 ? "bg-[#1b1310] text-[#f6e7cc] hover:bg-[#2a1f16]" : "bg-[#d9ccba] text-[#a09080] cursor-not-allowed"}`}
+                    className={`w-full py-[14px] rounded-full font-[700] text-[14px] mt-2 transition ${canProceedStep1 ? "bg-[#191510] text-[#f0e6d2] hover:bg-[#2b241a]" : "bg-[#ddd5c4] text-[#a09882] cursor-not-allowed"}`}
                   >
                     Continue to Payment →
                   </button>
@@ -6617,11 +6600,11 @@ export default function App() {
                   <div>
                     <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-3 block">Select Payment Method *</label>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                      {(["cod", "easypaisa", "jazzcash", "bank"] as (keyof typeof paymentAccounts)[]).map(method => (
+                      {(["cod", "easypaisa", "jazzcash", "bank"] as ("cod" | "easypaisa" | "jazzcash" | "bank")[]).map(method => (
                         <button
                           key={method}
                           onClick={() => setPayMethod(method)}
-                          className={`rounded-xl py-3.5 px-2 border text-center transition ${payMethod === method ? "border-[#c99a4a] bg-[#fff4df] shadow-inner" : "border-[#e2ccaa] bg-white hover:bg-[#fffaf0]"}`}
+                          className={`rounded-xl py-3.5 px-2 border text-center transition ${payMethod === method ? "border-[#b3924f] bg-[#faf3e3]" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}
                         >
                           <div className="text-[20px]">{paymentAccounts[method].icon}</div>
                           <div className="text-[12px] font-[600] mt-1">{paymentAccounts[method].title}</div>
@@ -6667,8 +6650,8 @@ export default function App() {
                           <span className="text-[14px] font-[600] text-[#e8d3b6]">{paymentAccounts[payMethod].name}</span>
                         </div>
                         <div className="flex justify-between items-center pt-2 border-t border-[#3a2b21]">
-                          <span className="text-[12px] text-[#c99a4a] font-[600]">Amount to Transfer</span>
-                          <span className="text-[20px] font-[700] text-[#e8c06f]">{PKR(cartTotal + deliveryCharge)}</span>
+                          <span className="text-[12px] text-[#b3924f] font-[600]">Amount to Transfer</span>
+                          <span className="text-[20px] font-[700] text-[#e0bd6f]">{PKR(cartTotal + deliveryCharge)}</span>
                         </div>
                       </div>
                     </div>
@@ -6679,7 +6662,7 @@ export default function App() {
                     <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-2 block">{payMethod === "cod" ? "Upload Delivery Charges Screenshot (Optional for now)" : "Upload Payment Screenshot *"}</label>
                     <div
                       onClick={() => screenshotInputRef.current?.click()}
-                      className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition hover:bg-[#fff8ee] ${payScreenshot ? "border-[#4CAF50] bg-[#f0faf0]" : "border-[#dcc49f] bg-white"
+                      className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition hover:bg-[#fbf9f4] ${payScreenshot ? "border-[#4CAF50] bg-[#f0faf0]" : "border-[#d5c8ab] bg-white"
                         }`}
                     >
                       {payScreenshot ? (
@@ -6709,7 +6692,7 @@ export default function App() {
                   <div className="flex gap-3">
                     <button
                       onClick={() => setCheckoutStep(1)}
-                      className="px-5 py-[14px] rounded-full border border-[#dcc49f] text-[13.5px] font-[600] text-[#5d4628] hover:bg-[#fff6e7] transition"
+                      className="px-5 py-[14px] rounded-full border border-[#ddd2b8] text-[13.5px] font-[600] text-[#5c5344] hover:bg-[#f3efe4] transition"
                     >
                       ← Back
                     </button>
@@ -6762,7 +6745,7 @@ export default function App() {
 
       {/* ═══════════ TOAST ═══════════ */}
       <div className={`fixed bottom-5 left-1/2 -translate-x-1/2 z-[90] transition-all duration-300 ${toast ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"}`}>
-        <div className="bg-[#1a140f] text-[#f7e6c5] px-6 py-3.5 rounded-full text-[13.5px] shadow-xl border border-[#3b2b1c]">{toast}</div>
+        <div className="bg-[#191510] text-[#efe3c8] px-6 py-3.5 rounded-full text-[13.5px] shadow-xl border border-[#332a1a]">{toast}</div>
       </div>
 
       {/* ═══════════ FLOATING WHATSAPP ═══════════ */}
@@ -6785,7 +6768,7 @@ export default function App() {
           />
         ) : (
           <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-5">
-            <div className="bg-[#faf7f2] border border-[#ead9bf] rounded-[28px] max-w-[400px] w-full p-8 shadow-2xl text-center">
+            <div className="bg-[#fbf9f4] border border-[#e8e0cd] rounded-3xl max-w-[400px] w-full p-8 shadow-2xl text-center">
               <h3 className="text-[28px] mb-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Admin Access</h3>
               <p className="text-[13px] text-[#7a6652] mb-6">Enter password to manage products and store settings</p>
               <input
@@ -6802,12 +6785,12 @@ export default function App() {
                     }
                   }
                 }}
-                className="w-full border border-[#d8c4a0] rounded-xl px-4 py-3 text-[14px] text-center outline-none focus:border-[#b89050] bg-white mb-4 font-mono"
+                className="w-full border border-[#dcd2bc] rounded-xl px-4 py-3 text-[14px] text-center outline-none focus:border-[#b3924f] bg-white mb-4 font-mono"
               />
               <div className="flex gap-3">
                 <button
                   onClick={() => { setAdminOpen(false); setAdminPass(""); window.location.hash = ""; }}
-                  className="flex-1 py-3 rounded-full border border-[#dcc49f] text-[13.5px] font-[600] text-[#5d4628] hover:bg-[#fff6e7] transition"
+                  className="flex-1 py-3 rounded-full border border-[#ddd2b8] text-[13.5px] font-[600] text-[#5c5344] hover:bg-[#f3efe4] transition"
                 >
                   Cancel
                 </button>
@@ -6819,7 +6802,7 @@ export default function App() {
                       alert("Incorrect Password!");
                     }
                   }}
-                  className="flex-1 py-3 rounded-full bg-[#1b1310] text-[#f6e7cc] text-[13.5px] font-[600] hover:bg-[#2a1f16] transition"
+                  className="flex-1 py-3 rounded-full bg-[#191510] text-[#f0e6d2] text-[13.5px] font-[600] hover:bg-[#2b241a] transition"
                 >
                   Unlock
                 </button>
