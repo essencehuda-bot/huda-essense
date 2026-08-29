@@ -57,14 +57,23 @@ function getBottleDisplayName(fullName: string): string {
   return clean.trim();
 }
 
-// Map product details to the correct clean template base image
+// Map product details & perfume notes (top, heart, base) to the correct clean template background image
 function getCleanTemplate(product: Product): string {
   const family = (product.family || '').toLowerCase();
   const name = (product.name || '').toLowerCase();
   const gender = (product.gender || '').toLowerCase();
+  const mood = (product.mood || '').toLowerCase();
 
-  // Blue theme
+  const topNotes = (product.top || []).map(n => n.toLowerCase());
+  const heartNotes = (product.heart || []).map(n => n.toLowerCase());
+  const baseNotes = (product.base || []).map(n => n.toLowerCase());
+  const allNotesStr = [...topNotes, ...heartNotes, ...baseNotes].join(' ');
+  const fullText = `${name} ${family} ${mood} ${allNotesStr}`;
+
+  // 1. Blue Theme (Aquatic / Marine / Water / Oceanic)
   if (
+    fullText.includes('sea notes') || fullText.includes('sea salt') || fullText.includes('aquatic') ||
+    fullText.includes('marine') || fullText.includes('water') || fullText.includes('ocean') ||
     name.includes('sauvage') || name.includes('bleu') || name.includes('blue') ||
     name.includes('dylan') || name.includes('chrome') || name.includes('cool water') ||
     name.includes('acqua') || name.includes('light blue') || name.includes('hawas') ||
@@ -73,47 +82,63 @@ function getCleanTemplate(product: Product): string {
     return '/images/clean_base_blue.jpg';
   }
 
-  // Green theme
+  // 2. Black Theme (Dark / Intense / Mysterious / Night / Incense / Heavy Oud)
   if (
-    name.includes('green') || name.includes('tweed') || name.includes('vetiver') ||
+    name.includes('black') || name.includes('noir') || name.includes('intense') ||
+    name.includes('opium') || name.includes('poison') || name.includes('nuit') ||
+    name.includes('afghano') || fullText.includes('incense') || fullText.includes('smoke') ||
+    fullText.includes('dark') || fullText.includes('myrrh') || fullText.includes('opopanax') ||
+    name.includes('interlude') || name.includes('greatness') || name.includes('nomade')
+  ) {
+    return '/images/clean_base_black.jpg';
+  }
+
+  // 3. Brown Theme (Woody / Leather / Tobacco / Sandalwood / Cedar / Birch / Cognac)
+  if (
+    allNotesStr.includes('leather') || allNotesStr.includes('suede') || allNotesStr.includes('tobacco') ||
+    allNotesStr.includes('santal') || allNotesStr.includes('birch') || allNotesStr.includes('cognac') ||
+    allNotesStr.includes('chestnut') || allNotesStr.includes('papyrus') || allNotesStr.includes('guaiac') ||
+    name.includes('tuscan') || name.includes('ombre leather') || name.includes('ombré') ||
+    name.includes('santal') || family.includes('leather') ||
+    (family.includes('woody') && !family.includes('floral') && !family.includes('citrus'))
+  ) {
+    return '/images/clean_base_brown.jpg';
+  }
+
+  // 4. Green Theme (Herbal / Aromatic / Vetiver / Sage / Mint / Pine / Cypress / Green Tea)
+  if (
+    allNotesStr.includes('vetiver') || allNotesStr.includes('sage') || allNotesStr.includes('mint') ||
+    allNotesStr.includes('pine') || allNotesStr.includes('cypress') || allNotesStr.includes('oakmoss') ||
+    allNotesStr.includes('galbanum') || allNotesStr.includes('green tea') || allNotesStr.includes('herbal') ||
+    name.includes('green') || name.includes('tweed') || name.includes('century') || name.includes('legend') ||
     family.includes('green') || family.includes('aromatic') || family.includes('fougere') || family.includes('fougère')
   ) {
     return '/images/clean_base_green.jpg';
   }
 
-  // Teal theme
-  if (family.includes('citrus') || family.includes('fresh')) {
+  // 5. Teal Theme (Fresh Citrus / Bergamot / Lemon / Grapefruit / Mandarin / Lime / Neroli)
+  if (
+    allNotesStr.includes('citrus') || allNotesStr.includes('bergamot') || allNotesStr.includes('lemon') ||
+    allNotesStr.includes('grapefruit') || allNotesStr.includes('mandarin') || allNotesStr.includes('neroli') ||
+    allNotesStr.includes('lime') || family.includes('citrus') || (family.includes('fresh') && gender !== 'women')
+  ) {
     return '/images/clean_base_teal.jpg';
   }
 
-  // Black theme
+  // 6. Silver Theme (Soft Floral / White Musk / Rose / Jasmine / Peony / Tuberose / Lily / Violet / Powder)
   if (
-    name.includes('black') || name.includes('noir') || name.includes('intense') ||
-    name.includes('opium') || name.includes('poison') || name.includes('nuit') ||
-    name.includes('afghano')
-  ) {
-    return '/images/clean_base_black.jpg';
-  }
-
-  // Silver theme (used for silver, clear, and pink/female floral scents)
-  if (
-    name.includes('silver') || name.includes('platinum') || name.includes('mountain') ||
-    name.includes('creed') || name.includes('white') || name.includes('musk') || name.includes('clean') ||
-    gender === 'Women' || family.includes('floral') || family.includes('rose')
+    allNotesStr.includes('white musk') || allNotesStr.includes('rose') || allNotesStr.includes('jasmine') ||
+    allNotesStr.includes('peony') || allNotesStr.includes('tuberose') || allNotesStr.includes('lily') ||
+    allNotesStr.includes('freesia') || allNotesStr.includes('violet') || allNotesStr.includes('iris') ||
+    allNotesStr.includes('cotton') || name.includes('silver') || name.includes('platinum') ||
+    name.includes('mountain') || name.includes('bloom') || name.includes('j\'adore') ||
+    name.includes('chastity') || name.includes('body') || name.includes('her') ||
+    gender === 'women' || family.includes('floral') || family.includes('rose')
   ) {
     return '/images/clean_base_silver.jpg';
   }
 
-  // Brown theme (warm woody/leather scents)
-  if (
-    name.includes('tobacco') || name.includes('leather') || name.includes('cognac') ||
-    name.includes('tuscan') || name.includes('ombre') || name.includes('ombré') ||
-    family.includes('woody') || family.includes('leather')
-  ) {
-    return '/images/clean_base_brown.jpg';
-  }
-
-  // Default Amber Gold
+  // 7. Default Amber Gold (Warm Amber / Vanilla / Tonka / Cinnamon / Nutmeg / Gourmand)
   return '/images/clean_base_amber.jpg';
 }
 

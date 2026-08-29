@@ -37,31 +37,37 @@ const getAdminProductImage = (p: ProductData) => {
   
   const family = (p.family || "").toLowerCase();
   const name = (p.name || "").toLowerCase();
+  const mood = (p.mood || "").toLowerCase();
+  const topNotes = (p.top || []).map(n => n.toLowerCase());
+  const heartNotes = (p.heart || []).map(n => n.toLowerCase());
+  const baseNotes = (p.base || []).map(n => n.toLowerCase());
+  const allNotesStr = [...topNotes, ...heartNotes, ...baseNotes].join(' ');
+  const fullText = `${name} ${family} ${mood} ${allNotesStr}`;
   
-  // Scent template checks
-  if (name.includes('sauvage') || name.includes('bleu') || name.includes('cool water') || name.includes('hawas') || name.includes('chrome') || name.includes('explorer') || name.includes('acqua') || family.includes('aquatic') || family.includes('marine')) {
+  // Scent template checks based on perfume notes & family
+  if (fullText.includes('sea notes') || fullText.includes('sea salt') || fullText.includes('aquatic') || fullText.includes('marine') || fullText.includes('water') || name.includes('sauvage') || name.includes('bleu') || name.includes('cool water') || name.includes('hawas') || name.includes('chrome') || name.includes('explorer') || name.includes('acqua') || family.includes('aquatic') || family.includes('marine')) {
     return '/images/base_aquatic.png';
   }
-  if (name.includes('wood') || name.includes('oud') || name.includes('janan') || name.includes('prestige') || family.includes('wood') || family.includes('oud')) {
-    return '/images/base_woody.png';
-  }
-  if (name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger') || family.includes('spicy') || family.includes('amber') || family.includes('oriental')) {
-    return '/images/base_spicy.png';
-  }
-  if (name.includes('leather') || name.includes('suede') || name.includes('animalic') || family.includes('leather')) {
+  if (allNotesStr.includes('leather') || allNotesStr.includes('suede') || name.includes('leather') || name.includes('suede') || family.includes('leather')) {
     return '/images/base_leather.png';
   }
-  if (name.includes('tweed') || name.includes('sage') || name.includes('legend') || name.includes('century') || family.includes('green') || family.includes('herbal')) {
+  if (allNotesStr.includes('wood') || allNotesStr.includes('cedar') || allNotesStr.includes('sandalwood') || allNotesStr.includes('oud') || name.includes('wood') || name.includes('oud') || name.includes('janan') || name.includes('prestige') || family.includes('wood') || family.includes('oud')) {
+    return '/images/base_woody.png';
+  }
+  if (allNotesStr.includes('vetiver') || allNotesStr.includes('sage') || allNotesStr.includes('mint') || allNotesStr.includes('pine') || allNotesStr.includes('cypress') || name.includes('tweed') || name.includes('sage') || name.includes('legend') || name.includes('century') || family.includes('green') || family.includes('herbal')) {
     return '/images/base_green.png';
   }
-  if (name.includes('bloom') || name.includes('j\'adore') || name.includes('blue lady') || name.includes('jasmine') || name.includes('grace') || family.includes('white floral') || family.includes('jasmine')) {
+  if (allNotesStr.includes('jasmine') || allNotesStr.includes('tuberose') || allNotesStr.includes('lily') || name.includes('bloom') || name.includes('j\'adore') || name.includes('blue lady') || name.includes('jasmine') || name.includes('grace') || family.includes('white floral') || family.includes('jasmine')) {
     return '/images/base_white_floral.png';
   }
-  if (name.includes('yara') || name.includes('bombshell') || name.includes('cherry') || name.includes('rouge 540') || name.includes('baccarat') || name.includes('pear') || family.includes('fruity') || family.includes('sweet') || family.includes('gourmand')) {
+  if (allNotesStr.includes('pear') || allNotesStr.includes('cherry') || allNotesStr.includes('apple') || allNotesStr.includes('peach') || name.includes('yara') || name.includes('bombshell') || name.includes('cherry') || name.includes('rouge 540') || name.includes('baccarat') || name.includes('pear') || family.includes('fruity') || family.includes('sweet') || family.includes('gourmand')) {
     return '/images/base_fruity.png';
   }
-  if (name.includes('rose') || name.includes('flora') || name.includes('chance') || name.includes('bright crystal') || family.includes('floral') || family.includes('rose')) {
+  if (allNotesStr.includes('rose') || allNotesStr.includes('peony') || name.includes('rose') || name.includes('flora') || name.includes('chance') || name.includes('bright crystal') || family.includes('floral') || family.includes('rose')) {
     return '/images/base_floral.png';
+  }
+  if (allNotesStr.includes('vanilla') || allNotesStr.includes('cinnamon') || allNotesStr.includes('cardamom') || allNotesStr.includes('amber') || name.includes('vanille') || name.includes('khamrah') || name.includes('asad') || name.includes('code') || name.includes('stronger') || family.includes('spicy') || family.includes('amber') || family.includes('oriental')) {
+    return '/images/base_spicy.png';
   }
 
   // Fallbacks
