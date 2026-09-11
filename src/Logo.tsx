@@ -12,7 +12,7 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
   const mistScale = isLarge ? "scale-125" : isFooter ? "scale-110" : "scale-100";
 
   return (
-    <div className="group relative inline-flex flex-col items-center select-none cursor-pointer">
+    <div className="group relative mx-auto flex flex-col items-center justify-center text-center select-none cursor-pointer">
       {/* Inline styles for keyframe animations */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes logoMistPulse {
@@ -38,7 +38,7 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
       `}} />
 
       {/* Container for logo image + spray mist animation */}
-      <div className="relative flex items-center justify-center">
+      <div className="relative mx-auto flex items-center justify-center">
         {/* Animated Spray Mist Effect overlay on nozzle (top right of bottle) */}
         <div 
           className={`absolute top-[6%] right-[14%] pointer-events-none z-10 ${mistScale}`}
@@ -67,7 +67,7 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
           <img 
             src="/images/huda_essence_logo.png" 
             alt="Huda Essence - Perfume House Logo" 
-            className={`w-auto ${imgHeight} object-contain block`}
+            className={`w-auto ${imgHeight} object-contain block mx-auto`}
             style={{
               animation: 'logoGlowPulse 3.5s ease-in-out infinite',
             }}
@@ -83,27 +83,7 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
         </div>
       </div>
 
-      {/* Tagline: PERFUME HOUSE */}
-      <div className="mt-1 flex items-center justify-center gap-2">
-        <span className={`h-px w-5 sm:w-6 ${isFooter ? 'bg-[#b48a3c]/60' : 'bg-[#a37628]/50'}`}></span>
-        <span 
-          className={`uppercase font-[600] tracking-[0.28em] ${
-            isLarge 
-              ? 'text-[12.5px] sm:text-[14px]' 
-              : isFooter 
-                ? 'text-[11px] text-[#e5c382]' 
-                : 'text-[10.5px] sm:text-[11.5px] text-[#a06e24]'
-          }`}
-          style={{
-            fontFamily: "'Instrument Sans', 'Inter', sans-serif",
-            textShadow: isFooter ? '0 1px 2px rgba(0,0,0,0.8)' : '0 1px 1px rgba(255,255,255,0.7)',
-            letterSpacing: '0.28em'
-          }}
-        >
-          PERFUME HOUSE
-        </span>
-        <span className={`h-px w-5 sm:w-6 ${isFooter ? 'bg-[#b48a3c]/60' : 'bg-[#a37628]/50'}`}></span>
-      </div>
+      {/* Tagline "PERFUME HOUSE" removed as per request */}
     </div>
   );
 }
