@@ -46,10 +46,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.9,
@@ -89,10 +85,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -135,10 +127,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -178,10 +166,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -224,10 +208,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -262,10 +242,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -303,10 +279,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -343,10 +315,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -388,10 +356,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -432,10 +396,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -476,10 +436,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -515,10 +471,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.85,
@@ -559,10 +511,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.86,
@@ -602,10 +550,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.87,
@@ -645,10 +589,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.88,
@@ -689,10 +629,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.89,
@@ -731,10 +667,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.9,
@@ -774,10 +706,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.91,
@@ -816,10 +744,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.92,
@@ -859,10 +783,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.93,
@@ -901,10 +821,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.94,
@@ -945,10 +861,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -985,10 +897,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -1030,10 +938,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -1070,10 +974,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -1112,10 +1012,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -1153,10 +1049,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -1193,10 +1085,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -1237,10 +1125,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -1281,10 +1165,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -1322,10 +1202,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -1366,10 +1242,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.85,
@@ -1408,10 +1280,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.86,
@@ -1453,10 +1321,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.87,
@@ -1496,10 +1360,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.88,
@@ -1540,10 +1400,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.89,
@@ -1582,10 +1438,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.9,
@@ -1623,10 +1475,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.91,
@@ -1667,10 +1515,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.92,
@@ -1711,10 +1555,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.93,
@@ -1755,10 +1595,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.94,
@@ -1800,10 +1636,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -1844,10 +1676,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -1887,10 +1715,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -1927,10 +1751,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -1970,10 +1790,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -2011,10 +1827,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -2051,10 +1863,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -2091,10 +1899,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -2131,10 +1935,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -2171,10 +1971,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -2212,10 +2008,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -2249,10 +2041,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -2290,10 +2078,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -2331,10 +2115,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -2378,10 +2158,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -2421,10 +2197,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -2463,10 +2235,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -2506,10 +2274,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -2549,10 +2313,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -2591,10 +2351,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -2635,10 +2391,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.85,
@@ -2679,10 +2431,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.86,
@@ -2723,10 +2471,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.87,
@@ -2767,10 +2511,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.88,
@@ -2812,10 +2552,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.89,
@@ -2856,10 +2592,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.9,
@@ -2899,10 +2631,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.91,
@@ -2945,10 +2673,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.92,
@@ -2981,10 +2705,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.93,
@@ -3017,10 +2737,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.94,
@@ -3064,10 +2780,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -3103,10 +2815,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -3142,10 +2850,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -3185,10 +2889,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -3225,10 +2925,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -3268,10 +2964,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -3310,10 +3002,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -3354,10 +3042,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -3392,10 +3076,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -3432,10 +3112,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -3469,10 +3145,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.85,
@@ -3514,10 +3186,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.86,
@@ -3559,10 +3227,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.87,
@@ -3601,10 +3265,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.88,
@@ -3642,10 +3302,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.89,
@@ -3678,10 +3334,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.9,
@@ -3722,10 +3374,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.91,
@@ -3767,10 +3415,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.92,
@@ -3805,10 +3449,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.93,
@@ -3844,10 +3484,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.94,
@@ -3886,10 +3522,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -3930,10 +3562,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -3970,10 +3598,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -4013,10 +3637,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -4056,10 +3676,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -4095,10 +3711,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -4134,10 +3746,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -4172,10 +3780,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -4211,10 +3815,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -4251,10 +3851,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -4291,10 +3887,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -4334,10 +3926,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -4376,10 +3964,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -4418,10 +4002,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -4458,10 +4038,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -4499,10 +4075,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -4538,10 +4110,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -4580,10 +4148,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -4620,10 +4184,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -4662,10 +4222,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -4700,10 +4256,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.85,
@@ -4739,10 +4291,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.86,
@@ -4779,10 +4327,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.87,
@@ -4821,10 +4365,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.88,
@@ -4863,10 +4403,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.89,
@@ -4907,10 +4443,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.9,
@@ -4951,10 +4483,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.91,
@@ -4990,10 +4518,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.92,
@@ -5029,10 +4553,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.93,
@@ -5068,10 +4588,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.94,
@@ -5109,10 +4625,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.75,
@@ -5151,10 +4663,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.76,
@@ -5191,10 +4699,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.77,
@@ -5234,10 +4738,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.78,
@@ -5274,10 +4774,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.79,
@@ -5310,10 +4806,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.8,
@@ -5346,10 +4838,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.81,
@@ -5384,10 +4872,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.82,
@@ -5427,10 +4911,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.83,
@@ -5468,10 +4948,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
             {
                 "ml": 50,
                 "price": 1299
-            },
-            {
-                "ml": 100,
-                "price": 2499
             }
         ],
         "rating": 4.84,
@@ -5839,8 +5315,6 @@ export default function App() {
           <span>10ml <s className="opacity-45">Rs 500</s> <b className="font-[700] text-[#e8c876]">Rs 299</b></span>
           <span className="hidden text-[#4a3f28] sm:inline">•</span>
           <span>50ml <s className="opacity-45">Rs 1,600</s> <b className="font-[700] text-[#e8c876]">Rs 1,299</b></span>
-          <span className="hidden text-[#4a3f28] sm:inline">•</span>
-          <span>100ml <s className="opacity-45">Rs 3,000</s> <b className="font-[700] text-[#e8c876]">Rs 2,399</b></span>
           <span className="hidden rounded-full bg-[#e8c876]/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.16em] text-[#cfae66] lg:inline">
             Limited stock
           </span>
@@ -5932,7 +5406,7 @@ export default function App() {
               <span className="italic text-[#a08040]"> ab har kisi ki pohanch</span> mein.
             </h1>
             <p className="mt-6 max-w-[480px] text-[15.5px] leading-relaxed text-[#6b6153]">
-              Premium impression perfumes crafted from high-quality oils — available in 10ml, 50ml aur 100ml. Ek simple, imaandaar price. Sirf Karachi mein delivery.
+              Premium impression perfumes crafted from high-quality oils — available in 10ml aur 50ml. Ek simple, imaandaar price. Sirf Karachi mein delivery.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -5963,7 +5437,7 @@ export default function App() {
               <div className="relative h-[460px] overflow-hidden rounded-t-[999px] rounded-b-[28px] shadow-[0_60px_110px_-40px_rgba(90,70,40,0.45)] lg:h-[580px]">
                 <img
                   src="/images/huda_essence_hero_all_sizes.png"
-                  alt="Huda Essence Bottles 10ml, 50ml, 100ml"
+                  alt="Huda Essence Bottles 10ml, 50ml"
                   className="absolute inset-0 h-full w-full object-cover"
                   fetchPriority="high"
                 />
@@ -6049,7 +5523,7 @@ export default function App() {
                 {group.items.map(p => (
                   <div key={p.id} className="group flex flex-col overflow-hidden rounded-2xl border border-[#e8e0cd] bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_36px_70px_-30px_rgba(90,70,40,0.35)]">
                     <div className="relative overflow-hidden">
-                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[190px] w-full cursor-pointer object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-[260px] md:h-[320px] lg:h-[380px]" />
+                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[128px] w-full cursor-pointer object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-[260px] md:h-[320px] lg:h-[380px]" />
                       <div className="absolute left-3 top-3 flex gap-1.5">
                         {p.bestseller && <span className="rounded-full bg-[#191510]/85 px-2.5 py-1 text-[8.5px] font-[600] uppercase tracking-[0.16em] text-[#e9dcb8] backdrop-blur">Bestseller</span>}
                         {p.nouveau && <span className="rounded-full bg-[#6e1e2a] px-2.5 py-1 text-[8.5px] font-[600] uppercase tracking-[0.16em] text-white">New</span>}
@@ -6063,7 +5537,7 @@ export default function App() {
                       <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-[#191510]/75 via-[#191510]/40 to-transparent p-2.5 transition-transform duration-300 group-hover:translate-y-0 sm:p-4">
                         <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
                           {p.sizes.map(s => {
-                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
+                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : null;
                             return (
                               <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="rounded-full bg-white/95 px-2 py-1.5 text-[9.5px] font-[600] text-[#191510] transition hover:bg-[#e8c876] sm:px-3 sm:text-[11.5px]">
                                 {s.ml}ml {orig ? <s className="mr-0.5 text-[8.5px] font-normal text-[#9a8c72] sm:text-[9.5px]">Rs {orig.toLocaleString()}</s> : null} {PKR(s.price)}
@@ -6073,22 +5547,22 @@ export default function App() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-1 flex-col p-4 pb-5 sm:p-5">
+                    <div className="flex flex-1 flex-col p-2.5 pb-3 sm:p-5">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <h3 className="text-[20px] leading-tight text-[#191510] sm:text-[23px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
-                          <div className="mt-1 text-[10px] font-[600] uppercase tracking-[0.14em] text-[#a08040]">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
+                          <h3 className="text-[15px] leading-tight text-[#191510] sm:text-[23px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
+                          <div className="mt-1 text-[8px] font-[600] uppercase tracking-[0.14em] text-[#a08040] sm:text-[10px]">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
                         </div>
-                        <div className="shrink-0 text-right text-[10px] text-[#8a7d66]">
+                        <div className="hidden shrink-0 text-right text-[10px] text-[#8a7d66] sm:block">
                           <div className="flex items-center justify-end gap-1"><Stars rating={p.rating} /><span>{p.rating}</span></div>
                           <div className="mt-0.5 text-[9px] text-[#a4977e]">({p.reviews} reviews)</div>
                         </div>
                       </div>
-                      <div className="mt-1.5 text-[12px] italic text-[#8a7d66] line-clamp-1">{p.mood}</div>
+                      <div className="mt-1.5 hidden text-[12px] italic text-[#8a7d66] line-clamp-1 sm:block">{p.mood}</div>
                       <div className="mt-auto">
-                        <div className="mt-4 grid grid-cols-3 gap-1.5 text-center">
+                        <div className="mt-2.5 grid grid-cols-2 gap-1.5 text-center sm:mt-4">
                           {p.sizes.map(s => {
-                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
+                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : null;
                             return (
                               <div key={s.ml} className="rounded-xl border border-[#ece3cf] bg-[#faf7ee] py-1.5 sm:py-2">
                                 <div className="text-[8.5px] font-[600] uppercase tracking-[0.12em] text-[#a4977e]">{s.ml}ml</div>
@@ -6098,9 +5572,9 @@ export default function App() {
                             );
                           })}
                         </div>
-                        <div className="mt-3.5 flex items-center gap-2">
-                          <button onClick={() => setModal(p)} className="flex-1 rounded-full bg-[#191510] py-[9px] text-[10px] font-[600] uppercase tracking-[0.12em] text-[#f0e6d2] transition hover:bg-[#2b241a] sm:py-[11px] sm:text-[11px]">View Details</button>
-                          <button onClick={() => addToCart(p.id)} className="rounded-full border border-[#ddd2b8] px-4 py-[9px] text-[10px] font-[600] uppercase tracking-[0.12em] text-[#5c5344] transition hover:border-[#b3924f] hover:text-[#8a6a33] sm:px-5 sm:py-[11px] sm:text-[11px]">+ Bag</button>
+                        <div className="mt-2 flex items-center gap-2 sm:mt-3.5">
+                          <button onClick={() => setModal(p)} className="flex-1 rounded-full bg-[#191510] py-[7px] text-[9px] sm:py-[9px] font-[600] uppercase tracking-[0.12em] text-[#f0e6d2] transition hover:bg-[#2b241a] sm:py-[11px] sm:text-[11px]">View Details</button>
+                          <button onClick={() => addToCart(p.id)} className="rounded-full border border-[#ddd2b8] px-3 py-[7px] text-[9px] sm:px-4 sm:py-[9px] font-[600] uppercase tracking-[0.12em] text-[#5c5344] transition hover:border-[#b3924f] hover:text-[#8a6a33] sm:px-5 sm:py-[11px] sm:text-[11px]">+ Bag</button>
                         </div>
                       </div>
                     </div>
@@ -6128,11 +5602,10 @@ export default function App() {
               No hidden charges. No confusing tiers. Every Huda Essence perfume is the same price — pick your size.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-[860px] gap-5 sm:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-[620px] gap-5 sm:grid-cols-2">
             {[
               { ml: 10, price: 299, originalPrice: 500, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
               { ml: 50, price: 1299, originalPrice: 1600, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear" },
-              { ml: 100, price: 2399, originalPrice: 3000, label: "Best Value", desc: "Maximum value — 5+ months of your signature scent", popular: true },
             ].map(s => (
               <div key={s.ml} className={`relative overflow-hidden rounded-2xl border p-6 text-center ${s.popular ? "border-[#c3a05c] bg-[#1d1810]" : "border-[#2c2517] bg-[#181510]"}`}>
                 {s.popular && <div className="pointer-events-none absolute inset-0 overflow-hidden"><div className="animate-sheen absolute -top-1/2 h-[200%] w-16 bg-gradient-to-r from-transparent via-[#e8c876]/15 to-transparent" /></div>}
@@ -6195,7 +5668,7 @@ export default function App() {
         <div className="grid gap-5 md:grid-cols-3">
           {[
             { name: "Fatima A.", city: "Karachi", text: "Tea Rosée is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rosée • 50ml", stars: 5 },
-            { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 100ml", stars: 5 },
+            { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 50ml", stars: 5 },
             { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 6 to 8 hours.", scent: "Armani Code + Miss Dior", stars: 5 },
           ].map((r, i) => (
             <div key={i} className="flex flex-col rounded-2xl border border-[#e8e0cd] bg-white p-6">
@@ -6246,7 +5719,7 @@ export default function App() {
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-7 text-[12px] tracking-[0.04em] text-[#8a7a5c]">10ml: <s className="opacity-70">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span> &nbsp;•&nbsp; 50ml: <s className="opacity-70">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span> &nbsp;•&nbsp; 100ml: <s className="opacity-70">Rs 3,000</s> <span className="font-[700] text-[#e0bd6f]">Rs 2,399</span></div>
+          <div className="mt-7 text-[12px] tracking-[0.04em] text-[#8a7a5c]">10ml: <s className="opacity-70">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span> &nbsp;•&nbsp; 50ml: <s className="opacity-70">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span></div>
         </div>
       </section>
 
@@ -6341,7 +5814,6 @@ export default function App() {
             <ul className="space-y-2 text-[#9a8a6a]">
               <li>10ml — <s className="opacity-60">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span></li>
               <li>50ml — <s className="opacity-60">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span></li>
-              <li>100ml — <s className="opacity-60">Rs 3,000</s> <span className="font-[700] text-[#e0bd6f]">Rs 2,399</span></li>
               <li className="pt-1 text-[#c9ab6c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
             </ul>
           </div>
@@ -6403,7 +5875,7 @@ export default function App() {
                   <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Select Your Size</div>
                   <div className="flex flex-wrap gap-3">
                     {modal.sizes.map(s => {
-                      const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : s.ml === 100 ? 3000 : null;
+                      const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : null;
                       return (
                         <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[140px] transition relative ${sizePick === s.ml ? "border-[#b3924f] bg-[#faf3e3]" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}>
                           <div className="absolute -top-2.5 -right-2 bg-[#6e1e2a] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>
