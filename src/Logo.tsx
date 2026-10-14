@@ -2,14 +2,14 @@ export default function Logo({ size = "default" }: { size?: "default" | "large" 
   const isLarge = size === "large";
   const isFooter = size === "footer";
 
-  // Height of the 3D logo graphic based on size (increased for prominent luxury look)
+  // Height of the 3D logo graphic based on size (responsive for mobile screens)
   const imgHeight = isLarge 
-    ? "h-[95px] sm:h-[110px]" 
+    ? "h-[80px] sm:h-[110px]" 
     : isFooter 
-      ? "h-[68px] sm:h-[78px]" 
-      : "h-[58px] sm:h-[66px]";
+      ? "h-[56px] sm:h-[78px]" 
+      : "h-[50px] sm:h-[70px]";
 
-  const mistScale = isLarge ? "scale-125" : isFooter ? "scale-110" : "scale-100";
+  const mistScale = isLarge ? "scale-110 sm:scale-125" : isFooter ? "scale-90 sm:scale-110" : "scale-75 sm:scale-100";
 
   return (
     <div className="group relative mx-auto flex flex-col items-center justify-center text-center select-none cursor-pointer">

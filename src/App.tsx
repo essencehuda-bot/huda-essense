@@ -40,10 +40,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An irresistible blast of juicy apple, warm cinnamon, and rich vanilla. 9 PM by Afnan is legendary for date nights and evening allure.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -78,10 +74,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "An explosive blast of fresh bergamot and raw ambroxan. A fragrance that projects confidence and turns heads.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -121,10 +113,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A tribute to masculine freedom. Our Bleu impression is crisp, powerful, and impossibly versatile.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -159,10 +147,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-chanel-allure-homme-sport.jpg",
         "story": "A fresh and sensual scent that evokes the simplicity of allure. Clean citrus meets warm tonka bean.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -202,10 +186,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Inspired by the dramatic life of an emperor, celebrating strength, power, and success.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -235,10 +215,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-creed-green-irish-tweed.jpg",
         "story": "Like a walk through the Irish countryside, Green Irish Tweed is fresh, green, and classically elegant.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -273,10 +249,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -308,10 +280,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-armani-code.jpg",
         "story": "A mysterious, sophisticated, and utterly seductive fragrance.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -350,10 +318,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A clean fragrance inspired by the Mediterranean sea, combining salty marine notes with sweet citrus.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -389,10 +353,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A warm, addictive embrace in a bottle. Sweet chestnut and vanilla merge with spicy cardamom.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -430,10 +390,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A deep, fresh and masculine scent representing the creative spirit of self-accomplishment.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -464,10 +420,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-la-nuit-de-l-homme.jpg",
         "story": "The ultimate weapon of seduction. Fresh cardamom and sweet lavender blended on deep, dark vetiver.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -505,10 +457,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Inspired by Greek mythology, Eros is the fragrance that depicts passion, desire and love.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -544,10 +492,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A highly sensual fragrance with woody aroma and fresh aquatic accents.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -582,10 +526,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-versace-pour-homme.jpg",
         "story": "An elegant, classic fragrance inspired by the fresh air of the Mediterranean coast.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -623,10 +563,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "The scent of success and luxury. A rich, spicy-sweet blend of cinnamon, leather, and blood mandarin.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -660,10 +596,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-invictus.jpg",
         "story": "A fresh and dynamic fragrance that embodies victory and physical energy.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -700,10 +632,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A futuristic fragrance born from the clash between luxury craftsmanship and new-tech.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -737,10 +665,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-dunhill-desire-red.jpg",
         "story": "A masculine scent designed for the self-confident man who wants to be at the center of attention.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -777,10 +701,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "The perfect blend of classic elegance and modern sophistication. Woody base meets fresh spices.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -814,10 +734,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-dunhill-century.jpg",
         "story": "An uplifting and bright fragrance that combines fresh citruses with cardamoms and warm sandalwood.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -855,10 +771,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An elegant, modern scent that balances fresh fruity notes with warm spicy elements.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -890,10 +802,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-boss-the-scent.jpg",
         "story": "A seductive fragrance that captures the mind with a unique note of African Maninka fruit.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -932,10 +840,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An aromatic green scent designed for the man who lives life on his own terms.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -967,10 +871,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A rich, smoky leather fragrance that captures the wide-open spaces of the American West.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1006,10 +906,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A dark, rich leather scent sweetened with raspberry and spiced with saffron. Impossibly opulent.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1043,10 +939,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Rare and expensive oud wood blended with warm spices, amber, and vanilla.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1078,10 +970,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-tom-ford-tobacco-vanille.jpg",
         "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1119,10 +1007,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A sporty and fresh fragrance that settles into a sweet apple and warm vanilla note.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1159,10 +1043,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An expressive and elegant fragrance that is fresh, spicy and deeply masculine.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1195,10 +1075,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-jaguar-classic-gold.jpg",
         "story": "A warm and sweet woody aromatic fragrance that turns heads with its vanilla and teak wood notes.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1236,10 +1112,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A rich and boozy fragrance featuring black pepper, rum and incense. Truly premium projection.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1273,10 +1145,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-bentley-absolute.jpg",
         "story": "An intensely woody and smoky fragrance with heavy notes of cedar, sandalwood, and oud.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1315,10 +1183,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "The classic aquatic fragrance. Fresh, clean sea notes blended with mint and rosemary.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1353,10 +1217,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-ck-one.jpg",
         "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1394,10 +1254,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A warm, fresh woody fragrance with a highly intimate musk base that sits close to the skin.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1432,10 +1288,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Designed for the confident and charismatic man. A fresh, fruity aromatic foug\u00e8re.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1468,10 +1320,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-mont-blanc-explorer.jpg",
         "story": "An unconventional woody aromatic scent that takes you on a journey of discovery.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1509,10 +1357,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A bold, magnetic, and irresistible fragrance for the confident man.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1549,10 +1393,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A fresh and clean citrus fragrance with crisp metallic accents and woody notes.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1588,10 +1428,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A fresh aquatic powerhouse combining crisp marine notes with warm amber. Beast-mode projection.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1630,10 +1466,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A legendary smoky pineapple beast-mode fragrance that commands attention.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1670,10 +1502,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A rich, spicy amber fragrance with a bold performance. Deep black pepper meets sweet vanilla.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1709,10 +1537,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1744,10 +1568,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-ameer-al-oud.jpg",
         "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1784,10 +1604,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud and saffron.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1821,10 +1637,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A majestic Pakistani blend featuring fresh citruses, rich rose, and a base of sweet amber and oud.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1856,10 +1668,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-j-janan-platinum.jpg",
         "story": "A modern executive fragrance that combines fresh grapefruit with dry cedarwood and white musk.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -1893,10 +1701,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A fresh and sporty aromatic fragrance that keeps you clean and active all day.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1929,10 +1733,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A high-performance fresh fragrance designed to beat the heat with citrus and mint.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -1964,10 +1764,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-wb-by-hemani-prestige.jpg",
         "story": "A classic charismatic scent with premium woody notes, fresh spices, and a touch of leather.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2002,10 +1798,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An elegant and sensual floral bouquet that celebrates the youthful spirit of femininity.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2034,10 +1826,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-gucci-bloom.jpg",
         "story": "A rich white floral scent that transports you to a beautiful, blooming garden.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2072,10 +1860,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An intoxicating and bold modern fragrance that leaves an unforgettable trail.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2108,10 +1892,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-miss-dior.jpg",
         "story": "A modern feminine icon. Captures the romantic freshness of peony and rose, balanced with a warm patchouli base.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2152,10 +1932,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An opulent, golden floral fragrance that shimmers on the skin. A tribute to modern luxury.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2191,10 +1967,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A delicious, bitter-sweet floral fragrance with mouthwatering notes of vanilla and almond.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2228,10 +2000,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A spirited and voluptuous fragrance. Sparkly orange notes meet a clear heart of rose and jasmine.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2268,10 +2036,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A spin of fortune. A sparkling floral fragrance where pink pepper and jasmine intertwine.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2307,10 +2071,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A solar fragrance created around four white flowers \u2014 a pure floral heart.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2344,10 +2104,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-versace-bright-crystal.jpg",
         "story": "A fresh, vibrant floral fragrance featuring pomegranate and peony with a warm musk finish.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2385,10 +2141,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A dark, mysterious fragrance featuring creamy coconut blended with rich gardenia and spices.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2424,10 +2176,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-versace-yellow-diamond.jpg",
         "story": "A bright, solar floral fragrance that sparkles like a diamond under the sun.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2465,10 +2213,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A grand floral fragrance of freedom. Tension between French lavender and Moroccan orange blossom.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2504,10 +2248,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-mon-paris.jpg",
         "story": "A passionate love fragrance capturing the spirit of Paris. Sweet berries meet patchouli.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2546,10 +2286,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A highly addictive feminine fragrance. Black coffee combined with sweet vanilla and white florals.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2586,10 +2322,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A burst of sweet berries blended with jasmine and a warm, woody-musky base.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2624,10 +2356,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-burberry-body.jpg",
         "story": "An intimate and sensual fragrance that wraps the skin like a warm cashmere blanket.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2667,10 +2395,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A glamorous and confident blend of purple passionfruit, Shangri-la peony and vanilla orchid.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2699,10 +2423,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A sultry, rich blend of decadent cherry, red peony and warm vanilla. Pure passion.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2730,10 +2450,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-bombshell-seduction.jpg",
         "story": "An intimate, airy floral fragrance with a warm, skin-like velvet musk base.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2774,10 +2490,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Sweet jasmine and cocoa meet bold coffee and tonka bean. A glamorous, confident scent.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2809,10 +2521,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A powdery, romantic floral fragrance featuring sweet vanilla and fresh peonies.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2843,10 +2551,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-212-vip-rose.jpg",
         "story": "A sparkling champagne fragrance with sweet peach blossom and a warm, woody-musk base.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2883,10 +2587,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Life is beautiful. A rich gourmand blend of sweet praline, warm vanilla, and iris.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2918,10 +2618,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-idole.jpg",
         "story": "For the future leaders. A clean, modern rose fragrance with a delicate white musk base.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -2958,10 +2654,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A fresh and sunny Mediterranean scent combining crisp apple and lemon with bamboo.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -2995,10 +2687,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-dolce-garden.jpg",
         "story": "A delicious tropical garden scent featuring creamy coconut and sweet frangipani blossoms.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3036,10 +2724,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A pure and fresh aquatic floral fragrance, clean as spring water.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3069,10 +2753,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-blue-lady.jpg",
         "story": "A rich white floral garden in a bottle. Lush, creamy tuberose and jasmine experience.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3106,10 +2786,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A clean, pure green-floral fragrance that brings a burst of freshness in warm weather.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3138,10 +2814,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-tea-rose.jpg",
         "story": "The ultimate fresh rose. Captures the true aroma of a rose garden in full bloom.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3180,10 +2852,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A velvety, clean, and comforting musk fragrance. A classic signature scent.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3221,10 +2889,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An opulent, classic floral fragrance. A rich bouquet of rose, jasmine, and sweet honey.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3259,10 +2923,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A charming, sweet floral fragrance with a warm, seductive vanilla base.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3296,10 +2956,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A playful, youthful floral-fruity scent with sweet raspberry and soft sandalwood.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3327,10 +2983,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-escada-cherry-in-japan.jpg",
         "story": "A cheerful, sweet fragrance that captures the beauty of cherry blossoms in Tokyo.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3367,10 +3019,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-escada-magnetism.jpg",
         "story": "A sweet, magnetic fragrance featuring delicious caramel, vanilla, and red berries.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3409,10 +3057,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An elegant and bold fragrance that is sweet, fresh, and projects beautifully.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3442,10 +3086,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-ajmal-raindrops.jpg",
         "story": "A clean, fresh, and dewy fragrance that feels like fresh raindrops on dry earth.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3477,10 +3117,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-ajmal-sacrifice-for-her.jpg",
         "story": "A warm and sweet floral amber fragrance featuring Jasmine and rich musk.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3515,10 +3151,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "The viral sensation. Creamy strawberry-vanilla milkshake vibe with rich white florals.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3556,10 +3188,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A creamy, opulent white floral bouquet with pomegranate and a sweet vanilla base.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3591,10 +3219,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-lattafa-ana-abiyedh-rouge.jpg",
         "story": "A sweet and woody amber fragrance with warm saffron. Similar to high-end luxury scents.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3631,10 +3255,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A sweet, sparkling floral fragrance with notes of strawberry, rose, and gardenia.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3670,10 +3290,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A legendary Pakistani scent reimagined. Rich floral notes blend with a warm amber base.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3704,10 +3320,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-bonanza-satrangi-femme.jpg",
         "story": "A soft, powdery floral fragrance that stays fresh and elegant throughout the day.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3740,10 +3352,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A cheerful and fresh daily-wear scent featuring crisp apple, jasmine, and white musk.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3773,10 +3381,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-khaadi-bloom.jpg",
         "story": "A light, clean floral scent that evokes the freshness of spring gardens.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3808,10 +3412,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-wb-by-hemani-grace.jpg",
         "story": "A graceful daily fragrance with fresh citruses, white jasmine, and soft sandalwood.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3845,10 +3445,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A sweet and romantic rose fragrance that projects beautifully in hot weather.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3880,10 +3476,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A luminous and sophisticated fragrance that lays on the skin like an amber floral and woody breeze.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3920,10 +3512,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "The iconic citrus aromatic fragrance. Bright lemon meets clean musk and green notes.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -3957,10 +3545,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "One of the most rare and expensive ingredients in a perfumer's arsenal, oud wood is blended here with warm spices.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -3996,10 +3580,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A vibrant, sparkling citrus scent that captures the cool breezes and clear water of Italy.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4031,10 +3611,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-tobacco-vanille.jpg",
         "story": "A modern take on an old-world gentleman's club. Rich tobacco meets sweet vanilla.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4069,10 +3645,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A soft, creamy woody fragrance featuring sweet white oud blended with amber and saffron.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4103,10 +3675,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-ameer-al-oud-unisex.jpg",
         "story": "A warm and sweet oriental fragrance featuring deep oud notes.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4142,10 +3710,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An opulent, dark fragrance designed for lovers of rare essences. Rich oud meets smoky incense.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4177,10 +3741,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-oud-mood-unisex.jpg",
         "story": "A warm, sweet and royal fragrance featuring caramel blended with rich woody oud.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4216,10 +3776,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A rich, sweet woody fragrance featuring delicious tropical fruits and sweet amber notes.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4249,10 +3805,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-musk-rijali.jpg",
         "story": "A clean, powdery, and pure white musk fragrance that is a timeless classic.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4285,10 +3837,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "The ultimate clean scent. A thick, velvety white musk that feels like fresh laundry.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4320,10 +3868,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-sheikh-al-shuyukh.jpg",
         "story": "A clean and spicy woody fragrance with aromatic lavender and a deep cedar-oud base.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4359,10 +3903,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A sweet, warm, and inviting fragrance perfect for cozy evenings.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4396,10 +3936,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A tribute to elegance, competence, and love of art. Smoky pineapple and heavy oakmoss.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4437,10 +3973,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A fresh citrus and blackcurrant blend with a rich woody leather base. Impossibly versatile.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4477,10 +4009,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "An incredibly intense warm fragrance. Heavy tobacco and sweet cinnamon. Beast-mode projection.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4511,10 +4039,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-montale-black-aoud.jpg",
         "story": "A dark, gothic masterpiece. Deep Cambodian oud blended with rich, velvety red roses.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4547,10 +4071,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A cozy and addictive scent featuring fresh coffee blended with sweet vanilla and roses.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4581,10 +4101,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-initio-oud-for-greatness.jpg",
         "story": "A mystical and powerful fragrance featuring raw oud wood, warm saffron, and lavender.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4618,10 +4134,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "bestseller": true,
         "story": "A basket of delicious Mediterranean citrus fruits over a loud vanilla-musk base.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4657,10 +4169,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "The iconic scent of the American West. Smoky sandalwood, dry papyrus, and leather.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4692,10 +4200,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-byredo-mojave-ghost.jpg",
         "story": "A woody composition inspired by the soulful beauty of the Mojave Desert. Delicate and powdery.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4732,10 +4236,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A glamorization of the Romany lifestyle. Earthy pine needles, incense, and warm vanilla.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4768,10 +4268,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "A creamy, smooth fragrance featuring sweet vanilla and warm amber. Impossibly elegant.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4800,10 +4296,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Escape the everyday along the windswept shore. Waves breaking white, the air fresh with sea salt.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4831,10 +4323,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-jo-malone-english-pear-freesia.jpg",
         "story": "The essence of autumn. The sensuous freshness of just-ripe pears wrapped in a bouquet of white freesias.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4865,10 +4353,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-memo-irish-leather.jpg",
         "story": "Frosty gallop on a horse. A green leather fragrance that is crisp and deep.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -4905,10 +4389,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "story": "Known as the 'Blue Beast'. An incredibly smoky, chaotic blend of incense, leather, and oud.",
         "sizes": [
             {
-                "ml": 10,
-                "price": 299
-            },
-            {
                 "ml": 50,
                 "price": 1299
             }
@@ -4941,10 +4421,6 @@ const DEFAULT_PRODUCTS: Product[] = [    {
         "image": "/images/huda-essence-creed-silver-mountain-water-unisex.jpg",
         "story": "Inspired by the exhilarating crispness of mountain air, capturing the purity of alpine streams.",
         "sizes": [
-            {
-                "ml": 10,
-                "price": 299
-            },
             {
                 "ml": 50,
                 "price": 1299
@@ -5200,6 +4676,7 @@ export default function App() {
   const [sizePick, setSizePick] = useState<number>(50);
   const [toast, setToast] = useState<string | null>(null);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const shopRef = useRef<HTMLDivElement>(null);
 
   /* ── Checkout state ── */
@@ -5308,35 +4785,35 @@ export default function App() {
         <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-70">
           <div className="animate-sheen absolute -top-1/2 h-[200%] w-24 bg-gradient-to-r from-transparent via-[#e8c876]/25 to-transparent" />
         </div>
-        <div className="relative mx-auto flex max-w-[1320px] flex-wrap items-center justify-center gap-x-4 gap-y-1 px-5 py-2.5 text-center text-[12px] sm:text-[13px] tracking-[0.05em] lg:px-10">
-          <span className="rounded-full border border-[#caa24f]/50 bg-[#caa24f]/10 px-2.5 py-0.5 text-[10px] font-[700] uppercase tracking-[0.2em] text-[#e8c876]">
-            Fire Sale
+        {/* Rotating headline — the two messages fade in place and swap, on loop */}
+        <div className="relative grid justify-items-center overflow-hidden py-2 sm:py-2.5 text-center">
+          <span className="animate-announce-fade col-start-1 row-start-1 whitespace-nowrap text-[11px] sm:text-[13px] font-[700] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-white">
+            Long Lasting Perfumes
           </span>
-          <span>10ml <s className="opacity-45">Rs 500</s> <b className="font-[700] text-[#e8c876]">Rs 299</b></span>
-          <span className="hidden text-[#4a3f28] sm:inline">•</span>
-          <span>50ml <s className="opacity-45">Rs 1,600</s> <b className="font-[700] text-[#e8c876]">Rs 1,299</b></span>
-          <span className="hidden rounded-full bg-[#e8c876]/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.16em] text-[#cfae66] lg:inline">
-            Limited stock
+          <span className="animate-announce-fade-delayed col-start-1 row-start-1 whitespace-nowrap text-[11px] sm:text-[13px] font-[700] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-white">
+            Advance Delivery Charges
           </span>
         </div>
       </div>
 
       {/* ═══════════ HEADER ═══════════ */}
-      <header className="sticky top-0 z-40 border-b border-[#e7dfcd] bg-[#f7f4ed]/90 backdrop-blur-xl">
-        <div className="mx-auto flex h-[70px] max-w-[1320px] items-center justify-between gap-6 px-5 lg:px-10">
-          <button onClick={() => setMobileMenu(!mobileMenu)} aria-label="menu" className="lg:hidden w-9 h-9 grid place-items-center">
-            <div className="w-5">
-              <div className={`h-[1.6px] bg-[#191510] transition-all ${mobileMenu ? "rotate-45 translate-y-[5.2px]" : "mb-1.5"}`}></div>
-              <div className={`h-[1.6px] bg-[#191510] transition-opacity ${mobileMenu ? "opacity-0" : "mb-1.5"}`}></div>
-              <div className={`h-[1.6px] bg-[#191510] transition-all ${mobileMenu ? "-rotate-45 -translate-y-[5.2px]" : ""}`}></div>
-            </div>
-          </button>
+      <header className="sticky top-0 z-40 border-b border-[#e7dfcd] bg-[#f7f4ed]/95 backdrop-blur-xl transition-all">
+        <div className="relative mx-auto flex h-[68px] sm:h-[82px] max-w-[1320px] items-center justify-between gap-2.5 sm:gap-6 px-3.5 sm:px-5 lg:px-10">
+          {/* Left: Mobile menu toggle + Nav links */}
+          <div className="flex items-center gap-1.5 sm:gap-4">
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              aria-label="Toggle navigation menu"
+              className="xl:hidden w-10 h-10 -ml-1 rounded-full flex items-center justify-center text-[#191510] hover:bg-black/5 active:bg-black/10 transition"
+            >
+              <div className="w-5">
+                <div className={`h-[1.8px] bg-[#191510] rounded-full transition-all duration-300 ${mobileMenu ? "rotate-45 translate-y-[5.2px]" : "mb-1.5"}`}></div>
+                <div className={`h-[1.8px] bg-[#191510] rounded-full transition-opacity duration-300 ${mobileMenu ? "opacity-0" : "mb-1.5"}`}></div>
+                <div className={`h-[1.8px] bg-[#191510] rounded-full transition-all duration-300 ${mobileMenu ? "-rotate-45 -translate-y-[5.2px]" : ""}`}></div>
+              </div>
+            </button>
 
-          <div className="flex items-center gap-10">
-            <a href="#">
-              <Logo />
-            </a>
-            <nav className="hidden lg:flex items-center gap-[30px] text-[11.5px] font-[600] uppercase tracking-[0.16em] text-[#5c5344]">
+            <nav className="hidden xl:flex items-center gap-[22px] 2xl:gap-[30px] text-[11.5px] font-[600] uppercase tracking-[0.16em] text-[#5c5344]">
               <a href="#shop" className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">Shop All</a>
               <button onClick={() => { setGender("Men"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">For Him</button>
               <button onClick={() => { setGender("Women"); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="underline-offset-8 transition hover:text-[#191510] hover:underline hover:decoration-[#c3a05c] hover:decoration-2">For Her</button>
@@ -5346,8 +4823,15 @@ export default function App() {
             </nav>
           </div>
 
-          <div className="flex items-center gap-3.5">
-            <div className="hidden md:flex items-center gap-2 border border-[#dcd2bc] rounded-full pl-4 pr-3.5 py-[8px] bg-white/70 min-w-[210px] focus-within:border-[#b3924f] transition-colors">
+          {/* Center: Logo pinned exactly to the header's center */}
+          <a href="#" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center" aria-label="Huda Essence — Home">
+            <Logo />
+          </a>
+
+          {/* Right Action Icons */}
+          <div className="flex items-center gap-1.5 sm:gap-3">
+            {/* Desktop search */}
+            <div className="hidden md:flex items-center gap-2 border border-[#dcd2bc] rounded-full pl-4 pr-3.5 py-[7px] bg-white/70 min-w-[210px] focus-within:border-[#b3924f] transition-colors">
               <svg className="text-[#a08b62] shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
               <input
                 value={search}
@@ -5357,33 +4841,124 @@ export default function App() {
               />
             </div>
 
-            <button onClick={() => { }} aria-label="wishlist" className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/60 transition hover:border-[#b3924f] hover:text-[#8a6a33]">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
-              {wishlist.length > 0 && <span className="absolute -top-1 -right-1 w-[16px] h-[16px] text-[10px] grid place-items-center rounded-full bg-[#6e1e2a] text-white">{wishlist.length}</span>}
+            {/* Mobile search toggle */}
+            <button
+              onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
+              aria-label="Search perfumes"
+              className={`md:hidden relative grid h-10 w-10 place-items-center rounded-full border transition active:scale-95 ${mobileSearchOpen ? "border-[#b3924f] bg-white text-[#8a6a33]" : "border-[#e2d8c2] bg-white/70 text-[#5c5344]"}`}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
             </button>
 
-            <button onClick={() => setCartOpen(true)} aria-label="cart" className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/60 transition hover:border-[#b3924f] hover:text-[#8a6a33]">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>
-              {cartCount > 0 && <span className="absolute -top-1 -right-1 min-w-[17px] px-[4px] h-[17px] text-[10px] grid place-items-center rounded-full bg-[#191510] text-[#e9dcb8] font-[600]">{cartCount}</span>}
+            {/* Wishlist button */}
+            <button
+              onClick={() => {
+                if (wishlist.length === 0) {
+                  setToast("Wishlist is empty — tap ♡ on any perfume!");
+                } else {
+                  setToast(`${wishlist.length} saved perfume(s) in your list`);
+                  shopRef.current?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              aria-label="Wishlist"
+              className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/70 transition hover:border-[#b3924f] hover:text-[#8a6a33] active:scale-95 text-[#5c5344]"
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill={wishlist.length > 0 ? "#6e1e2a" : "none"} stroke={wishlist.length > 0 ? "#6e1e2a" : "currentColor"} strokeWidth="1.6"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
+              {wishlist.length > 0 && <span className="absolute -top-1 -right-1 w-[16px] h-[16px] text-[10px] grid place-items-center rounded-full bg-[#6e1e2a] text-white font-bold">{wishlist.length}</span>}
+            </button>
+
+            {/* Cart button */}
+            <button
+              onClick={() => setCartOpen(true)}
+              aria-label="Shopping bag"
+              className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/70 transition hover:border-[#b3924f] hover:text-[#8a6a33] active:scale-95 text-[#5c5344]"
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>
+              {cartCount > 0 && <span className="absolute -top-1 -right-1 min-w-[17px] px-[4px] h-[17px] text-[10px] grid place-items-center rounded-full bg-[#191510] text-[#e9dcb8] font-[700] shadow-sm">{cartCount}</span>}
             </button>
           </div>
         </div>
 
-        {mobileMenu && (
-          <div className="lg:hidden border-t border-[#e7dfcd] bg-[#f7f4ed] px-5 py-5 space-y-3.5 text-[13px] font-[600] uppercase tracking-[0.14em] text-[#443c30]">
-            <a href="#shop" onClick={() => setMobileMenu(false)} className="block">Shop All Perfumes</a>
-            <button onClick={() => { setGender("Men"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="block w-full text-left">For Him</button>
-            <button onClick={() => { setGender("Women"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="block w-full text-left">For Her</button>
-            <button onClick={() => { setGender("Unisex"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="block w-full text-left">Unisex</button>
-            <a href="#about" onClick={() => setMobileMenu(false)} className="block">About Us</a>
-            <a href="#contact" onClick={() => setMobileMenu(false)} className="block">Contact</a>
-            <div className="pt-3">
+        {/* Mobile quick search drawer */}
+        {mobileSearchOpen && (
+          <div className="md:hidden border-t border-[#e7dfcd] bg-[#fbf9f4] px-4 py-3 animate-fade-up">
+            <div className="flex items-center gap-2 border border-[#dcd2bc] rounded-full px-4 py-2.5 bg-white shadow-sm focus-within:border-[#b3924f]">
+              <svg className="text-[#a08b62] shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
               <input
                 value={search}
-                onChange={e => setSearch(e.target.value)}
-                placeholder="Search perfumes…"
-                className="w-full border border-[#dcd2bc] rounded-full px-4 py-3 text-[13px] tracking-normal normal-case outline-none bg-white focus:border-[#b3924f] transition"
+                onChange={e => {
+                  setSearch(e.target.value);
+                  if (e.target.value.trim() && shopRef.current) {
+                    shopRef.current.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                autoFocus
+                placeholder="Search perfumes by name or notes..."
+                className="bg-transparent outline-none text-[15px] w-full placeholder-[#a89b82]"
               />
+              {search && (
+                <button onClick={() => setSearch("")} className="text-[#8a7d66] text-[13px] px-1 font-bold">✕</button>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Mobile navigation menu overlay */}
+        {mobileMenu && (
+          <div className="xl:hidden border-t border-[#e7dfcd] bg-[#fbf9f4] shadow-xl">
+            <div className="px-4 sm:px-5 py-5 space-y-4">
+              <div className="text-[10px] uppercase font-[700] tracking-[0.2em] text-[#a08040] pb-1 border-b border-[#ece3cf]">
+                Explore Fragrances
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-[12px] font-[600] uppercase tracking-[0.06em]">
+                <button
+                  onClick={() => { setGender("All"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="p-3 rounded-xl border border-[#e8ded0] bg-white text-left text-[#3c3428] hover:border-[#b3924f] active:bg-[#f3efe4] transition"
+                >
+                  ✨ All ({PRODUCTS.length})
+                </button>
+                <button
+                  onClick={() => { setGender("Men"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="p-3 rounded-xl border border-[#e8ded0] bg-white text-left text-[#3c3428] hover:border-[#b3924f] active:bg-[#f3efe4] transition"
+                >
+                  🎩 For Him
+                </button>
+                <button
+                  onClick={() => { setGender("Women"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="p-3 rounded-xl border border-[#e8ded0] bg-white text-left text-[#3c3428] hover:border-[#b3924f] active:bg-[#f3efe4] transition"
+                >
+                  🌹 For Her
+                </button>
+                <button
+                  onClick={() => { setGender("Unisex"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="p-3 rounded-xl border border-[#e8ded0] bg-white text-left text-[#3c3428] hover:border-[#b3924f] active:bg-[#f3efe4] transition"
+                >
+                  🌿 Unisex
+                </button>
+              </div>
+
+              <div className="pt-2 flex flex-col gap-1 text-[13.5px] font-[600] text-[#5c5344]">
+                <a href="#about" onClick={() => setMobileMenu(false)} className="py-2.5 px-2 rounded-lg hover:bg-white transition flex items-center justify-between">
+                  <span>About Huda Essence</span>
+                  <span className="text-[#a08040]">→</span>
+                </a>
+                <a href="#contact" onClick={() => setMobileMenu(false)} className="py-2.5 px-2 rounded-lg hover:bg-white transition flex items-center justify-between">
+                  <span>Contact & Support</span>
+                  <span className="text-[#a08040]">→</span>
+                </a>
+              </div>
+
+              <div className="pt-2 border-t border-[#ece3cf]">
+                <a
+                  href={`https://wa.me/${whatsappNum}?text=Hi! I have a question about Huda Essence perfumes`}
+                  target="_blank"
+                  rel="noopener"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-[#25D366] text-white text-[13px] font-[600] shadow-sm active:scale-98 transition"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                  Chat on WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -5395,55 +4970,54 @@ export default function App() {
         <div className="pointer-events-none absolute -top-48 left-1/2 h-[520px] w-[880px] -translate-x-1/2 rounded-full bg-[#ecdfc2]/60 blur-[130px]"></div>
         <div className="pointer-events-none absolute -bottom-32 -right-24 h-[320px] w-[320px] rounded-full bg-[#6e1e2a]/5 blur-[110px] animate-blob-2"></div>
 
-        <div className="relative mx-auto grid max-w-[1320px] items-center gap-12 px-5 pb-16 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-10 lg:pb-24 lg:pt-20">
-          <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-3 text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">
-              <span className="h-px w-10 bg-[#c9ad74]"></span>
+        <div className="relative mx-auto grid max-w-[1320px] items-center gap-8 sm:gap-12 px-4 sm:px-5 pb-12 pt-8 sm:pb-20 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-10 lg:pb-24 lg:pt-20">
+          <div className="animate-fade-up text-center lg:text-left">
+            <div className="inline-flex items-center gap-2.5 text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.2em] sm:tracking-[0.24em] text-[#a08040]">
+              <span className="h-px w-6 sm:w-10 bg-[#c9ad74]"></span>
               Perfume House — Huda Essence
+              <span className="h-px w-6 sm:w-10 bg-[#c9ad74] lg:hidden"></span>
             </div>
-            <h1 className="mt-6 text-[42px] leading-[1.02] tracking-[-0.01em] text-[#191510] sm:text-[54px] lg:text-[64px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+            <h1 className="mt-4 sm:mt-6 text-[32px] sm:text-[48px] lg:text-[64px] leading-[1.08] sm:leading-[1.02] tracking-[-0.01em] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
               Branded fragrances ki wohi khushboo,
               <span className="italic text-[#a08040]"> ab har kisi ki pohanch</span> mein.
             </h1>
-            <p className="mt-6 max-w-[480px] text-[15.5px] leading-relaxed text-[#6b6153]">
-              Premium impression perfumes crafted from high-quality oils — available in 10ml aur 50ml. Ek simple, imaandaar price. Sirf Karachi mein delivery.
+            <p className="mt-4 sm:mt-6 mx-auto lg:mx-0 max-w-[480px] text-[14px] sm:text-[15.5px] leading-relaxed text-[#6b6153]">
+              Premium impression perfumes crafted from high-quality oils — sirf 50ml bottle mein available. Ek simple, imaandaar price. Sirf Karachi mein delivery.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
               <button
                 onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="rounded-full bg-[#191510] px-[30px] py-[15px] text-[12px] font-[600] uppercase tracking-[0.14em] text-[#f0e6d2] transition hover:bg-[#2b241a] hover:shadow-[0_16px_36px_-12px_rgba(25,21,16,0.5)]"
+                className="w-full sm:w-auto rounded-full bg-[#191510] px-[28px] py-[14px] sm:py-[15px] text-[12px] font-[600] uppercase tracking-[0.14em] text-[#f0e6d2] transition hover:bg-[#2b241a] active:scale-95 shadow-[0_12px_28px_-10px_rgba(25,21,16,0.4)]"
               >
                 Shop Collection
               </button>
-              <a href={`https://wa.me/${whatsappNum}`} target="_blank" rel="noopener" className="flex items-center gap-2.5 rounded-full border border-[#d8cdb4] bg-white/70 px-[28px] py-[15px] text-[12px] font-[600] uppercase tracking-[0.12em] text-[#3c3428] transition hover:border-[#b3924f] hover:bg-white">
+              <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to order from Huda Essence`} target="_blank" rel="noopener" className="w-full sm:w-auto flex items-center justify-center gap-2.5 rounded-full border border-[#d8cdb4] bg-white/80 px-[26px] py-[14px] sm:py-[15px] text-[12px] font-[600] uppercase tracking-[0.12em] text-[#3c3428] transition hover:border-[#b3924f] hover:bg-white active:scale-95">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
                 WhatsApp Order
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-[#e4dbc6] pt-6 text-[11.5px] font-[600] uppercase tracking-[0.14em] text-[#7a6e58]">
-              <span>From Rs 299</span>
-              <span className="hidden h-1 w-1 rounded-full bg-[#c9ad74] sm:block"></span>
-              <span>6–8h Lasting</span>
-              <span className="hidden h-1 w-1 rounded-full bg-[#c9ad74] sm:block"></span>
-              <span>COD — Karachi</span>
+            <div className="mt-8 sm:mt-10 grid grid-cols-3 divide-x divide-[#e4dbc6] border-t border-[#e4dbc6] pt-5 text-center text-[10px] sm:text-[11.5px] font-[600] uppercase tracking-[0.06em] sm:tracking-[0.14em] text-[#7a6e58]">
+              <span className="px-1">Only Rs 1,299</span>
+              <span className="px-1">6–8h Lasting</span>
+              <span className="px-1">COD Karachi</span>
             </div>
           </div>
 
           <div className="relative">
-            <div className="relative mx-auto w-[88%] max-w-[440px]">
-              <div className="absolute -inset-3 rounded-t-[999px] rounded-b-[36px] border border-[#cbb47f]/50 pointer-events-none"></div>
-              <div className="relative h-[460px] overflow-hidden rounded-t-[999px] rounded-b-[28px] shadow-[0_60px_110px_-40px_rgba(90,70,40,0.45)] lg:h-[580px]">
+            <div className="relative mx-auto w-[82%] sm:w-[88%] max-w-[420px]">
+              <div className="absolute -inset-2.5 sm:-inset-3 rounded-t-[999px] rounded-b-[32px] sm:rounded-b-[36px] border border-[#cbb47f]/50 pointer-events-none"></div>
+              <div className="relative h-[320px] sm:h-[440px] lg:h-[560px] overflow-hidden rounded-t-[999px] rounded-b-[26px] sm:rounded-b-[28px] shadow-[0_40px_90px_-30px_rgba(90,70,40,0.4)]">
                 <img
                   src="/images/huda_essence_hero_all_sizes.png"
-                  alt="Huda Essence Bottles 10ml, 50ml"
+                  alt="Huda Essence Bottle — 50ml"
                   className="absolute inset-0 h-full w-full object-cover"
                   fetchPriority="high"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#19130d2b] via-transparent to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#e4dbc6] bg-white/95 px-5 py-2.5 text-[10px] font-[600] uppercase tracking-[0.2em] text-[#6b6153] shadow-[0_18px_40px_-18px_rgba(90,70,40,0.4)] backdrop-blur">
+              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#e4dbc6] bg-white/95 px-4 sm:px-5 py-2 text-[9px] sm:text-[10px] font-[600] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#6b6153] shadow-[0_14px_30px_-14px_rgba(90,70,40,0.35)] backdrop-blur">
                 Eau de Parfum • Premium Oils
               </div>
             </div>
@@ -5453,63 +5027,64 @@ export default function App() {
 
       {/* ═══════════ TRUST BAR ═══════════ */}
       <div className="border-y border-[#e7dfcd] bg-[#fbf9f4]">
-        <div className="mx-auto grid max-w-[1320px] grid-cols-1 divide-y divide-[#e7dfcd] px-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
+        <div className="mx-auto grid max-w-[1320px] grid-cols-3 divide-x divide-[#e7dfcd] px-2 sm:px-5 lg:px-10">
           {[
-            { title: "Premium Quality", sub: "Long-lasting fragrances" },
-            { title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
-            { title: "Cash on Delivery", sub: "Delivery charges advance" },
+            { icon: "💎", title: "Premium Oils", sub: "Long-lasting impressions" },
+            { icon: "🚚", title: `PKR ${deliveryCharge} Delivery`, sub: "Karachi Only" },
+            { icon: "💵", title: "Cash on Delivery", sub: "Advance delivery fee" },
           ].map(t => (
-            <div key={t.title} className="flex flex-col items-center gap-1 px-4 py-5 text-center">
-              <div className="text-[11px] font-[700] uppercase tracking-[0.2em] text-[#191510]">{t.title}</div>
-              <div className="text-[12px] text-[#8a7d66]">{t.sub}</div>
+            <div key={t.title} className="flex flex-col items-center justify-center gap-0.5 px-2 py-3.5 sm:px-4 sm:py-5 text-center">
+              <span className="text-[14px] sm:text-[18px] mb-0.5">{t.icon}</span>
+              <div className="text-[10px] sm:text-[11.5px] font-[700] uppercase tracking-[0.08em] sm:tracking-[0.18em] text-[#191510] leading-tight">{t.title}</div>
+              <div className="text-[9.5px] sm:text-[12px] text-[#8a7d66] leading-tight">{t.sub}</div>
             </div>
           ))}
         </div>
       </div>
 
       {/* ═══════════ SHOP ALL PRODUCTS ═══════════ */}
-      <section id="shop" ref={shopRef} className="mx-auto max-w-[1320px] px-5 py-14 lg:px-10 lg:py-[90px]">
-        <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
+      <section id="shop" ref={shopRef} className="mx-auto max-w-[1320px] px-3.5 sm:px-5 py-10 sm:py-14 lg:px-10 lg:py-[90px]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
           <div>
-            <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">Our Collection</div>
-            <h2 className="mt-3 text-[40px] leading-[0.98] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+            <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.22em] text-[#a08040]">Our Collection</div>
+            <h2 className="mt-2 text-[32px] sm:text-[40px] leading-[0.98] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
               Shop Huda Essence
             </h2>
-            <p className="mt-3 max-w-[520px] text-[14.5px] text-[#6b6153]">
-              {PRODUCTS.length} premium impression perfumes. All sizes, one simple price in PKR.
+            <p className="mt-2 max-w-[520px] text-[13.5px] sm:text-[14.5px] text-[#6b6153]">
+              {PRODUCTS.length} premium impression perfumes. Available in 50ml Eau de Parfum.
             </p>
           </div>
         </div>
 
-        {/* filters */}
-        <div className="mb-10 mt-6 flex flex-wrap items-center gap-3">
-          <div className="flex items-center gap-1 rounded-full border border-[#e2d8c2] bg-white p-1">
+        {/* Filter bar: responsive horizontal scroll pills */}
+        <div className="mb-6 sm:mb-10 mt-4 sm:mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 rounded-full border border-[#e2d8c2] bg-white p-1 shadow-xs">
             {(["All", "Men", "Women", "Unisex"] as const).map(g => (
               <button
                 key={g}
                 onClick={() => setGender(g)}
-                className={`rounded-full px-4 py-[8px] text-[11.5px] font-[600] uppercase tracking-[0.1em] transition ${gender === g ? "bg-[#191510] text-[#f0e6d2]" : "text-[#6b6153] hover:bg-[#f3efe4]"}`}
-              >{g === "All" ? "All" : g === "Men" ? "For Him" : g === "Women" ? "For Her" : "Unisex"}</button>
+                className={`whitespace-nowrap rounded-full px-3.5 sm:px-4 py-2 text-[11px] sm:text-[11.5px] font-[600] uppercase tracking-[0.08em] sm:tracking-[0.1em] transition active:scale-95 ${gender === g ? "bg-[#191510] text-[#f0e6d2] shadow-sm" : "text-[#6b6153] hover:bg-[#f3efe4]"}`}
+              >{g === "All" ? `All (${PRODUCTS.length})` : g === "Men" ? "For Him" : g === "Women" ? "For Her" : "Unisex"}</button>
             ))}
           </div>
-          <div className="ml-auto flex items-center gap-2">
-            <span className="text-[11px] font-[600] uppercase tracking-[0.14em] text-[#8a7d66]">Sort</span>
+          <div className="flex items-center justify-between sm:justify-end gap-2 px-1">
+            <span className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#8a7d66]">Sort:</span>
             <select
               value={sort}
               onChange={e => setSort(e.target.value as typeof sort)}
-              className="rounded-full border border-[#e2d8c2] bg-white px-4 py-[9px] text-[13px] outline-none transition focus:border-[#b3924f]"
+              className="rounded-full border border-[#e2d8c2] bg-white px-3.5 py-1.5 sm:py-2 text-[12px] sm:text-[13px] outline-none transition focus:border-[#b3924f] shadow-xs"
             >
               <option value="featured">Featured</option>
               <option value="bestsellers">Bestsellers</option>
               <option value="new">New Arrivals</option>
-              <option value="price_low">Price ↑</option>
-              <option value="price_high">Price ↓</option>
+              <option value="price_low">Price: Low to High</option>
+              <option value="price_high">Price: High to Low</option>
             </select>
           </div>
         </div>
 
         {/* product grids */}
-        <div className="space-y-16">
+        <div className="space-y-12 sm:space-y-16">
           {(gender === "All" && !search.trim() ? [
             { title: "For Her", items: filtered.filter(p => p.gender === "Women") },
             { title: "For Him", items: filtered.filter(p => p.gender === "Men") },
@@ -5518,63 +5093,65 @@ export default function App() {
             { title: null, items: filtered }
           ]).filter(g => g.items.length > 0).map((group, idx) => (
             <div key={idx}>
-              {group.title && <h3 className="mb-6 border-b border-[#e7dfcd] pb-3 text-[30px] text-[#191510] lg:text-[34px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{group.title}</h3>}
-              <div className="grid grid-cols-2 gap-3 sm:gap-7 md:grid-cols-3 lg:grid-cols-4">
+              {group.title && <h3 className="mb-4 sm:mb-6 border-b border-[#e7dfcd] pb-2.5 text-[26px] sm:text-[30px] text-[#191510] lg:text-[34px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{group.title}</h3>}
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
                 {group.items.map(p => (
-                  <div key={p.id} className="group flex flex-col overflow-hidden rounded-2xl border border-[#e8e0cd] bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_36px_70px_-30px_rgba(90,70,40,0.35)]">
-                    <div className="relative overflow-hidden">
-                      <PerfumeImage product={p} onClick={() => setModal(p)} className="h-[128px] w-full cursor-pointer object-cover transition-transform duration-700 group-hover:scale-[1.04] sm:h-[260px] md:h-[320px] lg:h-[380px]" />
-                      <div className="absolute left-3 top-3 flex gap-1.5">
-                        {p.bestseller && <span className="rounded-full bg-[#191510]/85 px-2.5 py-1 text-[8.5px] font-[600] uppercase tracking-[0.16em] text-[#e9dcb8] backdrop-blur">Bestseller</span>}
-                        {p.nouveau && <span className="rounded-full bg-[#6e1e2a] px-2.5 py-1 text-[8.5px] font-[600] uppercase tracking-[0.16em] text-white">New</span>}
+                  <div key={p.id} className="group flex flex-col overflow-hidden rounded-2xl border border-[#e8e0cd] bg-white transition-all duration-300 hover:shadow-[0_24px_50px_-20px_rgba(90,70,40,0.3)]">
+                    <div className="relative overflow-hidden bg-[#faf7f2]">
+                      <div className="w-full aspect-[4/5] overflow-hidden cursor-pointer" onClick={() => setModal(p)}>
+                        <PerfumeImage product={p} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+                      </div>
+                      <div className="absolute left-2 top-2 sm:left-3 sm:top-3 flex flex-col sm:flex-row gap-1 pointer-events-none">
+                        {p.bestseller && <span className="rounded-full bg-[#191510]/90 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[7.5px] sm:text-[8.5px] font-[600] uppercase tracking-[0.14em] text-[#e9dcb8] backdrop-blur">Bestseller</span>}
+                        {p.nouveau && <span className="rounded-full bg-[#6e1e2a] px-2 sm:px-2.5 py-0.5 sm:py-1 text-[7.5px] sm:text-[8.5px] font-[600] uppercase tracking-[0.14em] text-white">New</span>}
                       </div>
                       <button
                         onClick={(e) => { e.stopPropagation(); toggleWish(p.id); }}
-                        className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full border border-[#e8e0cd] bg-white/95 transition-transform hover:scale-110 sm:h-10 sm:w-10"
+                        aria-label="Save to wishlist"
+                        className="absolute right-2 top-2 sm:right-3 sm:top-3 grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-full border border-[#e8e0cd] bg-white/95 shadow-xs transition-transform active:scale-90 hover:scale-105"
                       >
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#6e1e2a" : "none"} stroke={wishlist.includes(p.id) ? "#6e1e2a" : "#6b6153"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill={wishlist.includes(p.id) ? "#6e1e2a" : "none"} stroke={wishlist.includes(p.id) ? "#6e1e2a" : "#6b6153"} strokeWidth="1.7"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
                       </button>
-                      <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-[#191510]/75 via-[#191510]/40 to-transparent p-2.5 transition-transform duration-300 group-hover:translate-y-0 sm:p-4">
-                        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
-                          {p.sizes.map(s => {
-                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : null;
-                            return (
-                              <button key={s.ml} onClick={(e) => { e.stopPropagation(); addToCart(p.id, s.ml); }} className="rounded-full bg-white/95 px-2 py-1.5 text-[9.5px] font-[600] text-[#191510] transition hover:bg-[#e8c876] sm:px-3 sm:text-[11.5px]">
-                                {s.ml}ml {orig ? <s className="mr-0.5 text-[8.5px] font-normal text-[#9a8c72] sm:text-[9.5px]">Rs {orig.toLocaleString()}</s> : null} {PKR(s.price)}
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
                     </div>
-                    <div className="flex flex-1 flex-col p-2.5 pb-3 sm:p-5">
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <h3 className="text-[15px] leading-tight text-[#191510] sm:text-[23px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</h3>
-                          <div className="mt-1 text-[8px] font-[600] uppercase tracking-[0.14em] text-[#a08040] sm:text-[10px]">{p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}</div>
-                        </div>
-                        <div className="hidden shrink-0 text-right text-[10px] text-[#8a7d66] sm:block">
-                          <div className="flex items-center justify-end gap-1"><Stars rating={p.rating} /><span>{p.rating}</span></div>
-                          <div className="mt-0.5 text-[9px] text-[#a4977e]">({p.reviews} reviews)</div>
+
+                    <div className="flex flex-1 flex-col p-2.5 sm:p-4 pb-3">
+                      <div>
+                        <h3 onClick={() => setModal(p)} className="text-[14px] sm:text-[20px] leading-tight text-[#191510] font-[600] line-clamp-1 cursor-pointer hover:text-[#b3924f] transition" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+                          {p.name}
+                          <span className="ml-1 whitespace-nowrap align-middle text-[8.5px] sm:text-[11px] font-[700] uppercase tracking-[0.14em] text-[#a08040]">· 50ml</span>
+                        </h3>
+                        <div className="mt-0.5 text-[8px] sm:text-[10px] font-[600] uppercase tracking-[0.1em] text-[#a08040] truncate">
+                          {p.gender === "Men" ? "For Him" : p.gender === "Women" ? "For Her" : "Unisex"} • {p.family}
                         </div>
                       </div>
-                      <div className="mt-1.5 hidden text-[12px] italic text-[#8a7d66] line-clamp-1 sm:block">{p.mood}</div>
-                      <div className="mt-auto">
-                        <div className="mt-2.5 grid grid-cols-2 gap-1.5 text-center sm:mt-4">
-                          {p.sizes.map(s => {
-                            const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : null;
-                            return (
-                              <div key={s.ml} className="rounded-xl border border-[#ece3cf] bg-[#faf7ee] py-1.5 sm:py-2">
-                                <div className="text-[8.5px] font-[600] uppercase tracking-[0.12em] text-[#a4977e]">{s.ml}ml</div>
-                                {orig && <div className="text-[8.5px] text-[#b3a488] line-through sm:text-[10px]">Rs {orig.toLocaleString()}</div>}
-                                <div className="text-[10.5px] font-[700] text-[#191510] sm:text-[13px]">{PKR(s.price)}</div>
-                              </div>
-                            );
-                          })}
-                        </div>
-                        <div className="mt-2 flex items-center gap-2 sm:mt-3.5">
-                          <button onClick={() => setModal(p)} className="flex-1 rounded-full bg-[#191510] py-[7px] text-[9px] sm:py-[9px] font-[600] uppercase tracking-[0.12em] text-[#f0e6d2] transition hover:bg-[#2b241a] sm:py-[11px] sm:text-[11px]">View Details</button>
-                          <button onClick={() => addToCart(p.id)} className="rounded-full border border-[#ddd2b8] px-3 py-[7px] text-[9px] sm:px-4 sm:py-[9px] font-[600] uppercase tracking-[0.12em] text-[#5c5344] transition hover:border-[#b3924f] hover:text-[#8a6a33] sm:px-5 sm:py-[11px] sm:text-[11px]">+ Bag</button>
+
+                      <div className="mt-auto pt-2">
+                        {/* Price — 50ml only, styled */}
+                        {(() => {
+                          const s50 = p.sizes.find(s => s.ml === 50) ?? p.sizes[p.sizes.length - 1];
+                          const orig = s50.ml === 50 ? 1600 : null;
+                          return (
+                            <div className="flex items-baseline justify-center gap-1.5 sm:gap-2">
+                              {orig && <span className="text-[10px] sm:text-[12px] text-[#b3a488] line-through">{PKR(orig)}</span>}
+                              <span className="text-[16px] sm:text-[21px] font-[700] leading-none text-[#8a6a33]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{PKR(s50.price)}</span>
+                            </div>
+                          );
+                        })()}
+
+                        {/* Card action buttons */}
+                        <div className="mt-2 sm:mt-3 flex items-center gap-1.5 sm:gap-2">
+                          <button
+                            onClick={() => setModal(p)}
+                            className="flex-1 rounded-full bg-[#191510] py-2 sm:py-2.5 text-[10px] sm:text-[11px] font-[600] uppercase tracking-[0.08em] sm:tracking-[0.1em] text-[#f0e6d2] transition hover:bg-[#2b241a] active:scale-95 text-center"
+                          >
+                            Details
+                          </button>
+                          <button
+                            onClick={() => addToCart(p.id)}
+                            className="rounded-full border border-[#ddd2b8] px-2.5 sm:px-4 py-2 sm:py-2.5 text-[10px] sm:text-[11px] font-[600] uppercase text-[#5c5344] transition hover:border-[#b3924f] hover:text-[#8a6a33] active:scale-95 shrink-0"
+                          >
+                            + Bag
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -5592,33 +5169,32 @@ export default function App() {
       {/* ═══════════ PRICING BANNER ═══════════ */}
       <section className="relative overflow-hidden bg-[#12100b] text-[#ece1c8]">
         <div className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-[#c9a75c]/10 blur-[130px]"></div>
-        <div className="relative mx-auto max-w-[1320px] px-5 py-16 lg:px-10 lg:py-24">
+        <div className="relative mx-auto max-w-[1320px] px-4 sm:px-5 py-12 sm:py-16 lg:px-10 lg:py-24">
           <div className="mx-auto max-w-[800px] text-center">
-            <div className="text-[10.5px] font-[600] uppercase tracking-[0.26em] text-[#cfae66]">Simple & Honest Pricing</div>
-            <h3 className="mt-4 text-[40px] leading-[0.98] lg:text-[54px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+            <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#cfae66]">Simple & Honest Pricing</div>
+            <h3 className="mt-3 sm:mt-4 text-[30px] sm:text-[40px] leading-[1.0] lg:text-[54px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
               One price for every fragrance.
             </h3>
-            <p className="mx-auto mt-4 max-w-[540px] text-[15px] leading-relaxed text-[#b3a486]">
-              No hidden charges. No confusing tiers. Every Huda Essence perfume is the same price — pick your size.
+            <p className="mx-auto mt-3 sm:mt-4 max-w-[540px] text-[14px] sm:text-[15px] leading-relaxed text-[#b3a486]">
+              No hidden charges. No confusing tiers. Every Huda Essence perfume is the same price — one beautiful 50ml bottle.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-[620px] gap-5 sm:grid-cols-2">
+          <div className="mx-auto mt-8 sm:mt-12 grid max-w-[380px] gap-4 sm:gap-5 grid-cols-1">
             {[
-              { ml: 10, price: 299, originalPrice: 500, label: "Travel Size", desc: "Perfect for trying a new scent or keeping in your bag" },
-              { ml: 50, price: 1299, originalPrice: 1600, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear" },
+              { ml: 50, price: 1299, originalPrice: 1600, label: "Popular Choice", desc: "The sweet spot — lasts 2–3 months with daily wear", popular: true },
             ].map(s => (
-              <div key={s.ml} className={`relative overflow-hidden rounded-2xl border p-6 text-center ${s.popular ? "border-[#c3a05c] bg-[#1d1810]" : "border-[#2c2517] bg-[#181510]"}`}>
+              <div key={s.ml} className={`relative overflow-hidden rounded-2xl border p-5 sm:p-6 text-center ${s.popular ? "border-[#c3a05c] bg-[#1d1810]" : "border-[#2c2517] bg-[#181510]"}`}>
                 {s.popular && <div className="pointer-events-none absolute inset-0 overflow-hidden"><div className="animate-sheen absolute -top-1/2 h-[200%] w-16 bg-gradient-to-r from-transparent via-[#e8c876]/15 to-transparent" /></div>}
-                <div className="mb-3 text-[9.5px] font-[700] uppercase tracking-[0.24em] text-[#cfae66]">{s.label}</div>
-                <div className="text-[13px] font-[500] text-[#8a7a5c] line-through">Rs {s.originalPrice.toLocaleString()}</div>
-                <div className="mt-1 text-[38px] leading-none text-[#f2e6c8] sm:text-[44px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+                <div className="mb-2 sm:mb-3 text-[9px] sm:text-[9.5px] font-[700] uppercase tracking-[0.22em] text-[#cfae66]">{s.label}</div>
+                <div className="text-[12px] sm:text-[13px] font-[500] text-[#8a7a5c] line-through">Rs {s.originalPrice.toLocaleString()}</div>
+                <div className="mt-1 text-[34px] sm:text-[42px] leading-none text-[#f2e6c8]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
                   Rs {s.price.toLocaleString()}
                 </div>
-                <div className="mt-2 text-[10.5px] font-[600] uppercase tracking-[0.18em] text-[#b3924f]">{s.ml} ml Eau de Parfum</div>
-                <div className="mt-3 text-[12.5px] leading-relaxed text-[#a49372]">{s.desc}</div>
+                <div className="mt-1.5 sm:mt-2 text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.16em] text-[#b3924f]">{s.ml} ml Eau de Parfum</div>
+                <div className="mt-2.5 sm:mt-3 text-[12px] sm:text-[12.5px] leading-relaxed text-[#a49372]">{s.desc}</div>
                 <button
                   onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`mt-5 w-full rounded-full py-3 text-[11px] font-[600] uppercase tracking-[0.14em] transition ${s.popular ? "bg-[#e0bd6f] text-[#1c1408] hover:bg-[#eccf85]" : "border border-[#3d3320] bg-transparent text-[#d8c49c] hover:bg-[#241e13]"}`}
+                  className={`mt-4 sm:mt-5 w-full rounded-full py-3 text-[11px] font-[600] uppercase tracking-[0.12em] transition active:scale-95 ${s.popular ? "bg-[#e0bd6f] text-[#1c1408] hover:bg-[#eccf85]" : "border border-[#3d3320] bg-transparent text-[#d8c49c] hover:bg-[#241e13]"}`}
                 >
                   Shop {s.ml}ml
                 </button>
@@ -5628,30 +5204,28 @@ export default function App() {
         </div>
       </section>
 
-
-
       {/* ═══════════ ABOUT ═══════════ */}
       <section id="about" className="border-y border-[#e7dfcd] bg-[#f3efe4]">
-        <div className="mx-auto max-w-[1320px] px-5 py-16 lg:px-10 lg:py-24">
+        <div className="mx-auto max-w-[1320px] px-4 sm:px-5 py-12 sm:py-16 lg:px-10 lg:py-24">
           <div className="mx-auto max-w-[760px] text-center">
-            <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">About Huda Essence</div>
-            <h3 className="mt-4 text-[40px] leading-[1.0] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>We don't just copy.<br />We craft impressions.</h3>
-            <p className="mx-auto mt-5 max-w-[600px] text-[15.5px] leading-relaxed text-[#5c5344]">
+            <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.22em] text-[#a08040]">About Huda Essence</div>
+            <h3 className="mt-3 sm:mt-4 text-[30px] sm:text-[40px] leading-[1.05] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>We don't just copy.<br />We craft impressions.</h3>
+            <p className="mx-auto mt-4 sm:mt-5 max-w-[600px] text-[14px] sm:text-[15.5px] leading-relaxed text-[#5c5344]">
               Huda Essence is a Pakistani impression perfume brand that believes everyone deserves to smell amazing.
               We study the world's most iconic designer fragrances and recreate their scent profiles using premium oils.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-[960px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-8 sm:mt-12 grid max-w-[960px] gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               ["Premium Oils", "High-quality fragrance oils sourced for long-lasting performance."],
-              ["Affordable Luxury", "Designer-inspired scents from just PKR 299 for 10ml."],
+              ["Affordable Luxury", "Designer-inspired scents from just PKR 1,299 for 50ml."],
               ["Made for Pakistan", "Formulated to perform in our hot and humid climate."],
               ["Flat Delivery", `Flat PKR ${deliveryCharge} delivery charge within Karachi only.`],
               ["Cash on Delivery", "Pay in cash on delivery! Only delivery charges (PKR " + deliveryCharge + ") paid in advance via JazzCash, EasyPaisa, or Bank."],
             ].map(([t, s]) => (
-              <div key={t} className="rounded-2xl border border-[#e5dcc6] bg-white/80 p-5 transition hover:border-[#cbb47f]">
-                <div className="text-[19px] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{t}</div>
-                <div className="mt-1.5 text-[13px] leading-relaxed text-[#6b6153]">{s}</div>
+              <div key={t} className="rounded-2xl border border-[#e5dcc6] bg-white/80 p-4 sm:p-5 transition hover:border-[#cbb47f]">
+                <div className="text-[18px] sm:text-[19px] text-[#191510] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{t}</div>
+                <div className="mt-1 text-[12.5px] sm:text-[13px] leading-relaxed text-[#6b6153]">{s}</div>
               </div>
             ))}
           </div>
@@ -5659,24 +5233,24 @@ export default function App() {
       </section>
 
       {/* ═══════════ REVIEWS ═══════════ */}
-      <section className="mx-auto max-w-[1320px] px-5 py-16 lg:px-10 lg:py-[90px]">
-        <div className="mb-12 text-center">
-          <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">Customer Love</div>
-          <h3 className="mt-3 text-[38px] leading-[0.98] text-[#191510] lg:text-[48px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>What Our Customers Say</h3>
-          <p className="mt-3 text-[14px] text-[#6b6153]"><span className="text-[#c9a24b]">★ 4.9</span> average rating from 5,000+ happy customers</p>
+      <section className="mx-auto max-w-[1320px] px-4 sm:px-5 py-12 sm:py-16 lg:px-10 lg:py-[90px]">
+        <div className="mb-8 sm:mb-12 text-center">
+          <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.22em] text-[#a08040]">Customer Love</div>
+          <h3 className="mt-2.5 sm:mt-3 text-[28px] sm:text-[38px] leading-[1.0] text-[#191510] lg:text-[48px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>What Our Customers Say</h3>
+          <p className="mt-2 sm:mt-3 text-[13.5px] sm:text-[14px] text-[#6b6153]"><span className="text-[#c9a24b] font-bold">★ 4.9</span> average rating from 5,000+ happy customers</p>
         </div>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-3.5 sm:gap-5 grid-cols-1 md:grid-cols-3">
           {[
             { name: "Fatima A.", city: "Karachi", text: "Tea Rosée is AMAZING! My friends thought I'm wearing an expensive imported perfume. Can't believe it's only PKR 1,299 for 50ml. Already ordered 3 more fragrances!", scent: "Tea Rosée • 50ml", stars: 5 },
             { name: "Ahmed K.", city: "Karachi", text: "Blue is my daily signature now. Lasts the entire day even in Karachi heat. Multiple compliments at office. Huda Essence quality is unreal at this price point.", scent: "Blue for Men • 50ml", stars: 5 },
             { name: "Sara M.", city: "Karachi", text: "Ordered Armani Code for my husband and Miss Dior for myself. Both are incredible! The packaging is beautiful, delivery was fast, and the scents last 6 to 8 hours.", scent: "Armani Code + Miss Dior", stars: 5 },
           ].map((r, i) => (
-            <div key={i} className="flex flex-col rounded-2xl border border-[#e8e0cd] bg-white p-6">
-              <div className="text-[15px] tracking-[0.2em] text-[#c9a24b]">{"★".repeat(r.stars)}</div>
-              <p className="mt-4 flex-1 text-[14.5px] leading-relaxed text-[#3c3428]">"{r.text}"</p>
-              <div className="mt-5 border-t border-[#efe8d6] pt-4">
-                <div className="text-[13.5px] font-[600] text-[#191510]">{r.name} — {r.city}</div>
-                <div className="mt-0.5 text-[11px] uppercase tracking-[0.12em] text-[#a4977e]">{r.scent}</div>
+            <div key={i} className="flex flex-col rounded-2xl border border-[#e8e0cd] bg-white p-5 sm:p-6 shadow-xs">
+              <div className="text-[14px] sm:text-[15px] tracking-[0.18em] text-[#c9a24b]">{"★".repeat(r.stars)}</div>
+              <p className="mt-3 sm:mt-4 flex-1 text-[13.5px] sm:text-[14.5px] leading-relaxed text-[#3c3428]">"{r.text}"</p>
+              <div className="mt-4 sm:mt-5 border-t border-[#efe8d6] pt-3 sm:pt-4">
+                <div className="text-[13px] sm:text-[13.5px] font-[600] text-[#191510]">{r.name} — {r.city}</div>
+                <div className="mt-0.5 text-[10.5px] sm:text-[11px] uppercase tracking-[0.1em] text-[#a4977e]">{r.scent}</div>
               </div>
             </div>
           ))}
@@ -5685,21 +5259,21 @@ export default function App() {
 
       {/* ═══════════ WHY CHOOSE US ═══════════ */}
       <section className="border-y border-[#e7dfcd] bg-[#fbf9f4]">
-        <div className="mx-auto max-w-[1320px] px-5 py-14 lg:px-10 lg:py-20">
-          <div className="mb-10 text-center">
-            <h3 className="text-[36px] leading-[0.98] text-[#191510] lg:text-[46px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Why Choose Huda Essence?</h3>
+        <div className="mx-auto max-w-[1320px] px-3.5 sm:px-5 py-10 sm:py-14 lg:px-10 lg:py-20">
+          <div className="mb-6 sm:mb-10 text-center">
+            <h3 className="text-[28px] sm:text-[36px] leading-[1.0] text-[#191510] lg:text-[46px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Why Choose Huda Essence?</h3>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-2.5 sm:gap-5 grid-cols-2 lg:grid-cols-4">
             {[
               { emoji: "💎", title: "Designer Quality", desc: "Premium impression oils that rival originals costing 10x more" },
               { emoji: "🇵🇰", title: "Made in Pakistan", desc: "Proudly crafted for Pakistani customers and our climate" },
               { emoji: "⏰", title: "Long Lasting", desc: "6 to 8 hours of beautiful fragrance performance" },
               { emoji: "🎁", title: "Perfect Gift", desc: "Beautiful packaging makes every order gift-ready" },
             ].map(item => (
-              <div key={item.title} className="rounded-2xl border border-[#e8e0cd] bg-white p-6 text-center transition hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgba(90,70,40,0.3)]">
-                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#f6efdd] text-[24px]">{item.emoji}</div>
-                <div className="mt-4 text-[17px] font-[600] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{item.title}</div>
-                <div className="mt-2 text-[13px] leading-relaxed text-[#6b6153]">{item.desc}</div>
+              <div key={item.title} className="rounded-2xl border border-[#e8e0cd] bg-white p-3.5 sm:p-6 text-center transition hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(90,70,40,0.25)]">
+                <div className="mx-auto grid h-11 w-11 sm:h-14 sm:w-14 place-items-center rounded-full bg-[#f6efdd] text-[20px] sm:text-[24px]">{item.emoji}</div>
+                <div className="mt-3 sm:mt-4 text-[15px] sm:text-[17px] font-[600] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{item.title}</div>
+                <div className="mt-1.5 sm:mt-2 text-[12px] sm:text-[13px] leading-relaxed text-[#6b6153]">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -5708,28 +5282,28 @@ export default function App() {
 
       {/* ═══════════ CTA ═══════════ */}
       <section className="bg-[#12100b] text-[#ece1c8]">
-        <div className="mx-auto max-w-[900px] px-5 py-16 text-center lg:px-10 lg:py-[90px]">
-          <div className="text-[10.5px] font-[600] uppercase tracking-[0.26em] text-[#cfae66]">Ready to smell amazing?</div>
-          <h4 className="mt-4 text-[38px] leading-[1.0] lg:text-[50px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Order your Huda Essence<br />perfume today.</h4>
-          <p className="mt-4 text-[15px] text-[#b3a486]">Delivery in Karachi only. Cash on Delivery available! Delivery charges advance.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <button onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })} className="rounded-full bg-[#e0bd6f] px-8 py-[15px] text-[11.5px] font-[700] uppercase tracking-[0.14em] text-[#1c1408] transition hover:bg-[#eccf85]">Shop All Perfumes</button>
-            <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to place an order from Huda Essence`} target="_blank" rel="noopener" className="flex items-center gap-2 rounded-full border border-[#3d3320] px-8 py-[15px] text-[11.5px] font-[600] uppercase tracking-[0.12em] text-[#e5d3ac] transition hover:bg-[#1d1810]">
+        <div className="mx-auto max-w-[900px] px-4 sm:px-5 py-12 sm:py-16 text-center lg:px-10 lg:py-[90px]">
+          <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#cfae66]">Ready to smell amazing?</div>
+          <h4 className="mt-3 sm:mt-4 text-[30px] sm:text-[38px] leading-[1.05] lg:text-[50px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Order your Huda Essence<br />perfume today.</h4>
+          <p className="mt-3 sm:mt-4 text-[14px] sm:text-[15px] text-[#b3a486]">Delivery in Karachi only. Cash on Delivery available! Delivery charges advance.</p>
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3">
+            <button onClick={() => shopRef.current?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto rounded-full bg-[#e0bd6f] px-8 py-[14px] sm:py-[15px] text-[11.5px] font-[700] uppercase tracking-[0.14em] text-[#1c1408] transition hover:bg-[#eccf85] active:scale-95">Shop All Perfumes</button>
+            <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to place an order from Huda Essence`} target="_blank" rel="noopener" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full border border-[#3d3320] px-8 py-[14px] sm:py-[15px] text-[11.5px] font-[600] uppercase tracking-[0.12em] text-[#e5d3ac] transition hover:bg-[#1d1810] active:scale-95">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
               WhatsApp Order
             </a>
           </div>
-          <div className="mt-7 text-[12px] tracking-[0.04em] text-[#8a7a5c]">10ml: <s className="opacity-70">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span> &nbsp;•&nbsp; 50ml: <s className="opacity-70">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span></div>
+          <div className="mt-6 sm:mt-7 text-[12px] tracking-[0.04em] text-[#8a7a5c]">50ml: <s className="opacity-70">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span></div>
         </div>
       </section>
 
       {/* ═══════════ CONTACT ═══════════ */}
-      <section id="contact" className="mx-auto max-w-[1320px] px-5 py-14 lg:px-10 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-2">
+      <section id="contact" className="mx-auto max-w-[1320px] px-4 sm:px-5 py-10 sm:py-14 lg:px-10 lg:py-20">
+        <div className="grid gap-8 lg:grid-cols-2">
           <div>
-            <div className="text-[10.5px] font-[600] uppercase tracking-[0.24em] text-[#a08040]">Get in Touch</div>
-            <h3 className="mt-3 text-[36px] leading-[1.0] text-[#191510] lg:text-[46px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Have a question?<br />We'd love to help.</h3>
-            <div className="mt-8 space-y-5 text-[14.5px] text-[#3c3428]">
+            <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.22em] text-[#a08040]">Get in Touch</div>
+            <h3 className="mt-2.5 sm:mt-3 text-[28px] sm:text-[36px] leading-[1.05] text-[#191510] lg:text-[46px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Have a question?<br />We'd love to help.</h3>
+            <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-5 text-[14px] sm:text-[14.5px] text-[#3c3428]">
               {[
                 { icon: "📱", label: "WhatsApp", val: `+${whatsappNum.replace(/(\d{2})(\d{3})(\d{7})/, "$1 $2 $3")}`, href: `https://wa.me/${whatsappNum}` },
                 { icon: "📸", label: "Instagram", val: "@hudaessence2026", href: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" },
@@ -5740,13 +5314,13 @@ export default function App() {
               ].map(({ icon, label, val, href }) => {
                 const Content = () => (
                   <>
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[#e5dcc6] bg-white text-[16px]">{icon}</span>
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[#e5dcc6] bg-white text-[16px] shadow-xs">{icon}</span>
                     <div>
                       <div className="flex items-center gap-1 text-[11px] font-[700] uppercase tracking-[0.14em] text-[#191510]">
                         {label}
                         {href && <span className="font-normal text-[#a08040] opacity-70 transition-all group-hover:translate-x-0.5 group-hover:opacity-100">→</span>}
                       </div>
-                      <div className="mt-0.5 text-[#6b6153] transition-colors duration-200 group-hover:text-[#8a6a33]">{val}</div>
+                      <div className="mt-0.5 text-[#6b6153] transition-colors duration-200 group-hover:text-[#8a6a33] text-[13px] sm:text-[14.5px] break-all">{val}</div>
                     </div>
                   </>
                 );
@@ -5763,13 +5337,13 @@ export default function App() {
             </div>
           </div>
           <div>
-            <form onSubmit={e => { e.preventDefault(); setToast("Message sent! We'll reply within 2 hours InshaAllah."); }} className="space-y-4 rounded-2xl border border-[#e8e0cd] bg-white p-6 lg:p-8">
-              <div className="text-[21px] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Send us a message</div>
-              <input required type="text" placeholder="Your Name" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
-              <input required type="tel" placeholder="Phone / WhatsApp Number" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
-              <input type="email" placeholder="Email (optional)" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
-              <textarea required rows={4} placeholder="Your message…" className="w-full resize-none rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-4 py-3.5 text-[14px] outline-none transition focus:border-[#b3924f]" />
-              <button className="w-full rounded-full bg-[#191510] py-[13px] text-[11.5px] font-[600] uppercase tracking-[0.14em] text-[#f0e6d2] transition hover:bg-[#2b241a]">Send Message</button>
+            <form onSubmit={e => { e.preventDefault(); setToast("Message sent! We'll reply within 2 hours InshaAllah."); }} className="space-y-3.5 sm:space-y-4 rounded-2xl border border-[#e8e0cd] bg-white p-4 sm:p-6 lg:p-8 shadow-xs">
+              <div className="text-[20px] sm:text-[21px] text-[#191510] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Send us a message</div>
+              <input required type="text" placeholder="Your Name" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-3.5 sm:px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <input required type="tel" placeholder="Phone / WhatsApp Number" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-3.5 sm:px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <input type="email" placeholder="Email (optional)" className="w-full rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-3.5 sm:px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <textarea required rows={4} placeholder="Your message…" className="w-full resize-none rounded-xl border border-[#e5dcc6] bg-[#fbf9f4] px-3.5 sm:px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none transition focus:border-[#b3924f]" />
+              <button className="w-full rounded-full bg-[#191510] py-3.5 text-[11.5px] font-[600] uppercase tracking-[0.14em] text-[#f0e6d2] transition hover:bg-[#2b241a] active:scale-95 shadow-sm">Send Message</button>
             </form>
           </div>
         </div>
@@ -5777,11 +5351,11 @@ export default function App() {
 
       {/* ═══════════ FOOTER ═══════════ */}
       <footer className="bg-[#12100b] text-[#b8a688]">
-        <div className="mx-auto grid max-w-[1320px] gap-10 px-5 py-14 text-[13.5px] md:grid-cols-4 lg:px-10">
+        <div className="mx-auto grid max-w-[1320px] gap-8 sm:gap-10 px-4 sm:px-5 py-10 sm:py-14 text-[13px] sm:text-[13.5px] grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:px-10">
           <div>
             <div onClick={() => setAdminClicks(c => c + 1)} className="cursor-default"><Logo size="footer" /></div>
-            <p className="mt-4 leading-relaxed text-[#8a7a5c]">Premium impression perfumes inspired by the world's finest designer fragrances. Made for Pakistan.</p>
-            <div className="mt-6 flex gap-3">
+            <p className="mt-4 leading-relaxed text-[#8a7a5c] text-[13px]">Premium impression perfumes inspired by the world's finest designer fragrances. Made for Pakistan.</p>
+            <div className="mt-5 flex gap-3">
               <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=q1vsax1" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-[#2c2517] flex items-center justify-center text-[#8a7a5c] hover:text-[#e9dcb8] hover:border-[#e9dcb8] hover:bg-[#1d1810] transition duration-200" title="Follow @hudaessence2026 on Instagram">
                 <svg className="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
@@ -5798,112 +5372,142 @@ export default function App() {
             <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Shop</div>
             <ul className="space-y-2 text-[#9a8a6a]">
               <li><a href="#shop" className="hover:text-[#e9dcb8] transition">All Perfumes</a></li>
-              {PRODUCTS.map(p => <li key={p.id}><a href="#shop" className="hover:text-[#e9dcb8] transition">{p.name}</a></li>)}
+              {PRODUCTS.slice(0, 6).map(p => <li key={p.id}><a href="#shop" className="hover:text-[#e9dcb8] transition truncate block">{p.name}</a></li>)}
             </ul>
           </div>
           <div>
-            <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Help</div>
+            <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Help & Info</div>
             <ul className="space-y-2 text-[#9a8a6a]">
-              <li>Shipping Policy</li>
-              <li>Track Your Order</li>
-              <li>FAQs</li>
+              <li>Shipping: Karachi Flat Delivery</li>
+              <li>Payment: COD (Advance Delivery Fee)</li>
+              <li>WhatsApp Support: Available</li>
             </ul>
           </div>
           <div>
             <div className="mb-3 text-[11px] font-[700] uppercase tracking-[0.18em] text-[#e9dcb8]">Pricing</div>
             <ul className="space-y-2 text-[#9a8a6a]">
-              <li>10ml — <s className="opacity-60">Rs 500</s> <span className="font-[700] text-[#e0bd6f]">Rs 299</span></li>
               <li>50ml — <s className="opacity-60">Rs 1,600</s> <span className="font-[700] text-[#e0bd6f]">Rs 1,299</span></li>
               <li className="pt-1 text-[#c9ab6c]">PKR {deliveryCharge} delivery (Karachi Only) • COD Available</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-[#241e12]">
-          <div className="mx-auto flex max-w-[1320px] flex-wrap justify-between gap-4 px-5 py-5 text-[12px] text-[#7a6a4e] lg:px-10">
+          <div className="mx-auto flex max-w-[1320px] flex-col sm:flex-row justify-between items-center gap-3 px-4 sm:px-5 py-4 sm:py-5 text-[11px] sm:text-[12px] text-[#7a6a4e] text-center sm:text-left lg:px-10">
             <div>© {new Date().getFullYear()} Huda Essence — All rights reserved. Impression perfumes inspired by designers, not affiliated.</div>
-            <div className="flex gap-5"><span>Privacy Policy</span><span>Terms</span></div>
+            <div className="flex gap-4"><span>Privacy Policy</span><span>Terms of Service</span></div>
           </div>
         </div>
       </footer>
 
       {/* ═══════════ MODALS / DRAWER ═══════════ */}
       {modal && (
-        <div className="fixed inset-0 z-[60] flex">
-          <div className="absolute inset-0 bg-black/55 backdrop-blur-sm" onClick={() => setModal(null)} />
-          <div className="relative m-auto w-[min(1020px,96vw)] max-h-[92vh] overflow-auto rounded-3xl bg-[#fbf9f4] shadow-2xl">
-            <button onClick={() => setModal(null)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e5dcc6] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
-            <div className="grid md:grid-cols-[460px_1fr]">
-              <div className="relative bg-[#f0e9d8]">
-                <PerfumeImage product={modal} className="w-full h-[450px] md:h-full object-cover" />
-                <div className="absolute left-5 top-5 flex gap-2">
-                  {modal.bestseller && <span className="bg-[#191510]/90 text-[#e9dcb8] px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">Bestseller</span>}
-                  {modal.nouveau && <span className="bg-[#6e1e2a] text-white px-3 py-1.5 rounded-full text-[10.5px] tracking-[0.1em] uppercase font-[600]">New</span>}
+        <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setModal(null)} />
+          <div className="relative w-full sm:w-[min(1020px,96vw)] max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-[#fbf9f4] shadow-2xl z-10 animate-fade-up">
+            <button
+              onClick={() => setModal(null)}
+              aria-label="Close dialog"
+              className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 border border-[#e5dcc6] grid place-items-center text-[#725a3d] z-20 hover:bg-[#f5e5cc] shadow-sm transition active:scale-95 text-[16px] sm:text-[18px]"
+            >
+              ✕
+            </button>
+            <div className="grid md:grid-cols-[440px_1fr]">
+              <div className="relative bg-[#f0e9d8] h-[260px] sm:h-[380px] md:h-full overflow-hidden">
+                <PerfumeImage product={modal} className="w-full h-full object-cover" />
+                <div className="absolute left-3.5 top-3.5 sm:left-5 sm:top-5 flex gap-1.5 pointer-events-none">
+                  {modal.bestseller && <span className="bg-[#191510]/90 text-[#e9dcb8] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[10.5px] tracking-[0.1em] uppercase font-[600] backdrop-blur">Bestseller</span>}
+                  {modal.nouveau && <span className="bg-[#6e1e2a] text-white px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[10.5px] tracking-[0.1em] uppercase font-[600]">New</span>}
                 </div>
               </div>
-              <div className="p-7 md:p-9">
-                <div className="text-[10.5px] tracking-[0.24em] text-[#a08040] uppercase font-[600]">
+              <div className="p-4 sm:p-7 md:p-9">
+                <div className="text-[10px] sm:text-[10.5px] tracking-[0.2em] sm:tracking-[0.24em] text-[#a08040] uppercase font-[600]">
                   {modal.gender === "Men" ? "For Him" : modal.gender === "Women" ? "For Her" : "Unisex"} • {modal.family}
                 </div>
-                <h4 className="text-[38px] leading-[0.95] mt-2" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{modal.name}</h4>
-                <div className="text-[14px] text-[#6a5037] mt-1">{modal.concentration}</div>
-                <div className="mt-1 text-[13px] text-[#9a7f5f]"><Stars rating={modal.rating} /> {modal.rating} • {modal.reviews} reviews</div>
-                <p className="mt-4 text-[15px] leading-relaxed text-[#4b3828]">{modal.story}</p>
-                {/* notes */}
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[13px]">
-                  <div className="bg-[#f5efe3] p-3.5 rounded-2xl border border-[#e8ded0] shadow-sm">
-                    <div className="text-[10.5px] tracking-[0.18em] text-[#a08040] uppercase font-[700] mb-2 flex items-center gap-1.5">
-                      <span className="text-[12px]">✨</span> Top Notes
+                <h4 className="text-[28px] sm:text-[38px] leading-[0.98] mt-1.5 font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{modal.name}</h4>
+                <div className="text-[13px] sm:text-[14px] text-[#6a5037] mt-1">{modal.concentration}</div>
+                <div className="mt-1 text-[12px] sm:text-[13px] text-[#9a7f5f] flex items-center gap-1.5">
+                  <Stars rating={modal.rating} /> <span>{modal.rating} • {modal.reviews} reviews</span>
+                </div>
+                <p className="mt-3 sm:mt-4 text-[13.5px] sm:text-[15px] leading-relaxed text-[#4b3828]">{modal.story}</p>
+
+                {/* Fragrance notes */}
+                <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 text-[12.5px] sm:text-[13px]">
+                  <div className="bg-[#f5efe3] p-3 sm:p-3.5 rounded-xl sm:rounded-2xl border border-[#e8ded0]">
+                    <div className="text-[9.5px] sm:text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[700] mb-1.5 flex items-center gap-1">
+                      <span>✨</span> Top Notes
                     </div>
-                    {modal.top.map(n => <div key={n} className="text-[#4b3728] mb-1 font-[500] flex items-center gap-1.5"><span className="text-[#c2a265] text-[10px]">♦</span> {n}</div>)}
+                    {modal.top.map(n => <div key={n} className="text-[#4b3728] mb-0.5 font-[500] flex items-center gap-1"><span className="text-[#c2a265] text-[9px]">♦</span> {n}</div>)}
                   </div>
-                  <div className="bg-[#f5efe3] p-3.5 rounded-2xl border border-[#e8ded0] shadow-sm">
-                    <div className="text-[10.5px] tracking-[0.18em] text-[#a08040] uppercase font-[700] mb-2 flex items-center gap-1.5">
-                      <span className="text-[12px]">🌿</span> Heart Notes
+                  <div className="bg-[#f5efe3] p-3.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-[#e8ded0]">
+                    <div className="text-[9.5px] sm:text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[700] mb-1.5 flex items-center gap-1">
+                      <span>🌿</span> Heart Notes
                     </div>
-                    {modal.heart.map(n => <div key={n} className="text-[#4b3728] mb-1 font-[500] flex items-center gap-1.5"><span className="text-[#c2a265] text-[10px]">♦</span> {n}</div>)}
+                    {modal.heart.map(n => <div key={n} className="text-[#4b3728] mb-0.5 font-[500] flex items-center gap-1"><span className="text-[#c2a265] text-[9px]">♦</span> {n}</div>)}
                   </div>
-                  <div className="bg-[#f5efe3] p-3.5 rounded-2xl border border-[#e8ded0] shadow-sm">
-                    <div className="text-[10.5px] tracking-[0.18em] text-[#a08040] uppercase font-[700] mb-2 flex items-center gap-1.5">
-                      <span className="text-[12px]">🪵</span> Base Notes
+                  <div className="bg-[#f5efe3] p-3 sm:p-3.5 rounded-xl sm:rounded-2xl border border-[#e8ded0]">
+                    <div className="text-[9.5px] sm:text-[10.5px] tracking-[0.16em] text-[#a08040] uppercase font-[700] mb-1.5 flex items-center gap-1">
+                      <span>🪵</span> Base Notes
                     </div>
-                    {modal.base.map(n => <div key={n} className="text-[#4b3728] mb-1 font-[500] flex items-center gap-1.5"><span className="text-[#c2a265] text-[10px]">♦</span> {n}</div>)}
+                    {modal.base.map(n => <div key={n} className="text-[#4b3728] mb-0.5 font-[500] flex items-center gap-1"><span className="text-[#c2a265] text-[9px]">♦</span> {n}</div>)}
                   </div>
                 </div>
-                <div className="mt-5 text-[13.6px] text-[#5a452f] italic">{modal.mood}</div>
-                {/* size picker */}
-                <div className="mt-6">
-                  <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Select Your Size</div>
-                  <div className="flex flex-wrap gap-3">
+
+                <div className="mt-3.5 sm:mt-5 text-[12.5px] sm:text-[13.5px] text-[#5a452f] italic">{modal.mood}</div>
+
+                {/* Size picker */}
+                <div className="mt-4 sm:mt-6">
+                  <div className="text-[10.5px] tracking-[0.16em] text-[#9b7141] uppercase font-[600] mb-2 sm:mb-3">Select Size</div>
+                  <div className={`grid gap-2 sm:gap-3 ${modal.sizes.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
                     {modal.sizes.map(s => {
                       const orig = s.ml === 10 ? 500 : s.ml === 50 ? 1600 : null;
                       return (
-                        <button key={s.ml} onClick={() => setSizePick(s.ml)} className={`rounded-2xl px-5 py-4 border text-left min-w-[140px] transition relative ${sizePick === s.ml ? "border-[#b3924f] bg-[#faf3e3]" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}>
-                          <div className="absolute -top-2.5 -right-2 bg-[#6e1e2a] text-white text-[9px] font-[700] px-2 py-0.5 rounded-full tracking-wider">SALE</div>
-                          <div className="text-[15px] font-[700]">{s.ml} ml Perfume</div>
-                          {orig && <div className="text-[12px] text-[#9a8c72] line-through">Original: Rs {orig.toLocaleString()}</div>}
-                          <div className="text-[14px] font-[700] text-[#6e1e2a]">Sale: Rs {s.price.toLocaleString()}</div>
+                        <button
+                          key={s.ml}
+                          onClick={() => setSizePick(s.ml)}
+                          className={`rounded-xl sm:rounded-2xl p-3 sm:p-4 border text-left transition relative active:scale-98 ${sizePick === s.ml ? "border-[#b3924f] bg-[#faf3e3] ring-1 ring-[#b3924f]" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}
+                        >
+                          <div className="absolute -top-2 -right-1 bg-[#6e1e2a] text-white text-[8px] sm:text-[9px] font-[700] px-1.5 sm:px-2 py-0.5 rounded-full tracking-wider">SALE</div>
+                          <div className="text-[13px] sm:text-[15px] font-[700]">{s.ml} ml Perfume</div>
+                          {orig && <div className="text-[10.5px] sm:text-[12px] text-[#9a8c72] line-through">Original: Rs {orig.toLocaleString()}</div>}
+                          <div className="text-[12.5px] sm:text-[14px] font-[700] text-[#6e1e2a]">Sale: Rs {s.price.toLocaleString()}</div>
                         </button>
                       );
                     })}
                   </div>
                 </div>
-                <div className="mt-6 flex gap-3 flex-wrap">
-                  <button onClick={() => { addToCart(modal.id, sizePick); setModal(null); }} className="px-7 py-[14px] rounded-full bg-[#191510] text-[#f0e6d2] text-[14.5px] font-[600] hover:bg-[#2b241a] transition">
+
+                {/* Modal action buttons */}
+                <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3">
+                  <button
+                    onClick={() => { addToCart(modal.id, sizePick); setModal(null); }}
+                    className="w-full sm:flex-1 py-3.5 px-6 rounded-full bg-[#191510] text-[#f0e6d2] text-[13.5px] sm:text-[14.5px] font-[600] hover:bg-[#2b241a] active:scale-98 transition shadow-sm text-center"
+                  >
                     Add to Bag — {PKR(modal.sizes.find(s => s.ml === sizePick)?.price ?? modal.sizes[0].price)}
                   </button>
-                  <a href={`https://wa.me/${whatsappNum}?text=Hi! I want to order ${modal.name} (${sizePick}ml) from Huda Essence`} target="_blank" rel="noopener" className="px-5 py-[14px] rounded-full bg-[#25D366] text-white text-[13.7px] font-[600] flex items-center gap-2">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
-                    WhatsApp
-                  </a>
-                  <button onClick={() => toggleWish(modal.id)} className="px-5 py-[14px] rounded-full border border-[#d9b97f] text-[13.7px]">
-                    {wishlist.includes(modal.id) ? "♥ Saved" : "♡ Save"}
-                  </button>
+                  <div className="flex gap-2">
+                    <a
+                      href={`https://wa.me/${whatsappNum}?text=Hi! I want to order ${modal.name} (${sizePick}ml) from Huda Essence`}
+                      target="_blank"
+                      rel="noopener"
+                      className="flex-1 sm:flex-initial px-4 py-3 sm:py-[14px] rounded-full bg-[#25D366] text-white text-[13px] font-[600] flex items-center justify-center gap-1.5 active:scale-98 transition"
+                    >
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                      WhatsApp
+                    </a>
+                    <button
+                      onClick={() => toggleWish(modal.id)}
+                      className="px-4 py-3 sm:py-[14px] rounded-full border border-[#d9b97f] text-[13px] active:scale-95 transition"
+                    >
+                      {wishlist.includes(modal.id) ? "♥ Saved" : "♡ Save"}
+                    </button>
+                  </div>
                 </div>
-                <div className="mt-6 text-[12.6px] text-[#6b6153] border-t border-[#efe8d6] pt-4 grid grid-cols-2 gap-3">
-                  <div>✓ PKR {deliveryCharge} delivery (Karachi Only)</div>
+
+                <div className="mt-5 text-[11.5px] sm:text-[12.5px] text-[#6b6153] border-t border-[#efe8d6] pt-3.5 grid grid-cols-2 gap-2">
+                  <div>✓ Flat PKR {deliveryCharge} (Karachi Only)</div>
                   <div>✓ Cash on Delivery Available</div>
-                  <div>✓ Delivery charges advance only</div>
-                  <div>✓ Premium quality oils</div>
+                  <div>✓ Advance delivery fee only</div>
+                  <div>✓ Premium quality oil impressions</div>
                 </div>
               </div>
             </div>
@@ -5913,18 +5517,19 @@ export default function App() {
 
       {/* ═══════════ CART DRAWER ═══════════ */}
       <div className={`fixed inset-0 z-[70] ${cartOpen ? "" : "pointer-events-none"}`}>
-        <div className={`absolute inset-0 bg-black/45 transition-opacity duration-300 ${cartOpen ? "opacity-100" : "opacity-0"}`} onClick={() => setCartOpen(false)} />
-        <aside className={`absolute right-0 top-0 h-full w-[430px] max-w-[96vw] bg-[#fbf9f4] shadow-2xl border-l border-[#e8e0cd] transition-transform duration-300 ${cartOpen ? "translate-x-0" : "translate-x-full"}`}>
-          <div className="h-16 px-6 border-b border-[#e8e0cd] flex items-center justify-between">
-            <div className="text-[22px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Your Bag ({cartCount})</div>
-            <button onClick={() => setCartOpen(false)} className="w-8 h-8 rounded-full hover:bg-[#f3efe4] grid place-items-center text-[#6b6153] transition text-[16px]">✕</button>
+        <div className={`absolute inset-0 bg-black/45 backdrop-blur-[2px] transition-opacity duration-300 ${cartOpen ? "opacity-100" : "opacity-0"}`} onClick={() => setCartOpen(false)} />
+        <aside className={`absolute right-0 top-0 h-full w-full sm:w-[420px] max-w-full bg-[#fbf9f4] shadow-2xl border-l border-[#e8e0cd] transition-transform duration-300 flex flex-col ${cartOpen ? "translate-x-0" : "translate-x-full"}`}>
+          <div className="h-14 sm:h-16 px-4 sm:px-6 border-b border-[#e8e0cd] flex items-center justify-between shrink-0 bg-white/70 backdrop-blur-sm">
+            <div className="text-[20px] sm:text-[22px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Your Bag ({cartCount})</div>
+            <button onClick={() => setCartOpen(false)} className="w-9 h-9 rounded-full hover:bg-[#f3efe4] grid place-items-center text-[#6b6153] transition text-[17px] active:scale-95">✕</button>
           </div>
-          <div className="px-6 py-4 overflow-auto h-[calc(100%-270px)] space-y-4">
+          <div className="flex-1 px-4 sm:px-6 py-4 overflow-y-auto space-y-3.5 overscroll-contain">
             {cart.length === 0 && (
-              <div className="text-center py-16">
-                <div className="text-[40px] mb-3">🧴</div>
-                <div className="text-[#9a8062] text-[15px]">Your bag is empty.</div>
-                <button onClick={() => { setCartOpen(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="mt-4 px-5 py-2.5 rounded-full bg-[#191510] text-[#f0e6d2] text-[13.5px]">Shop Perfumes</button>
+              <div className="text-center py-16 px-4">
+                <div className="text-[44px] mb-3">🧴</div>
+                <div className="text-[#9a8062] text-[15px] font-[500]">Your bag is currently empty.</div>
+                <p className="text-[12.5px] text-[#a89379] mt-1 max-w-[240px] mx-auto">Explore our luxury impressions and find your signature scent.</p>
+                <button onClick={() => { setCartOpen(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="mt-5 px-6 py-3 rounded-full bg-[#191510] text-[#f0e6d2] text-[13.5px] font-[600] active:scale-95 transition shadow-sm">Shop Fragrances</button>
               </div>
             )}
             {cart.map((line, idx) => {
@@ -5932,139 +5537,139 @@ export default function App() {
               if (!p) return null;
               const sz = p.sizes.find(s => s.ml === line.sizeMl) ?? p.sizes[0];
               return (
-                <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex gap-4 bg-white border border-[#ece3cf] rounded-2xl p-3">
-                  <PerfumeImage product={p} className="w-[76px] h-[76px] object-cover rounded-xl shrink-0" />
+                <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex gap-3 sm:gap-4 bg-white border border-[#ece3cf] rounded-2xl p-3 shadow-sm">
+                  <PerfumeImage product={p} className="w-[72px] h-[72px] sm:w-[76px] sm:h-[76px] object-cover rounded-xl shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <div className="text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</div>
+                    <div className="text-[16px] sm:text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</div>
                     <div className="text-[12px] text-[#8d7253]">{line.sizeMl}ml • {p.concentration}</div>
-                    <div className="mt-2 flex items-center justify-between">
-                      <div className="flex items-center border border-[#dfc8a6] rounded-full">
-                        <button onClick={() => setCart(c => c.map((l, i) => i === idx ? { ...l, qty: Math.max(1, l.qty - 1) } : l))} className="px-3 py-1 text-[#7b5f3f]">−</button>
-                        <span className="px-2 text-[13px] w-7 text-center font-[600]">{line.qty}</span>
-                        <button onClick={() => setCart(c => c.map((l, i) => i === idx ? { ...l, qty: l.qty + 1 } : l))} className="px-3 py-1 text-[#7b5f3f]">+</button>
+                    <div className="mt-2.5 flex items-center justify-between">
+                      <div className="flex items-center border border-[#dfc8a6] rounded-full bg-[#faf7ef]">
+                        <button onClick={() => setCart(c => c.map((l, i) => i === idx ? { ...l, qty: Math.max(1, l.qty - 1) } : l))} className="w-8 h-8 flex items-center justify-center text-[#7b5f3f] text-[16px] font-[600] active:scale-90 transition">−</button>
+                        <span className="px-1 text-[13px] min-w-6 text-center font-[700]">{line.qty}</span>
+                        <button onClick={() => setCart(c => c.map((l, i) => i === idx ? { ...l, qty: l.qty + 1 } : l))} className="w-8 h-8 flex items-center justify-center text-[#7b5f3f] text-[16px] font-[600] active:scale-90 transition">+</button>
                       </div>
-                      <div className="text-[15px] font-[700]">{PKR(sz.price * line.qty)}</div>
+                      <div className="text-[14.5px] sm:text-[15px] font-[700] text-[#191510]">{PKR(sz.price * line.qty)}</div>
                     </div>
                   </div>
-                  <button onClick={() => setCart(c => c.filter((_, i) => i !== idx))} className="text-[#a4977e] text-[11px] self-start hover:text-[#6e1e2a] transition">✕</button>
+                  <button onClick={() => setCart(c => c.filter((_, i) => i !== idx))} className="w-7 h-7 rounded-full flex items-center justify-center text-[#a4977e] text-[13px] self-start hover:text-[#6e1e2a] hover:bg-[#faebee] active:scale-90 transition" title="Remove item">✕</button>
                 </div>
               );
             })}
           </div>
-          <div className="absolute bottom-0 left-0 right-0 border-t border-[#e8e0cd] bg-[#f5f1e6] px-6 py-5">
-            {cart.length > 0 && (<>
-              <div className="flex justify-between text-[14px] text-[#6d5437]"><span>Subtotal</span><span className="font-[600]">{PKR(cartTotal)}</span></div>
-              <div className="flex justify-between text-[14px] text-[#6d5437] mt-1"><span>Delivery</span><span className="font-[600]">PKR {deliveryCharge}</span></div>
-              <div className="flex justify-between text-[20px] font-[700] mt-3"><span>Total</span><span>{PKR(cartTotal + deliveryCharge)}</span></div>
+          {cart.length > 0 && (
+            <div className="shrink-0 border-t border-[#e8e0cd] bg-[#f5f1e6] px-4 sm:px-6 py-4 sm:py-5 pb-6 sm:pb-5">
+              <div className="flex justify-between text-[13.5px] sm:text-[14px] text-[#6d5437]"><span>Subtotal</span><span className="font-[600]">{PKR(cartTotal)}</span></div>
+              <div className="flex justify-between text-[13.5px] sm:text-[14px] text-[#6d5437] mt-1"><span>Delivery (Karachi)</span><span className="font-[600]">PKR {deliveryCharge}</span></div>
+              <div className="flex justify-between text-[18px] sm:text-[20px] font-[700] mt-2.5 pt-2.5 border-t border-[#e2d7c0]"><span>Total</span><span>{PKR(cartTotal + deliveryCharge)}</span></div>
               <button
                 onClick={() => { setCheckoutOpen(true); setCheckoutStep(1); }}
-                className="w-full mt-4 py-[14px] rounded-full bg-[#191510] text-[#f0e6d2] font-[700] text-[14px] flex items-center justify-center gap-2 hover:bg-[#2b241a] transition"
+                className="w-full mt-3.5 py-3.5 sm:py-[14px] rounded-full bg-[#191510] text-[#f0e6d2] font-[700] text-[14px] flex items-center justify-center gap-2 hover:bg-[#2b241a] active:scale-98 transition shadow-md"
               >
                 💳 Proceed to Checkout
               </button>
-              <div className="text-[11.5px] text-center text-[#9a7d5c] mt-2">Cash on Delivery Available • Delivery Charges Advance (EasyPaisa / JazzCash / Bank)</div>
-            </>)}
-          </div>
+              <div className="text-[11px] sm:text-[11.5px] text-center text-[#9a7d5c] mt-2 leading-tight">Cash on Delivery Available • Delivery Charges Advance</div>
+            </div>
+          )}
         </aside>
       </div>
 
       {/* ═══════════ CHECKOUT MODAL ═══════════ */}
       {checkoutOpen && (
-        <div className="fixed inset-0 z-[80] flex">
+        <div className="fixed inset-0 z-[80] flex items-end sm:items-center justify-center">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setCheckoutOpen(false)} />
-          <div className="relative m-auto w-[min(560px,96vw)] max-h-[94vh] overflow-auto rounded-3xl bg-[#fbf9f4] shadow-2xl">
-            <button onClick={() => setCheckoutOpen(false)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white border border-[#e5dcc6] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[18px]">✕</button>
+          <div className="relative w-full sm:w-[min(560px,96vw)] max-h-[92vh] sm:max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-[#fbf9f4] shadow-2xl overscroll-contain">
+            <button onClick={() => setCheckoutOpen(false)} className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-sm border border-[#e5dcc6] grid place-items-center text-[#725a3d] z-10 hover:bg-[#f5e5cc] transition text-[16px] sm:text-[18px] active:scale-95 shadow-sm">✕</button>
 
             {/* Header */}
-            <div className="bg-[#12100b] text-[#ece1c8] px-7 py-5 rounded-t-3xl">
+            <div className="bg-[#12100b] text-[#ece1c8] px-5 sm:px-7 py-4 sm:py-5 rounded-t-3xl">
               <div className="text-[10px] tracking-[0.22em] uppercase font-[600] text-[#d2a75a]">Checkout</div>
-              <div className="text-[26px] mt-1" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+              <div className="text-[22px] sm:text-[26px] mt-0.5" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
                 {checkoutStep === 1 ? "Your Details" : "Payment & Confirmation"}
               </div>
-              <div className="flex items-center gap-3 mt-3">
+              <div className="flex items-center gap-2.5 sm:gap-3 mt-2.5">
                 <div className={`flex items-center gap-1.5 text-[11px] font-[600] ${checkoutStep >= 1 ? "text-[#e0bd6f]" : "text-[#6b5a46]"}`}>
-                  <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] ${checkoutStep >= 1 ? "bg-[#e0bd6f] text-[#1c1408]" : "bg-[#3a2b21] text-[#8a7054]"}`}>1</span>
+                  <span className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full grid place-items-center text-[10px] sm:text-[11px] ${checkoutStep >= 1 ? "bg-[#e0bd6f] text-[#1c1408]" : "bg-[#3a2b21] text-[#8a7054]"}`}>1</span>
                   Details
                 </div>
-                <div className={`w-8 h-px ${checkoutStep >= 2 ? "bg-[#e0bd6f]" : "bg-[#3a2b21]"}`}></div>
+                <div className={`w-6 sm:w-8 h-px ${checkoutStep >= 2 ? "bg-[#e0bd6f]" : "bg-[#3a2b21]"}`}></div>
                 <div className={`flex items-center gap-1.5 text-[11px] font-[600] ${checkoutStep >= 2 ? "text-[#e0bd6f]" : "text-[#6b5a46]"}`}>
-                  <span className={`w-6 h-6 rounded-full grid place-items-center text-[11px] ${checkoutStep >= 2 ? "bg-[#e0bd6f] text-[#1c1408]" : "bg-[#3a2b21] text-[#8a7054]"}`}>2</span>
+                  <span className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full grid place-items-center text-[10px] sm:text-[11px] ${checkoutStep >= 2 ? "bg-[#e0bd6f] text-[#1c1408]" : "bg-[#3a2b21] text-[#8a7054]"}`}>2</span>
                   Payment
                 </div>
               </div>
             </div>
 
-            <div className="p-7">
+            <div className="p-4 sm:p-7">
               {/* ── Order Summary ── */}
-              <div className="bg-white rounded-2xl border border-[#ece3cf] p-4 mb-6">
-                <div className="text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-3">Order Summary</div>
+              <div className="bg-white rounded-2xl border border-[#ece3cf] p-3.5 sm:p-4 mb-5 sm:mb-6">
+                <div className="text-[10.5px] sm:text-[11px] tracking-[0.18em] text-[#9b7141] uppercase font-[600] mb-2.5">Order Summary</div>
                 {cart.map((line, idx) => {
                   const p = PRODUCTS.find(pp => pp.id === line.productId);
                   if (!p) return null;
                   const sz = p.sizes.find(s => s.ml === line.sizeMl) ?? p.sizes[0];
                   return (
-                    <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex items-center gap-3 py-2 border-b border-[#f0e0c8] last:border-0">
+                    <div key={`${line.productId}-${line.sizeMl}-${idx}`} className="flex items-center gap-2.5 sm:gap-3 py-2 border-b border-[#f0e0c8] last:border-0">
                       <PerfumeImage product={p} className="w-10 h-10 object-cover rounded-lg shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <div className="text-[14px] font-[600] truncate">{p.name}</div>
+                        <div className="text-[13.5px] sm:text-[14px] font-[600] truncate">{p.name}</div>
                         <div className="text-[11px] text-[#8d7253]">{line.sizeMl}ml × {line.qty}</div>
                       </div>
-                      <div className="text-[14px] font-[700] shrink-0">{PKR(sz.price * line.qty)}</div>
+                      <div className="text-[13.5px] sm:text-[14px] font-[700] shrink-0">{PKR(sz.price * line.qty)}</div>
                     </div>
                   );
                 })}
-                <div className="mt-3 pt-3 border-t border-[#e8e0cd] space-y-1">
-                  <div className="flex justify-between text-[13px] text-[#6d5437]"><span>Subtotal</span><span>{PKR(cartTotal)}</span></div>
-                  <div className="flex justify-between text-[13px] text-[#6d5437]"><span>Delivery</span><span>PKR {deliveryCharge}</span></div>
-                  <div className="flex justify-between text-[17px] font-[700] pt-1"><span>Total</span><span>{PKR(cartTotal + deliveryCharge)}</span></div>
+                <div className="mt-2.5 pt-2.5 border-t border-[#e8e0cd] space-y-1">
+                  <div className="flex justify-between text-[12.5px] sm:text-[13px] text-[#6d5437]"><span>Subtotal</span><span>{PKR(cartTotal)}</span></div>
+                  <div className="flex justify-between text-[12.5px] sm:text-[13px] text-[#6d5437]"><span>Delivery (Karachi)</span><span>PKR {deliveryCharge}</span></div>
+                  <div className="flex justify-between text-[16px] sm:text-[17px] font-[700] pt-1 text-[#191510]"><span>Total</span><span>{PKR(cartTotal + deliveryCharge)}</span></div>
                 </div>
               </div>
 
               {/* ── STEP 1: Customer Details ── */}
               {checkoutStep === 1 && (
-                <div className="space-y-4">
+                <div className="space-y-3.5 sm:space-y-4">
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">Full Name *</label>
+                    <label className="text-[11.5px] sm:text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">Full Name *</label>
                     <input
                       value={custName}
                       onChange={e => setCustName(e.target.value)}
                       placeholder="e.g. Ahmed Khan"
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
                     />
                   </div>
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">Phone / WhatsApp Number *</label>
+                    <label className="text-[11.5px] sm:text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">Phone / WhatsApp Number *</label>
                     <input
                       value={custPhone}
                       onChange={e => setCustPhone(e.target.value)}
                       placeholder="e.g. 0312-3456789"
                       type="tel"
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
                     />
                   </div>
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">Delivery Address *</label>
+                    <label className="text-[11.5px] sm:text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">Delivery Address *</label>
                     <textarea
                       value={custAddress}
                       onChange={e => setCustAddress(e.target.value)}
                       placeholder="House #, Street, Block, Area..."
                       rows={3}
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white resize-none"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none focus:border-[#b3924f] transition bg-white resize-none"
                     />
                   </div>
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">City</label>
+                    <label className="text-[11.5px] sm:text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-1.5 block">City</label>
                     <input
                       value={custCity}
                       onChange={e => setCustCity(e.target.value)}
-                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3.5 text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
+                      className="w-full border border-[#e4d0b2] rounded-xl px-4 py-3 sm:py-3.5 text-[16px] sm:text-[14px] outline-none focus:border-[#b3924f] transition bg-white"
                     />
                   </div>
 
                   <button
                     onClick={() => setCheckoutStep(2)}
                     disabled={!canProceedStep1}
-                    className={`w-full py-[14px] rounded-full font-[700] text-[14px] mt-2 transition ${canProceedStep1 ? "bg-[#191510] text-[#f0e6d2] hover:bg-[#2b241a]" : "bg-[#ddd5c4] text-[#a09882] cursor-not-allowed"}`}
+                    className={`w-full py-3.5 sm:py-[14px] rounded-full font-[700] text-[14px] mt-2 active:scale-98 transition shadow-sm ${canProceedStep1 ? "bg-[#191510] text-[#f0e6d2] hover:bg-[#2b241a]" : "bg-[#ddd5c4] text-[#a09882] cursor-not-allowed"}`}
                   >
                     Continue to Payment →
                   </button>
@@ -6073,19 +5678,19 @@ export default function App() {
 
               {/* ── STEP 2: Payment ── */}
               {checkoutStep === 2 && (
-                <div className="space-y-5">
+                <div className="space-y-4 sm:space-y-5">
                   {/* Payment Method Selection */}
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-3 block">Select Payment Method *</label>
+                    <label className="text-[11.5px] sm:text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-2 sm:mb-3 block">Select Payment Method *</label>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                       {(["cod", "easypaisa", "jazzcash", "bank"] as ("cod" | "easypaisa" | "jazzcash" | "bank")[]).map(method => (
                         <button
                           key={method}
                           onClick={() => setPayMethod(method)}
-                          className={`rounded-xl py-3.5 px-2 border text-center transition ${payMethod === method ? "border-[#b3924f] bg-[#faf3e3]" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}
+                          className={`rounded-xl py-2.5 sm:py-3.5 px-2 border text-center transition active:scale-95 ${payMethod === method ? "border-[#b3924f] bg-[#faf3e3] shadow-sm" : "border-[#e5dcc6] bg-white hover:bg-[#fbf9f4]"}`}
                         >
-                          <div className="text-[20px]">{paymentAccounts[method].icon}</div>
-                          <div className="text-[12px] font-[600] mt-1">{paymentAccounts[method].title}</div>
+                          <div className="text-[18px] sm:text-[20px]">{paymentAccounts[method].icon}</div>
+                          <div className="text-[11.5px] sm:text-[12px] font-[600] mt-1">{paymentAccounts[method].title}</div>
                         </button>
                       ))}
                     </div>
@@ -6093,43 +5698,43 @@ export default function App() {
 
                   {/* Payment Account Details */}
                   {payMethod === "cod" ? (
-                    <div className="bg-[#1a3a1a] text-[#d4f5d4] rounded-2xl p-5">
+                    <div className="bg-[#1a3a1a] text-[#d4f5d4] rounded-2xl p-4 sm:p-5">
                       <div className="text-[10px] tracking-[0.2em] uppercase font-[600] text-[#66bb6a] mb-2">
                         💵 Cash on Delivery
                       </div>
-                      <div className="text-[13px] text-[#a5d6a7] mb-3 leading-relaxed">Pay <span className="font-[700] text-white">{PKR(cartTotal)}</span> in cash when your order is delivered.</div>
-                      <div className="bg-[#0d290d] rounded-xl p-4 space-y-3">
+                      <div className="text-[12.5px] sm:text-[13px] text-[#a5d6a7] mb-3 leading-relaxed">Pay <span className="font-[700] text-white">{PKR(cartTotal)}</span> in cash when your order is delivered.</div>
+                      <div className="bg-[#0d290d] rounded-xl p-3.5 sm:p-4 space-y-2.5 sm:space-y-3">
                         <div className="flex justify-between items-center">
-                          <span className="text-[12px] text-[#81c784]">Product Amount (COD)</span>
-                          <span className="text-[18px] font-[700] text-[#a5d6a7]">{PKR(cartTotal)}</span>
+                          <span className="text-[11.5px] sm:text-[12px] text-[#81c784]">Product Amount (COD)</span>
+                          <span className="text-[16px] sm:text-[18px] font-[700] text-[#a5d6a7]">{PKR(cartTotal)}</span>
                         </div>
                         <div className="flex justify-between items-center pt-2 border-t border-[#2e5a2e]">
-                          <span className="text-[12px] text-[#ffb74d] font-[600]">⚠️ Delivery Charges (Pay Now)</span>
-                          <span className="text-[18px] font-[700] text-[#ffb74d]">PKR {deliveryCharge}</span>
+                          <span className="text-[11.5px] sm:text-[12px] text-[#ffb74d] font-[600]">⚠️ Delivery Charges (Pay Now)</span>
+                          <span className="text-[16px] sm:text-[18px] font-[700] text-[#ffb74d]">PKR {deliveryCharge}</span>
                         </div>
                       </div>
-                      <div className="mt-3 text-[11.5px] text-[#81c784] bg-[#0d290d] rounded-lg p-3 border border-[#2e5a2e]">
+                      <div className="mt-3 text-[11px] sm:text-[11.5px] text-[#81c784] bg-[#0d290d] rounded-lg p-2.5 sm:p-3 border border-[#2e5a2e]">
                         📋 <span className="font-[600]">How it works:</span> Pay PKR {deliveryCharge} delivery charges in advance via EasyPaisa/JazzCash/Bank. Remaining {PKR(cartTotal)} you pay in cash on delivery.
                       </div>
                     </div>
                   ) : (
-                    <div className="bg-[#14100d] text-[#f6e7c9] rounded-2xl p-5">
+                    <div className="bg-[#14100d] text-[#f6e7c9] rounded-2xl p-4 sm:p-5">
                       <div className="text-[10px] tracking-[0.2em] uppercase font-[600] text-[#d2a75a] mb-2">
                         {paymentAccounts[payMethod].title} Account Details
                       </div>
                       <div className="text-[11px] text-[#c5ad88] mb-3">Transfer the exact amount below and take a screenshot</div>
-                      <div className="bg-[#1e1812] rounded-xl p-4 space-y-2">
+                      <div className="bg-[#1e1812] rounded-xl p-3.5 sm:p-4 space-y-2">
                         <div className="flex justify-between items-center">
-                          <span className="text-[12px] text-[#9a8163]">Account</span>
-                          <span className="text-[15px] font-[700] text-[#f6e8cc] tracking-wide">{paymentAccounts[payMethod].number}</span>
+                          <span className="text-[11.5px] sm:text-[12px] text-[#9a8163]">Account</span>
+                          <span className="text-[14px] sm:text-[15px] font-[700] text-[#f6e8cc] tracking-wide">{paymentAccounts[payMethod].number}</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-[12px] text-[#9a8163]">Name</span>
-                          <span className="text-[14px] font-[600] text-[#e8d3b6]">{paymentAccounts[payMethod].name}</span>
+                          <span className="text-[11.5px] sm:text-[12px] text-[#9a8163]">Name</span>
+                          <span className="text-[13px] sm:text-[14px] font-[600] text-[#e8d3b6]">{paymentAccounts[payMethod].name}</span>
                         </div>
                         <div className="flex justify-between items-center pt-2 border-t border-[#3a2b21]">
-                          <span className="text-[12px] text-[#b3924f] font-[600]">Amount to Transfer</span>
-                          <span className="text-[20px] font-[700] text-[#e0bd6f]">{PKR(cartTotal + deliveryCharge)}</span>
+                          <span className="text-[11.5px] sm:text-[12px] text-[#b3924f] font-[600]">Amount to Transfer</span>
+                          <span className="text-[18px] sm:text-[20px] font-[700] text-[#e0bd6f]">{PKR(cartTotal + deliveryCharge)}</span>
                         </div>
                       </div>
                     </div>
@@ -6137,23 +5742,23 @@ export default function App() {
 
                   {/* Screenshot Upload */}
                   <div>
-                    <label className="text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-2 block">{payMethod === "cod" ? "Upload Delivery Charges Screenshot (Optional for now)" : "Upload Payment Screenshot *"}</label>
+                    <label className="text-[11.5px] sm:text-[12px] tracking-[0.1em] text-[#8a7054] uppercase font-[600] mb-2 block">{payMethod === "cod" ? "Upload Delivery Charges Screenshot (Optional for now)" : "Upload Payment Screenshot *"}</label>
                     <div
                       onClick={() => screenshotInputRef.current?.click()}
-                      className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition hover:bg-[#fbf9f4] ${payScreenshot ? "border-[#4CAF50] bg-[#f0faf0]" : "border-[#d5c8ab] bg-white"
+                      className={`border-2 border-dashed rounded-2xl p-4 sm:p-5 text-center cursor-pointer transition active:scale-98 hover:bg-[#fbf9f4] ${payScreenshot ? "border-[#4CAF50] bg-[#f0faf0]" : "border-[#d5c8ab] bg-white"
                         }`}
                     >
                       {payScreenshot ? (
                         <div>
-                          <img src={payScreenshot} alt="Payment screenshot" className="max-h-[200px] mx-auto rounded-xl shadow-md mb-3" loading="lazy" />
-                          <div className="text-[13px] text-[#4CAF50] font-[600]">✓ {payScreenshotName}</div>
+                          <img src={payScreenshot} alt="Payment screenshot" className="max-h-[160px] sm:max-h-[200px] mx-auto rounded-xl shadow-md mb-2 sm:mb-3" loading="lazy" />
+                          <div className="text-[12.5px] sm:text-[13px] text-[#4CAF50] font-[600]">✓ {payScreenshotName}</div>
                           <div className="text-[11px] text-[#8a7054] mt-1">Click to change</div>
                         </div>
                       ) : (
                         <div>
-                          <div className="text-[32px] mb-2">📸</div>
-                          <div className="text-[14px] font-[600] text-[#5a4a38]">Click to Upload Screenshot</div>
-                          <div className="text-[12px] text-[#9a8163] mt-1">PNG, JPG — Payment proof required</div>
+                          <div className="text-[28px] sm:text-[32px] mb-1.5 sm:mb-2">📸</div>
+                          <div className="text-[13.5px] sm:text-[14px] font-[600] text-[#5a4a38]">Click to Upload Screenshot</div>
+                          <div className="text-[11.5px] sm:text-[12px] text-[#9a8163] mt-0.5">PNG, JPG — Payment proof required</div>
                         </div>
                       )}
                     </div>
@@ -6167,17 +5772,17 @@ export default function App() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-2.5 sm:gap-3">
                     <button
                       onClick={() => setCheckoutStep(1)}
-                      className="px-5 py-[14px] rounded-full border border-[#ddd2b8] text-[13.5px] font-[600] text-[#5c5344] hover:bg-[#f3efe4] transition"
+                      className="px-4 sm:px-5 py-3 sm:py-[14px] rounded-full border border-[#ddd2b8] text-[13px] sm:text-[13.5px] font-[600] text-[#5c5344] hover:bg-[#f3efe4] active:scale-95 transition"
                     >
                       ← Back
                     </button>
                     <button
                       onClick={() => {
                         const orderItems = cart.map(l => {
-                          const p = PRODUCTS.find(pp => pp.id === l.productId);
+                          const p = PRODUCTS.find(pp => pp.id === line.productId);
                           return `• ${p?.name} (${l.sizeMl}ml) x${l.qty}`;
                         }).join('\n');
                         const msg = `🛍️ *NEW ORDER — Huda Essence*\n\n` +
@@ -6202,15 +5807,15 @@ export default function App() {
                         resetCheckout();
                       }}
                       disabled={!canConfirmOrder}
-                      className={`flex-1 py-[14px] rounded-full font-[700] text-[14px] flex items-center justify-center gap-2 transition ${canConfirmOrder ? "bg-[#25D366] text-white hover:bg-[#1fba59]" : "bg-[#d9ccba] text-[#a09080] cursor-not-allowed"}`}
+                      className={`flex-1 py-3 sm:py-[14px] rounded-full font-[700] text-[13.5px] sm:text-[14px] flex items-center justify-center gap-2 active:scale-98 transition ${canConfirmOrder ? "bg-[#25D366] text-white hover:bg-[#1fba59] shadow-md" : "bg-[#d9ccba] text-[#a09080] cursor-not-allowed"}`}
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
-                      Confirm Order via WhatsApp
+                      Confirm Order
                     </button>
                   </div>
 
                   {!canConfirmOrder && (
-                    <div className="text-[12px] text-center text-[#b07a28] bg-[#fff8ee] rounded-xl py-2.5 border border-[#ead6b8]">
+                    <div className="text-[11.5px] sm:text-[12px] text-center text-[#b07a28] bg-[#fff8ee] rounded-xl py-2 sm:py-2.5 px-3 border border-[#ead6b8]">
                       ⚠️ {payMethod === "cod" ? "Please fill in your details to confirm order" : "Please upload your payment screenshot to confirm order"}
                     </div>
                   )}
@@ -6222,14 +5827,15 @@ export default function App() {
       )}
 
       {/* ═══════════ TOAST ═══════════ */}
-      <div className={`fixed bottom-5 left-1/2 -translate-x-1/2 z-[90] transition-all duration-300 ${toast ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"}`}>
-        <div className="bg-[#191510] text-[#efe3c8] px-6 py-3.5 rounded-full text-[13.5px] shadow-xl border border-[#332a1a]">{toast}</div>
+      <div className={`fixed bottom-5 left-1/2 -translate-x-1/2 z-[90] transition-all duration-300 w-[min(90vw,420px)] ${toast ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"}`}>
+        <div className="bg-[#191510] text-[#efe3c8] px-5 py-3 rounded-full text-[13px] sm:text-[13.5px] shadow-xl border border-[#332a1a] text-center">{toast}</div>
       </div>
 
       {/* ═══════════ FLOATING WHATSAPP ═══════════ */}
       <a href={`https://wa.me/${whatsappNum}?text=Hi! I'm interested in Huda Essence perfumes`} target="_blank" rel="noopener"
-        className="fixed bottom-6 right-6 z-50 w-[58px] h-[58px] rounded-full bg-[#25D366] grid place-items-center shadow-[0_6px_24px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+        aria-label="Chat with Huda Essence on WhatsApp"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[52px] h-[52px] sm:w-[58px] sm:h-[58px] rounded-full bg-[#25D366] grid place-items-center shadow-[0_6px_24px_rgba(37,211,102,0.4)] active:scale-95 hover:scale-105 transition-transform">
+        <svg width="25" height="25" className="sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
       </a>
 
       {/* ═══════════ ADMIN PANEL ═══════════ */}

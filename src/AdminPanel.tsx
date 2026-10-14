@@ -87,7 +87,7 @@ const EMPTY_PRODUCT: ProductData = {
   heart: [],
   base: [],
   mood: "",
-  sizes: [{ ml: 10, price: 299 }, { ml: 50, price: 1299 }, { ml: 100, price: 2399 }],
+  sizes: [{ ml: 50, price: 1299 }],
   image: "",
   bestseller: false,
   nouveau: false,
@@ -174,7 +174,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
         value={value.join(", ")}
         onChange={e => onChange(e.target.value.split(",").map(s => s.trim()).filter(Boolean))}
         placeholder="Comma separated, e.g. Rose, Jasmine"
-        className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1"
+        className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1"
       />
     </div>
   );
@@ -183,29 +183,33 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
   const SizeEditor = ({ sizes, onChange }: { sizes: { ml: number; price: number }[]; onChange: (s: { ml: number; price: number }[]) => void }) => (
     <div>
       <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Sizes & Prices (PKR)</label>
-      <div className="space-y-2 mt-1">
+      <div className="space-y-2.5 mt-1">
         {sizes.map((s, i) => (
-          <div key={i} className="flex gap-2 items-center">
-            <input
-              type="number"
-              value={s.ml}
-              onChange={e => { const c = [...sizes]; c[i] = { ...c[i], ml: Number(e.target.value) }; onChange(c); }}
-              className="w-20 border border-[#dcd2bc] rounded-lg px-2 py-2 text-[13px] outline-none"
-              placeholder="ml"
-            />
-            <span className="text-[12px] text-[#a4977e]">ml</span>
-            <input
-              type="number"
-              value={s.price}
-              onChange={e => { const c = [...sizes]; c[i] = { ...c[i], price: Number(e.target.value) }; onChange(c); }}
-              className="w-28 border border-[#dcd2bc] rounded-lg px-2 py-2 text-[13px] outline-none"
-              placeholder="Price"
-            />
-            <span className="text-[12px] text-[#a4977e]">PKR</span>
-            <button onClick={() => onChange(sizes.filter((_, j) => j !== i))} className="text-red-500 text-[12px] hover:text-red-700">✕</button>
+          <div key={i} className="flex gap-2 items-center flex-wrap sm:flex-nowrap bg-[#faf7ef] sm:bg-transparent p-2 sm:p-0 rounded-xl sm:rounded-none">
+            <div className="flex items-center gap-1.5">
+              <input
+                type="number"
+                value={s.ml}
+                onChange={e => { const c = [...sizes]; c[i] = { ...c[i], ml: Number(e.target.value) }; onChange(c); }}
+                className="w-20 border border-[#dcd2bc] rounded-lg px-2.5 py-2 text-[16px] sm:text-[13px] outline-none bg-white"
+                placeholder="ml"
+              />
+              <span className="text-[12px] text-[#a4977e]">ml</span>
+            </div>
+            <div className="flex items-center gap-1.5 flex-1 sm:flex-initial">
+              <input
+                type="number"
+                value={s.price}
+                onChange={e => { const c = [...sizes]; c[i] = { ...c[i], price: Number(e.target.value) }; onChange(c); }}
+                className="w-full sm:w-28 border border-[#dcd2bc] rounded-lg px-2.5 py-2 text-[16px] sm:text-[13px] outline-none bg-white"
+                placeholder="Price"
+              />
+              <span className="text-[12px] text-[#a4977e]">PKR</span>
+            </div>
+            <button onClick={() => onChange(sizes.filter((_, j) => j !== i))} className="w-7 h-7 rounded-full grid place-items-center text-red-500 hover:text-red-700 hover:bg-red-50 text-[13px] transition" title="Delete size">✕</button>
           </div>
         ))}
-        <button onClick={() => onChange([...sizes, { ml: 0, price: 0 }])} className="text-[12.5px] text-[#a08040] underline">+ Add size</button>
+        <button onClick={() => onChange([...sizes, { ml: 0, price: 0 }])} className="text-[12.5px] text-[#a08040] font-[600] underline mt-1 inline-block">+ Add size</button>
       </div>
     </div>
   );
@@ -213,21 +217,21 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
   /* ── Product form ── */
   const ProductForm = ({ data, setData, isNew }: { data: ProductData; setData: (d: ProductData) => void; isNew?: boolean }) => (
     <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Product Name *</label>
-          <input value={data.name} onChange={e => setData({ ...data, name: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="e.g. Armani Code" />
+          <input value={data.name} onChange={e => setData({ ...data, name: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="e.g. Armani Code" />
         </div>
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Inspired By</label>
-          <input value={data.inspiredBy} onChange={e => setData({ ...data, inspiredBy: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="e.g. Armani Code by Giorgio Armani" />
+          <input value={data.inspiredBy} onChange={e => setData({ ...data, inspiredBy: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="e.g. Armani Code by Giorgio Armani" />
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Gender</label>
-          <select value={data.gender} onChange={e => setData({ ...data, gender: e.target.value as ProductData["gender"] })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none bg-white mt-1">
+          <select value={data.gender} onChange={e => setData({ ...data, gender: e.target.value as ProductData["gender"] })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none bg-white mt-1">
             <option value="Men">Men</option>
             <option value="Women">Women</option>
             <option value="Unisex">Unisex</option>
@@ -235,20 +239,20 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
         </div>
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Concentration</label>
-          <input value={data.concentration} onChange={e => setData({ ...data, concentration: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="Eau de Parfum" />
+          <input value={data.concentration} onChange={e => setData({ ...data, concentration: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="Eau de Parfum" />
         </div>
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Family</label>
-          <input value={data.family} onChange={e => setData({ ...data, family: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="Amber Spicy" />
+          <input value={data.family} onChange={e => setData({ ...data, family: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="Amber Spicy" />
         </div>
       </div>
 
       <div>
         <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Mood / Tags</label>
-        <input value={data.mood} onChange={e => setData({ ...data, mood: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="seductive • dark • magnetic" />
+        <input value={data.mood} onChange={e => setData({ ...data, mood: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="seductive • dark • magnetic" />
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <NotesField label="Top Notes" value={data.top} onChange={v => setData({ ...data, top: v })} />
         <NotesField label="Heart Notes" value={data.heart} onChange={v => setData({ ...data, heart: v })} />
         <NotesField label="Base Notes" value={data.base} onChange={v => setData({ ...data, base: v })} />
@@ -258,15 +262,15 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
 
       <div>
         <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Story / Description</label>
-        <textarea value={data.story} onChange={e => setData({ ...data, story: e.target.value })} rows={3} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1 resize-none" placeholder="Write product description…" />
+        <textarea value={data.story} onChange={e => setData({ ...data, story: e.target.value })} rows={3} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1 resize-none" placeholder="Write product description…" />
       </div>
 
       <div>
         <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Product Image</label>
-        <div className="mt-1 flex items-center gap-4">
-          <img src={getAdminProductImage(data)} alt="" className="w-16 h-16 rounded-xl object-cover border border-[#e5dcc6]" />
+        <div className="mt-1 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+          <img src={getAdminProductImage(data)} alt="" className="w-16 h-16 rounded-xl object-cover border border-[#e5dcc6] shrink-0" />
           <div className="flex-1">
-            <input value={data.image} onChange={e => setData({ ...data, image: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white" placeholder="Image URL or upload below" />
+            <input value={data.image} onChange={e => setData({ ...data, image: e.target.value })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white" placeholder="Image URL or upload below" />
             <input
               ref={isNew ? fileRefNew : fileRef}
               type="file"
@@ -279,14 +283,14 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Rating</label>
-          <input type="number" step="0.01" min="0" max="5" value={data.rating} onChange={e => setData({ ...data, rating: Number(e.target.value) })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none bg-white mt-1" />
+          <input type="number" step="0.01" min="0" max="5" value={data.rating} onChange={e => setData({ ...data, rating: Number(e.target.value) })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none bg-white mt-1" />
         </div>
         <div>
           <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Reviews Count</label>
-          <input type="number" value={data.reviews} onChange={e => setData({ ...data, reviews: Number(e.target.value) })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none bg-white mt-1" />
+          <input type="number" value={data.reviews} onChange={e => setData({ ...data, reviews: Number(e.target.value) })} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none bg-white mt-1" />
         </div>
         <div className="flex items-end gap-3 pb-1">
           <label className="flex items-center gap-2 text-[13px] cursor-pointer">
@@ -305,24 +309,24 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
   );
 
   return (
-    <div className="fixed inset-0 z-[100] flex">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative m-auto w-[min(1100px,96vw)] h-[92vh] rounded-3xl bg-[#fbf9f4] shadow-2xl flex flex-col overflow-hidden">
+      <div className="relative w-full sm:w-[min(1100px,96vw)] h-full sm:h-[92vh] sm:rounded-3xl bg-[#fbf9f4] shadow-2xl flex flex-col overflow-hidden">
 
         {/* Header */}
-        <div className="px-6 py-4 border-b border-[#241e12] flex items-center justify-between bg-[#191510] text-[#f0e6d2] rounded-t-3xl">
+        <div className="px-4 sm:px-6 py-3.5 sm:py-4 border-b border-[#241e12] flex items-center justify-between bg-[#191510] text-[#f0e6d2] sm:rounded-t-3xl shrink-0">
           <div>
-            <div className="text-[20px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>🔒 Admin Panel</div>
-            <div className="text-[11.5px] text-[#cfae66] tracking-wider">Huda Essence • Full Control</div>
+            <div className="text-[19px] sm:text-[20px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>🔒 Admin Panel</div>
+            <div className="text-[11px] sm:text-[11.5px] text-[#cfae66] tracking-wider">Huda Essence • Full Control</div>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="text-[12px] text-[#9a8a6a]">{products.length} products</div>
-            <button onClick={onClose} className="w-9 h-9 rounded-full bg-[#2b241a] grid place-items-center text-[#cfae66] hover:bg-[#3a2f22] transition text-[16px]">✕</button>
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="text-[11.5px] sm:text-[12px] text-[#9a8a6a]">{products.length} products</div>
+            <button onClick={onClose} className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#2b241a] grid place-items-center text-[#cfae66] hover:bg-[#3a2f22] active:scale-95 transition text-[15px] sm:text-[16px]">✕</button>
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="px-6 py-3 border-b border-[#e8e0cd] flex gap-2 bg-[#f3efe4]">
+        <div className="px-3 sm:px-6 py-2.5 sm:py-3 border-b border-[#e8e0cd] flex gap-2 bg-[#f3efe4] overflow-x-auto no-scrollbar shrink-0">
           {([
             ["products", `📦 Products (${products.length})`],
             ["add", "➕ Add New Product"],
@@ -331,48 +335,50 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
             <button
               key={key}
               onClick={() => { setTab(key); setEditIdx(null); setEditData(null); }}
-              className={`px-4 py-2 rounded-xl text-[13.5px] font-[500] transition ${tab === key ? "bg-[#191510] text-[#f0e6d2]" : "bg-white text-[#5c5344] border border-[#e5dcc6] hover:bg-[#f3efe4]"}`}
+              className={`whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-xl text-[12.5px] sm:text-[13.5px] font-[500] transition active:scale-95 ${tab === key ? "bg-[#191510] text-[#f0e6d2]" : "bg-white text-[#5c5344] border border-[#e5dcc6] hover:bg-[#f3efe4]"}`}
             >{label}</button>
           ))}
         </div>
 
         {/* Save message */}
         {saveMsg && (
-          <div className="mx-6 mt-3 px-4 py-2.5 rounded-xl bg-[#191510] text-[#f0e6d2] text-[13.5px] font-[500]">{saveMsg}</div>
+          <div className="mx-4 sm:mx-6 mt-3 px-4 py-2.5 rounded-xl bg-[#191510] text-[#f0e6d2] text-[13px] sm:text-[13.5px] font-[500] shrink-0">{saveMsg}</div>
         )}
 
         {/* Content */}
-        <div className="flex-1 overflow-auto px-6 py-5">
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4 sm:py-5 overscroll-contain">
 
           {/* ── Products Tab ── */}
           {tab === "products" && !editData && (
             <div className="space-y-3">
               {products.map((p, idx) => (
-                <div key={p.id} className="flex items-center gap-4 bg-white rounded-2xl border border-[#ece3cf] p-3 hover:shadow-md transition">
-                  <img src={getAdminProductImage(p)} alt="" className="w-[70px] h-[70px] rounded-xl object-cover shrink-0 border border-[#ece3cf]" />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</span>
-                      {p.bestseller && <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#191510] text-[#e9dcb8] uppercase tracking-wider">Best</span>}
-                      {p.nouveau && <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#6e1e2a] text-white uppercase tracking-wider">New</span>}
-                    </div>
-                    <div className="text-[12px] text-[#8a7d66]">{p.gender} • {p.family} • ★ {p.rating} ({p.reviews})</div>
-                    <div className="text-[12px] text-[#6b6153] mt-0.5">
-                      {p.sizes.map(s => `${s.ml}ml PKR ${s.price}`).join(" • ")}
+                <div key={p.id} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 bg-white rounded-2xl border border-[#ece3cf] p-3 sm:p-3.5 hover:shadow-md transition">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <img src={getAdminProductImage(p)} alt="" className="w-14 h-14 sm:w-[70px] sm:h-[70px] rounded-xl object-cover shrink-0 border border-[#ece3cf]" />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-[16px] sm:text-[17px] font-[600] truncate" style={{ fontFamily: '"Cormorant Garamond", serif' }}>{p.name}</span>
+                        {p.bestseller && <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#191510] text-[#e9dcb8] uppercase tracking-wider">Best</span>}
+                        {p.nouveau && <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#6e1e2a] text-white uppercase tracking-wider">New</span>}
+                      </div>
+                      <div className="text-[11.5px] sm:text-[12px] text-[#8a7d66]">{p.gender} • {p.family} • ★ {p.rating} ({p.reviews})</div>
+                      <div className="text-[11px] sm:text-[12px] text-[#6b6153] mt-0.5 truncate">
+                        {p.sizes.map(s => `${s.ml}ml PKR ${s.price}`).join(" • ")}
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <button onClick={() => moveProduct(idx, -1)} disabled={idx === 0} className="w-8 h-8 rounded-lg border border-[#e5dcc6] grid place-items-center text-[13px] disabled:opacity-30 hover:bg-[#f3efe4]">↑</button>
-                    <button onClick={() => moveProduct(idx, 1)} disabled={idx === products.length - 1} className="w-8 h-8 rounded-lg border border-[#e5dcc6] grid place-items-center text-[13px] disabled:opacity-30 hover:bg-[#f3efe4]">↓</button>
-                    <button onClick={() => startEdit(idx)} className="px-3 py-[7px] rounded-lg bg-[#f6efdd] text-[#3c3428] text-[12.5px] font-[600] hover:bg-[#efe3c4]">Edit</button>
+                  <div className="flex items-center justify-end gap-1.5 shrink-0 pt-2 sm:pt-0 border-t border-[#f2ece0] sm:border-0">
+                    <button onClick={() => moveProduct(idx, -1)} disabled={idx === 0} className="w-8 h-8 rounded-lg border border-[#e5dcc6] grid place-items-center text-[13px] disabled:opacity-30 hover:bg-[#f3efe4] active:scale-95" title="Move up">↑</button>
+                    <button onClick={() => moveProduct(idx, 1)} disabled={idx === products.length - 1} className="w-8 h-8 rounded-lg border border-[#e5dcc6] grid place-items-center text-[13px] disabled:opacity-30 hover:bg-[#f3efe4] active:scale-95" title="Move down">↓</button>
+                    <button onClick={() => startEdit(idx)} className="px-3.5 py-[7px] rounded-lg bg-[#f6efdd] text-[#3c3428] text-[12.5px] font-[600] hover:bg-[#efe3c4] active:scale-95">Edit</button>
                     <button
                       onClick={() => setConfirmDelete(confirmDelete === p.id ? null : p.id)}
-                      className="px-3 py-[7px] rounded-lg border border-red-200 text-red-600 text-[12.5px] hover:bg-red-50"
+                      className="px-3.5 py-[7px] rounded-lg border border-red-200 text-red-600 text-[12.5px] hover:bg-red-50 active:scale-95"
                     >
-                      {confirmDelete === p.id ? "Confirm?" : "Delete"}
+                      {confirmDelete === p.id ? "Cancel?" : "Delete"}
                     </button>
                     {confirmDelete === p.id && (
-                      <button onClick={() => deleteProduct(p.id)} className="px-3 py-[7px] rounded-lg bg-red-600 text-white text-[12.5px] font-[600]">Yes Delete</button>
+                      <button onClick={() => deleteProduct(p.id)} className="px-3.5 py-[7px] rounded-lg bg-red-600 text-white text-[12.5px] font-[600] active:scale-95">Yes Delete</button>
                     )}
                   </div>
                 </div>
@@ -389,18 +395,18 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
           {/* ── Edit Product ── */}
           {tab === "products" && editData && (
             <div>
-              <div className="flex items-center justify-between mb-5">
-                <h3 className="text-[22px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+              <div className="flex items-center justify-between mb-4 sm:mb-5">
+                <h3 className="text-[20px] sm:text-[22px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
                   Editing: {editData.name}
                 </h3>
                 <button onClick={() => { setEditIdx(null); setEditData(null); }} className="text-[13px] text-[#8a7d66] underline">← Back to list</button>
               </div>
               <ProductForm data={editData} setData={setEditData} />
-              <div className="mt-6 flex gap-3">
-                <button onClick={saveEdit} className="px-6 py-3 rounded-xl bg-[#191510] text-[#f0e6d2] font-[600] text-[14px] hover:bg-[#2b241a] transition">
+              <div className="mt-6 flex flex-wrap gap-3">
+                <button onClick={saveEdit} className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#191510] text-[#f0e6d2] font-[600] text-[14px] hover:bg-[#2b241a] active:scale-98 transition shadow-sm">
                   💾 Save Changes
                 </button>
-                <button onClick={() => { setEditIdx(null); setEditData(null); }} className="px-6 py-3 rounded-xl border border-[#dcd2bc] text-[#5c5344] text-[14px]">
+                <button onClick={() => { setEditIdx(null); setEditData(null); }} className="w-full sm:w-auto px-6 py-3 rounded-xl border border-[#dcd2bc] text-[#5c5344] text-[14px] active:scale-98">
                   Cancel
                 </button>
               </div>
@@ -410,10 +416,10 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
           {/* ── Add New Product ── */}
           {tab === "add" && (
             <div>
-              <h3 className="text-[22px] font-[600] mb-5" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Add New Product</h3>
+              <h3 className="text-[20px] sm:text-[22px] font-[600] mb-4 sm:mb-5" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Add New Product</h3>
               <ProductForm data={newProduct} setData={setNewProduct} isNew />
               <div className="mt-6">
-                <button onClick={addProduct} className="px-6 py-3 rounded-xl bg-[#191510] text-[#f0e6d2] font-[600] text-[14px] hover:bg-[#2b241a] transition">
+                <button onClick={addProduct} className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#191510] text-[#f0e6d2] font-[600] text-[14px] hover:bg-[#2b241a] active:scale-98 transition shadow-sm">
                   ➕ Add Product
                 </button>
               </div>
@@ -422,22 +428,22 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
 
           {/* ── Settings ── */}
           {tab === "settings" && (
-            <div className="max-w-[600px] space-y-6">
-              <h3 className="text-[22px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Store Settings</h3>
+            <div className="max-w-[600px] space-y-5 sm:space-y-6">
+              <h3 className="text-[20px] sm:text-[22px] font-[600]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>Store Settings</h3>
 
               <div>
                 <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Delivery Charge (PKR)</label>
-                <input type="number" value={tempDelivery} onChange={e => setTempDelivery(Number(e.target.value))} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" />
+                <input type="number" value={tempDelivery} onChange={e => setTempDelivery(Number(e.target.value))} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" />
               </div>
 
               <div>
                 <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">WhatsApp Number (with country code, no +)</label>
-                <input value={tempWA} onChange={e => setTempWA(e.target.value)} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="923376760760" />
+                <input value={tempWA} onChange={e => setTempWA(e.target.value)} className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none focus:border-[#b3924f] bg-white mt-1" placeholder="923376760760" />
               </div>
 
               <div>
                 <label className="text-[11px] uppercase tracking-wider text-[#8a7d66] font-[600]">Bulk Price Update — Set same price for ALL products</label>
-                <div className="grid grid-cols-3 gap-3 mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 mt-2">
                   {[10, 50, 100].map(ml => (
                     <div key={ml}>
                       <label className="text-[12px] text-[#8a7d66]">{ml}ml Price (PKR)</label>
@@ -445,7 +451,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
                         type="number"
                         placeholder={`${ml}ml`}
                         id={`bulk-${ml}`}
-                        className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[13.5px] outline-none bg-white mt-1"
+                        className="w-full border border-[#dcd2bc] rounded-lg px-3 py-2.5 text-[16px] sm:text-[13.5px] outline-none bg-white mt-1"
                       />
                     </div>
                   ))}
@@ -468,7 +474,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
                     onSave(updated);
                     flash("✓ All product prices updated");
                   }}
-                  className="mt-3 px-5 py-2.5 rounded-xl bg-[#f6efdd] text-[#3c3428] text-[13px] font-[600] hover:bg-[#efe3c4]"
+                  className="mt-3 w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#f6efdd] text-[#3c3428] text-[13px] font-[600] hover:bg-[#efe3c4] active:scale-95 transition"
                 >
                   Apply to All Products
                 </button>
@@ -481,7 +487,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
                     onWhatsappChange(tempWA);
                     flash("✓ Settings saved");
                   }}
-                  className="px-6 py-3 rounded-xl bg-[#191510] text-[#f0e6d2] font-[600] text-[14px] hover:bg-[#2b241a] transition"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#191510] text-[#f0e6d2] font-[600] text-[14px] hover:bg-[#2b241a] active:scale-98 transition shadow-sm"
                 >
                   💾 Save Settings
                 </button>
@@ -498,7 +504,7 @@ export default function AdminPanel({ products, onSave, onClose, deliveryCharge, 
                       window.location.reload();
                     }
                   }}
-                  className="px-5 py-2.5 rounded-xl border border-red-300 text-red-600 text-[13px] hover:bg-red-50"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-red-300 text-red-600 text-[13px] hover:bg-red-50 active:scale-95 transition"
                 >
                   🔄 Reset to Factory Defaults
                 </button>

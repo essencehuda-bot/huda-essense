@@ -21,12 +21,33 @@
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background: #f7f4ed;
   color: #191510;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Prevent iOS Safari auto-zoom on input focus */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }
 
 .font-display { font-family: var(--font-display); }
@@ -67,6 +88,20 @@ body {
   60%, 100% { transform: translateX(340%) skewX(-18deg); }
 }
 .animate-sheen { animation: sheen-sweep 5.5s ease-in-out infinite; }
+
+/* rotating announcement headlines — fade in place, swap every 5s, loop */
+@keyframes announce-fade {
+  0% { opacity: 0; }
+  5%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.animate-announce-fade { animation: announce-fade 10s ease-in-out infinite both; }
+.animate-announce-fade-delayed { animation: announce-fade 10s ease-in-out infinite 5s both; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-announce-fade,
+  .animate-announce-fade-delayed { animation: none; }
+  .animate-announce-fade-delayed { display: none; }
+}
 
 /* gentle fade-up entrance */
 @keyframes fade-up {
