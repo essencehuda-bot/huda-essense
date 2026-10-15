@@ -4915,7 +4915,7 @@ export default function App() {
                   onClick={() => { setGender("All"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
                   className="p-3 rounded-xl border border-[#e8ded0] bg-white text-left text-[#3c3428] hover:border-[#b3924f] active:bg-[#f3efe4] transition"
                 >
-                  ✨ All ({PRODUCTS.length})
+                  ✨ All
                 </button>
                 <button
                   onClick={() => { setGender("Men"); setMobileMenu(false); shopRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -4970,20 +4970,16 @@ export default function App() {
         <div className="pointer-events-none absolute -top-48 left-1/2 h-[520px] w-[880px] -translate-x-1/2 rounded-full bg-[#ecdfc2]/60 blur-[130px]"></div>
         <div className="pointer-events-none absolute -bottom-32 -right-24 h-[320px] w-[320px] rounded-full bg-[#6e1e2a]/5 blur-[110px] animate-blob-2"></div>
 
-        <div className="relative mx-auto grid max-w-[1320px] items-center gap-8 sm:gap-12 px-4 sm:px-5 pb-12 pt-8 sm:pb-20 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-10 lg:pb-24 lg:pt-20">
+        <div className="relative mx-auto grid max-w-[1320px] items-center gap-8 sm:gap-12 px-4 sm:px-5 pb-12 pt-8 sm:pb-20 sm:pt-16 lg:px-10 lg:pb-24 lg:pt-20">
           <div className="animate-fade-up text-center lg:text-left">
             <div className="inline-flex items-center gap-2.5 text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.2em] sm:tracking-[0.24em] text-[#a08040]">
               <span className="h-px w-6 sm:w-10 bg-[#c9ad74]"></span>
               Perfume House — Huda Essence
               <span className="h-px w-6 sm:w-10 bg-[#c9ad74] lg:hidden"></span>
             </div>
-            <h1 className="mt-4 sm:mt-6 text-[32px] sm:text-[48px] lg:text-[64px] leading-[1.08] sm:leading-[1.02] tracking-[-0.01em] text-[#191510]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
-              Branded fragrances ki wohi khushboo,
-              <span className="italic text-[#a08040]"> ab har kisi ki pohanch</span> mein.
+            <h1 className="mt-4 sm:mt-6 text-[34px] sm:text-[50px] lg:text-[66px] leading-[1.08] sm:leading-[1.02] tracking-[0.005em] text-[#191510] italic font-[500]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+              Apne Pasandida Brand ke Perfume Banwayen Munasib Qeemat mein.
             </h1>
-            <p className="mt-4 sm:mt-6 mx-auto lg:mx-0 max-w-[480px] text-[14px] sm:text-[15.5px] leading-relaxed text-[#6b6153]">
-              Premium impression perfumes crafted from high-quality oils — sirf 50ml bottle mein available. Ek simple, imaandaar price. Sirf Karachi mein delivery.
-            </p>
 
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
               <button
@@ -4996,30 +4992,6 @@ export default function App() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
                 WhatsApp Order
               </a>
-            </div>
-
-            <div className="mt-8 sm:mt-10 grid grid-cols-3 divide-x divide-[#e4dbc6] border-t border-[#e4dbc6] pt-5 text-center text-[10px] sm:text-[11.5px] font-[600] uppercase tracking-[0.06em] sm:tracking-[0.14em] text-[#7a6e58]">
-              <span className="px-1">Only Rs 1,299</span>
-              <span className="px-1">6–8h Lasting</span>
-              <span className="px-1">COD Karachi</span>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="relative mx-auto w-[82%] sm:w-[88%] max-w-[420px]">
-              <div className="absolute -inset-2.5 sm:-inset-3 rounded-t-[999px] rounded-b-[32px] sm:rounded-b-[36px] border border-[#cbb47f]/50 pointer-events-none"></div>
-              <div className="relative h-[320px] sm:h-[440px] lg:h-[560px] overflow-hidden rounded-t-[999px] rounded-b-[26px] sm:rounded-b-[28px] shadow-[0_40px_90px_-30px_rgba(90,70,40,0.4)]">
-                <img
-                  src="/images/huda_essence_hero_all_sizes.png"
-                  alt="Huda Essence Bottle — 50ml"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  fetchPriority="high"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#19130d2b] via-transparent to-transparent"></div>
-              </div>
-              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#e4dbc6] bg-white/95 px-4 sm:px-5 py-2 text-[9px] sm:text-[10px] font-[600] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#6b6153] shadow-[0_14px_30px_-14px_rgba(90,70,40,0.35)] backdrop-blur">
-                Eau de Parfum • Premium Oils
-              </div>
             </div>
           </div>
         </div>
@@ -5044,18 +5016,6 @@ export default function App() {
 
       {/* ═══════════ SHOP ALL PRODUCTS ═══════════ */}
       <section id="shop" ref={shopRef} className="mx-auto max-w-[1320px] px-3.5 sm:px-5 py-10 sm:py-14 lg:px-10 lg:py-[90px]">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
-          <div>
-            <div className="text-[10px] sm:text-[10.5px] font-[600] uppercase tracking-[0.22em] text-[#a08040]">Our Collection</div>
-            <h2 className="mt-2 text-[32px] sm:text-[40px] leading-[0.98] text-[#191510] lg:text-[52px]" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
-              Shop Huda Essence
-            </h2>
-            <p className="mt-2 max-w-[520px] text-[13.5px] sm:text-[14.5px] text-[#6b6153]">
-              {PRODUCTS.length} premium impression perfumes. Available in 50ml Eau de Parfum.
-            </p>
-          </div>
-        </div>
-
         {/* Filter bar: responsive horizontal scroll pills */}
         <div className="mb-6 sm:mb-10 mt-4 sm:mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 rounded-full border border-[#e2d8c2] bg-white p-1 shadow-xs">
@@ -5064,7 +5024,7 @@ export default function App() {
                 key={g}
                 onClick={() => setGender(g)}
                 className={`whitespace-nowrap rounded-full px-3.5 sm:px-4 py-2 text-[11px] sm:text-[11.5px] font-[600] uppercase tracking-[0.08em] sm:tracking-[0.1em] transition active:scale-95 ${gender === g ? "bg-[#191510] text-[#f0e6d2] shadow-sm" : "text-[#6b6153] hover:bg-[#f3efe4]"}`}
-              >{g === "All" ? `All (${PRODUCTS.length})` : g === "Men" ? "For Him" : g === "Women" ? "For Her" : "Unisex"}</button>
+              >{g === "All" ? "All" : g === "Men" ? "For Him" : g === "Women" ? "For Her" : "Unisex"}</button>
             ))}
           </div>
           <div className="flex items-center justify-between sm:justify-end gap-2 px-1">
