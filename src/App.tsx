@@ -4831,13 +4831,13 @@ export default function App() {
           {/* Right Action Icons */}
           <div className="flex items-center gap-1.5 sm:gap-3">
             {/* Desktop search */}
-            <div className="hidden md:flex items-center gap-2 border border-[#dcd2bc] rounded-full pl-4 pr-3.5 py-[7px] bg-white/70 min-w-[210px] focus-within:border-[#b3924f] transition-colors">
-              <svg className="text-[#a08b62] shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
+            <div className="hidden md:flex items-center gap-1.5 border border-[#dcd2bc] rounded-full pl-3 pr-2.5 py-[4px] bg-white/70 min-w-[140px] focus-within:border-[#b3924f] transition-colors">
+              <svg className="text-[#a08b62] shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
               <input
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                placeholder="Search perfumes…"
-                className="bg-transparent outline-none text-[13px] w-full placeholder-[#a89b82]"
+                placeholder="Search…"
+                className="bg-transparent outline-none text-[12px] w-full placeholder-[#a89b82]"
               />
             </div>
 
@@ -4848,23 +4848,6 @@ export default function App() {
               className={`md:hidden relative grid h-10 w-10 place-items-center rounded-full border transition active:scale-95 ${mobileSearchOpen ? "border-[#b3924f] bg-white text-[#8a6a33]" : "border-[#e2d8c2] bg-white/70 text-[#5c5344]"}`}
             >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
-            </button>
-
-            {/* Wishlist button */}
-            <button
-              onClick={() => {
-                if (wishlist.length === 0) {
-                  setToast("Wishlist is empty — tap ♡ on any perfume!");
-                } else {
-                  setToast(`${wishlist.length} saved perfume(s) in your list`);
-                  shopRef.current?.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              aria-label="Wishlist"
-              className="relative grid h-10 w-10 place-items-center rounded-full border border-[#e2d8c2] bg-white/70 transition hover:border-[#b3924f] hover:text-[#8a6a33] active:scale-95 text-[#5c5344]"
-            >
-              <svg width="17" height="17" viewBox="0 0 24 24" fill={wishlist.length > 0 ? "#6e1e2a" : "none"} stroke={wishlist.length > 0 ? "#6e1e2a" : "currentColor"} strokeWidth="1.6"><path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0-1.6 1.6-1.6 4.1 0 5.7l8.8 8.8 8.8-8.8c1.6-1.6 1.6-4.1 0-5.7Z" /></svg>
-              {wishlist.length > 0 && <span className="absolute -top-1 -right-1 w-[16px] h-[16px] text-[10px] grid place-items-center rounded-full bg-[#6e1e2a] text-white font-bold">{wishlist.length}</span>}
             </button>
 
             {/* Cart button */}
